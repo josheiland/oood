@@ -1,0 +1,26 @@
+# macOS
+.DS_Store
+
+# Editors
+.vscode/
+.idea/
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+
+# Raw and generated media (track locations in 03_ASSETS/ASSET_MANIFEST.md)
+*.mp4
+*.mov
+*.mkv
+*.wav
+*.aiff
+*.mp3
+
+# Temporary exports
+tmp/
+temp/
+exports/
