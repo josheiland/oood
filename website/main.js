@@ -61,6 +61,7 @@
       img.src = ep.thumbnail;
     }
     popup.classList.add('popup--live');
+    if (window.fitHero) window.fitHero();
   }
 
   if (cfg.pinnedEpisode) {
@@ -71,6 +72,30 @@
       .then(function (data) { if (data && data.video) showEpisode(data.video); })
       .catch(function () {});
   }
+
+  // Size the hero so the whole homepage, down to the episode card, fits on one screen.
+  // Everything below the hero has a natural height; the hero gets what is left.
+  var hero = document.querySelector('.hero');
+  var root = document.documentElement;
+  var MIN_HERO = 150;
+
+  function fitHero() {
+    if (window.innerWidth <= 640) {
+      root.style.removeProperty('--hero-h');
+      return;
+    }
+    var heroBottom = hero.offsetTop + hero.offsetHeight;
+    var cardBottom = popup.offsetTop + popup.offsetHeight;
+    var below = cardBottom - heroBottom + 20;
+    var above = hero.offsetTop; // the logo bar, when it sits above the hero
+    var available = window.innerHeight - below - above;
+    root.style.setProperty('--hero-h', Math.max(MIN_HERO, Math.floor(available)) + 'px');
+  }
+
+  fitHero();
+  window.addEventListener('resize', fitHero);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitHero);
+  window.fitHero = fitHero;
 
   // Pop the card in when it scrolls into view
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;

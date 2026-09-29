@@ -90,8 +90,9 @@ a { color: inherit; }
 .hero__stage {
   position: relative;
   container-type: inline-size;
-  /* Height is capped at ~32% of the screen so the whole page fits on a laptop */
-  width: min(100%, 1600px, 139vh);
+  /* main.js sets --hero-h to whatever height is left once everything below the
+     hero fits on screen. Without JS it falls back to about a third of the screen. */
+  width: min(100%, 1600px, calc(var(--hero-h, 32vh) * 100 / 23));
   margin: 0 auto;
   aspect-ratio: 100 / 23;
 }
@@ -321,6 +322,25 @@ a { color: inherit; }
   margin: 0 auto;
   padding: 20px clamp(20px, 5vw, 40px) 32px;
   border-top: 1px solid rgba(169, 220, 255, .2);
+}
+
+/* Laptop and up: tagline and buttons share one row so the page fits on one screen */
+@media (min-width: 901px) {
+  .intro {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 20px clamp(20px, 5vw, 40px) 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    text-align: left;
+  }
+  .intro__tagline { max-width: 32ch; font-size: 17px; }
+  .about__grid p { font-size: 17px; }
+  .latest { padding: 24px clamp(20px, 5vw, 40px) 40px; }
+  .popup { grid-template-columns: 224px minmax(0, 1fr); padding: 16px; }
+  .popup__blurb { font-size: 16px; }
 }
 
 /* Tablet and down */
