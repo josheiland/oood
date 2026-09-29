@@ -8,7 +8,7 @@
   --navy: #0B2A45;        /* Night Swim Navy: body copy, dark panels */
   --tint: #A9DCFF;        /* Shallow: rules, waveforms, type on navy */
   --body-muted: #3C5A73;
-  --waterline: 57%;
+  --waterline: 56.5%;
   --display: 'Teachers', system-ui, sans-serif;
   --mono: 'JetBrains Mono', ui-monospace, monospace;
 }
@@ -90,9 +90,10 @@ a { color: inherit; }
 .hero__stage {
   position: relative;
   container-type: inline-size;
-  width: min(100%, 1600px);
+  /* Height is capped at ~32% of the screen so the whole page fits on a laptop */
+  width: min(100%, 1600px, 139vh);
   margin: 0 auto;
-  aspect-ratio: 2 / 1;
+  aspect-ratio: 100 / 23;
 }
 .hero__host {
   position: absolute;
@@ -101,8 +102,8 @@ a { color: inherit; }
   user-select: none;
   pointer-events: none;
 }
-.hero__host--mary { left: 12.4cqw; top: 20.6cqw; width: 18.2cqw; }
-.hero__host--josh { left: 66.4cqw; top: 18.6cqw; width: 26.2cqw; }
+.hero__host--mary { left: 12.4cqw; top: 5.1cqw; width: 18.2cqw; }
+.hero__host--josh { left: 66.4cqw; top: 3.1cqw; width: 26.2cqw; }
 
 .hero__title {
   position: absolute;
@@ -119,7 +120,7 @@ a { color: inherit; }
   position: absolute;
   left: 0;
   right: 0;
-  top: 19.5cqw;
+  top: 4cqw;
   font-weight: 700;
   font-size: 2.95cqw;
   letter-spacing: .02em;
@@ -129,7 +130,7 @@ a { color: inherit; }
   position: absolute;
   left: 0;
   right: 0;
-  top: 21.9cqw;
+  top: 6.4cqw;
   font-weight: 800;
   font-size: 15.6cqw;
   letter-spacing: -.02em;
@@ -140,13 +141,13 @@ a { color: inherit; }
 .intro {
   display: grid;
   justify-items: center;
-  gap: 24px;
-  padding: clamp(24px, 4vw, 48px) 20px clamp(48px, 6vw, 80px);
+  gap: 16px;
+  padding: 20px 20px 28px;
   text-align: center;
 }
 .intro__tagline {
   margin: 0;
-  max-width: 34ch;
+  max-width: 60ch;
   font-weight: 700;
   font-size: clamp(15px, 1.6vw, 20px);
   letter-spacing: .08em;
@@ -187,50 +188,39 @@ a { color: inherit; }
   margin: 0 auto;
   padding: 0 clamp(20px, 5vw, 40px);
   display: grid;
-  gap: 32px;
+  gap: 16px;
 }
 .section-head { display: flex; align-items: baseline; gap: 16px; }
 .label--num { font-size: 12px; letter-spacing: .2em; }
 .section-head h2 {
   margin: 0;
   font-weight: 800;
-  font-size: clamp(30px, 4.4vw, 52px);
+  font-size: clamp(28px, 3.2vw, 40px);
   letter-spacing: -.02em;
   line-height: .95;
   text-transform: uppercase;
 }
 .about__grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
-  gap: clamp(24px, 4vw, 56px);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(20px, 4vw, 56px);
   align-items: start;
 }
-.about__copy p { margin: 0 0 1em; max-width: 58ch; font-size: clamp(18px, 1.5vw, 20px); line-height: 1.55; }
-.about__copy p:last-child { margin-bottom: 0; font-weight: 600; }
-.about__cards { display: grid; gap: 16px; }
-.card {
-  display: grid;
-  gap: 10px;
-  padding: 26px 28px;
-  border-radius: 20px;
-  background: var(--cream);
-}
-.card p { margin: 0; font-size: 17px; line-height: 1.5; }
-.card--navy { background: var(--navy); color: var(--cream); }
-.card--navy .label { color: var(--tint); }
+.about__grid p { margin: 0; font-size: 18px; line-height: 1.55; }
+.about__grid strong { font-weight: 600; }
 
 /* Latest-episode popup: cream card, waterline inside, navy body, one blue heading */
-.latest { padding: clamp(56px, 7vw, 96px) clamp(20px, 5vw, 40px) clamp(64px, 8vw, 112px); }
+.latest { padding: 28px clamp(20px, 5vw, 40px) 48px; }
 .popup {
   position: relative;
   overflow: hidden;
-  max-width: 920px;
+  max-width: 1100px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
-  gap: clamp(20px, 3vw, 36px);
+  grid-template-columns: 256px minmax(0, 1fr);
+  gap: clamp(20px, 3vw, 32px);
   align-items: center;
-  padding: clamp(18px, 2.4vw, 28px);
+  padding: 18px;
   border: 2px solid var(--blue);
   border-radius: 24px;
   background: var(--cream);
@@ -264,16 +254,16 @@ a { color: inherit; }
   font-weight: 800;
   text-transform: uppercase;
   line-height: .96;
-  font-size: clamp(22px, 3.4vw, 34px);
+  font-size: 26px;
 }
 .popup__tile[hidden] { display: none; }
-.popup__body { display: grid; gap: 12px; justify-items: start; }
+.popup__body { display: grid; gap: 8px; justify-items: start; }
 .popup__label { display: flex; align-items: center; gap: 10px; }
 .popup__title {
   margin: 0;
   color: var(--blue);
   font-weight: 800;
-  font-size: clamp(40px, 4.6vw, 52px);
+  font-size: 40px;
   letter-spacing: -.02em;
   line-height: .95;
   text-transform: uppercase;
@@ -282,12 +272,12 @@ a { color: inherit; }
 /* Real episode titles run long, so they drop to navy sentence case, per the episode-index rule */
 .popup--live .popup__title {
   color: var(--navy);
-  font-size: clamp(24px, 2.6vw, 32px);
+  font-size: clamp(22px, 2.2vw, 28px);
   line-height: 1.15;
   letter-spacing: -.01em;
   text-transform: none;
 }
-.popup__blurb { margin: 0 0 6px; color: var(--body-muted); font-size: 17px; line-height: 1.5; }
+.popup__blurb { margin: 0 0 4px; color: var(--body-muted); font-size: 17px; line-height: 1.5; }
 
 /* Waveform bars: 8, rounded caps, even gaps */
 .wave { display: inline-flex; align-items: center; gap: 3px; height: 16px; }
@@ -334,20 +324,26 @@ a { color: inherit; }
 }
 
 /* Tablet and down */
+@media (max-width: 900px) {
+  /* Below laptop width the logo would sit on Mary, so the bar moves above the hero */
+  .topbar { position: static; background: var(--cream); padding: 12px 16px 4px; }
+}
+
 @media (max-width: 860px) {
-  .about__grid { grid-template-columns: 1fr; }
+  .about__grid { grid-template-columns: 1fr; gap: 12px; }
   .popup { grid-template-columns: 1fr; }
   .popup__waterline { inset: 44% 0 0 0; }
 }
 
 /* Phones: hosts rise into the cream band and DEPTH crosses their shoulders at the waterline */
 @media (max-width: 640px) {
-  :root { --waterline: 58%; }
-  .hero__stage { aspect-ratio: 1 / .96; }
-  .hero__host--mary { left: -2cqw; top: 20cqw; width: 46cqw; }
-  .hero__host--josh { left: 52cqw; top: 24cqw; width: 50cqw; }
-  .hero__kicker { top: 37.8cqw; font-size: 6.2cqw; }
-  .hero__word { top: 43.5cqw; font-size: 29.3cqw; }
+  :root { --waterline: 56%; }
+  .tile--small { width: 48px; height: 48px; font-size: 8.1px; }
+  .hero__stage { width: 100%; aspect-ratio: 100 / 72.7; }
+  .hero__host--mary { left: -2cqw; top: 5cqw; width: 46cqw; }
+  .hero__host--josh { left: 52cqw; top: 9cqw; width: 50cqw; }
+  .hero__kicker { top: 22.8cqw; font-size: 6.2cqw; }
+  .hero__word { top: 28.5cqw; font-size: 29.3cqw; }
   .btn { width: 100%; justify-content: center; }
   .listen { width: 100%; max-width: 360px; }
 }
