@@ -28,6 +28,10 @@ The domain's DNS is on Cloudflare. Zoho mail runs through the same zone.
 3. Set both records to **DNS only** (grey cloud), not proxied.
 4. Do not touch the MX, SPF or DKIM records. Those carry `hi@outofourdepth.com`.
 
+## Short links
+
+`vercel.json` redirects `outofourdepth.com/spotify`, `/youtube`, `/instagram`, `/tiktok` and `/x` to each platform. Use these anywhere a link gets spoken, printed or put in a bio. They are temporary (307) redirects, so changing a destination takes effect right away.
+
 ## Common edits
 
 - **Spotify is live:** paste the show URL into `spotify` in `config.js`. The button switches from "coming soon" to a real link.

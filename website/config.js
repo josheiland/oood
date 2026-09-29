@@ -2,10 +2,7 @@
 window.OOOD = {
   youtube: 'https://www.youtube.com/@OutOfOurDepthPod',
 
-  // Paste the show link from Spotify for Creators once the show is live,
-  // e.g. 'https://open.spotify.com/show/XXXXXXXX'. While this is empty the
-  // Spotify button says "coming soon" and does not link anywhere.
-  spotify: '',
+  spotify: 'https://open.spotify.com/show/5uqWe60E7Vi3MfQtJki7b1',
 
   email: 'hi@outofourdepth.com',
 

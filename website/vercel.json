@@ -5,7 +5,39 @@
   "headers": [
     {
       "source": "/images/(.*)",
-      "headers": [{ "key": "Cache-Control", "value": "public, max-age=604800" }]
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=604800"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/spotify",
+      "destination": "https://open.spotify.com/show/5uqWe60E7Vi3MfQtJki7b1",
+      "permanent": false
+    },
+    {
+      "source": "/youtube",
+      "destination": "https://www.youtube.com/@OutOfOurDepthPod",
+      "permanent": false
+    },
+    {
+      "source": "/instagram",
+      "destination": "https://www.instagram.com/outofourdepthpod/",
+      "permanent": false
+    },
+    {
+      "source": "/tiktok",
+      "destination": "https://www.tiktok.com/@outofourdepthpod",
+      "permanent": false
+    },
+    {
+      "source": "/x",
+      "destination": "https://x.com/OutOfOurDepthX",
+      "permanent": false
     }
   ]
 }
