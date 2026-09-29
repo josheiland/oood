@@ -6,11 +6,13 @@ window.OOOD = {
 
   email: 'hi@outofourdepth.com',
 
+  // Shown as icons in the top right, in this order, followed by the email icon.
+  // icon: 'instagram' | 'x' | 'tiktok' | 'youtube' | 'spotify'
   socials: [
-    { label: 'Instagram', url: 'https://www.instagram.com/outofourdepthpod/' },
+    { label: 'Instagram', icon: 'instagram', url: 'https://www.instagram.com/outofourdepthpod/' },
     // TikTok hidden 2026-09-28 while @outofourdepthpod is suspended. Restore after the appeal:
-    // { label: 'TikTok', url: 'https://www.tiktok.com/@outofourdepthpod' },
-    { label: 'X', url: 'https://x.com/OutOfOurDepthX' },
+    // { label: 'TikTok', icon: 'tiktok', url: 'https://www.tiktok.com/@outofourdepthpod' },
+    { label: 'X', icon: 'x', url: 'https://x.com/OutOfOurDepthX' },
   ],
 
   // The latest-episode card fills itself from YouTube via /api/latest.

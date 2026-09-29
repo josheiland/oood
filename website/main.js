@@ -19,22 +19,32 @@
     }
   }
 
-  if (cfg.email) {
-    document.querySelectorAll('[data-email]').forEach(function (a) {
-      a.href = 'mailto:' + cfg.email;
-      if (a.classList.contains('footer__mail')) a.textContent = cfg.email;
-    });
-  }
+  // Social icons, top right
+  var ICONS = {
+    instagram: '<rect x="3" y="3" width="18" height="18" rx="5.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.4" cy="6.6" r="1.3" fill="currentColor"/>',
+    x: '<path d="M4 4h4.6l11.4 16h-4.6z" fill="currentColor"/><path d="M19.2 4 13.4 10.6M4.8 20l5.8-6.6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>',
+    tiktok: '<path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M14 3c.4 2.8 2.3 4.6 5 4.8" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>',
+    youtube: '<rect x="2" y="5" width="20" height="14" rx="4.5" fill="currentColor"/><path d="M10 9.2v5.6l4.8-2.8z" fill="#FBF1E5"/>',
+    spotify: '<circle cx="12" cy="12" r="10" fill="currentColor"/><path d="M7 9.6c3.3-1 7-.7 9.9 1M7.6 12.5c2.7-.8 5.7-.5 8.1.9M8.2 15.2c2.1-.6 4.3-.4 6.2.7" fill="none" stroke="#FBF1E5" stroke-width="1.6" stroke-linecap="round"/>',
+    email: '<rect x="2.5" y="5" width="19" height="14" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="m3.5 7 8.5 6 8.5-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>'
+  };
 
   var socials = document.querySelector('[data-socials]');
-  if (socials && cfg.socials) {
-    cfg.socials.forEach(function (s) {
+  if (socials) {
+    var items = (cfg.socials || []).slice();
+    if (cfg.email) items.push({ label: 'Email ' + cfg.email, icon: 'email', url: 'mailto:' + cfg.email });
+    items.forEach(function (s) {
+      if (!ICONS[s.icon]) return;
       var a = document.createElement('a');
-      a.className = 'label label--light';
+      a.className = 'social';
       a.href = s.url;
-      a.target = '_blank';
-      a.rel = 'noopener';
-      a.textContent = s.label;
+      a.setAttribute('aria-label', s.label);
+      a.title = s.label;
+      if (s.icon !== 'email') {
+        a.target = '_blank';
+        a.rel = 'noopener';
+      }
+      a.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true">' + ICONS[s.icon] + '</svg>';
       socials.appendChild(a);
     });
   }
@@ -73,11 +83,11 @@
       .catch(function () {});
   }
 
-  // Size the hero so the whole homepage, down to the episode card, fits on one screen.
+  // Size the hero so the whole homepage fits on one screen with no scrolling.
   // Everything below the hero has a natural height; the hero gets what is left.
   var hero = document.querySelector('.hero');
   var root = document.documentElement;
-  var MIN_HERO = 150;
+  var MIN_HERO = 140;
 
   function fitHero() {
     if (window.innerWidth <= 640) {
@@ -85,8 +95,8 @@
       return;
     }
     var heroBottom = hero.offsetTop + hero.offsetHeight;
-    var cardBottom = popup.offsetTop + popup.offsetHeight;
-    var below = cardBottom - heroBottom + 20;
+    // Everything after the hero, to the very bottom of the page
+    var below = document.body.scrollHeight - heroBottom;
     var above = hero.offsetTop; // the logo bar, when it sits above the hero
     var available = window.innerHeight - below - above;
     root.style.setProperty('--hero-h', Math.max(MIN_HERO, Math.floor(available)) + 'px');

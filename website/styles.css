@@ -71,8 +71,19 @@ a { color: inherit; }
   justify-content: space-between;
   padding: 16px clamp(16px, 4vw, 40px);
 }
-.topbar__mail { padding: 8px 0; border-bottom: 1px solid rgba(14, 111, 192, .35); }
-.topbar__mail:hover { color: var(--navy); border-color: var(--navy); }
+.topbar__social { display: flex; align-items: center; gap: 6px; }
+.social {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  color: var(--navy);
+  transition: background-color .15s ease, color .15s ease;
+}
+.social svg { width: 22px; height: 22px; }
+.social:hover { background: var(--navy); color: var(--cream); }
+.social:hover svg [fill="#FBF1E5"], .social:hover svg [stroke="#FBF1E5"] { fill: var(--navy); stroke: var(--navy); }
 
 /* Hero: the waterline composition from the kit banner.
    Cream above, foam below, big DEPTH crossing the seam, one host per edge, bottom-cropped. */
@@ -148,15 +159,15 @@ a { color: inherit; }
 }
 .intro__tagline {
   margin: 0;
-  max-width: 60ch;
   font-weight: 700;
   font-size: clamp(15px, 1.6vw, 20px);
   letter-spacing: .08em;
   line-height: 1.4;
   text-transform: uppercase;
-  color: var(--small-blue);
-  text-wrap: balance;
+  color: var(--navy);
 }
+/* Always exactly two lines: one per phrase */
+.intro__tagline span { display: block; white-space: nowrap; }
 .listen { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
 
 .btn {
@@ -293,37 +304,6 @@ a { color: inherit; }
 .wave i:nth-child(8) { height: 25%; background: var(--tint); animation-delay: -.7s; }
 @keyframes wave { 50% { transform: scaleY(.45); } }
 
-/* Footer */
-.footer { background: var(--navy); color: var(--cream); }
-.footer__inner {
-  max-width: 1180px;
-  margin: 0 auto;
-  padding: clamp(44px, 6vw, 72px) clamp(20px, 5vw, 40px) 32px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 32px;
-}
-.footer__mail {
-  display: inline-block;
-  margin: 10px 0 12px;
-  font-weight: 700;
-  font-size: clamp(24px, 3vw, 34px);
-  text-decoration: none;
-  border-bottom: 2px solid var(--tint);
-}
-.footer__mail:hover { color: var(--tint); }
-.footer__note { margin: 0; max-width: 44ch; color: var(--tint); }
-.footer__social { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 22px; }
-.footer__social a { padding: 6px 0; border-bottom: 1px solid rgba(169, 220, 255, .35); }
-.footer__social a:hover { color: var(--cream); border-color: var(--cream); }
-.footer__base {
-  max-width: 1180px;
-  margin: 0 auto;
-  padding: 20px clamp(20px, 5vw, 40px) 32px;
-  border-top: 1px solid rgba(169, 220, 255, .2);
-}
-
 /* Laptop and up: tagline and buttons share one row so the page fits on one screen */
 @media (min-width: 901px) {
   .intro {
@@ -336,9 +316,9 @@ a { color: inherit; }
     gap: 24px;
     text-align: left;
   }
-  .intro__tagline { max-width: 32ch; font-size: 17px; }
+  .intro__tagline { font-size: 17px; }
   .about__grid p { font-size: 17px; }
-  .latest { padding: 24px clamp(20px, 5vw, 40px) 40px; }
+  .latest { padding: 24px clamp(20px, 5vw, 40px) 28px; }
   .popup { grid-template-columns: 224px minmax(0, 1fr); padding: 16px; }
   .popup__blurb { font-size: 16px; }
 }
@@ -364,6 +344,7 @@ a { color: inherit; }
   .hero__host--josh { left: 52cqw; top: 9cqw; width: 50cqw; }
   .hero__kicker { top: 22.8cqw; font-size: 6.2cqw; }
   .hero__word { top: 28.5cqw; font-size: 29.3cqw; }
+  .intro__tagline span { white-space: normal; }
   .btn { width: 100%; justify-content: center; }
   .listen { width: 100%; max-width: 360px; }
 }
