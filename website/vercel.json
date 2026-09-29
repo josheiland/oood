@@ -33,6 +33,16 @@
       "source": "/x",
       "destination": "https://x.com/OutOfOurDepthX",
       "permanent": false
+    },
+    {
+      "source": "/linkedin",
+      "destination": "https://www.linkedin.com/company/outofourdepth",
+      "permanent": false
+    },
+    {
+      "source": "/facebook",
+      "destination": "https://www.facebook.com/outofourdepthpod",
+      "permanent": false
     }
   ]
 }

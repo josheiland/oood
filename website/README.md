@@ -30,7 +30,7 @@ The domain's DNS is on Cloudflare. Zoho mail runs through the same zone.
 
 ## Short links
 
-`vercel.json` redirects `outofourdepth.com/spotify`, `/youtube`, `/instagram` and `/x` (`/tiktok` is off while that account is suspended) to each platform. Use these anywhere a link gets spoken, printed or put in a bio. They are temporary (307) redirects, so changing a destination takes effect right away.
+`vercel.json` redirects `outofourdepth.com/spotify`, `/youtube`, `/instagram`, `/x`, `/linkedin` and `/facebook` (`/tiktok` is off while that account is suspended) to each platform. Use these anywhere a link gets spoken, printed or put in a bio. They are temporary (307) redirects, so changing a destination takes effect right away.
 
 ## Common edits
 

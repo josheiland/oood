@@ -83,7 +83,8 @@ a { color: inherit; }
 }
 .social svg { width: 22px; height: 22px; }
 .social:hover { background: var(--navy); color: var(--cream); }
-.social:hover svg [fill="#FBF1E5"], .social:hover svg [stroke="#FBF1E5"] { fill: var(--navy); stroke: var(--navy); }
+.social:hover svg [fill="#FBF1E5"] { fill: var(--navy); }
+.social:hover svg [stroke="#FBF1E5"] { stroke: var(--navy); }
 
 /* Hero: the waterline composition from the kit banner.
    Cream above, foam below, big DEPTH crossing the seam, one host per edge, bottom-cropped. */
