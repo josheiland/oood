@@ -320,8 +320,17 @@ a { color: inherit; }
   .intro__tagline { font-size: 17px; }
   .about__grid p { font-size: 17px; }
   .latest { padding: 24px clamp(20px, 5vw, 40px) 28px; }
-  .popup { grid-template-columns: 224px minmax(0, 1fr); padding: 16px; }
+  /* Thumbnail fills the card's full inner height; text spreads to match its top and bottom */
+  .popup { grid-template-columns: 300px minmax(0, 1fr); align-items: stretch; padding: 16px; }
+  .popup__thumb { aspect-ratio: auto; min-height: 169px; }
+  .popup__thumb img { position: absolute; inset: 0; }
+  .popup__body { align-content: space-between; }
   .popup__blurb { font-size: 16px; }
+}
+
+@media (min-width: 901px) and (max-width: 1150px) {
+  .popup { grid-template-columns: 256px minmax(0, 1fr); }
+  .popup__thumb { min-height: 144px; }
 }
 
 /* Tablet and down */
