@@ -8,7 +8,8 @@ window.OOOD = {
 
   socials: [
     { label: 'Instagram', url: 'https://www.instagram.com/outofourdepthpod/' },
-    { label: 'TikTok', url: 'https://www.tiktok.com/@outofourdepthpod' },
+    // TikTok hidden 2026-09-28 while @outofourdepthpod is suspended. Restore after the appeal:
+    // { label: 'TikTok', url: 'https://www.tiktok.com/@outofourdepthpod' },
     { label: 'X', url: 'https://x.com/OutOfOurDepthX' },
   ],
 

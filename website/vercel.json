@@ -30,11 +30,6 @@
       "permanent": false
     },
     {
-      "source": "/tiktok",
-      "destination": "https://www.tiktok.com/@outofourdepthpod",
-      "permanent": false
-    },
-    {
       "source": "/x",
       "destination": "https://x.com/OutOfOurDepthX",
       "permanent": false

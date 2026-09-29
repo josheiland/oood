@@ -44,7 +44,6 @@ Website: https://outofourdepth.com
 Email: hi@outofourdepth.com
 Spotify: https://open.spotify.com/show/5uqWe60E7Vi3MfQtJki7b1
 Instagram: https://www.instagram.com/outofourdepthpod
-TikTok: https://www.tiktok.com/@outofourdepthpod
 X: https://x.com/OutOfOurDepthX
 ```
 
@@ -54,3 +53,4 @@ X: https://x.com/OutOfOurDepthX
 - All links returned 200 on 2026-09-28, except Spotify (404 until the show's first episode is live on Spotify) and chatgpt.com (blocks scripted requests; fine in a browser).
 - The 20% line is phrased as a relative *usage* gap, per `02_RESEARCH/episode-00-source-checks-2026-09-26.md`. It resolves the open "what does 20% behind mean" question only if the hosts agree that is what they meant.
 - "Around 15 foster puppies" is Mary's on-air "probably like 15".
+- TikTok removed from the description 2026-09-28: the account is suspended and its public page shows "Couldn't find this account". Add it back after the appeal.
