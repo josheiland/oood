@@ -1,0 +1,51 @@
+{
+  "about": "Out of Our Depth caption glossary. 'fix' rules are applied automatically by fix_captions.py; 'review' rules only flag a line for a human listen. Patterns are case-insensitive regexes; a space in a pattern matches any whitespace, including a caption line break. Add a term the first time ASR gets it wrong, then it is fixed for every future episode.",
+  "updated": "2026-09-29",
+
+  "fix": [
+    { "term": "J", "patterns": ["\\bJay\\b"], "note": "Mary's name for Josh. Spelled J, never Jay (Josh, 2026-09-29)." },
+    { "term": "Eiland", "patterns": ["(?<=Josh\\s)(Island|Eyeland|Iland|Ireland)\\b", "(?<=Mary\\s)(Island|Eyeland|Iland|Ireland)\\b"], "note": "Only after Josh or Mary." },
+    { "term": "Run Your City", "patterns": ["\\brun your city\\b"] },
+    { "term": "AI@GSB", "patterns": ["\\bAI at (the )?GSB\\b", "\\bA\\.I\\. at GSB\\b"] },
+    { "term": "Stanford GSB", "patterns": ["\\bStanford G\\.S\\.B\\b"] },
+    { "term": "outofourdepth.com", "patterns": ["\\bout of our depth dot com\\b", "\\boutofourdepth dot com\\b"] },
+    { "term": "hi@outofourdepth.com", "patterns": ["\\bhi at outofourdepth\\.com\\b", "\\bhi at out of our depth dot com\\b"] },
+
+    { "term": "ChatGPT", "patterns": ["\\bchat ?g ?p ?t\\b", "\\bchat ?g ?b ?t\\b", "\\bchad ?g ?p ?t\\b"] },
+    { "term": "Claude Code", "patterns": ["\\bcloud code\\b", "\\bclod ?code\\b", "\\bclaud code\\b"] },
+    { "term": "Claude", "patterns": ["\\bcollod\\b", "\\bclod\\b", "\\bclaud\\b", "\\bclawed\\b"] },
+    { "term": "Anthropic's", "patterns": ["\\banthropics\\b"] },
+    { "term": "Anthropic", "patterns": ["\\banthropic\\b", "\\banthropik\\b", "\\banthopic\\b", "\\bentropic\\b", "\\banthropick\\b"] },
+    { "term": "OpenAI", "patterns": ["\\bopen ?a\\.?i\\b"] },
+    { "term": "Codex", "patterns": ["\\bcodecs\\b"] },
+    { "term": "Gemini", "patterns": ["\\bgemini\\b"] },
+    { "term": "DeepMind", "patterns": ["\\bdeep mind\\b"] },
+    { "term": "DeepSeek", "patterns": ["\\bdeep seek\\b", "\\bdeepseek\\b"] },
+    { "term": "NVIDIA", "patterns": ["\\bnvidia\\b", "\\bn video\\b"] },
+    { "term": "Grok", "patterns": ["\\bgrock\\b"] },
+    { "term": "xAI", "patterns": ["\\bx\\.a\\.i\\b", "\\bx ai\\b"] },
+    { "term": "OpenEvidence", "patterns": ["\\bopen evidence\\b"] },
+    { "term": "Composio", "patterns": ["\\bcomposeo\\b", "\\bcompose ?io\\b", "\\bcomposio\\b"] },
+    { "term": "Wispr Flow", "patterns": ["\\bwhisper flow\\b", "\\bwispr flow\\b"] },
+    { "term": "YouTube", "patterns": ["\\byou tube\\b"] },
+
+    { "term": "Dario Amodei", "patterns": ["\\bDario (Amadine|Amaday|Amodai|Amo day|Amodeo|Amadei|Amodei)\\b"] },
+    { "term": "Demis Hassabis", "patterns": ["\\bDemis (Hasabis|Hassabus|Hosabis|Asabis)\\b"] },
+    { "term": "Hassabis", "patterns": ["\\b(Hasabis|Hassabus|Hosabis)\\b"] },
+    { "term": "Sam Altman", "patterns": ["\\bSam Altmann\\b", "\\bSam Oltman\\b"] },
+    { "term": "Jensen Huang", "patterns": ["\\bJensen (Wong|Hwang|Hwong)\\b"] },
+    { "term": "Claire Vo", "patterns": ["\\bClaire (Voe|Voh|Vogue|Vaux|Veau)\\b", "\\bClare Vo\\b"] }
+  ],
+
+  "review": [
+    { "pattern": "\\bChad\\b", "why": "Mary calls ChatGPT 'Chat'. ASR often hears 'Chad'. Probably 'Chat' unless a real Chad is meant." },
+    { "pattern": "(?<!the\\s)(?<!versus\\s)\\bcloud\\b", "why": "Probably Claude. ('the cloud' and 'versus cloud' are skipped as cloud computing.)" },
+    { "pattern": "\\bWarren\\b", "why": "Possibly 'Wharton' or a misheard school name. Check the audio." },
+    { "pattern": "\\bAstra\\b", "why": "Project Astra is Google's, not OpenAI's. Check what was said." },
+    { "pattern": "\\bLuna\\b", "why": "Not a known model name. Check the audio." },
+    { "pattern": "\\bSAML\\b", "why": "Probably 'Sam' (Altman). Check the audio." },
+    { "pattern": "\\bOD\\b", "why": "Possibly 'OOOD'." },
+    { "pattern": "(?<!Times\\s)\\bNew Roman\\b", "why": "Probably 'Times New Roman'." },
+    { "pattern": "\\bllama\\b", "why": "Meta's model is 'Llama'. Leave lowercase if it's the animal." }
+  ]
+}
