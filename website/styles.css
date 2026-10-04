@@ -306,7 +306,9 @@ a { color: inherit; }
 @media (max-width: 640px) {
   .wordmark__kicker { font-size: 9px; }
   .wordmark__word { font-size: 26px; }
-  .hero__stage { width: 100%; aspect-ratio: 100 / 72; }
+  /* Clip at the stage itself: its bottom edge lands between device pixels, and the hosts run
+     ~90px past it, so a hairline of photo could show under the fade (Josh's phone, 2026-10-04) */
+  .hero__stage { width: 100%; aspect-ratio: 100 / 72; overflow: hidden; }
   /* Heads matched: each cutout is scaled so eyes-to-chin is the same 11cqw and the eyes share
      one line (Josh 2026-10-04). Mary's cutout is 305px wide, Josh's 441px. */
   .hero__host--mary { left: 1cqw; top: 5.4cqw; width: 52.5cqw; }
@@ -314,17 +316,18 @@ a { color: inherit; }
   /* Both chins end near 31cqw, so the title starts below them */
   .hero__kicker { top: 34.5cqw; font-size: 6.2cqw; }
   .hero__word { top: 41cqw; font-size: 29.3cqw; }
-  /* The photos fade into tan. Solid by 68cqw, above the diagonal slash in both cutouts
-     (Josh's starts near 70cqw, Mary's near 84cqw). Sits under the title, over the hosts. */
+  /* The photos fade into tan. Solid by 62cqw, well above the diagonal slash in both cutouts
+     (Josh's starts near 70cqw, Mary's near 84cqw), leaving 10cqw of plain tan as buffer.
+     Runs 2px past the bottom so no sliver of photo survives rounding. Under the title, over the hosts. */
   .hero__stage::after {
     content: "";
     position: absolute;
     left: 0;
     right: 0;
-    top: 50cqw;
-    bottom: 0;
+    top: 46cqw;
+    bottom: -2px;
     z-index: 1;
-    background: linear-gradient(to bottom, rgb(251 241 229 / 0), var(--cream) 18cqw);
+    background: linear-gradient(to bottom, rgb(251 241 229 / 0), var(--cream) 16cqw);
     pointer-events: none;
   }
   /* Two lines on phones: the phrases flow together and break before "Stanford GSB" */

@@ -43,7 +43,7 @@ The top bar shows Instagram, X, LinkedIn and email. Josh trimmed it to Instagram
 - **Episode 003** "What the Heck Is an AI Agent?" (`rxethT04zMY`, public 10/4 12:13 p.m. PT) is the new lead in `config.js` and the no-JS cards.
 - **All episodes show**, three per row, per Josh. Older ones wrap onto new rows. `main.js` sizes the laptop hero so everything through the *first* row fits on one screen, and later rows scroll. Tablets: newest full width, the rest three across. Phones: unchanged, newest with thumbnail and the rest as text rows.
 - **Mary's cutout is `images/mary-v2.webp`.** `mary.webp` had a notch keyed out of the left of her forehead, because her skin is nearly the tan. v2 restores it from `banner-youtube.png` (her cutout sits at 575,687 in the banner). `mary.webp` stays only as the original.
-- **Phone hero:** the hosts are scaled so their heads match (same eyes-to-chin, eyes on one line). The title sits below both chins, and the photos fade into tan, solid by 68cqw, above the diagonal slash in both cutouts.
+- **Phone hero:** the hosts are scaled so their heads match (same eyes-to-chin, eyes on one line). The title sits below both chins, and the photos fade into tan, solid by 62cqw, leaving plain tan below as buffer, and clipped at the stage so no hairline of photo shows under it.
 - **Share image v4** is v3 rebuilt with `mary-v2.webp`, the only change.
 
 ## Renumbering and the Episode 002 re-upload (2026-10-03)
