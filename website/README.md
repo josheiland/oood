@@ -34,7 +34,9 @@ The domain's DNS is on Cloudflare. Zoho mail runs through the same zone.
 
 ## Social icons (2026-10-03)
 
-The top bar shows only Instagram, X and email, per Josh. TikTok, LinkedIn and Facebook are live but commented out in `config.js`.
+The top bar shows Instagram, X, LinkedIn and email. Josh trimmed it to Instagram, X and email on 10/3 and added LinkedIn back on 10/4, with an outline icon to match Instagram. TikTok and Facebook are live but commented out in `config.js`.
+
+**Background (2026-10-04):** the page is tan (`--cream`) throughout, per Josh. The foam lower band under the hero is gone, and so is the cream/foam split in the share image (`images/og-v3.png`, built from `03_ASSETS/share-image/`).
 
 ## Renumbering and the Episode 002 re-upload (2026-10-03)
 

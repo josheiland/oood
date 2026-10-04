@@ -8,13 +8,13 @@ window.OOOD = {
 
   // Shown as icons in the top right, in this order, followed by the email icon.
   // icon: 'instagram' | 'x' | 'linkedin' | 'facebook' | 'tiktok' | 'youtube' | 'spotify'
-  // Josh trimmed these to Instagram, X and email on 2026-10-03. The other accounts are live; add them back here if wanted:
+  // Josh trimmed these to Instagram, X and email on 2026-10-03, then added LinkedIn back on 2026-10-04. The others are live; add them back here if wanted:
   // { label: 'TikTok', icon: 'tiktok', url: 'https://www.tiktok.com/@outofourdepthpod' },
-  // { label: 'LinkedIn', icon: 'linkedin', url: 'https://www.linkedin.com/company/outofourdepth' },
   // { label: 'Facebook', icon: 'facebook', url: 'https://www.facebook.com/outofourdepthpod' },
   socials: [
     { label: 'Instagram', icon: 'instagram', url: 'https://www.instagram.com/outofourdepthpod/' },
     { label: 'X', icon: 'x', url: 'https://x.com/OutOfOurDepthX' },
+    { label: 'LinkedIn', icon: 'linkedin', url: 'https://www.linkedin.com/company/outofourdepth' },
   ],
 
   // Verified public uploads, newest first. Numbering follows the public order (renumbered 2026-10-03:

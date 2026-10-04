@@ -26,7 +26,7 @@
   var ICONS = {
     instagram: '<rect x="3" y="3" width="18" height="18" rx="5.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.4" cy="6.6" r="1.3" fill="currentColor"/>',
     x: '<path d="M4 4h4.6l11.4 16h-4.6z" fill="currentColor"/><path d="M19.2 4 13.4 10.6M4.8 20l5.8-6.6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>',
-    linkedin: '<rect x="2.5" y="2.5" width="19" height="19" rx="4" fill="currentColor"/><path d="M7.4 10v7M7.4 7.1v.1M11 17v-4.2c0-1.7 1-2.8 2.5-2.8s2.3 1 2.3 2.8V17M11 10.2V17" fill="none" stroke="#FBF1E5" stroke-width="2" stroke-linecap="round"/>',
+    linkedin: '<rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 10.6V16.2M8 7.7v.1M11.6 16.2v-3.4c0-1.5.9-2.3 2.1-2.3s2 .8 2 2.3v3.4M11.6 10.6v5.6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>',
     facebook: '<circle cx="12" cy="12" r="10" fill="currentColor"/><path d="M13.3 21.9V14h2.4l.4-2.9h-2.8V9.4c0-.8.3-1.4 1.4-1.4h1.5V5.5c-.3 0-1.2-.1-2.2-.1-2.2 0-3.6 1.3-3.6 3.7v2H8v2.9h2.4v7.9" fill="#FBF1E5"/>',
     tiktok: '<path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M14 3c.4 2.8 2.3 4.6 5 4.8" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>',
     youtube: '<rect x="2" y="5" width="20" height="14" rx="4.5" fill="currentColor"/><path d="M10 9.2v5.6l4.8-2.8z" fill="#FBF1E5"/>',

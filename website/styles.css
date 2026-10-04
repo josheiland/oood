@@ -4,11 +4,10 @@
   --blue: #38B6FF;        /* Deep-End Blue: big type, tiles, one large field */
   --small-blue: #0E6FC0;  /* small type on cream */
   --cream: #FBF1E5;       /* Sand Cream: upper band, cards */
-  --foam: #FDF8F2;        /* Foam: lower band, page */
+  --foam: #FDF8F2;        /* Foam: no longer used on the page; tan runs throughout (Josh, 2026-10-04) */
   --navy: #0B2A45;        /* Night Swim Navy: body copy, dark panels */
   --tint: #A9DCFF;        /* Shallow: rules, waveforms, type on navy */
   --body-muted: #3C5A73;
-  --waterline: 56.5%;
   --display: 'Teachers', system-ui, sans-serif;
   --mono: 'JetBrains Mono', ui-monospace, monospace;
   /* One content column: the wordmark, tagline, buttons and episode grid all share these edges */
@@ -22,7 +21,7 @@ html { -webkit-text-size-adjust: 100%; }
 
 body {
   margin: 0;
-  background: var(--foam);
+  background: var(--cream);
   color: var(--navy);
   font-family: var(--display);
   font-weight: 400;
@@ -104,18 +103,12 @@ a { color: inherit; }
 .social:hover svg [fill="#FBF1E5"] { fill: var(--navy); }
 .social:hover svg [stroke="#FBF1E5"] { stroke: var(--navy); }
 
-/* Hero: the waterline composition from the kit banner.
-   Cream above, foam below, big DEPTH crossing the seam, one host per edge, bottom-cropped. */
+/* Hero: the kit banner composition on one tan field (no foam band, per Josh 2026-10-04).
+   Big DEPTH across the middle, one host per edge, bottom-cropped. */
 .hero {
   position: relative;
   background: var(--cream);
   overflow: hidden;
-}
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: var(--waterline) 0 0 0;
-  background: var(--foam);
 }
 .hero__stage {
   position: relative;
@@ -209,7 +202,7 @@ a { color: inherit; }
 .btn__icon { width: 22px; height: 22px; flex: none; }
 .btn--youtube { background: var(--blue); color: var(--navy); }
 .btn--youtube .btn__icon { color: var(--navy); }
-.btn--spotify { background: var(--foam); color: var(--navy); border-color: var(--navy); }
+.btn--spotify { background: transparent; color: var(--navy); border-color: var(--navy); }
 .btn--spotify .btn__icon { color: var(--navy); }
 .btn--soon { opacity: .55; border-style: dashed; cursor: default; }
 .btn--soon:hover { transform: none; }
@@ -308,9 +301,8 @@ a { color: inherit; }
   .ep--latest .ep__title { font-size: 22px; }
 }
 
-/* Phones: hosts rise into the cream band and DEPTH crosses their shoulders at the waterline */
+/* Phones: hosts rise and DEPTH crosses their shoulders */
 @media (max-width: 640px) {
-  :root { --waterline: 56%; }
   .wordmark__kicker { font-size: 9px; }
   .wordmark__word { font-size: 26px; }
   .hero__stage { width: 100%; aspect-ratio: 100 / 72.7; }
