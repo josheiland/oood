@@ -54,9 +54,8 @@
     });
   }
 
-  // Episodes: the newest three, newest first. The HTML ships the same cards as a no-JS fallback.
+  // Episodes: every public upload, newest first (Josh 2026-10-04). The HTML ships the same cards as a no-JS fallback.
   var grid = document.querySelector('[data-episodes]');
-  var MAX_EPISODES = 3;
   var WAVE = '<span class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>';
 
   function thumbFor(ep) {
@@ -67,7 +66,7 @@
   function renderEpisodes(list) {
     if (!grid || !list.length) return;
     grid.replaceChildren();
-    list.slice(0, MAX_EPISODES).forEach(function (ep, i) {
+    list.forEach(function (ep, i) {
       var card = document.createElement('a');
       card.className = 'ep' + (i === 0 ? ' ep--latest' : '');
       card.href = ep.url;
@@ -138,11 +137,12 @@
       .catch(function () {});
   }
 
-  // Size the hero so the whole homepage fits on one screen with no scrolling.
-  // Everything below the hero has a natural height; the hero gets what is left.
+  // Size the hero so everything through the first row of episodes fits on one screen.
+  // Older episodes wrap onto later rows and scroll; the hero gets what is left.
   var hero = document.querySelector('.hero');
   var root = document.documentElement;
   var MIN_HERO = 180;
+  var ROW_GAP = 44; // breathing room under the first row
 
   function fitHero() {
     if (window.innerWidth <= 640) {
@@ -150,8 +150,17 @@
       return;
     }
     var heroBottom = hero.offsetTop + hero.offsetHeight;
-    // Everything after the hero, to the very bottom of the page
+    // Everything after the hero, down to the bottom of the first row of episode cards
+    var cards = grid ? grid.children : [];
     var below = document.body.scrollHeight - heroBottom;
+    if (cards.length) {
+      var firstTop = cards[0].offsetTop, rowBottom = 0;
+      for (var i = 0; i < cards.length && cards[i].offsetTop === firstTop; i++) {
+        var r = cards[i].getBoundingClientRect();
+        rowBottom = Math.max(rowBottom, r.bottom + window.scrollY);
+      }
+      below = Math.min(below, rowBottom - heroBottom + ROW_GAP);
+    }
     var above = hero.offsetTop; // the logo bar, when it sits above the hero
     var available = window.innerHeight - below - above;
     root.style.setProperty('--hero-h', Math.max(MIN_HERO, Math.floor(available)) + 'px');

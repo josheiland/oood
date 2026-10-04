@@ -22,6 +22,12 @@ window.OOOD = {
   // Keep these as a fallback when YouTube is unavailable.
   episodes: [
     {
+      id: 'rxethT04zMY', number: '003', title: 'What the Heck Is an AI Agent?',
+      published: '2026-10-04T19:13:36+00:00',
+      url: 'https://www.youtube.com/watch?v=rxethT04zMY',
+      thumbnail: 'https://i.ytimg.com/vi/rxethT04zMY/maxresdefault.jpg'
+    },
+    {
       id: 'cp4P_2t5rRQ', number: '002', title: "Who's Who in AI (Explained With a Toyota Prius)",
       blurb: 'We untangle AI companies, models and apps, with a little help from a Toyota Prius.',
       published: '2026-10-03T19:37:28+00:00',

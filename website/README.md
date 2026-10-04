@@ -36,7 +36,15 @@ The domain's DNS is on Cloudflare. Zoho mail runs through the same zone.
 
 The top bar shows Instagram, X, LinkedIn and email. Josh trimmed it to Instagram, X and email on 10/3 and added LinkedIn back on 10/4, with an outline icon to match Instagram. TikTok and Facebook are live but commented out in `config.js`.
 
-**Background (2026-10-04):** the page is tan (`--cream`) throughout, per Josh. The foam lower band under the hero is gone, and so is the cream/foam split in the share image (`images/og-v3.png`, built from `03_ASSETS/share-image/`).
+**Background (2026-10-04):** the page is tan (`--cream`) throughout, per Josh. The foam lower band under the hero is gone, and so is the cream/foam split in the share image (`images/og-v4.png`, built from `03_ASSETS/share-image/`).
+
+## Episode 003, all episodes, phone hero (2026-10-04, later)
+
+- **Episode 003** "What the Heck Is an AI Agent?" (`rxethT04zMY`, public 10/4 12:13 p.m. PT) is the new lead in `config.js` and the no-JS cards.
+- **All episodes show**, three per row, per Josh. Older ones wrap onto new rows. `main.js` sizes the laptop hero so everything through the *first* row fits on one screen, and later rows scroll. Tablets: newest full width, the rest three across. Phones: unchanged, newest with thumbnail and the rest as text rows.
+- **Mary's cutout is `images/mary-v2.webp`.** `mary.webp` had a notch keyed out of the left of her forehead, because her skin is nearly the tan. v2 restores it from `banner-youtube.png` (her cutout sits at 575,687 in the banner). `mary.webp` stays only as the original.
+- **Phone hero:** the hosts are scaled so their heads match (same eyes-to-chin, eyes on one line). The title sits below both chins, and the photos fade into tan, solid by 68cqw, above the diagonal slash in both cutouts.
+- **Share image v4** is v3 rebuilt with `mary-v2.webp`, the only change.
 
 ## Renumbering and the Episode 002 re-upload (2026-10-03)
 

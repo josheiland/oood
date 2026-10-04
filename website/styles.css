@@ -220,8 +220,9 @@ a { color: inherit; }
 .episodes__all:hover { color: var(--navy); }
 .episode-grid {
   display: grid;
+  /* Three per row; older episodes wrap onto more rows (Josh 2026-10-04) */
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 28px clamp(20px, 2.6vw, 32px);
+  gap: 36px clamp(20px, 2.6vw, 32px);
   margin-top: 18px;
 }
 .ep {
@@ -295,23 +296,37 @@ a { color: inherit; }
   /* Below laptop width the wordmark would sit on Mary, so the bar moves above the hero */
   .topbar { position: static; background: var(--cream); }
   .topbar__inner { padding-top: 14px; padding-bottom: 6px; }
-  /* Newest episode leads full width; the other two sit side by side under it */
-  .episode-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  /* Newest episode leads full width; the rest sit three across under it */
+  .episode-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .ep--latest { grid-column: 1 / -1; }
   .ep--latest .ep__title { font-size: 22px; }
 }
 
-/* Phones: hosts rise and DEPTH crosses their shoulders */
+/* Phones: heads matched, DEPTH across their chests, photos fade into tan */
 @media (max-width: 640px) {
   .wordmark__kicker { font-size: 9px; }
   .wordmark__word { font-size: 26px; }
-  .hero__stage { width: 100%; aspect-ratio: 100 / 72.7; }
-  .hero__host--mary { left: -2cqw; top: 5cqw; width: 46cqw; }
-  /* Josh is scaled up and raised so the stage's bottom edge cuts above the diagonal slash in his
-     cutout (it starts about 470px down the 653px image). His chin stays above DEPTH. */
-  .hero__host--josh { left: 45.5cqw; top: .5cqw; width: 70cqw; }
-  .hero__kicker { top: 22.8cqw; font-size: 6.2cqw; }
-  .hero__word { top: 28.5cqw; font-size: 29.3cqw; }
+  .hero__stage { width: 100%; aspect-ratio: 100 / 72; }
+  /* Heads matched: each cutout is scaled so eyes-to-chin is the same 11cqw and the eyes share
+     one line (Josh 2026-10-04). Mary's cutout is 305px wide, Josh's 441px. */
+  .hero__host--mary { left: 1cqw; top: 5.4cqw; width: 52.5cqw; }
+  .hero__host--josh { left: 44cqw; top: 5.7cqw; width: 60cqw; }
+  /* Both chins end near 31cqw, so the title starts below them */
+  .hero__kicker { top: 34.5cqw; font-size: 6.2cqw; }
+  .hero__word { top: 41cqw; font-size: 29.3cqw; }
+  /* The photos fade into tan. Solid by 68cqw, above the diagonal slash in both cutouts
+     (Josh's starts near 70cqw, Mary's near 84cqw). Sits under the title, over the hosts. */
+  .hero__stage::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50cqw;
+    bottom: 0;
+    z-index: 1;
+    background: linear-gradient(to bottom, rgb(251 241 229 / 0), var(--cream) 18cqw);
+    pointer-events: none;
+  }
   /* Two lines on phones: the phrases flow together and break before "Stanford GSB" */
   .intro__tagline { font-size: clamp(13px, 3.7vw, 15px); letter-spacing: .06em; }
   .intro__tagline span { display: inline; white-space: normal; }
