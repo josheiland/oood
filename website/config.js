@@ -26,21 +26,21 @@ window.OOOD = {
       blurb: 'We untangle AI companies, models and apps, with a little help from a Toyota Prius.',
       published: '2026-10-03T19:37:28+00:00',
       url: 'https://www.youtube.com/watch?v=cp4P_2t5rRQ',
-      thumbnail: 'https://i.ytimg.com/vi/cp4P_2t5rRQ/hqdefault.jpg'
+      thumbnail: 'https://i.ytimg.com/vi/cp4P_2t5rRQ/maxresdefault.jpg'
     },
     {
       id: 'd-ykZl4WHjo', number: '001', title: "Projects, Connectors & Skills… Take Your AI From Fresh Intern to Full-Time Hire",
       blurb: 'We try projects, connectors and skills to give AI context and put it to work.',
       published: '2026-09-30T23:00:52+00:00',
       url: 'https://www.youtube.com/watch?v=d-ykZl4WHjo',
-      thumbnail: 'https://i.ytimg.com/vi/d-ykZl4WHjo/hqdefault.jpg'
+      thumbnail: 'https://i.ytimg.com/vi/d-ykZl4WHjo/maxresdefault.jpg'
     },
     {
       id: 'y0NH_zvAdEo', number: '000', title: "We Can’t Keep Up With AI Either (So We Started a Podcast!)",
       blurb: 'Meet Josh and Mary, and why we decided to learn AI out loud together.',
       published: '2026-09-30T21:31:01+00:00',
       url: 'https://www.youtube.com/watch?v=y0NH_zvAdEo',
-      thumbnail: 'https://i.ytimg.com/vi/y0NH_zvAdEo/hqdefault.jpg'
+      thumbnail: 'https://i.ytimg.com/vi/y0NH_zvAdEo/maxresdefault.jpg'
     }
   ],
 

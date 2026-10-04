@@ -5,6 +5,9 @@
   document.querySelectorAll('[data-link="youtube"]').forEach(function (a) {
     if (cfg.youtube) a.href = cfg.youtube;
   });
+  document.querySelectorAll('[data-link="youtube-videos"]').forEach(function (a) {
+    if (cfg.youtube) a.href = cfg.youtube.replace(/\/$/, '') + '/videos';
+  });
 
   var spotify = document.querySelector('[data-link="spotify"]');
   if (spotify) {
@@ -15,7 +18,7 @@
       spotify.removeAttribute('target');
       spotify.setAttribute('aria-disabled', 'true');
       spotify.classList.add('btn--soon');
-      spotify.querySelector('[data-spotify-label]').textContent = 'Spotify coming soon';
+      spotify.querySelector('[data-spotify-label]').textContent = 'Spotify soon';
     }
   }
 
@@ -51,84 +54,86 @@
     });
   }
 
-  // Latest-episode popup
-  var popup = document.querySelector('[data-popup]');
+  // Episodes: the newest three, newest first. The HTML ships the same cards as a no-JS fallback.
+  var grid = document.querySelector('[data-episodes]');
+  var MAX_EPISODES = 3;
+  var WAVE = '<span class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>';
 
-  function showEpisode(ep) {
-    if (!ep || !ep.url || !ep.title) return;
-    var known = (cfg.episodes || []).find(function (item) { return item.url === ep.url; });
-    if (known) ep = Object.assign({}, known, ep);
-    popup.querySelector('[data-episode-kicker]').textContent =
-      'Latest episode' + (ep.number ? ' / ' + ep.number : '');
-    popup.querySelector('[data-episode-title]').textContent = ep.title;
-    popup.querySelector('[data-episode-blurb]').textContent =
-      ep.blurb || 'Our newest episode is up. Grab a coffee and come learn with us.';
-    var cta = popup.querySelector('[data-episode-cta]');
-    cta.href = ep.url;
-    cta.textContent = 'Watch the episode';
-    popup.querySelector('[data-episode-link]').href = ep.url;
-    if (ep.thumbnail) {
-      var img = popup.querySelector('[data-episode-thumb]');
-      img.onload = function () {
-        img.hidden = false;
-        popup.querySelector('[data-episode-tile]').hidden = true;
-      };
-      img.src = ep.thumbnail;
-    }
-    showEarlierEpisodes(ep.url);
-    popup.classList.add('popup--live');
-    if (window.fitHero) window.fitHero();
+  function thumbFor(ep) {
+    if (ep.thumbnail) return ep.thumbnail.replace('/hqdefault.jpg', '/maxresdefault.jpg');
+    return ep.id ? 'https://i.ytimg.com/vi/' + ep.id + '/maxresdefault.jpg' : '';
   }
 
-  function showEarlierEpisodes(latestUrl) {
-    var grid = document.querySelector('[data-episodes]');
-    if (!grid) return;
+  function renderEpisodes(list) {
+    if (!grid || !list.length) return;
     grid.replaceChildren();
-    (cfg.episodes || []).filter(function (ep) { return ep.url !== latestUrl; }).forEach(function (ep) {
+    list.slice(0, MAX_EPISODES).forEach(function (ep, i) {
       var card = document.createElement('a');
-      card.className = 'episode-card';
+      card.className = 'ep' + (i === 0 ? ' ep--latest' : '');
       card.href = ep.url;
       card.target = '_blank';
       card.rel = 'noopener';
-      var image = document.createElement('img');
-      image.src = ep.thumbnail;
-      image.alt = '';
-      image.loading = 'lazy';
-      image.width = 480;
-      image.height = 360;
-      var body = document.createElement('div');
-      body.className = 'episode-card__body';
-      var label = document.createElement('span');
-      label.className = 'label';
-      label.textContent = 'Episode ' + ep.number;
+
+      var thumb = document.createElement('span');
+      thumb.className = 'ep__thumb';
+      var img = document.createElement('img');
+      img.alt = '';
+      img.width = 1280;
+      img.height = 720;
+      if (i > 0) img.loading = 'lazy';
+      // A fresh upload may not have a maxres image yet; YouTube serves a 120px placeholder instead.
+      img.onload = function () {
+        if (img.naturalWidth <= 120 && img.src.indexOf('maxresdefault') > -1) {
+          img.src = img.src.replace('maxresdefault', 'hqdefault');
+        }
+      };
+      img.onerror = function () {
+        if (img.src.indexOf('maxresdefault') > -1) img.src = img.src.replace('maxresdefault', 'hqdefault');
+      };
+      img.src = thumbFor(ep);
+      thumb.appendChild(img);
+
+      var meta = document.createElement('span');
+      meta.className = 'ep__meta label';
+      if (i === 0) {
+        meta.innerHTML = WAVE;
+        meta.appendChild(document.createTextNode('New' + (ep.number ? ' \u00b7 ' + ep.number : '')));
+      } else {
+        meta.textContent = ep.number ? 'Episode ' + ep.number : 'Episode';
+      }
+
       var title = document.createElement('h3');
+      title.className = 'ep__title';
       title.textContent = ep.title;
-      var blurb = document.createElement('p');
-      blurb.textContent = ep.blurb;
-      var cta = document.createElement('span');
-      cta.className = 'episode-card__cta';
-      cta.textContent = 'Watch on YouTube →';
-      body.append(label, title, blurb, cta);
-      card.append(image, body);
+
+      card.append(thumb, meta, title);
       grid.appendChild(card);
     });
+    if (window.fitHero) window.fitHero();
   }
 
-  // Render the verified latest upload immediately, then refresh automatically.
-  if (cfg.episodes && cfg.episodes.length) showEpisode(cfg.episodes[0]);
+  function withLatest(ep) {
+    var list = (cfg.episodes || []).slice();
+    if (!ep || !ep.url || !ep.title) return list;
+    var known = list.find(function (item) { return item.url === ep.url; });
+    var merged = known ? Object.assign({}, ep, known) : ep;
+    return [merged].concat(list.filter(function (item) { return item.url !== ep.url; }));
+  }
 
-  if (cfg.pinnedEpisode) {
-    showEpisode(cfg.pinnedEpisode);
-  } else if (window.fetch) {
+  // Render the verified uploads immediately, then pick up anything newer from YouTube.
+  renderEpisodes(withLatest(cfg.pinnedEpisode));
+
+  if (!cfg.pinnedEpisode && window.fetch) {
     fetch('/api/latest')
       .then(function (r) { return r.ok ? r.json() : null; })
       .then(function (data) {
         if (!data || !data.video) return;
-        var fallback = (cfg.episodes || [])[0];
+        var newest = (cfg.episodes || [])[0];
+        if (newest && data.video.url === newest.url) return;
         // An older cached response must not replace the verified latest upload.
-        if (fallback && data.video.published &&
-            Date.parse(data.video.published) < Date.parse(fallback.published)) return;
-        showEpisode(data.video);
+        if (newest && data.video.published &&
+            Date.parse(data.video.published) < Date.parse(newest.published)) return;
+        renderEpisodes(withLatest(data.video));
       })
       .catch(function () {});
   }
@@ -137,7 +142,7 @@
   // Everything below the hero has a natural height; the hero gets what is left.
   var hero = document.querySelector('.hero');
   var root = document.documentElement;
-  var MIN_HERO = 140;
+  var MIN_HERO = 180;
 
   function fitHero() {
     if (window.innerWidth <= 640) {
@@ -156,20 +161,4 @@
   window.addEventListener('resize', fitHero);
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitHero);
   window.fitHero = fitHero;
-
-  // Pop the card in when it scrolls into view
-  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (reduce || !('IntersectionObserver' in window)) {
-    popup.classList.add('popup--in');
-  } else {
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (e.isIntersecting) {
-          popup.classList.add('popup--in');
-          io.disconnect();
-        }
-      });
-    }, { threshold: 0.35 });
-    io.observe(popup);
-  }
 })();

@@ -11,6 +11,9 @@
   --waterline: 56.5%;
   --display: 'Teachers', system-ui, sans-serif;
   --mono: 'JetBrains Mono', ui-monospace, monospace;
+  /* One content column: the wordmark, tagline, buttons and episode grid all share these edges */
+  --container: 1120px;
+  --gutter: clamp(20px, 5vw, 48px);
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -34,44 +37,59 @@ a { color: inherit; }
 
 :focus-visible { outline: 3px solid var(--small-blue); outline-offset: 3px; }
 
+.container {
+  width: 100%;
+  max-width: calc(var(--container) + 2 * var(--gutter));
+  margin: 0 auto;
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+}
+
 .label {
+  margin: 0;
   font-family: var(--mono);
   font-size: 12px;
+  font-weight: 400;
   letter-spacing: .18em;
+  line-height: 1;
   text-transform: uppercase;
   color: var(--small-blue);
   text-decoration: none;
 }
-.label--light { color: var(--tint); }
 
-/* Icon tile: square blue, two-line cream lockup (kit logo system) */
-.tile {
-  display: grid;
-  place-content: center;
-  text-align: center;
-  background: var(--blue);
-  color: var(--cream);
-  font-family: var(--display);
-  font-weight: 800;
-  text-transform: uppercase;
-  text-decoration: none;
-  line-height: .96;
-}
-.tile__kicker { display: block; font-size: .46em; letter-spacing: .02em; line-height: 1; }
-.tile__word { display: block; font-size: 1.32em; letter-spacing: -.02em; line-height: .88; }
-.tile--small { width: 64px; height: 64px; font-size: 10.8px; }
-
-/* Top bar sits on the cream band */
+/* Top bar sits on the cream band, on the same edges as the content below */
 .topbar {
   position: absolute;
   inset: 0 0 auto 0;
   z-index: 5;
+}
+.topbar__inner {
+  max-width: calc(var(--container) + 2 * var(--gutter));
+  margin: 0 auto;
+  padding: 22px var(--gutter);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px clamp(16px, 4vw, 40px);
 }
-.topbar__social { display: flex; align-items: center; gap: 6px; }
+
+/* Stacked text wordmark (kit: kicker about a third of DEPTH's cap height, aligned to the D), in navy to match the icons */
+.wordmark {
+  display: inline-grid;
+  justify-items: start;
+  color: var(--navy);
+  font-family: var(--display);
+  font-weight: 800;
+  text-transform: uppercase;
+  text-decoration: none;
+  line-height: 1;
+  transition: color .15s ease;
+}
+.wordmark:hover { color: var(--blue); }
+.wordmark__kicker { font-size: 10.5px; font-weight: 700; letter-spacing: .07em; }
+.wordmark__word { font-size: 31px; letter-spacing: -.02em; line-height: .78; margin: 3px 0 0 -1px; }
+
+/* Icons keep a 40px tap target; the negative margin puts the last glyph on the content edge */
+.topbar__social { display: flex; align-items: center; gap: 4px; margin-right: -9px; }
 .social {
   display: grid;
   place-items: center;
@@ -150,12 +168,13 @@ a { color: inherit; }
   line-height: .85;
 }
 
-/* Below the hero */
+/* Intro: tagline and one line of promise, buttons beside them */
 .intro {
   display: grid;
   justify-items: center;
-  gap: 16px;
-  padding: 20px 20px 28px;
+  gap: 20px;
+  padding-top: 24px;
+  padding-bottom: 32px;
   text-align: center;
 }
 .intro__tagline {
@@ -169,13 +188,14 @@ a { color: inherit; }
 }
 /* Always exactly two lines: one per phrase */
 .intro__tagline span { display: block; white-space: nowrap; }
+.intro__sub { margin: 8px 0 0; color: var(--body-muted); font-size: 17px; line-height: 1.4; }
 .listen { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
 
 .btn {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  padding: 14px 24px;
+  padding: 14px 26px;
   border: 2px solid transparent;
   border-radius: 999px;
   font-family: var(--display);
@@ -191,164 +211,108 @@ a { color: inherit; }
 .btn--youtube .btn__icon { color: var(--navy); }
 .btn--spotify { background: var(--foam); color: var(--navy); border-color: var(--navy); }
 .btn--spotify .btn__icon { color: var(--navy); }
-.btn--navy { background: var(--navy); color: var(--cream); }
 .btn--soon { opacity: .55; border-style: dashed; cursor: default; }
 .btn--soon:hover { transform: none; }
 
-/* About */
-.about {
-  max-width: 1180px;
-  margin: 0 auto;
-  padding: 0 clamp(20px, 5vw, 40px);
+/* Episodes: no boxes. Big rounded thumbnails, a mono label, the title. */
+.episodes { padding-bottom: 44px; }
+.episodes__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding-top: 22px;
+  border-top: 1px solid var(--tint);
+}
+.episodes__all { transition: color .15s ease; }
+.episodes__all:hover { color: var(--navy); }
+.episode-grid {
   display: grid;
-  gap: 16px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px clamp(20px, 2.6vw, 32px);
+  margin-top: 18px;
 }
-.section-head { display: flex; align-items: baseline; gap: 16px; }
-.label--num { font-size: 12px; letter-spacing: .2em; }
-.section-head h2 {
-  margin: 0;
-  font-weight: 800;
-  font-size: clamp(28px, 3.2vw, 40px);
-  letter-spacing: -.02em;
-  line-height: .95;
-  text-transform: uppercase;
-}
-.about__grid {
+.ep {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: clamp(20px, 4vw, 56px);
-  align-items: start;
+  align-content: start;
+  gap: 12px;
+  color: var(--navy);
+  text-decoration: none;
 }
-.about__grid p { margin: 0; font-size: 18px; line-height: 1.55; }
-.about__grid strong { font-weight: 600; }
-
-/* Latest-episode popup: cream card, waterline inside, navy body, one blue heading */
-.latest { padding: 28px clamp(20px, 5vw, 40px) 48px; }
-.popup {
-  position: relative;
-  overflow: hidden;
-  max-width: 1100px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 256px minmax(0, 1fr);
-  gap: clamp(20px, 3vw, 32px);
-  align-items: center;
-  padding: 18px;
-  border: 2px solid var(--blue);
-  border-radius: 24px;
-  background: var(--cream);
-  opacity: 0;
-  transform: translateY(24px) scale(.97);
-  transition: opacity .45s ease, transform .55s cubic-bezier(.2, .9, .3, 1.25);
-}
-.popup--in { opacity: 1; transform: none; }
-.popup__waterline {
-  position: absolute;
-  inset: 58% 0 0 0;
-  background: var(--foam);
-}
-.popup__thumb,
-.popup__body { position: relative; }
-.popup__thumb {
+.ep__thumb {
   display: block;
   aspect-ratio: 16 / 9;
   border-radius: 14px;
   overflow: hidden;
-  background: var(--blue);
+  background: var(--cream);
 }
-.popup__thumb img { width: 100%; height: 100%; object-fit: cover; }
-.popup__tile {
-  position: absolute;
-  inset: 0;
-  display: grid;
-  place-content: center;
-  text-align: center;
-  color: var(--cream);
-  font-weight: 800;
-  text-transform: uppercase;
-  line-height: .96;
-  font-size: 26px;
+.ep__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .45s cubic-bezier(.2, .8, .2, 1);
 }
-.popup__tile[hidden] { display: none; }
-.popup__body { display: grid; gap: 8px; justify-items: start; }
-.popup__label { display: flex; align-items: center; gap: 10px; }
-.popup__title {
+.ep:hover .ep__thumb img { transform: scale(1.035); }
+.ep__meta { display: flex; align-items: center; gap: 8px; margin-top: 4px; }
+.ep__title {
   margin: 0;
-  color: var(--blue);
-  font-weight: 800;
-  font-size: 40px;
-  letter-spacing: -.02em;
-  line-height: .95;
-  text-transform: uppercase;
-  text-wrap: balance;
+  font-weight: 700;
+  font-size: clamp(17px, 1.4vw, 19px);
+  line-height: 1.25;
+  letter-spacing: -.005em;
+  text-wrap: pretty;
+  transition: color .15s ease;
 }
-/* Real episode titles run long, so they drop to navy sentence case, per the episode-index rule */
-.popup--live .popup__title {
-  color: var(--navy);
-  font-size: clamp(22px, 2.2vw, 28px);
-  line-height: 1.15;
-  letter-spacing: -.01em;
-  text-transform: none;
-}
-.popup__blurb { margin: 0 0 4px; color: var(--body-muted); font-size: 17px; line-height: 1.5; }
+.ep:hover .ep__title { color: var(--small-blue); }
 
-/* Waveform bars: 8, rounded caps, even gaps */
-.wave { display: inline-flex; align-items: center; gap: 3px; height: 16px; }
-.wave i { display: block; width: 3px; border-radius: 99px; background: var(--blue); animation: wave 1.2s ease-in-out infinite; }
-.wave i:nth-child(1) { height: 30%; }
-.wave i:nth-child(2) { height: 70%; animation-delay: -.2s; }
-.wave i:nth-child(3) { height: 100%; animation-delay: -.4s; }
-.wave i:nth-child(4) { height: 55%; background: var(--tint); animation-delay: -.6s; }
-.wave i:nth-child(5) { height: 85%; animation-delay: -.8s; }
-.wave i:nth-child(6) { height: 40%; background: var(--tint); animation-delay: -1s; }
-.wave i:nth-child(7) { height: 65%; animation-delay: -.3s; }
-.wave i:nth-child(8) { height: 25%; background: var(--tint); animation-delay: -.7s; }
+/* Waveform bars mark the newest episode */
+.wave { display: inline-flex; align-items: center; gap: 2px; height: 12px; }
+.wave i { display: block; width: 2.5px; height: 100%; border-radius: 99px; background: var(--blue); animation: wave 1.2s ease-in-out infinite; }
+.wave i:nth-child(1) { height: 40%; }
+.wave i:nth-child(2) { height: 80%; animation-delay: -.2s; }
+.wave i:nth-child(3) { height: 100%; background: var(--tint); animation-delay: -.4s; }
+.wave i:nth-child(4) { height: 65%; animation-delay: -.6s; }
+.wave i:nth-child(5) { height: 35%; background: var(--tint); animation-delay: -.8s; }
 @keyframes wave { 50% { transform: scaleY(.45); } }
 
 /* Laptop and up: tagline and buttons share one row so the page fits on one screen */
 @media (min-width: 901px) {
   .intro {
-    max-width: 1180px;
-    margin: 0 auto;
-    padding: 20px clamp(20px, 5vw, 40px) 24px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 24px;
+    gap: 32px;
     text-align: left;
   }
   .intro__tagline { font-size: 17px; }
-  .about__grid p { font-size: 17px; }
-  .latest { padding: 24px clamp(20px, 5vw, 40px) 28px; }
-  /* Thumbnail fills the card's full inner height; text spreads to match its top and bottom */
-  .popup { grid-template-columns: 300px minmax(0, 1fr); align-items: stretch; padding: 16px; }
-  .popup__thumb { aspect-ratio: auto; min-height: 169px; }
-  .popup__thumb img { position: absolute; inset: 0; }
-  .popup__body { align-content: space-between; }
-  .popup__blurb { font-size: 16px; }
+  .intro__sub { font-size: 16px; }
 }
 
-@media (min-width: 901px) and (max-width: 1150px) {
-  .popup { grid-template-columns: 256px minmax(0, 1fr); }
-  .popup__thumb { min-height: 144px; }
+/* Short laptop screens: tighten the spacing so the page still fits without scrolling */
+@media (min-width: 901px) and (max-height: 720px) {
+  .topbar__inner { padding-top: 16px; padding-bottom: 16px; }
+  .intro { padding-top: 16px; padding-bottom: 20px; }
+  .episodes { padding-bottom: 24px; }
+  .episodes__head { padding-top: 16px; }
+  .episode-grid { margin-top: 14px; }
+  .ep { gap: 10px; }
 }
 
 /* Tablet and down */
 @media (max-width: 900px) {
-  /* Below laptop width the logo would sit on Mary, so the bar moves above the hero */
-  .topbar { position: static; background: var(--cream); padding: 12px 16px 4px; }
-}
-
-@media (max-width: 860px) {
-  .about__grid { grid-template-columns: 1fr; gap: 12px; }
-  .popup { grid-template-columns: 1fr; }
-  .popup__waterline { inset: 44% 0 0 0; }
+  /* Below laptop width the wordmark would sit on Mary, so the bar moves above the hero */
+  .topbar { position: static; background: var(--cream); }
+  .topbar__inner { padding-top: 14px; padding-bottom: 6px; }
+  /* Newest episode leads full width; the other two sit side by side under it */
+  .episode-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .ep--latest { grid-column: 1 / -1; }
+  .ep--latest .ep__title { font-size: 22px; }
 }
 
 /* Phones: hosts rise into the cream band and DEPTH crosses their shoulders at the waterline */
 @media (max-width: 640px) {
   :root { --waterline: 56%; }
-  .tile--small { width: 48px; height: 48px; font-size: 8.1px; }
+  .wordmark__kicker { font-size: 9px; }
+  .wordmark__word { font-size: 26px; }
   .hero__stage { width: 100%; aspect-ratio: 100 / 72.7; }
   .hero__host--mary { left: -2cqw; top: 5cqw; width: 46cqw; }
   /* Josh is scaled up and raised so the stage's bottom edge cuts above the diagonal slash in his
@@ -359,49 +323,21 @@ a { color: inherit; }
   /* Two lines on phones: the phrases flow together and break before "Stanford GSB" */
   .intro__tagline { font-size: clamp(13px, 3.7vw, 15px); letter-spacing: .06em; }
   .intro__tagline span { display: inline; white-space: normal; }
+  .intro__sub { font-size: 15px; }
   .btn { width: 100%; justify-content: center; }
-  .listen { width: 100%; max-width: 360px; }
+  .listen { width: 100%; max-width: 360px; flex-wrap: nowrap; }
+  .listen .btn { padding-left: 16px; padding-right: 16px; }
+  /* Only the newest episode keeps its thumbnail; the rest are clean text rows */
+  .episode-grid { grid-template-columns: 1fr; gap: 0; }
+  .ep--latest { padding-bottom: 20px; }
+  .ep--latest .ep__title { font-size: 20px; }
+  .ep:not(.ep--latest) { gap: 8px; padding: 16px 0; border-top: 1px solid var(--tint); }
+  .ep:not(.ep--latest) .ep__thumb { display: none; }
+  .ep:not(.ep--latest) .ep__meta { margin-top: 0; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .popup { transition: none; }
   .wave i { animation: none; }
-  .btn { transition: none; }
-}
-
-/* Launch episodes: compact cards beneath the featured upload. */
-.episode-archive { max-width: 1100px; margin: 24px auto 0; }
-.episode-archive > h2 { margin: 0 0 12px; font-weight: 400; }
-.episode-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
-.episode-card {
-  display: grid;
-  grid-template-columns: 144px minmax(0, 1fr);
-  overflow: hidden;
-  border: 1px solid var(--tint);
-  border-radius: 16px;
-  background: var(--cream);
-  text-decoration: none;
-}
-.episode-card:hover { border-color: var(--small-blue); }
-.episode-card > img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; align-self: center; }
-.episode-card__body { padding: 16px; }
-.episode-card h3 { margin: 6px 0; font-size: 22px; line-height: 1.15; font-weight: 800; }
-.episode-card p { margin: 0 0 10px; color: var(--body-muted); font-size: 15px; line-height: 1.4; }
-.episode-card__cta { font-size: 15px; font-weight: 700; }
-@media (max-width: 1000px) {
-  .episode-card { grid-template-columns: 112px minmax(0, 1fr); }
-}
-@media (max-width: 860px) {
-  .episode-grid { grid-template-columns: 1fr; }
-  .episode-card { grid-template-columns: 144px minmax(0, 1fr); }
-}
-@media (max-width: 420px) {
-  .episode-card { grid-template-columns: 104px minmax(0, 1fr); }
-  .episode-card__body { padding: 12px; }
-  .episode-card h3 { font-size: 20px; }
-}
-/* Phones: no thumbnails in More episodes, it's too cramped */
-@media (max-width: 640px) {
-  .episode-card { grid-template-columns: 1fr; }
-  .episode-card > img { display: none; }
+  .btn, .ep__thumb img { transition: none; }
+  .ep:hover .ep__thumb img { transform: none; }
 }

@@ -40,22 +40,33 @@ The top bar shows only Instagram, X and email, per Josh. TikTok, LinkedIn and Fa
 
 Episodes are numbered in public order. Josh re-uploaded the AI-basics episode without pop-ups on October 3 (12:37 p.m. PT, new ID `cp4P_2t5rRQ`), so it is now **002** and the featured latest episode. Projects/connectors/skills is **001**. The old ID `-YWPmoWKbrM` returns 404. The section below is the 9/30 record under the old numbering.
 
-On phones, More episodes shows no thumbnails, the tagline runs two lines, and Josh's cutout is scaled so the hero's bottom edge cuts above the diagonal edge in `josh.webp`.
+On phones the tagline runs two lines, and Josh's cutout is scaled so the hero's bottom edge cuts above the diagonal edge in `josh.webp`.
+
+## Redesign (2026-10-04)
+
+Josh asked for a cleaner, less boxy page with fewer words.
+
+- **Top left** is now a navy stacked text wordmark ("OUT OF OUR" over "DEPTH", left-aligned to the D), matching the navy social icons. The blue tile is gone from the header but stays as the favicon.
+- **Copy:** the "Hi, we're Josh and Mary" section is cut. The tagline gets one line under it ("AI in plain English. No tech background needed."), and the buttons read just "YouTube" and "Spotify".
+- **Episodes:** the latest-episode popup and the boxed "More episodes" cards are replaced by one borderless grid of the newest three episodes (HD `maxresdefault` thumbnails, mono label, verbatim title). The newest gets a waveform and "New". `/api/latest` still slots a newer upload in first. On tablets the newest leads full width; on phones only the newest keeps its thumbnail and the rest are text rows.
+- **Alignment:** everything, including the top bar, sits on one content column (`--container` 1120px plus `--gutter`), so the wordmark, tagline and grid share a left edge, and the last social glyph, buttons and grid share a right edge.
+- **Wordmark hover** is Deep-End Blue `#38B6FF`, at Josh's request. The kit limits that blue to type 40px and up, and the wordmark is about 31px. Mary approved this exception on 2026-10-04.
+- Laptops 1024×640 and up fit on one screen with no scrolling. A short-screen rule tightens spacing below 720px tall.
 
 ## Current episodes (verified 2026-09-30, old numbering)
 
-All three launch episodes are public on the official channel. The homepage features Episode 002 and shows Episodes 001 and 000 beneath it, with exact YouTube titles, summaries, thumbnails and direct YouTube links. Episode 000 now points to its September 30 upload, not the September 29 URL.
+All three launch episodes are public on the official channel. The homepage shows the newest three, with exact YouTube titles, thumbnails and direct YouTube links. The `blurb` fields in `config.js` are kept but no longer displayed. Episode 000 now points to its September 30 upload, not the September 29 URL.
 
 - 002: https://www.youtube.com/watch?v=d-ykZl4WHjo
 - 001: https://www.youtube.com/watch?v=-YWPmoWKbrM
 - 000: https://www.youtube.com/watch?v=y0NH_zvAdEo
 
-`config.js` stores the verified launch metadata. The HTML also contains these links, so the episodes remain accessible before scripts load or when the feed is unavailable. The automatic latest-upload lookup stays enabled; a response with an older publication date cannot replace the verified latest upload. Future featured uploads leave the launch episodes in More episodes. Website titles match YouTube verbatim, including capitalization and punctuation, per Josh's September 30 instruction; this supersedes the shorter episode-index title guideline on this surface. When adding future episode summaries, update `episodes` in `config.js` and the matching HTML fallback.
+`config.js` stores the verified launch metadata. The HTML also contains these links, so the episodes remain accessible before scripts load or when the feed is unavailable. The automatic latest-upload lookup stays enabled; a response with an older publication date cannot replace the verified latest upload. The grid shows the newest three; older episodes are one click away through "See all". Website titles match YouTube verbatim, including capitalization and punctuation, per Josh's September 30 instruction; this supersedes the shorter episode-index title guideline on this surface. When adding future episode summaries, update `episodes` in `config.js` and the matching HTML fallback.
 
 Publication evidence: the official channel Atom feed (`https://www.youtube.com/feeds/videos.xml?channel_id=UCr2sdn2AwHyhjm5SUtWUNGQ`), publisher YouTube / Out of Our Depth, accessed September 30, 2026. Public timestamps: 000 at 21:31:01 UTC, 001 at 22:38:35 UTC, 002 at 23:00:52 UTC, all September 30. These correspond to 2:31, 3:38 and 4:00 p.m. Pacific. This confirms public URLs/titles, not byte identity with local exports or Spotify publication.
 
 ## Common edits
 
-- **Spotify is live:** paste the show URL into `spotify` in `config.js`. The button switches from "coming soon" to a real link.
+- **Spotify is live:** paste the show URL into `spotify` in `config.js`. The button switches from "Spotify soon" to a real link.
 - **Feature a specific episode:** fill in `pinnedEpisode` in `config.js`. It overrides the automatic YouTube lookup.
-- **Preview locally:** `npx vercel dev` from this folder runs the page and the function together. Opening `index.html` directly works too, but the episode card stays on "coming soon" without the function.
+- **Preview locally:** `npx vercel dev` from this folder runs the page and the function together. Opening `index.html` directly works too; the grid shows the episodes in `config.js` without the function.
