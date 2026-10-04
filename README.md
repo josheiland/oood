@@ -40,15 +40,18 @@ Numbering follows public order. Before 2026-10-03, 001 and 002 were swapped, and
 | `website/` | outofourdepth.com source (Vercel project `oood-website`) |
 | `99_ARCHIVE/` | Notes on how the repo got here, plus pointers to the full Drive backup |
 
-## Not in Git
+## Setting up a new machine
 
-These are gitignored and kept in Drive:
+Everything except episode video lives in this repo: brand kit, fonts, music, card and thumbnail templates, skills, and the scripts behind every cut. Final videos and raw recordings are in Drive at `Out of Our Depth (OOOD)/Video Files/`; see [ASSET_MANIFEST.md](03_ASSETS/ASSET_MANIFEST.md).
 
-- video and audio
-- the brand-kit source, the fonts and the theme music (`03_ASSETS/brand-kit/`, `brand-fonts/`, `music/`)
-- the archive zips
+To plan, write and do research, just clone the repo. To render and edit, also install:
 
-A fresh clone has everything needed to understand the show and plan or write episodes. To render cards or thumbnails, or edit video, first copy those assets from the Drive backup (see [`99_ARCHIVE/README.md`](99_ARCHIVE/README.md)).
+- **FFmpeg and FFprobe** (`brew install ffmpeg`). Version 8.1 was used for 003/004.
+- **Python 3 with Pillow and NumPy** (`pip3 install pillow numpy`). The card, thumbnail and color-QC scripts use them.
+- **whisper.cpp** for transcription (`brew install whisper-cpp`), plus the `ggml-small.en.bin` model (488 MB, from huggingface.co/ggerganov/whisper.cpp) in `~/.cache/whisper-cpp/`. The 003 transcription scripts call `whisper-cli` with that model path.
+- **Teachers and JetBrains Mono** installed as system fonts (from `03_ASSETS/brand-fonts/`), if you edit the SVG templates by hand.
+- **Vercel CLI** (`npm i -g vercel`, then `vercel link` in `website/` to the `oood-website` project) to deploy the site.
+- **Skills:** Codex and Claude Code pick them up from `.agents/skills/` and `.claude/skills/`. For Claude chat, run `python3 scripts/package-oood-skills.py` and upload the ZIPs from `exports/skills/`.
 
 ## Core rule
 

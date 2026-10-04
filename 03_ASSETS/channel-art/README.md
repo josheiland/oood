@@ -6,4 +6,6 @@ Mirrored on Drive in `Out of Our Depth (OOOD)/Channel Art`. Added 2026-10-03 fro
 - `YouTube Splash.png`: YouTube banner (2560×1440)
 - `Text Icon (old main icon).png`: the blue OUT OF OUR / DEPTH tile, kept for small uses (favicon, app tiles). It's a copy of `../brand-kit/assets/icon-square.png`, which is unchanged
 
+`originals-2026-09-15/`: the first channel art from Josh's Downloads. It has the 2560×1440 host-cutout cover, a zoomed crop, the 2560×1440 YouTube splash, and the 2000×2000 square text icon, which is a higher-res source for `Text Icon (old main icon).png`.
+
 Current episode thumbnails (1280×720) live in each episode folder as `thumbnail.png`; Drive also has them in `Channel Art/Thumbnails/`. Earlier published thumbnails are in Drive only.

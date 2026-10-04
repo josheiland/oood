@@ -21,6 +21,10 @@
 *.mp3
 *.m4a
 
+# Show music is small and needed for production, so it is tracked
+!03_ASSETS/music/
+!03_ASSETS/music/*
+
 # Temporary exports
 tmp/
 temp/
@@ -33,13 +37,7 @@ exports/
 __pycache__/
 *.pyc
 
-# Imported brand source bundle and licensed font binaries (see asset manifest)
-03_ASSETS/brand-kit/
-03_ASSETS/brand-fonts/
 
 # Local authenticated document readbacks and revision evidence
 /02_RESEARCH/codex-description-review-2026-09-30/
-
-# Local archive zips (full copies live in the Drive backup)
-99_ARCHIVE/*.zip
 99_ARCHIVE/restored-launch-work/

@@ -9,4 +9,6 @@ Git is for lightweight, shareable files, not raw video or audio masters. [ASSET_
 | `thumbnail-template/` | Mary's paired-host thumbnail format: editable SVG, config and renderer. |
 | `channel-art/` | Channel icon, YouTube banner, old text icon. |
 | `caption-glossary/` | Glossary and fixer for recurring caption mistakes. |
-| `brand-kit/`, `brand-fonts/`, `music/` | Local only (gitignored). Brand kit source, Teachers/JetBrains Mono fonts, theme/sting/outro audio. Copies are in the Drive backup. |
+| `brand-kit/` | Brand kit source: design kit HTML, banners, icons, Mary's reference uploads |
+| `brand-fonts/` | Teachers and JetBrains Mono, with OFL licences |
+| `music/` | Theme, 5-second sting, 11-second outro |

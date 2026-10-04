@@ -55,7 +55,7 @@ The supplied brand kit is the visual source of truth; [brand-guidelines.md](../0
 - **Thumbnails:** Mary's paired-host format. [`03_ASSETS/thumbnail-template/`](../03_ASSETS/thumbnail-template/README.md) holds the editable format, and the current thumbnail for each episode is `thumbnail.png` in its folder.
 - **Channel art:** [`03_ASSETS/channel-art/`](../03_ASSETS/channel-art/README.md). The main icon is a photo of Josh and Mary.
 - **Caption glossary and fixer:** [`03_ASSETS/caption-glossary/`](../03_ASSETS/caption-glossary/README.md).
-- **Local-only assets:** the brand kit source, the fonts and the theme/sting/outro music are gitignored and kept in Drive. Josh confirmed music rights on 2026-09-28; the rights document itself is not in this repo.
+- **Brand kit, fonts and music** are in the repo (`03_ASSETS/brand-kit/`, `brand-fonts/`, `music/`). Josh confirmed music rights on 2026-09-28; the rights document itself is not in this repo.
 
 Where every asset lives: [ASSET_MANIFEST.md](../03_ASSETS/ASSET_MANIFEST.md).
 

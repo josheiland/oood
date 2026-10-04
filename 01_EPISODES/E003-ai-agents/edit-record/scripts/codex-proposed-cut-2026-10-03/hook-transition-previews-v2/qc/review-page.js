@@ -1,0 +1,1 @@
+const vids=[...document.querySelectorAll('video')];vids.forEach(v=>v.addEventListener('play',()=>vids.forEach(o=>{if(o!==v)o.pause()})));function jump(id,t){const v=document.getElementById(id);v.currentTime=Math.max(0,t-1.5);v.play().catch(()=>{})}

@@ -2,21 +2,21 @@
 
 Current as of 2026-10-03. This lists what exists now and where. The full history of earlier, mostly deleted assets is in [`99_ARCHIVE/notes/asset-manifest-history-to-2026-10-03.md`](../99_ARCHIVE/notes/asset-manifest-history-to-2026-10-03.md).
 
-**In Git** means the file is in this repository. **Local only** means it's gitignored. It's on the production laptop and in the Drive backup zip, but a fresh clone won't have it.
+As of 2026-10-03, every brand, design, font, music and channel-art asset is in Git, so a fresh clone can produce episodes. Only episode video and raw recordings stay out of Git; they live in Drive.
 
 ## Brand and production assets
 
 | Asset | Location | In Git? | Notes |
 |---|---|---|---|
 | Brand rules digest | `03_ASSETS/brand-guidelines.md`, `brand-tokens.json` | Yes | Kit rules plus later host overrides. Read before any graphic or public copy. |
-| Brand kit source (design kit HTML, banners, icons, Mary's uploads) | `03_ASSETS/brand-kit/` | Local only | Extracted from `Out of Our Depth Brand Kit.zip`, SHA-256 `39224df9937d2101eac0d1c48c67b1e95a68942b1d5813dc06f57af3b82341db`. Visual source of truth. |
-| Fonts: Teachers, JetBrains Mono | `03_ASSETS/brand-fonts/` | Local only | Google Fonts, OFL licences included. Needed by the card and thumbnail renderers and the brand-visuals skill package. |
+| Brand kit source (design kit HTML, banners, icons, Mary's uploads) | `03_ASSETS/brand-kit/` | Yes | Extracted from `Out of Our Depth Brand Kit.zip`, SHA-256 `39224df9937d2101eac0d1c48c67b1e95a68942b1d5813dc06f57af3b82341db`. Visual source of truth. |
+| Fonts: Teachers, JetBrains Mono | `03_ASSETS/brand-fonts/` | Yes | Google Fonts, OFL licences included. Needed by the card and thumbnail renderers and the brand-visuals skill package. |
 | Intro/outro cards ("Mono, Mirrored", three-digit) | `03_ASSETS/intro-outro-cards/` | Yes | SVG templates, JSON copy, renderer, 1080p PNG stills. Tagline FIGURING OUT AI TOGETHER. |
 | Thumbnail format (Mary's paired-host layout) | `03_ASSETS/thumbnail-template/` | Yes | Editable SVG, JSON, renderer, Josh's clean photo (SHA-256 `3ff8be1e751231d5c809399223c24791cb744ad79777c0d6bc96006630bc0298`). |
 | Caption glossary and fixer | `03_ASSETS/caption-glossary/` | Yes | Fixes recurring ASR mistakes (Chad→Chat, cloud→Claude, etc.). |
-| Channel art | `03_ASSETS/channel-art/` | Yes | `Icon.jpg` (main icon), `YouTube Splash.png`, `Text Icon (old main icon).png`. Mirrored in Drive `Channel Art/`. |
+| Channel art | `03_ASSETS/channel-art/` | Yes | `Icon.jpg` (main icon), `YouTube Splash.png`, `Text Icon (old main icon).png`. Mirrored in Drive `Channel Art/`. `originals-2026-09-15/` holds the first high-res cover, banner and square icon (2560×1440 / 2000×2000). |
 | Episode thumbnails | `01_EPISODES/E00X-*/thumbnail.png` | Yes | Current 1280×720 thumbnails. Also in Drive `Channel Art/Thumbnails/` and each Final folder. Earlier thumbnails are in Drive only. |
-| Theme music, sting, outro | `03_ASSETS/music/` (`oood-theme-option-1-original.m4a`, `oood-sting-5s.wav`, `oood-outro-11s.wav`) | Local only | "OOOD - Option 1", 24.8 s, generator Free plan. Josh confirmed rights 2026-09-28; the rights document is not in the repo. |
+| Theme music, sting, outro | `03_ASSETS/music/` (`oood-theme-option-1-original.m4a`, `oood-sting-5s.wav`, `oood-outro-11s.wav`) | Yes | "OOOD - Option 1", 24.8 s, generator Free plan. Josh confirmed rights 2026-09-28; the rights document is not in the repo. |
 | OBS scene collection | — | — | Not yet exported. Sanitize paths and devices before committing. |
 
 ## Episode media (all in Drive, nothing local)
@@ -41,5 +41,5 @@ Raw numbering was swapped on 2026-10-03 to match the episodes. `Episode 3 Raw.mp
 ## Recovery
 
 - **OOOD project files backup 2026-10-03.zip** (Drive root, MD5 `0d7c369d14e686b44473c62d461be4fa`, 9,020 entries): the whole repository as of 2026-10-03 ~20:00 PT, without video/audio. It includes every versioned edit folder, QC record, review page and comparison that was removed from the working tree in the cleanup, plus brand kit, fonts, music and `.git`.
-- **`99_ARCHIVE/2026-09-30-completed-launch-work.zip`** (local only, and inside the Drive backup): byte-for-byte launch-era records. Restore with `scripts/restore-completed-work.py`.
+- **`99_ARCHIVE/2026-09-30-completed-launch-work.zip`** (in Git, 31 MB): byte-for-byte launch-era records. Restore with `scripts/restore-completed-work.py`.
 - **`production-records-2026-09-30.zip`** (Drive `Video Files/Final/`): the older compact production-records archive.

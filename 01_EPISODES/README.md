@@ -31,7 +31,7 @@ E00X-short-slug/
 
 Final videos and raw recordings never go in Git. They live in Drive `Out of Our Depth (OOOD)/Video Files/Final/` and `Raw/` (see `03_ASSETS/ASSET_MANIFEST.md`). While an episode is being edited, put working renders and versions in `edit/` (the media is gitignored). When the cut is final, keep the record in `edit-record/` and move the rest out.
 
-`edit-record/` files were copied from the original working folders. Links inside them may point at files that are now only in the Drive backup zip (see `99_ARCHIVE/README.md`).
+`edit-record/scripts/` holds every script from the original working folders, under their original folder names. That covers transcription, cut planning, rendering, captions, review pages and verification, so the full pipeline can be rerun or adapted. Other `edit-record/` files were copied from those folders. Links inside them may point at files that are now only in the Drive backup zip (see `99_ARCHIVE/README.md`).
 
 ## Status vocabulary
 
