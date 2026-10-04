@@ -2,7 +2,7 @@
 
 **Final cut ready (Josh, 2026-10-03); not yet published.** v5, 37:36.933, 1080p30. The working title in the brief is "What can we actually delegate to an AI agent?". The public title, thumbnail text and release date are still open.
 
-Final video, SRT and chapters: Drive `Video Files/Final/E003-ai-agents/` (`agents-feedback-cut-v5-audio-matched.mp4`, MD5 `a30e2648171ff0c1fb0d5eb4824560ff`). Raw: Drive `Video Files/Raw/Episode 3 Raw.mp4` (originally `Movies/Agents episode.mp4`, 70:24.567, recorded 2026-10-03).
+Final video, SRT and chapters: Drive `Video Files/Final/E003-ai-agents/` (`episode-003.mp4`, originally `agents-feedback-cut-v5-audio-matched.mp4`, MD5 `a30e2648171ff0c1fb0d5eb4824560ff`). Raw: Drive `Video Files/Raw/Episode 3 Raw.mp4` (originally `Movies/Agents episode.mp4`, 70:24.567, recorded 2026-10-03).
 
 | File | What it is |
 |---|---|

@@ -2,7 +2,7 @@
 
 **Final cut ready (Josh, 2026-10-03); not yet published.** v11, 44:49.833, 1080p30, 80,695 frames. Recorded 2026-10-02. The working title in the brief is "We had to coach our AI coach". The public title, thumbnail text and release date are still open; options are in `title-and-thumbnail-options.txt`.
 
-Final video, SRT and chapters: Drive `Video Files/Final/E004-el-cruce/` (`el-cruce-personality-v11.mp4`, MD5 `8e34965ba5ee812a5f70d52fcc1e1190`, SHA-256 `e6818d0ab7f9729fdf4c38b65a5e62c7b37864bf1055a6be003c22ae45ed7dc3`). Raws: Drive `Video Files/Raw/Episode 4 Raw/`, with four camera files and three screen recordings.
+Final video, SRT and chapters: Drive `Video Files/Final/E004-el-cruce/` (`episode-004.mp4`, originally `el-cruce-personality-v11.mp4`, MD5 `8e34965ba5ee812a5f70d52fcc1e1190`, SHA-256 `e6818d0ab7f9729fdf4c38b65a5e62c7b37864bf1055a6be003c22ae45ed7dc3`). Raws: Drive `Video Files/Raw/Episode 4 Raw/`, with four camera files and three screen recordings.
 
 | File | What it is |
 |---|---|

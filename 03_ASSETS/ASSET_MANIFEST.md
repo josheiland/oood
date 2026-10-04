@@ -28,15 +28,15 @@ Drive root: **Out of Our Depth (OOOD)** (`1Go6MaIuE0OY_ZePvNVdQgehdh8uZGtf-`) in
 | 000 | [`E000-why-were-here`](https://drive.google.com/drive/folders/1BtzCXPB2v8w1y7SWS3PoUIzOsoKfaAqy) | Final MP4, SRT, description/chapters, thumbnail, manifest |
 | 001 | [`E001-make-ai-useful`](https://drive.google.com/drive/folders/1OdHgDxylP4Rs_zQ7_U8PHSlKTZZbnRBt) | Same. Files renamed `episode-001.*` on 2026-10-03; the `archive-manifest.json` inside still lists the old names. |
 | 002 | [`E002-ai-basics`](https://drive.google.com/drive/folders/1VKme1NR8TNqgaR5JnTBqswkwIV6lgXCX) | `episode-002.mp4` is the published no-pop-up master (2,058,534,021 bytes, MD5 `6bbda852ffc189906da26b5e8b1b22ea`). `episode-002-with-popups-2026-09-30.mp4` is the original release. |
-| 003 | `E003-ai-agents` (`1x13Xf0pxoNfRLQbx186768qaIkAic227`) | `agents-feedback-cut-v5-audio-matched.mp4` final (MD5 `a30e2648171ff0c1fb0d5eb4824560ff`), SRT, chapters |
-| 004 | `E004-el-cruce` (`1H7yxliI3nsJjYiMyQLcAnFOUw1fdG5wX`) | `el-cruce-personality-v11.mp4` final (MD5 `8e34965ba5ee812a5f70d52fcc1e1190`), SRT, chapters |
+| 003 | `E003-ai-agents` (`1x13Xf0pxoNfRLQbx186768qaIkAic227`) | `episode-003.mp4` final (was `agents-feedback-cut-v5-audio-matched.mp4`, MD5 `a30e2648171ff0c1fb0d5eb4824560ff`), `.srt`, `-chapters.txt`, thumbnail |
+| 004 | `E004-el-cruce` (`1H7yxliI3nsJjYiMyQLcAnFOUw1fdG5wX`) | `episode-004.mp4` final (was `el-cruce-personality-v11.mp4`, MD5 `8e34965ba5ee812a5f70d52fcc1e1190`), `.srt`, `-description-and-chapters.txt`, thumbnail |
 
 Raw recordings are in [`Video Files/Raw/`](https://drive.google.com/drive/folders/1KrXgS2Ms6MSz6KXF5YWz1M3fZ_6_fshm):
 
 - `Episode 0/1/2/3 Raw.mp4` and `Episode 1 Raw - vOld1/2`
-- `Episode 4 Raw/`, which holds four camera files and three screen recordings (screen-A/B/C MD5 `d81930d7…`, `84d2643f…`, `1ebe894e…`)
+- `Episode 4 Raw/`, which holds four camera files (`2026-10-02 09-16-14/09-36-14/14-21-33/14-52-11.mp4`) and three screen recordings: `Screen Recording 2026-10-02 at 9.36.12 AM.mov` (screen A), `at 2.21.28 PM` (B), and `at 2.51.59 PM` (C)
 
-Raw numbering was swapped on 2026-10-03 to match the episodes.
+Raw numbering was swapped on 2026-10-03 to match the episodes. `Episode 3 Raw.mp4` is the agents recording (originally `Movies/Agents episode.mp4`). Uploads made on 2026-10-03 had come through as "Untitled". They were renamed the same night by matching MD5s.
 
 ## Recovery
 
