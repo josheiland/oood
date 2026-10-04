@@ -118,6 +118,20 @@ a { color: inherit; }
   width: min(100%, 1600px, calc(var(--hero-h, 32vh) * 100 / 23));
   margin: 0 auto;
   aspect-ratio: 100 / 23;
+  overflow: hidden;
+}
+/* Fade both host photos into the page tan on desktop/tablet, beneath the title.
+   Solid by 22cqw, leaving a tan buffer before the stage ends at 23cqw. */
+.hero__stage::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 16cqw;
+  bottom: -2px;
+  z-index: 1;
+  background: linear-gradient(to bottom, rgb(251 241 229 / 0), var(--cream) 6cqw);
+  pointer-events: none;
 }
 .hero__host {
   position: absolute;
@@ -320,15 +334,8 @@ a { color: inherit; }
      (Josh's starts near 70cqw, Mary's near 84cqw), leaving 10cqw of plain tan as buffer.
      Runs 2px past the bottom so no sliver of photo survives rounding. Under the title, over the hosts. */
   .hero__stage::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
     top: 46cqw;
-    bottom: -2px;
-    z-index: 1;
     background: linear-gradient(to bottom, rgb(251 241 229 / 0), var(--cream) 16cqw);
-    pointer-events: none;
   }
   /* Two lines on phones: the phrases flow together and break before "Stanford GSB" */
   .intro__tagline { font-size: clamp(13px, 3.7vw, 15px); letter-spacing: .06em; }
