@@ -36,6 +36,8 @@ The domain's DNS is on Cloudflare. Zoho mail runs through the same zone.
 
 The top bar shows Instagram, X, LinkedIn and email. Josh trimmed it to Instagram, X and email on 10/3 and added LinkedIn back on 10/4, with an outline icon to match Instagram. TikTok and Facebook are live but commented out in `config.js`.
 
+**Homepage copy (2026-10-04, later):** “Stanford Business School” replaces “Stanford GSB” on the homepage and description metadata, per Josh. The explanatory subline is removed entirely, with no replacement, to simplify the page. Only the main tagline remains above the watch/listen buttons.
+
 **Hero fade (2026-10-04):** host photos fade into the page tan on desktop and tablet too, per Josh. The wider-layout fade runs from 16cqw to solid tan at 22cqw, with the title above it. The phone fade remains at 46–62cqw.
 
 **Background (2026-10-04):** the page is tan (`--cream`) throughout, per Josh. The foam lower band under the hero is gone, and so is the cream/foam split in the share image (`images/og-v4.png`, built from `03_ASSETS/share-image/`).
@@ -59,7 +61,7 @@ On phones the tagline runs two lines, and Josh's cutout is scaled so the hero's 
 Josh asked for a cleaner, less boxy page with fewer words.
 
 - **Top left** is now a navy stacked text wordmark ("OUT OF OUR" over "DEPTH", left-aligned to the D), matching the navy social icons. The blue tile is gone from the header but stays as the favicon.
-- **Copy:** the "Hi, we're Josh and Mary" section is cut. The tagline gets one line under it ("AI in plain English. No tech background needed."), and the buttons read just "YouTube" and "Spotify".
+- **Copy:** the "Hi, we're Josh and Mary" section is cut. The buttons read just "YouTube" and "Spotify". The explanatory subline initially added beneath the tagline was subsequently removed per Josh to simplify the page.
 - **Episodes:** the latest-episode popup and the boxed "More episodes" cards are replaced by one borderless grid of the newest three episodes (HD `maxresdefault` thumbnails, mono label, verbatim title). The newest gets a waveform and "New". `/api/latest` still slots a newer upload in first. On tablets the newest leads full width; on phones only the newest keeps its thumbnail and the rest are text rows.
 - **Alignment:** everything, including the top bar, sits on one content column (`--container` 1120px plus `--gutter`), so the wordmark, tagline and grid share a left edge, and the last social glyph, buttons and grid share a right edge.
 - **Wordmark hover** is Deep-End Blue `#38B6FF`, at Josh's request. The kit limits that blue to type 40px and up, and the wordmark is about 31px. Mary approved this exception on 2026-10-04.

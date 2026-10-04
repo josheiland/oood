@@ -195,7 +195,6 @@ a { color: inherit; }
 }
 /* Always exactly two lines: one per phrase */
 .intro__tagline span { display: block; white-space: nowrap; }
-.intro__sub { margin: 8px 0 0; color: var(--body-muted); font-size: 17px; line-height: 1.4; }
 .listen { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
 
 .btn {
@@ -292,7 +291,6 @@ a { color: inherit; }
     text-align: left;
   }
   .intro__tagline { font-size: 17px; }
-  .intro__sub { font-size: 16px; }
 }
 
 /* Short laptop screens: tighten the spacing so the page still fits without scrolling */
@@ -340,7 +338,6 @@ a { color: inherit; }
   /* Two lines on phones: the phrases flow together and break before "Stanford Business School" */
   .intro__tagline { font-size: clamp(13px, 3.7vw, 15px); letter-spacing: .06em; }
   .intro__tagline span { display: inline; white-space: normal; }
-  .intro__sub { font-size: 15px; }
   .btn { width: 100%; justify-content: center; }
   .listen { width: 100%; max-width: 360px; flex-wrap: nowrap; }
   .listen .btn { padding-left: 16px; padding-right: 16px; }
