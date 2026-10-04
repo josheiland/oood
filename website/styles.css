@@ -337,7 +337,7 @@ a { color: inherit; }
     top: 46cqw;
     background: linear-gradient(to bottom, rgb(251 241 229 / 0), var(--cream) 16cqw);
   }
-  /* Two lines on phones: the phrases flow together and break before "Stanford GSB" */
+  /* Two lines on phones: the phrases flow together and break before "Stanford Business School" */
   .intro__tagline { font-size: clamp(13px, 3.7vw, 15px); letter-spacing: .06em; }
   .intro__tagline span { display: inline; white-space: normal; }
   .intro__sub { font-size: 15px; }
