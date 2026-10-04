@@ -1,0 +1,33 @@
+source_start,source_end,duration_seconds,reason
+"00:00:00,000","00:01:04,000",64.0,"Setup, retakes and production chatter."
+"00:01:25,800","00:02:00,667",34.867,"Historical Operator retelling: wrong product name, amount and request. Replaced with already-recorded hypothetical."
+"00:02:19,767","00:02:25,067",5.3,"Long first attempt at components, interruptions and retakes; clearer later take retained."
+"00:03:18,200","00:10:41,900",443.7,"Long first attempt at components, interruptions and retakes; clearer later take retained."
+"00:12:44,200","00:13:14,000",29.8,Duplicated explanation and transition.
+"00:13:54,833","00:14:46,033",51.2,Restart or repeated transition.
+"00:16:13,367","00:16:26,333",12.967,Restart or repeated transition.
+"00:17:45,600","00:17:46,600",1.0,"Unverified Gartner quantity / Duplex detail, repeated wording, or transition."
+"00:18:55,100","00:19:22,733",27.633,"Unverified Gartner quantity / Duplex detail, repeated wording, or transition."
+"00:19:42,233","00:19:53,200",10.967,"Unverified Gartner quantity / Duplex detail, repeated wording, or transition."
+"00:22:07,033","00:22:28,200",21.167,Parallel-only subagent definition; the recorded correction is retained.
+"00:23:25,833","00:23:49,967",24.133,Repetition or diffuse setup; stronger personal-agent explanation retained.
+"00:24:54,667","00:25:04,867",10.2,Repetition or diffuse setup; stronger personal-agent explanation retained.
+"00:25:21,000","00:25:49,233",28.233,Repetition or diffuse setup; stronger personal-agent explanation retained.
+"00:27:08,567","00:29:01,200",112.633,"Workplace and wellbeing generalizations, production interruptions and less useful detour."
+"00:30:32,667","00:31:22,233",49.567,Unsupported numerical hallucination analogy and speculative mechanism; accurate basic definition retained.
+"00:32:27,033","00:32:32,400",5.367,Uncertain dates or unmeasured generalized model-improvement claim.
+"00:32:44,533","00:32:52,467",7.933,Uncertain dates or unmeasured generalized model-improvement claim.
+"00:33:52,233","00:35:44,667",112.433,Repetitive guardrail discussion and explanatory detour.
+"00:36:49,667","00:36:52,633",2.967,"Production aside, incomplete product critique, or unverified funding/team/privacy assertions."
+"00:39:08,867","00:39:13,200",4.333,"Production aside, incomplete product critique, or unverified funding/team/privacy assertions."
+"00:39:27,467","00:40:05,567",38.1,"Production aside, incomplete product critique, or unverified funding/team/privacy assertions."
+"00:41:15,733","00:41:16,333",0.6,"Detour, or unverified current monetization/tier/cap assertions."
+"00:42:33,367","00:42:55,000",21.633,"Detour, or unverified current monetization/tier/cap assertions."
+"00:46:09,433","00:46:42,233",32.8,"Repetition, incorrect/current-eligibility and future rollout claims, rumors or unsupported legal-letter account."
+"00:48:28,467","00:50:11,433",102.967,"Repetition, incorrect/current-eligibility and future rollout claims, rumors or unsupported legal-letter account."
+"00:50:24,933","00:50:38,400",13.467,Unverified first-ever agent-superlative.
+"00:51:23,767","00:56:17,667",293.9,Speculative vendor motives; medical and legal generalizations without suitable evidence; diffuse pricing setup.
+"00:56:40,967","00:59:19,933",158.967,Unverified precise unit price / medical pricing; long SaaS-margin detour with weak causal claims.
+"00:59:27,967","01:03:33,833",245.867,Unverified precise unit price / medical pricing; long SaaS-margin detour with weak causal claims.
+"01:09:27,667","01:09:38,067",10.4,Undercooked-egg safety reassurance removed; personal taste discussion retained.
+"01:10:15,667","01:10:24,567",8.9,After-signoff production talk.

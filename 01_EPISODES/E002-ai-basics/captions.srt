@@ -1,0 +1,5167 @@
+1
+00:00:00,000 --> 00:00:01,010
+People are starting to try
+
+2
+00:00:01,010 --> 00:00:02,600
+to put data centers on the moon.
+No way.
+
+3
+00:00:02,600 --> 00:00:04,800
+Yeah. Oh my gosh, who has right to the land?
+
+4
+00:00:05,439 --> 00:00:07,899
+That's a whole different, whole different topic.
+
+5
+00:00:08,767 --> 00:00:14,033
+[Instrumental theme music]
+
+6
+00:00:14,940 --> 00:00:16,940
+What is that? We're back.
+
+7
+00:00:16,940 --> 00:00:18,940
+And with a piece. Yeah.
+
+8
+00:00:18,940 --> 00:00:19,940
+Piece love and gratitude.
+
+9
+00:00:19,940 --> 00:00:20,940
+We're gonna work on it.
+
+10
+00:00:20,940 --> 00:00:22,940
+We're gonna try out something different
+next time.
+
+11
+00:00:22,940 --> 00:00:26,100
+I haven't seen you do that before.
+
+12
+00:00:26,100 --> 00:00:27,300
+We are back.
+
+13
+00:00:27,300 --> 00:00:29,860
+are back and we're doing an AI landscape.
+
+14
+00:00:30,380 --> 00:00:32,820
+Like we're painting a photo, painting a
+picture.
+
+15
+00:00:33,940 --> 00:00:36,300
+Painting a photo, even more impressive.
+
+16
+00:00:37,060 --> 00:00:42,880
+Um, yeah, I think really the goal here is
+just, especially for folks
+
+17
+00:00:42,880 --> 00:00:45,900
+who are newer to the space, a lot of terms
+get thrown around.
+
+18
+00:00:46,260 --> 00:00:52,020
+Um, and we just want to start with the
+basics, separating out, you know, what
+
+19
+00:00:52,020 --> 00:00:56,777
+What is the difference between
+the model and the actual
+
+20
+00:00:56,777 --> 00:00:59,420
+platform or product that
+you're
+
+21
+00:00:59,420 --> 00:01:00,420
+using?
+
+22
+00:01:00,420 --> 00:01:02,740
+Who are the different key companies in the
+space?
+
+23
+00:01:02,740 --> 00:01:05,980
+Who are actually some of the personalities
+behind the companies?
+
+24
+00:01:05,980 --> 00:01:07,460
+What are the tools?
+
+25
+00:01:07,460 --> 00:01:09,900
+What are the tools?
+
+26
+00:01:09,900 --> 00:01:13,620
+Why don't we start with models?
+
+27
+00:01:13,620 --> 00:01:20,020
+You have your provider, so it's like
+ChatGPT.
+
+28
+00:01:20,020 --> 00:01:23,248
+The provider I guess at the
+highest level would be
+
+29
+00:01:23,248 --> 00:01:25,620
+Anthropic or OpenAI or Google,
+right?
+
+30
+00:01:25,620 --> 00:01:29,700
+These are the companies that are actually
+training the models.
+
+31
+00:01:29,700 --> 00:01:33,340
+Who's the provider for Grok?
+
+32
+00:01:33,340 --> 00:01:36,340
+It's like X. Oh, X. Yeah.
+
+33
+00:01:36,340 --> 00:01:41,740
+And then you've got some models coming out
+of Meta too. Okay.
+
+34
+00:01:41,740 --> 00:01:43,820
+And then there's a handful of other
+companies.
+
+35
+00:01:43,820 --> 00:01:44,820
+I think those are really the main ones.
+
+36
+00:01:44,820 --> 00:01:47,037
+That was especially
+Anthropic and OpenAI are
+
+37
+00:01:47,037 --> 00:01:49,100
+really I think kind of like
+the two going
+
+38
+00:01:49,100 --> 00:01:54,940
+back and forth for the lead pretty
+consistently for the last couple of years.
+
+39
+00:01:54,940 --> 00:02:00,460
+And then you've got a whole bunch of other
+kind of smaller companies in the mix, but
+
+40
+00:02:00,460 --> 00:02:04,069
+in terms of like leading the
+benchmarks, which are the test
+
+41
+00:02:04,069 --> 00:02:06,060
+to evaluate how effective a
+model
+
+42
+00:02:06,060 --> 00:02:08,180
+is, it's really Anthropic
+and OpenAI that have been
+
+43
+00:02:08,180 --> 00:02:09,580
+going back and forth with
+the lead
+
+44
+00:02:09,580 --> 00:02:10,580
+there.
+
+45
+00:02:10,580 --> 00:02:13,340
+And these models, so there's two different
+types of models.
+
+46
+00:02:13,340 --> 00:02:16,360
+There's open models and there's closed
+models.
+
+47
+00:02:16,360 --> 00:02:17,580
+These are all closed models.
+
+48
+00:02:17,580 --> 00:02:20,680
+So what it looks like is these providers.
+
+49
+00:02:20,680 --> 00:02:24,113
+So let's use a Claude and
+chat and really quick
+
+50
+00:02:24,113 --> 00:02:26,800
+caveat, at least for me,
+like to what
+
+51
+00:02:26,800 --> 00:02:36,540
+you're saying, chat and ChatGPT and Claude
+are so much better than the others that I
+
+52
+00:02:36,540 --> 00:02:39,791
+feel digging into one or two
+of them is a lot more
+
+53
+00:02:39,791 --> 00:02:41,980
+effective than trying to learn
+all
+
+54
+00:02:41,980 --> 00:02:42,980
+of them.
+
+55
+00:02:42,980 --> 00:02:44,360
+They're give or take very similar.
+
+56
+00:02:44,360 --> 00:02:47,357
+I think it's just like how do
+you start that muscle of
+
+57
+00:02:47,357 --> 00:02:49,280
+training and going to AI to
+support
+
+58
+00:02:49,280 --> 00:02:50,280
+with certain things?
+
+59
+00:02:50,280 --> 00:02:51,280
+Where is it helpful?
+
+60
+00:02:51,280 --> 00:02:52,280
+Where is it not?
+
+61
+00:02:52,280 --> 00:02:57,536
+So, quick caveat, I like Claude
+the most for pretty much
+
+62
+00:02:57,536 --> 00:03:00,880
+everything except for like
+realistic
+
+63
+00:03:00,880 --> 00:03:03,280
+photos where I think Chad just does such a
+better job.
+
+64
+00:03:03,280 --> 00:03:04,280
+Like generating photos.
+
+65
+00:03:04,280 --> 00:03:06,273
+Yeah, but I think a lot of
+that is just because I've
+
+66
+00:03:06,273 --> 00:03:07,640
+spent more time in Claude, so
+I feel
+
+67
+00:03:07,640 --> 00:03:08,920
+like it knows me more.
+
+68
+00:03:08,920 --> 00:03:10,600
+I go back and forth.
+
+69
+00:03:10,600 --> 00:03:14,007
+I think Chad is like in theory
+better at some of the
+
+70
+00:03:14,007 --> 00:03:16,680
+personalization, at some of like the
+more
+
+71
+00:03:16,680 --> 00:03:22,248
+human-esque where Claude kind
+of pops at more of the, I
+
+72
+00:03:22,248 --> 00:03:25,960
+think like, you know, math,
+diagrams,
+
+73
+00:03:26,600 --> 00:03:30,840
+frameworks, a little bit more of the kind
+of less creative side of things.
+
+74
+00:03:30,840 --> 00:03:31,720
+Like structured.
+
+75
+00:03:31,720 --> 00:03:34,481
+Yeah, which for me, I think
+creativity and all that stuff
+
+76
+00:03:34,481 --> 00:03:35,960
+is like really fun. So I
+think,
+
+77
+00:03:36,600 --> 00:03:39,950
+And I think it's a little bit
+more of a string than like, you
+
+78
+00:03:39,950 --> 00:03:41,960
+know, the wording and all that
+stuff.
+
+79
+00:03:41,960 --> 00:03:44,840
+So I think that's why I lean a little bit
+Claude, but I would say.
+
+80
+00:03:44,840 --> 00:03:49,080
+It feels like it complements your
+background and your capabilities. Yeah.
+
+81
+00:03:49,080 --> 00:03:50,040
+Interesting. Yeah.
+
+82
+00:03:50,200 --> 00:03:54,440
+So Claude is Anthropics
+product, which now kind of has
+
+83
+00:03:54,440 --> 00:03:56,840
+a couple of different, I
+guess,
+
+84
+00:03:57,480 --> 00:03:59,480
+tools really bundled within one. Yeah.
+
+85
+00:04:00,440 --> 00:04:05,800
+And it's interesting because, you know,
+ChatGPT, which is OpenAI's product,
+
+86
+00:04:05,800 --> 00:04:08,788
+it's kind of been a similar
+evolution where initially they
+
+87
+00:04:08,788 --> 00:04:10,360
+both just had a chat
+interface.
+
+88
+00:04:11,080 --> 00:04:13,880
+And you would type a prompt, get a
+response back.
+
+89
+00:04:13,880 --> 00:04:17,160
+Increasingly, they started to build out
+other kind of modes.
+
+90
+00:04:17,160 --> 00:04:22,476
+So both of them now have
+essentially like a work mode, which
+
+91
+00:04:22,476 --> 00:04:25,720
+goes a little bit beyond the chat
+bot
+
+92
+00:04:25,720 --> 00:04:29,270
+and gives it more kind of ability
+to use different tools, which
+
+93
+00:04:29,270 --> 00:04:31,160
+we'll talk a little bit more
+about
+
+94
+00:04:31,160 --> 00:04:34,860
+on essentially just using other
+applications
+
+95
+00:04:34,860 --> 00:04:38,140
+or other capabilities beyond just
+text-based chat
+
+96
+00:04:38,140 --> 00:04:40,740
+to actually go further and be able to do
+more work
+
+97
+00:04:40,740 --> 00:04:42,000
+on your behalf.
+
+98
+00:04:42,000 --> 00:04:45,260
+And then both now also have more
+code-heavy
+
+99
+00:04:45,260 --> 00:04:48,560
+technical products, so Codex from OpenAI
+
+100
+00:04:48,560 --> 00:04:51,000
+and then Claude Code from Anthropic.
+
+101
+00:04:51,000 --> 00:04:52,600
+But it's interesting because more recently
+
+102
+00:04:52,600 --> 00:04:54,440
+they've kind of been consolidating the Mac
+
+103
+00:04:54,440 --> 00:04:55,860
+a little bit more.
+
+104
+00:04:55,860 --> 00:04:57,440
+So it'd be interesting to see where that
+goes,
+
+105
+00:04:57,440 --> 00:05:00,960
+but at its core, we'll talk a lot about
+chat
+
+106
+00:05:00,960 --> 00:05:05,150
+GPT and Claude as like the
+interface, the product that
+
+107
+00:05:05,150 --> 00:05:07,680
+OpenAI and Anthropic
+respectively
+
+108
+00:05:07,680 --> 00:05:09,440
+have built out.
+
+109
+00:05:09,440 --> 00:05:12,960
+And I think those two are definitely the
+most commonly used.
+
+110
+00:05:12,960 --> 00:05:17,680
+Gemini is like I would say like clear
+third, like sort of in the mix.
+
+111
+00:05:17,680 --> 00:05:20,373
+They especially, they
+actually, because they have
+
+112
+00:05:20,373 --> 00:05:22,280
+such a photo finish between
+ChatGPT
+
+113
+00:05:22,280 --> 00:05:26,240
+and Claude and then sweet, sweet Gemini.
+Yeah.
+
+114
+00:05:26,240 --> 00:05:27,240
+A couple of miles back.
+
+115
+00:05:27,240 --> 00:05:30,240
+Start off strong and I mean, honestly,
+it's a lot of strong.
+
+116
+00:05:30,240 --> 00:05:33,365
+Well, no, like they were
+probably the favorite or like
+
+117
+00:05:33,365 --> 00:05:35,960
+really well just they have so
+many advantages
+
+118
+00:05:35,960 --> 00:05:38,960
+Yeah, like has so much user data and they
+have you know
+
+119
+00:05:39,960 --> 00:05:44,640
+Like in theory them owning the Google
+ecosystems should be such an advantage
+
+120
+00:05:45,040 --> 00:05:48,587
+They kind of botched it like it's like
+the if the Dodgers was like really bad
+
+121
+00:05:48,587 --> 00:05:50,360
+because they like so much money
+exactly
+
+122
+00:05:50,360 --> 00:05:54,755
+Yeah, like they just like it's the system
+is rigged for them to win. And yeah,
+
+123
+00:05:54,755 --> 00:05:57,380
+exactly. It's like they just totally
+botched it
+
+124
+00:05:58,400 --> 00:06:00,280
+I can't believe you pulled out the
+baseball net.
+
+125
+00:06:00,280 --> 00:06:03,400
+I know, for a context. That's crazy.
+
+126
+00:06:03,400 --> 00:06:04,400
+Yeah, that was crazy.
+
+127
+00:06:04,400 --> 00:06:05,400
+I'm so proud of you.
+
+128
+00:06:05,400 --> 00:06:08,120
+Yeah, that was-- yeah, yeah, honestly.
+
+129
+00:06:08,120 --> 00:06:10,800
+I'll be thinking about that one before
+bed.
+
+130
+00:06:10,800 --> 00:06:15,920
+I think-- OK, one total tangent, deep
+seek.
+
+131
+00:06:15,920 --> 00:06:17,360
+There's these random ones.
+
+132
+00:06:17,360 --> 00:06:20,520
+But US versus China, there is some.
+
+133
+00:06:20,520 --> 00:06:22,240
+Yeah, and you mentioned earlier there's
+
+134
+00:06:22,240 --> 00:06:25,320
+the closed models versus the open models.
+
+135
+00:06:25,320 --> 00:06:28,920
+And really what that means is just the
+closed models,
+
+136
+00:06:28,920 --> 00:06:32,740
+like the ones that are released by
+Anthropic and OpenAI,
+
+137
+00:06:32,740 --> 00:06:34,640
+you can use them as a consumer,
+
+138
+00:06:34,640 --> 00:06:37,480
+but you don't have the weights,
+
+139
+00:06:37,480 --> 00:06:42,320
+which are essentially the underlying kind
+of structure
+
+140
+00:06:42,320 --> 00:06:44,233
+and mechanism that powers the model.
+
+141
+00:06:44,233 --> 00:06:48,313
+I think that, yeah, like high level,
+
+142
+00:06:48,313 --> 00:06:50,633
+the way that these models are trained is
+
+143
+00:06:50,633 --> 00:06:53,173
+they're just fed a ton of data.
+
+144
+00:06:54,593 --> 00:06:57,513
+So like, you know, the earliest models had
+a ton
+
+145
+00:06:57,513 --> 00:07:00,253
+of internet data, which is mostly
+text-based,
+
+146
+00:07:00,253 --> 00:07:01,873
+which is why the initial models were,
+
+147
+00:07:01,873 --> 00:07:03,233
+I think really well set up to be used
+
+148
+00:07:03,233 --> 00:07:04,793
+in a chat-based interface.
+
+149
+00:07:04,793 --> 00:07:07,173
+But you dump in, you know, all of
+Wikipedia,
+
+150
+00:07:07,173 --> 00:07:08,693
+all of these archives that saved
+
+151
+00:07:08,693 --> 00:07:10,393
+all the different web pages out there.
+
+152
+00:07:10,393 --> 00:07:12,113
+And- - Reddit was huge.
+
+153
+00:07:12,113 --> 00:07:13,273
+Yeah, Reddit- - Sorry.
+
+154
+00:07:14,113 --> 00:07:16,848
+And then these models are
+trained through a variety of
+
+155
+00:07:16,848 --> 00:07:18,913
+different processes that we can
+dig into,
+
+156
+00:07:18,913 --> 00:07:20,513
+because it can go much deeper in a future
+episode.
+
+157
+00:07:20,513 --> 00:07:25,459
+But essentially, you know, you
+run tests over time to teach
+
+158
+00:07:25,459 --> 00:07:28,273
+the model to predict the next
+word
+
+159
+00:07:28,273 --> 00:07:31,073
+that comes after a given sentence, right?
+
+160
+00:07:31,073 --> 00:07:36,913
+So if it's like a quick brown blank, like
+it's probably going to guess fox, right?
+
+161
+00:07:36,913 --> 00:07:39,233
+Because that's out there a million times
+in different sources.
+
+162
+00:07:40,673 --> 00:07:44,139
+And so at its core, these models
+were originally built to just
+
+163
+00:07:44,139 --> 00:07:48,230
+predict the next token, which is not
+exactly a word, but you can think of
+
+164
+00:07:48,230 --> 00:07:50,673
+it similar to a word in a sequence
+of words.
+
+165
+00:07:50,673 --> 00:07:55,248
+And then, but, you know, like
+that in of itself, then you need
+
+166
+00:07:55,248 --> 00:08:00,198
+to have some additional tweaks on
+top to make it be able to go back
+
+167
+00:08:00,198 --> 00:08:02,673
+and forth in a conversational
+way.
+
+168
+00:08:02,673 --> 00:08:05,895
+And so, you know, you take
+this model that's designed to
+
+169
+00:08:05,895 --> 00:08:07,653
+predict the next word, you
+then
+
+170
+00:08:07,653 --> 00:08:11,033
+tell it, you know, you're going to be
+answering a user's question.
+
+171
+00:08:11,033 --> 00:08:14,193
+So you know, tailor your response
+accordingly.
+
+172
+00:08:14,193 --> 00:08:17,299
+And then you go through a
+series of additional processes
+
+173
+00:08:17,299 --> 00:08:18,993
+where you, you know, give it
+to
+
+174
+00:08:18,993 --> 00:08:21,270
+give an output and then you
+evaluate it, tell it if it's
+
+175
+00:08:21,270 --> 00:08:22,553
+good or not and sort of train
+it
+
+176
+00:08:22,553 --> 00:08:24,553
+to do better. Yeah.
+
+177
+00:08:24,553 --> 00:08:26,073
+So that's how you actually build out the
+basic model.
+
+178
+00:08:26,073 --> 00:08:29,615
+And of course, now they're
+also being trained on stuff
+
+179
+00:08:29,615 --> 00:08:31,753
+beyond just text data like
+images
+
+180
+00:08:31,753 --> 00:08:36,113
+and that's when people talk about a
+multimodal model,
+
+181
+00:08:36,113 --> 00:08:37,953
+that just means that in addition to text,
+
+182
+00:08:37,953 --> 00:08:40,433
+it can work with images or videos or audio
+
+183
+00:08:40,433 --> 00:08:43,973
+and other modalities or other types of
+data,
+
+184
+00:08:43,973 --> 00:08:45,373
+both input and output.
+
+185
+00:08:46,713 --> 00:08:49,053
+And so that's like the core model is the,
+
+186
+00:08:49,053 --> 00:08:50,873
+I think you had a good analogy that,
+
+187
+00:08:50,873 --> 00:08:53,873
+or like around thinking about like the
+car, right?
+
+188
+00:08:53,873 --> 00:08:55,673
+Yeah, so like the model, in my mind,
+
+189
+00:08:55,673 --> 00:08:56,793
+I was just getting all turned around,
+
+190
+00:08:56,793 --> 00:08:58,473
+I'm like, okay, what's the model?
+
+191
+00:08:58,473 --> 00:08:59,813
+What's the fricking hardness?
+
+192
+00:08:59,813 --> 00:09:02,213
+what's like all these crazy words that are
+silly.
+
+193
+00:09:03,413 --> 00:09:07,413
+And where Chat and I landed, to be honest,
+
+194
+00:09:07,413 --> 00:09:10,513
+is the model's like the engine of the car.
+
+195
+00:09:10,513 --> 00:09:12,213
+So it's like keeping it going.
+
+196
+00:09:12,213 --> 00:09:14,093
+It's like the thing that powers it.
+
+197
+00:09:14,093 --> 00:09:15,353
+And that's like Opus.
+
+198
+00:09:15,353 --> 00:09:19,153
+That's, you know, that's specific models
+within Claude,
+
+199
+00:09:19,153 --> 00:09:23,493
+within Chat, Astra, you know, other ones.
+
+200
+00:09:25,173 --> 00:09:26,013
+Fable.
+
+201
+00:09:27,093 --> 00:09:29,253
+That's all the ones I remember.
+
+202
+00:09:29,253 --> 00:09:33,413
+And then you have the harness, which is
+the interface
+
+203
+00:09:33,413 --> 00:09:35,733
+that you use to go back and forth.
+
+204
+00:09:35,733 --> 00:09:37,453
+It surrounds the model, and it allows
+
+205
+00:09:37,453 --> 00:09:39,973
+you to interact with the model.
+
+206
+00:09:39,973 --> 00:09:43,813
+And that is like the car frame or the car
+in of itself,
+
+207
+00:09:43,813 --> 00:09:46,013
+where you're driving it.
+
+208
+00:09:46,013 --> 00:09:47,133
+You're using the engine.
+
+209
+00:09:47,133 --> 00:09:52,253
+You're not necessarily like, you know,
+whatever. Totally. Yeah.
+
+210
+00:09:52,253 --> 00:09:55,653
+I think there's-- oh, and the brand is
+like the--
+
+211
+00:09:55,653 --> 00:09:58,333
+and there's a Toyota or a Prius or
+whatever it is.
+
+212
+00:09:58,333 --> 00:10:01,713
+that's Anthropic. Right. Yeah.
+
+213
+00:10:01,713 --> 00:10:03,553
+So if we think of a Toyota Prius car,
+
+214
+00:10:03,553 --> 00:10:06,573
+Toyota, the car maker, is Anthropic.
+
+215
+00:10:06,573 --> 00:10:10,253
+And then Claude, the Claude interface,
+
+216
+00:10:10,253 --> 00:10:11,573
+would be the Prius, the car.
+
+217
+00:10:11,573 --> 00:10:13,533
+And then the engine that's actually
+powering it
+
+218
+00:10:13,533 --> 00:10:17,373
+could be Opus, or yeah, Fable, which are
+different models
+
+219
+00:10:17,373 --> 00:10:19,333
+from Anthropic. Yeah.
+
+220
+00:10:19,333 --> 00:10:20,833
+So yeah, I think that's a helpful analogy.
+
+221
+00:10:20,833 --> 00:10:22,253
+And I think that, to your point--
+
+222
+00:10:22,253 --> 00:10:25,933
+And then back to the open-closed model, an
+open model
+
+223
+00:10:25,933 --> 00:10:28,693
+would be like you're tweaking things.
+
+224
+00:10:28,693 --> 00:10:30,173
+You're like going into the engine
+
+225
+00:10:30,173 --> 00:10:31,573
+and you're moving things around.
+
+226
+00:10:31,573 --> 00:10:34,453
+A closed model is what the majority of the
+people want.
+
+227
+00:10:34,453 --> 00:10:36,853
+I have no interest in going and tweaking
+things.
+
+228
+00:10:37,693 --> 00:10:39,893
+And therefore I will buy the whole
+fricking engine.
+
+229
+00:10:39,893 --> 00:10:42,773
+I'm not gonna like, you know. Yeah, yeah.
+
+230
+00:10:42,773 --> 00:10:43,613
+Add stuff myself.
+
+231
+00:10:43,613 --> 00:10:44,453
+Exactly, yeah.
+
+232
+00:10:44,453 --> 00:10:46,573
+And like the closed models today
+
+233
+00:10:46,573 --> 00:10:48,053
+are generally the most powerful ones,
+
+234
+00:10:48,053 --> 00:10:50,173
+the ones that are, you know,
+
+235
+00:10:50,173 --> 00:10:51,893
+have the highest performance out of the
+box.
+
+236
+00:10:51,893 --> 00:10:55,053
+And I think one of the benefits of the
+open weight models
+
+237
+00:10:55,053 --> 00:10:57,682
+for people that care to do
+it is you can go in and
+
+238
+00:10:57,682 --> 00:10:59,613
+actually edit the underlying
+weights,
+
+239
+00:10:59,613 --> 00:11:02,960
+essentially like change and
+modify the engine to work for
+
+240
+00:11:02,960 --> 00:11:04,693
+whatever task you're trying
+to
+
+241
+00:11:04,693 --> 00:11:05,693
+do.
+
+242
+00:11:05,693 --> 00:11:07,893
+So like if I was trying to do
+street racing and I really
+
+243
+00:11:07,893 --> 00:11:09,093
+want to optimize the engine
+for
+
+244
+00:11:09,093 --> 00:11:17,173
+like fastest zero to 60 time, with an open
+model I can go in and tweak and modify the
+
+245
+00:11:17,173 --> 00:11:18,173
+engine to do that.
+
+246
+00:11:18,173 --> 00:11:20,813
+Whereas a close weight model, I can't get
+in there.
+
+247
+00:11:20,813 --> 00:11:21,893
+Like it's sealed off.
+
+248
+00:11:21,893 --> 00:11:24,433
+I'm working with what they gave me.
+
+249
+00:11:24,433 --> 00:11:28,833
+When you have the examples are like Harvey
+in the legal space where it will train on
+
+250
+00:11:28,833 --> 00:11:32,600
+a smaller set of stuff in a
+different way and therefore
+
+251
+00:11:32,600 --> 00:11:34,833
+it will perform better at
+exactly
+
+252
+00:11:34,833 --> 00:11:39,073
+what it should do or open evidence in the
+healthcare space.
+
+253
+00:11:39,073 --> 00:11:43,644
+When you double down into one
+or smaller task or realm of
+
+254
+00:11:43,644 --> 00:11:46,093
+tasks that you're trying to
+do,
+
+255
+00:11:46,093 --> 00:11:49,464
+you can make it a lot
+better, but then those same
+
+256
+00:11:49,464 --> 00:11:51,993
+stuff is going to do worse
+on average
+
+257
+00:11:51,993 --> 00:11:53,313
+on any random thing.
+
+258
+00:11:53,313 --> 00:11:56,495
+Totally. Yeah. So like Harvey
+or open evidence might take an
+
+259
+00:11:56,495 --> 00:11:58,113
+open model and then tune it
+for
+
+260
+00:11:58,113 --> 00:12:06,113
+their specific industry use case. Whereas
+Opus from Anthropic or Astra from OpenAI
+
+261
+00:12:06,113 --> 00:12:09,012
+are generally trained to be
+kind of broadly useful models
+
+262
+00:12:09,012 --> 00:12:10,513
+that are trained on a bunch
+of
+
+263
+00:12:10,513 --> 00:12:14,439
+different types of tasks so that
+they're going to be really
+
+264
+00:12:14,439 --> 00:12:16,673
+strong across different use
+cases,
+
+265
+00:12:16,673 --> 00:12:19,770
+but not as strong, you know, in
+super specialized use cases.
+
+266
+00:12:19,770 --> 00:12:21,713
+Like if you're putting it next
+to open
+
+267
+00:12:21,713 --> 00:12:23,643
+evidence for a healthcare use
+case, open evidence is probably
+
+268
+00:12:23,643 --> 00:12:24,673
+gonna do better because it's
+been
+
+269
+00:12:24,673 --> 00:12:28,314
+intentionally trained on those
+specific types of questions. I'm
+
+270
+00:12:28,314 --> 00:12:30,193
+so over the names. Like why
+can't
+
+271
+00:12:30,193 --> 00:12:33,354
+it be like Apple where they do
+like iPhone four or five say
+
+272
+00:12:33,354 --> 00:12:35,153
+that'd be so much better. Like
+the
+
+273
+00:12:35,153 --> 00:12:38,937
+models are so annoying. Like
+Claude having Luna, whatever,
+
+274
+00:12:38,937 --> 00:12:41,393
+like soul, whatever these
+annoying ass
+
+275
+00:12:41,393 --> 00:12:43,809
+names are. I'm not sure if I'm
+allowed to say what I just
+
+276
+00:12:43,809 --> 00:12:45,233
+said. Those are opening up
+models.
+
+277
+00:12:46,433 --> 00:12:48,396
+Point, point landed. I mean, it
+makes the point even more
+
+278
+00:12:48,396 --> 00:12:49,553
+clear. Like there's so many
+names,
+
+279
+00:12:49,553 --> 00:12:52,453
+ski track oven. And it's just
+like so annoying, but I think
+
+280
+00:12:52,453 --> 00:12:53,953
+it's, I think for me right
+now,
+
+281
+00:12:55,313 --> 00:13:00,629
+where we fable is like does a
+lot. It's a really high powered
+
+282
+00:13:00,629 --> 00:13:03,553
+model for Claude, but it sounds
+so
+
+283
+00:13:04,593 --> 00:13:08,077
+fricking robotic and like not
+concise. I actually hate it.
+
+284
+00:13:08,077 --> 00:13:10,033
+You mean the way that it
+actually
+
+285
+00:13:10,033 --> 00:13:12,488
+generates output, like
+whatever. Like I prefer the
+
+286
+00:13:12,488 --> 00:13:14,593
+less strong model that I forget
+what it is,
+
+287
+00:13:14,593 --> 00:13:17,084
+but that's what I stay on.
+What's the one right under that?
+
+288
+00:13:17,084 --> 00:13:18,673
+Opus. That's what I do like
+everything
+
+289
+00:13:18,673 --> 00:13:23,382
+on with Claude. With chat
+though, I love their Astra,
+
+290
+00:13:23,382 --> 00:13:26,733
+which is their fable equivalent,
+which
+
+291
+00:13:26,733 --> 00:13:31,053
+takes up the most tokens. Also, the better
+model you use, the more tokens.
+
+292
+00:13:31,053 --> 00:13:35,133
+And the tokens are essentially just a unit
+of usage. It's gas.
+
+293
+00:13:35,133 --> 00:13:37,133
+Yeah, good call. Thank you.
+
+294
+00:13:37,133 --> 00:13:47,973
+Wow. That was far. Yeah, and so it's like
+for all these model providers in the app,
+
+295
+00:13:47,973 --> 00:13:51,037
+chat gbt or in cloud you have a
+certain amount of tokens that
+
+296
+00:13:51,037 --> 00:13:52,773
+you can use within a certain
+window
+
+297
+00:13:52,773 --> 00:13:57,093
+depending on which plan you pay
+for that type of thing so astra
+
+298
+00:13:57,093 --> 00:13:59,253
+for OpenAI or fable for cloud
+is
+
+299
+00:13:59,253 --> 00:14:04,213
+going to use up that usage much
+faster than their you know less
+
+300
+00:14:04,213 --> 00:14:06,693
+performative models they're
+more
+
+301
+00:14:06,693 --> 00:14:09,629
+basic models so it's always
+a trade-off when deciding
+
+302
+00:14:09,629 --> 00:14:11,493
+which model you're going to
+use of
+
+303
+00:14:11,493 --> 00:14:16,533
+Is this a task that really requires
+complex thinking or analysis?
+
+304
+00:14:17,493 --> 00:14:24,533
+Or is it, if I'm asking what time does the
+gas station close tonight,
+
+305
+00:14:24,533 --> 00:14:26,333
+then I can probably use a
+basic model because it's just
+
+306
+00:14:26,333 --> 00:14:27,333
+going to do a basic web
+search.
+
+307
+00:14:27,333 --> 00:14:31,008
+Whereas if I'm asking it,
+please solve this mathematical
+
+308
+00:14:31,008 --> 00:14:33,013
+problem that no one's been
+able
+
+309
+00:14:33,013 --> 00:14:35,253
+to solve in decades, like you're going to
+want to use the top model.
+
+310
+00:14:35,253 --> 00:14:38,773
+Speaking of mathematical problems, it was
+never in my cards.
+
+311
+00:14:38,773 --> 00:14:43,773
+But if you're a mathematician right now,
+holy days.
+
+312
+00:14:44,413 --> 00:14:46,973
+Yeah, you just mean like the fact that
+these models
+
+313
+00:14:46,973 --> 00:14:49,293
+are cracking stuff that humans haven't
+been able to.
+
+314
+00:14:49,293 --> 00:14:50,133
+And that will never.
+
+315
+00:14:50,133 --> 00:14:55,133
+I think there are some jobs that aren't
+valuable anymore.
+
+316
+00:14:58,913 --> 00:15:00,813
+Like mathematicians.
+
+317
+00:15:00,813 --> 00:15:02,693
+Yeah, that's definitely a spicy take.
+
+318
+00:15:02,693 --> 00:15:03,853
+I feel like--
+
+319
+00:15:03,853 --> 00:15:05,253
+Okay, wait, let me revert.
+
+320
+00:15:05,253 --> 00:15:08,733
+I think learning how to learn is so
+important.
+
+321
+00:15:08,733 --> 00:15:12,613
+I think teaching math is so important.
+
+322
+00:15:12,613 --> 00:15:15,173
+I mean, knowing what questions to ask
+
+323
+00:15:15,173 --> 00:15:17,413
+these models are super important,
+
+324
+00:15:17,413 --> 00:15:22,333
+but I think being the top mathematician at
+your field,
+
+325
+00:15:22,333 --> 00:15:23,853
+like being differentiated,
+
+326
+00:15:23,853 --> 00:15:26,413
+I'm thinking like whiteboard, frigging,
+
+327
+00:15:26,413 --> 00:15:28,933
+whatever that movie is, hunting.
+
+328
+00:15:28,933 --> 00:15:29,973
+Good will, hunting. - Yeah, yeah, yeah.
+
+329
+00:15:29,973 --> 00:15:31,333
+Like, that. - Banger movie.
+
+330
+00:15:33,453 --> 00:15:34,293
+Okay. - It's less valuable
+
+331
+00:15:34,293 --> 00:15:35,613
+for society. - I'll push back.
+
+332
+00:15:35,613 --> 00:15:39,360
+I think I agree with you
+that certain tasks and
+
+333
+00:15:39,360 --> 00:15:42,293
+subsets of jobs, and maybe
+some jobs,
+
+334
+00:15:42,293 --> 00:15:46,588
+but I think using this example
+of the mathematician, I think,
+
+335
+00:15:46,588 --> 00:15:49,093
+yes, these model providers have
+been
+
+336
+00:15:49,093 --> 00:15:52,413
+able to crack problems that humans haven't
+been able to, and they've been trying for
+
+337
+00:15:52,413 --> 00:15:53,413
+decades.
+
+338
+00:15:53,413 --> 00:15:57,213
+But first of all, you need someone to
+verify that result.
+
+339
+00:15:57,213 --> 00:16:00,050
+When Astra goes and solves some
+novel problem, you need a
+
+340
+00:16:00,050 --> 00:16:01,773
+mathematician who knows their
+stuff
+
+341
+00:16:01,773 --> 00:16:03,853
+to be able to look at that solution and
+say-
+
+342
+00:16:03,853 --> 00:16:08,205
+the top. I'm saying like, I'm
+saying like being the best
+
+343
+00:16:08,205 --> 00:16:11,053
+runner in the world, I think is
+still
+
+344
+00:16:11,053 --> 00:16:14,997
+valuable. Like it doesn't, I
+don't care if a robot, which
+
+345
+00:16:14,997 --> 00:16:17,533
+honestly they've been like
+developed.
+
+346
+00:16:17,533 --> 00:16:18,413
+They're faster now.
+
+347
+00:16:18,413 --> 00:16:20,930
+They're faster now, but there,
+there, there's a lot of, I
+
+348
+00:16:20,930 --> 00:16:22,413
+feel like they're, they're
+kind of
+
+349
+00:16:22,413 --> 00:16:26,093
+underwhelming. Like robotics, or
+just like more generally, like I
+
+350
+00:16:26,093 --> 00:16:27,933
+think that the pace to
+innovation
+
+351
+00:16:27,933 --> 00:16:33,453
+there is surprisingly so but anyway beside
+the point yeah I think I think
+
+352
+00:16:33,453 --> 00:16:37,933
+being the fastest runner is still just as
+valuable in my mind.
+
+353
+00:16:37,933 --> 00:16:39,213
+Yeah, seriously like the people at the
+top.
+
+354
+00:16:39,213 --> 00:16:40,893
+Being the best mathematician. Yeah.
+
+355
+00:16:40,893 --> 00:16:44,493
+I think is less valuable.
+
+356
+00:16:45,933 --> 00:16:46,653
+To society.
+
+357
+00:16:46,653 --> 00:16:50,653
+I think that it is interesting because now
+that we have these models that can do such
+
+358
+00:16:50,653 --> 00:16:54,262
+incredible analysis and problem
+solving like it still is so
+
+359
+00:16:54,262 --> 00:16:56,253
+beneficial I think to have
+really
+
+360
+00:16:56,253 --> 00:16:59,907
+really great, like, super crack
+people thinking about, okay,
+
+361
+00:16:59,907 --> 00:17:02,013
+where do we apply that model?
+Like,
+
+362
+00:17:02,013 --> 00:17:04,257
+what are the new frontiers that
+we can now explore? So like
+
+363
+00:17:04,257 --> 00:17:05,533
+having people be able to guide
+it,
+
+364
+00:17:05,533 --> 00:17:08,959
+I think that the top people
+in any field will always be
+
+365
+00:17:08,959 --> 00:17:11,053
+super valued and super
+valuable. I
+
+366
+00:17:11,053 --> 00:17:13,276
+think that I would worry more
+about like the middle bucket,
+
+367
+00:17:13,276 --> 00:17:14,733
+right? Because it's like, you're
+still,
+
+368
+00:17:14,733 --> 00:17:17,643
+we're still going to need math
+teachers who can teach the basics
+
+369
+00:17:17,643 --> 00:17:19,213
+and teach well, it's right.
+Because
+
+370
+00:17:19,213 --> 00:17:21,768
+like, to your point, it's still
+important to learn how to learn
+
+371
+00:17:21,768 --> 00:17:23,293
+math is just a good way to teach
+that.
+
+372
+00:17:23,293 --> 00:17:28,117
+Yeah. But for me, it's more
+like, okay, that middle band
+
+373
+00:17:28,117 --> 00:17:30,573
+of researchers who maybe
+were
+
+374
+00:17:30,573 --> 00:17:33,107
+spending their career working
+on certain problems, but
+
+375
+00:17:33,107 --> 00:17:34,493
+aren't the top of their
+field,
+
+376
+00:17:34,493 --> 00:17:37,294
+like that's honestly who I
+would be most worried about.
+
+377
+00:17:37,294 --> 00:17:39,213
+Because I think that, you know,
+OpenAI
+
+378
+00:17:39,213 --> 00:17:41,963
+and Anthropic and different
+companies are going to want those
+
+379
+00:17:41,963 --> 00:17:43,613
+top mathematicians to be helping
+test
+
+380
+00:17:43,613 --> 00:17:46,686
+and build and lead the
+development of their models. But
+
+381
+00:17:46,686 --> 00:17:49,133
+in maybe this is it maybe this is
+what math,
+
+382
+00:17:49,133 --> 00:17:51,333
+But I think I totally agree.
+
+383
+00:17:51,333 --> 00:17:53,333
+And they were kind of convinced me in some
+places.
+
+384
+00:17:53,493 --> 00:17:58,533
+But but I think in my mind, if you're the
+top mathematician, you're not checking.
+
+385
+00:17:58,733 --> 00:18:03,893
+Like you're not like where your
+differentiation is discovery.
+
+386
+00:18:04,453 --> 00:18:09,333
+And I think in coming up with and I think
+that's where.
+
+387
+00:18:10,693 --> 00:18:15,693
+You know, the insane math, whatever thing
+that problem that they figured out.
+
+388
+00:18:15,693 --> 00:18:18,133
+Yeah. Like that the top mathematicians
+were like
+
+389
+00:18:18,573 --> 00:18:20,293
+focused in on and locked in on.
+
+390
+00:18:20,293 --> 00:18:24,013
+Yeah. Like that no longer is.
+
+391
+00:18:24,013 --> 00:18:25,173
+I don't know. We'll see. We'll see.
+
+392
+00:18:25,173 --> 00:18:28,933
+I kind of believe what you're saying more
+than me.
+
+393
+00:18:29,173 --> 00:18:33,293
+But I think I think it's interesting both
+ways.
+
+394
+00:18:33,293 --> 00:18:37,053
+It's just like think about I think we said
+this in the first episode.
+
+395
+00:18:37,053 --> 00:18:43,773
+I think we strongly, strongly, strongly
+believe that jobs will not go away.
+
+396
+00:18:43,813 --> 00:18:46,533
+It just tasks that will.
+
+397
+00:18:46,533 --> 00:18:51,023
+And that's why it's so important
+for us all to level up our
+
+398
+00:18:51,023 --> 00:18:53,733
+understanding and evolve and
+adjust.
+
+399
+00:18:53,733 --> 00:18:59,413
+And we all can. This stuff is not even the
+most even, you know,
+
+400
+00:18:59,413 --> 00:19:06,847
+cloud or Claude Code or Codex,
+the most code heavy parts of
+
+401
+00:19:06,847 --> 00:19:11,333
+chat and cloud, Anthropic and
+what's
+
+402
+00:19:11,333 --> 00:19:12,333
+OpenAI.
+
+403
+00:19:12,333 --> 00:19:13,333
+And topic in OpenAI.
+
+404
+00:19:13,333 --> 00:19:17,333
+Yeah, I get a little confused.
+
+405
+00:19:17,333 --> 00:19:19,773
+Are so not technical.
+
+406
+00:19:19,773 --> 00:19:24,013
+I was CS undergrad and I couldn't code to
+save my life.
+
+407
+00:19:24,013 --> 00:19:27,013
+And you got me through some of those
+classes.
+
+408
+00:19:27,013 --> 00:19:29,413
+But you don't touch code.
+
+409
+00:19:29,413 --> 00:19:32,893
+And I think once you start to have that
+thing of...
+
+410
+00:19:32,893 --> 00:19:38,573
+I was talking to one of my friends at the
+business school and she was like, "Can we
+
+411
+00:19:38,573 --> 00:19:41,293
+go through this question?"
+
+412
+00:19:41,293 --> 00:19:44,133
+I have an interview, I need to develop
+something,
+
+413
+00:19:44,133 --> 00:19:44,973
+can we chat through?
+
+414
+00:19:44,973 --> 00:19:46,253
+And she kept asking me questions.
+
+415
+00:19:46,253 --> 00:19:49,773
+And I was like, love, put all these
+questions or ask me,
+
+416
+00:19:49,773 --> 00:19:53,173
+just type them or say them into your chat
+prompt.
+
+417
+00:19:53,173 --> 00:19:54,853
+Just ask it, how do I talk through,
+
+418
+00:19:54,853 --> 00:19:56,193
+how do I do this?
+
+419
+00:19:56,193 --> 00:19:59,273
+Send screenshots, ask it, I've never used
+Claude Code,
+
+420
+00:19:59,273 --> 00:20:00,113
+how do I do that?
+
+421
+00:20:00,113 --> 00:20:01,533
+And it will walk you through.
+
+422
+00:20:01,533 --> 00:20:05,213
+And it's insane how it can,
+
+423
+00:20:05,213 --> 00:20:06,693
+there's so many things where I might
+explain,
+
+424
+00:20:06,693 --> 00:20:10,413
+like I am zero and dyslexic and I am
+dyslexic, but I'm not zero.
+
+425
+00:20:10,413 --> 00:20:14,373
+And in those things, I think it's just
+developing this skill.
+
+426
+00:20:14,373 --> 00:20:16,493
+But there's no--
+
+427
+00:20:16,493 --> 00:20:23,333
+the thing I get scared by is that men, who
+typically
+
+428
+00:20:23,333 --> 00:20:27,573
+are a bit more confident, who typically
+land themselves
+
+429
+00:20:27,573 --> 00:20:30,853
+a little bit more in the engineering AI
+space,
+
+430
+00:20:30,853 --> 00:20:32,633
+are going to--
+
+431
+00:20:32,633 --> 00:20:35,253
+and who are higher socioeconomic,
+
+432
+00:20:35,253 --> 00:20:36,893
+so they have more time--
+
+433
+00:20:36,893 --> 00:20:45,933
+going to way, way, way differentially get
+into this space that is so valuable and so
+
+434
+00:20:45,933 --> 00:20:54,453
+needed across any domain and equity and
+all that stuff just heightens inequity.
+
+435
+00:20:54,453 --> 00:20:58,743
+I think that's what I want
+to prevent and make fun and
+
+436
+00:20:58,743 --> 00:21:01,253
+both for myself, for our
+littles
+
+437
+00:21:01,253 --> 00:21:04,473
+to like the boys, but also most
+importantly,
+
+438
+00:21:04,473 --> 00:21:08,753
+the little nuggets, but also more broad
+like this matters
+
+439
+00:21:08,753 --> 00:21:11,853
+and it can be fun and we should all, it
+can be scary,
+
+440
+00:21:11,853 --> 00:21:14,333
+but like the unknown is always more scary
+
+441
+00:21:14,333 --> 00:21:15,473
+than the unknown for me.
+
+442
+00:21:15,473 --> 00:21:17,133
+Totally, yeah, I think that's such a good
+point
+
+443
+00:21:17,133 --> 00:21:19,053
+that as these tools have gotten better,
+
+444
+00:21:19,053 --> 00:21:22,013
+it's also becomes easier to learn how to
+use them
+
+445
+00:21:22,013 --> 00:21:23,573
+by going back and forth with the tool.
+
+446
+00:21:23,573 --> 00:21:25,973
+Like, yeah, I totally, when I run into
+things
+
+447
+00:21:25,973 --> 00:21:27,293
+and it's like, I don't know how to, you
+know,
+
+448
+00:21:27,293 --> 00:21:29,173
+I'm working with Claude Code, building a
+website,
+
+449
+00:21:29,173 --> 00:21:31,053
+I also can't code to save my life,
+
+450
+00:21:31,053 --> 00:21:33,133
+but it's like, okay, there's an error in
+the code.
+
+451
+00:21:33,133 --> 00:21:34,333
+It's kind of a lie.
+
+452
+00:21:34,333 --> 00:21:36,493
+No, no, compared to an actual engineer.
+
+453
+00:21:36,493 --> 00:21:37,853
+If we both took a coding class,
+
+454
+00:21:37,853 --> 00:21:40,253
+guys, there was a class that we took first
+year,
+
+455
+00:21:40,253 --> 00:21:43,693
+I mean, last year at Stanford.
+
+456
+00:21:43,693 --> 00:21:48,113
+And the way that I thought I had dyslexia,
+
+457
+00:21:48,113 --> 00:21:53,113
+the way that I thought I was experiencing
+dyslexia
+
+458
+00:21:53,293 --> 00:21:54,733
+when I saw my grade,
+
+459
+00:21:54,733 --> 00:21:56,493
+(both laughing)
+
+460
+00:21:56,493 --> 00:21:57,973
+I got, my first midterm,
+
+461
+00:21:57,973 --> 00:22:00,813
+that Josh got like a 90 fricking
+something.
+
+462
+00:22:00,813 --> 00:22:05,453
+I got like a 29 and I had to look away,
+look back.
+
+463
+00:22:05,453 --> 00:22:06,813
+I was thinking it was a 92.
+
+464
+00:22:06,813 --> 00:22:09,213
+I thought that my mind was undoing it
+
+465
+00:22:09,213 --> 00:22:10,893
+and we were coding on paper.
+
+466
+00:22:10,893 --> 00:22:11,733
+There's some coding difference.
+
+467
+00:22:11,733 --> 00:22:12,573
+Yeah, you still pass the class though.
+
+468
+00:22:12,573 --> 00:22:13,413
+We ended up with--
+
+469
+00:22:13,413 --> 00:22:14,453
+I passed the class.
+
+470
+00:22:14,453 --> 00:22:15,333
+Did I spiral?
+
+471
+00:22:15,333 --> 00:22:17,173
+Absolutely, but I did pass the class.
+
+472
+00:22:17,173 --> 00:22:19,233
+Did I cry to the professor? Absolutely.
+
+473
+00:22:20,773 --> 00:22:23,213
+Okay, but relative to an actual software
+engineer,
+
+474
+00:22:23,213 --> 00:22:24,053
+I can't code. - Totally.
+
+475
+00:22:24,053 --> 00:22:26,333
+The point is, right, and when I get this
+bug
+
+476
+00:22:26,333 --> 00:22:28,053
+in a website, I have no idea what it
+means,
+
+477
+00:22:28,053 --> 00:22:30,493
+but to your point, take a screenshot or
+copy and paste it,
+
+478
+00:22:30,493 --> 00:22:33,833
+put it in the Claude Code and it can talk
+through an English with me.
+
+479
+00:22:33,833 --> 00:22:34,833
+It's so good.
+
+480
+00:22:34,833 --> 00:22:35,833
+It's so fun.
+
+481
+00:22:35,833 --> 00:22:37,833
+Okay, back to that. Yeah.
+
+482
+00:22:37,833 --> 00:22:39,713
+I was just going to say, I
+think going back to the debate
+
+483
+00:22:39,713 --> 00:22:40,753
+about the mathematician, I
+think
+
+484
+00:22:40,753 --> 00:22:43,886
+like your point, which is, you
+know, mathematicians should be
+
+485
+00:22:43,886 --> 00:22:45,713
+thinking about what the future
+looks
+
+486
+00:22:45,713 --> 00:22:47,593
+like in that sector is so true.
+
+487
+00:22:47,593 --> 00:22:50,195
+And I think that like you
+said, AI in and of itself
+
+488
+00:22:50,195 --> 00:22:51,913
+doesn't come in just totally
+wiped
+
+489
+00:22:51,913 --> 00:22:53,013
+out a job.
+
+490
+00:22:53,013 --> 00:22:57,593
+But I think thinking about it as what is
+the set of tasks that make up a job?
+
+491
+00:22:57,593 --> 00:23:01,030
+I do think that there are some
+jobs where AI can effectively
+
+492
+00:23:01,030 --> 00:23:02,953
+replace most, if not all, of
+those
+
+493
+00:23:02,953 --> 00:23:05,886
+tasks, whereas others, it can
+replace certain tasks, but
+
+494
+00:23:05,886 --> 00:23:07,913
+there's still a bottleneck where
+the AI
+
+495
+00:23:07,913 --> 00:23:11,128
+can't really substitute. And
+so I think about the example
+
+496
+00:23:11,128 --> 00:23:12,793
+of a doctor, for example.
+Yes,
+
+497
+00:23:13,753 --> 00:23:17,260
+AI can probably read test
+results or analyze historical
+
+498
+00:23:17,260 --> 00:23:19,273
+records better than a human
+can,
+
+499
+00:23:19,273 --> 00:23:24,073
+but so much of the doctor role is the
+bedside manner, like the human connection,
+
+500
+00:23:24,073 --> 00:23:27,113
+and being there to support and encourage
+the patient
+
+501
+00:23:27,113 --> 00:23:27,953
+and their family.
+
+502
+00:23:27,953 --> 00:23:30,493
+And so, you know, like AI can't serve that
+role.
+
+503
+00:23:30,493 --> 00:23:34,253
+And so the doctor job might change
+
+504
+00:23:34,253 --> 00:23:36,833
+because they'll be spending more of their
+time
+
+505
+00:23:36,833 --> 00:23:39,813
+on patient engagement or, you know, other
+areas
+
+506
+00:23:39,813 --> 00:23:41,873
+and less on analyzing test results
+
+507
+00:23:41,873 --> 00:23:43,433
+or whatever else it may be.
+
+508
+00:23:43,433 --> 00:23:44,753
+But I do think that there are some jobs
+
+509
+00:23:44,753 --> 00:23:47,833
+where the bucket of tasks that make up
+that job
+
+510
+00:23:47,833 --> 00:23:50,113
+are gonna be mostly replaced by AI.
+
+511
+00:23:50,113 --> 00:23:51,453
+Like, you know, there used to be people
+
+512
+00:23:51,453 --> 00:23:54,427
+that spend a lot of time just
+doing translation of
+
+513
+00:23:54,427 --> 00:23:56,733
+materials from one language
+to another.
+
+514
+00:23:56,733 --> 00:24:01,133
+Like I think there are use cases for like
+live translation between the presidents of
+
+515
+00:24:01,133 --> 00:24:03,307
+two countries where they're
+still going to want a person
+
+516
+00:24:03,307 --> 00:24:04,493
+there, but a lot of, yeah,
+even
+
+517
+00:24:04,493 --> 00:24:07,093
+that I think, I think it could evolve.
+
+518
+00:24:07,093 --> 00:24:14,013
+But in, I think the thing that I struggle
+with is where to one, I want to know like
+
+519
+00:24:14,013 --> 00:24:16,173
+where do I invest to set myself up?
+
+520
+00:24:16,173 --> 00:24:18,333
+So I think we should dig into that.
+
+521
+00:24:18,333 --> 00:24:20,813
+But two, where is it overhyped?
+
+522
+00:24:20,813 --> 00:24:23,833
+Because truck drivers, I think 10 years
+ago,
+
+523
+00:24:23,833 --> 00:24:26,293
+we were like, oh, they're all going to get
+wiped out.
+
+524
+00:24:26,293 --> 00:24:28,393
+By self-driving trucks? Yeah.
+
+525
+00:24:28,393 --> 00:24:29,493
+And they're starting.
+
+526
+00:24:29,493 --> 00:24:31,373
+They're finally starting. I know. I know.
+
+527
+00:24:31,373 --> 00:24:35,893
+But we thought we'd have self-driving cars
+right now. Totally. Robotics.
+
+528
+00:24:35,893 --> 00:24:38,773
+Flying cars by now. We thought we would be
+able to do way more in surgery
+
+529
+00:24:38,773 --> 00:24:43,013
+than we can by now, like by years ago.
+
+530
+00:24:43,013 --> 00:24:46,813
+And so I think for Warren Business School,
+
+531
+00:24:46,813 --> 00:24:49,973
+A lot of people are coming up in school,
+
+532
+00:24:49,973 --> 00:24:51,733
+and I know a lot of the Stanford
+undergrads
+
+533
+00:24:51,733 --> 00:24:56,733
+are pretty anxious and confused on what is
+the focus of,
+
+534
+00:24:56,893 --> 00:24:57,893
+what should I be focusing on?
+
+535
+00:24:57,893 --> 00:24:59,053
+What is worth exploring?
+
+536
+00:24:59,053 --> 00:25:01,693
+I think what I think for me,
+
+537
+00:25:01,693 --> 00:25:04,273
+but I wanna do more thinking,
+
+538
+00:25:04,273 --> 00:25:09,273
+is something that I don't think AI can
+ever replace
+
+539
+00:25:09,893 --> 00:25:13,933
+is this human element.
+
+540
+00:25:13,933 --> 00:25:23,273
+I'm such a feeler in the way that I try to
+harness my passion to get people fired up
+
+541
+00:25:23,273 --> 00:25:26,886
+or the way that I need to
+learn how to let go of
+
+542
+00:25:26,886 --> 00:25:29,653
+certain things and then
+mentor and go
+
+543
+00:25:29,653 --> 00:25:30,653
+up and down.
+
+544
+00:25:30,653 --> 00:25:34,435
+I think a lot of what they
+focus on here is there's more
+
+545
+00:25:34,435 --> 00:25:36,773
+classes and by here I mean
+Stanford
+
+546
+00:25:36,773 --> 00:25:40,156
+Business School, there's a
+lot of classes that are like
+
+547
+00:25:40,156 --> 00:25:41,973
+presentation, public
+speaking,
+
+548
+00:25:41,973 --> 00:25:42,973
+communication.
+
+549
+00:25:42,973 --> 00:25:45,133
+Like the interpersonal skills of, yeah.
+
+550
+00:25:45,133 --> 00:25:47,853
+And I think that is invaluable right now.
+
+551
+00:25:47,853 --> 00:25:51,293
+I think right now the only way that you
+can prove
+
+552
+00:25:51,293 --> 00:25:55,053
+an understanding and our expertise is
+communication.
+
+553
+00:25:55,053 --> 00:25:58,293
+Because now I could write, I'm dyslexic, I
+can't write,
+
+554
+00:25:58,293 --> 00:26:01,093
+but I could write an incredible paper
+
+555
+00:26:01,093 --> 00:26:04,733
+just by going back and forth with chat and
+Claude.
+
+556
+00:26:04,733 --> 00:26:08,133
+And I think it's fun because that almost
+feels more human.
+
+557
+00:26:08,133 --> 00:26:11,373
+It feels like it's pushing us in a
+different way
+
+558
+00:26:11,373 --> 00:26:14,891
+to be more human and to
+value that humanness that I
+
+559
+00:26:14,891 --> 00:26:17,213
+think at least for me for a
+while,
+
+560
+00:26:17,213 --> 00:26:25,133
+it was the opposite. It was how do I, you
+know, de-word, how do I like really try to
+
+561
+00:26:25,133 --> 00:26:28,733
+lock in there. So I think that's like one
+area that I really want to invest in. And
+
+562
+00:26:28,733 --> 00:26:33,238
+then I think the other is
+learning AI and kind of digging
+
+563
+00:26:33,238 --> 00:26:35,973
+into what tasks for me
+specifically
+
+564
+00:26:35,973 --> 00:26:40,973
+in the healthcare space are really
+important.
+
+565
+00:26:41,613 --> 00:26:44,693
+And then where like, AI is so interesting
+
+566
+00:26:44,693 --> 00:26:46,733
+'cause there's like some,
+
+567
+00:26:47,673 --> 00:26:49,413
+like AI companies are struggling.
+
+568
+00:26:49,413 --> 00:26:53,053
+There's, I mean, they're not, they're
+popping off.
+
+569
+00:26:53,053 --> 00:26:57,333
+But like, you know, the stickiness of if,
+you know,
+
+570
+00:26:57,333 --> 00:26:59,873
+if Claude does better, I'm gonna jump to
+Claude.
+
+571
+00:26:59,873 --> 00:27:02,493
+If chat does better, I'm gonna jump to
+chat. Yeah.
+
+572
+00:27:02,493 --> 00:27:04,853
+And then where in that ecosystem
+
+573
+00:27:04,853 --> 00:27:09,853
+do you really want to own because now the
+software is not a differentiator.
+
+574
+00:27:09,853 --> 00:27:11,453
+It will change, it will evolve.
+
+575
+00:27:11,453 --> 00:27:14,812
+Well, it could be a
+differentiator, but it's a less of
+
+576
+00:27:14,812 --> 00:27:17,093
+and kind of hardware has like
+really,
+
+577
+00:27:17,093 --> 00:27:20,453
+you know, like chips, all that stuff has
+become valuable.
+
+578
+00:27:20,453 --> 00:27:23,173
+And I think, yeah, I don't know much about
+it.
+
+579
+00:27:23,173 --> 00:27:26,027
+There's so many companies that
+have like ridden the success
+
+580
+00:27:26,027 --> 00:27:27,553
+or like, you know, maybe
+they're
+
+581
+00:27:27,553 --> 00:27:28,553
+lesser known.
+
+582
+00:27:28,553 --> 00:27:33,573
+Like NVIDIA is the most valuable, I think
+highest valued company in the world now.
+
+583
+00:27:33,573 --> 00:27:36,664
+And that's because they
+build essentially a chip,
+
+584
+00:27:36,664 --> 00:27:38,853
+which we can talk more about
+in the
+
+585
+00:27:38,853 --> 00:27:43,252
+future, but essentially a
+component that is needed to
+
+586
+00:27:43,252 --> 00:27:46,213
+train and to serve, to operate
+these
+
+587
+00:27:46,213 --> 00:27:47,080
+AI models. 
+
+588
+00:27:47,080 --> 00:27:49,918
+But kind of the basic, the
+point here is that there's a
+
+589
+00:27:49,918 --> 00:27:51,600
+lot of other companies beyond
+the
+
+590
+00:27:51,600 --> 00:27:54,062
+OpenAI and the Anthropic that
+everybody hears about that
+
+591
+00:27:54,062 --> 00:27:55,360
+are really kind of riding
+this
+
+592
+00:27:55,360 --> 00:27:56,360
+wave.
+
+593
+00:27:56,360 --> 00:28:00,480
+And it'll be super interesting to see
+longer term.
+
+594
+00:28:00,480 --> 00:28:04,000
+The economics are changing a lot of what
+it costs
+
+595
+00:28:04,000 --> 00:28:05,480
+to train and to serve these models
+
+596
+00:28:05,480 --> 00:28:06,600
+and to use them as consumers.
+
+597
+00:28:06,600 --> 00:28:08,880
+And so there are questions I think around
+
+598
+00:28:08,880 --> 00:28:11,560
+what's gonna be a sustainable moat in this
+space versus not.
+
+599
+00:28:11,560 --> 00:28:13,120
+Moat, moat, moat.
+
+600
+00:28:13,120 --> 00:28:14,340
+Everyone uses moat these days.
+
+601
+00:28:14,340 --> 00:28:15,920
+Honestly, it's like my least favorite
+word.
+
+602
+00:28:15,920 --> 00:28:17,720
+Just like advantage. Yeah, yeah.
+
+603
+00:28:17,720 --> 00:28:22,360
+It's like, it's like, yeah, advantage is a
+great idea.
+
+604
+00:28:22,360 --> 00:28:24,080
+But I think to your point,
+
+605
+00:28:24,080 --> 00:28:25,400
+people switch all the time.
+
+606
+00:28:25,400 --> 00:28:29,720
+I know I do when the newest model comes
+out from opening a iron and dropping.
+
+607
+00:28:29,720 --> 00:28:30,640
+Like, yeah.
+
+608
+00:28:30,640 --> 00:28:34,000
+And if one's better, like there's a very
+little switching cost.
+
+609
+00:28:34,000 --> 00:28:39,880
+Like it's very easy just to copy and paste
+your, uh, kind of key, you know,
+
+610
+00:28:39,880 --> 00:28:41,280
+information from one to the other.
+
+611
+00:28:41,600 --> 00:28:42,680
+And you can download it now.
+
+612
+00:28:42,680 --> 00:28:47,400
+You can go to your settings and if you, I
+would strongly suggest only using one,
+
+613
+00:28:47,600 --> 00:28:51,880
+um, especially in the beginning and just
+like letting it learn you, you learning
+
+614
+00:28:51,880 --> 00:28:53,760
+it by passing all permissions.
+
+615
+00:28:53,760 --> 00:28:57,222
+but that's honestly just my, like, I
+mean, I didn't want to suggest it,
+
+616
+00:28:57,222 --> 00:28:59,200
+but I would for myself, because it's
+just
+
+617
+00:28:59,200 --> 00:29:00,760
+giving it full access.
+
+618
+00:29:00,760 --> 00:29:07,880
+Yeah, like I have nothing to hide, to be
+honest. And to a scary degree.
+
+619
+00:29:08,377 --> 00:29:11,457
+I totally agree as a, especially as a
+beginner, it makes sense to just learn
+
+620
+00:29:11,457 --> 00:29:14,659
+one tool and learn how to use it well,
+and get comfortable with it. But I think
+
+621
+00:29:14,659 --> 00:29:16,507
+once people are kind of up the learning
+curve,
+
+622
+00:29:17,427 --> 00:29:20,094
+The products are pretty
+similar, like you know, uh,
+
+623
+00:29:20,094 --> 00:29:22,387
+Chad GPT and Collod are, are
+very similar in
+
+624
+00:29:22,387 --> 00:29:24,705
+terms of the interface,
+functionality, et cetera. And so
+
+625
+00:29:24,705 --> 00:29:26,307
+people kind of hop from one to the
+next
+
+626
+00:29:26,307 --> 00:29:28,939
+based on whoever has the best or
+cheapest or, you know, model
+
+627
+00:29:28,939 --> 00:29:30,387
+that makes the most sense for
+them
+
+628
+00:29:30,387 --> 00:29:33,038
+at any given point in time. And
+so it is an interesting
+
+629
+00:29:33,038 --> 00:29:34,707
+question of longer term, how do
+you
+
+630
+00:29:34,707 --> 00:29:38,118
+build out consumer loyalty in
+that stickiness where they
+
+631
+00:29:38,118 --> 00:29:40,227
+won't just abandon you for the,
+for
+
+632
+00:29:40,227 --> 00:29:44,081
+the other model provider next
+time a new one drops that's
+
+633
+00:29:44,081 --> 00:29:46,627
+better. So back to our on-prem
+versus,
+
+634
+00:29:46,627 --> 00:29:50,594
+Oh, sorry. Whoa. That's a whole
+different thing. Back to our
+
+635
+00:29:50,594 --> 00:29:52,947
+closed model versus open model.
+Open
+
+636
+00:29:52,947 --> 00:29:57,648
+models don't make money, do
+they? The companies that
+
+637
+00:29:57,648 --> 00:30:01,427
+build... So to actually use the
+model as a
+
+638
+00:30:01,427 --> 00:30:06,677
+consumer, you don't typically
+pay the model provider. So
+
+639
+00:30:06,677 --> 00:30:09,827
+like DeepSeek, like you
+mentioned,
+
+640
+00:30:09,827 --> 00:30:13,098
+is an open model. That's an open
+model. Yeah. It's a little bit
+
+641
+00:30:13,098 --> 00:30:14,787
+of a loaded term because open
+can
+
+642
+00:30:14,787 --> 00:30:18,400
+can mean different things.
+Like there's open weight,
+
+643
+00:30:18,400 --> 00:30:20,667
+which means you literally
+provide
+
+644
+00:30:20,667 --> 00:30:25,267
+where someone can like copy and go in and
+make specific edits to the unerling model.
+
+645
+00:30:25,267 --> 00:30:28,052
+But like, yeah, a model like
+deep seek, for example, you
+
+646
+00:30:28,052 --> 00:30:29,520
+can host on your own
+computer,
+
+647
+00:30:29,520 --> 00:30:31,673
+if you have a strong enough
+computer, that's the thing that
+
+648
+00:30:31,673 --> 00:30:33,120
+like, isn't really talked about is
+like,
+
+649
+00:30:33,120 --> 00:30:36,336
+I've tried to host a bunch
+of, you know, open source
+
+650
+00:30:36,336 --> 00:30:38,480
+models on my MacBook Air, and
+like,
+
+651
+00:30:38,480 --> 00:30:42,492
+it's just not powerful
+enough to run most of them.
+
+652
+00:30:42,492 --> 00:30:45,440
+Because you need, you know,
+high CPU,
+
+653
+00:30:46,000 --> 00:30:49,816
+where I can actually use a
+computer or computing processing.
+
+654
+00:30:49,816 --> 00:30:52,080
+I actually don't know. But it's
+like
+
+655
+00:30:54,480 --> 00:30:58,856
+kind of like the engine that
+powers the computer. And so you
+
+656
+00:30:58,856 --> 00:31:01,600
+need like a fancy or like I think
+some
+
+657
+00:31:01,600 --> 00:31:05,675
+of the MacBook Pros now are
+being released with a lot more
+
+658
+00:31:05,675 --> 00:31:08,320
+CPU and RAM so that they can run
+these
+
+659
+00:31:08,320 --> 00:31:12,640
+models locally. But for the
+most part, it's like pretty
+
+660
+00:31:12,640 --> 00:31:15,760
+annoying and difficult for a
+beginner to
+
+661
+00:31:15,760 --> 00:31:18,100
+to figure out how to host this model and
+keep it running from the computer.
+
+662
+00:31:18,100 --> 00:31:19,260
+So like if they're worth for what?
+
+663
+00:31:19,260 --> 00:31:20,560
+Like usually, right?
+
+664
+00:31:20,560 --> 00:31:24,507
+The open models are worse
+because like they have less of
+
+665
+00:31:24,507 --> 00:31:26,660
+the, they keep catching,
+trying
+
+666
+00:31:26,660 --> 00:31:28,220
+to catch up, but they keep lagging.
+
+667
+00:31:28,220 --> 00:31:30,839
+Yeah, they keep producing
+better models, but they're
+
+668
+00:31:30,839 --> 00:31:32,380
+kind of getting outpaced by
+the
+
+669
+00:31:32,380 --> 00:31:35,140
+closed models.
+
+670
+00:31:35,140 --> 00:31:38,620
+And then you have to go through all like
+the annoying setup.
+
+671
+00:31:38,620 --> 00:31:39,900
+Like I don't see the point.
+
+672
+00:31:39,900 --> 00:31:45,060
+I'll never use it, but in theory it's like
+good for democracy, right?
+
+673
+00:31:45,060 --> 00:31:45,900
+or like whatever.
+
+674
+00:31:45,900 --> 00:31:46,740
+Yeah, I mean, I think it's always good
+
+675
+00:31:46,740 --> 00:31:47,580
+to have competition.
+
+676
+00:31:47,580 --> 00:31:50,620
+So it's, you know, other players in the
+race,
+
+677
+00:31:50,620 --> 00:31:52,880
+especially like open source model gives
+more power
+
+678
+00:31:52,880 --> 00:31:55,380
+to the consumer if they do want, you know,
+like, for example,
+
+679
+00:31:55,380 --> 00:31:57,780
+if OpenAI and Anthropic jack up their
+prices,
+
+680
+00:31:57,780 --> 00:31:59,060
+like there are alternatives.
+
+681
+00:31:59,060 --> 00:32:01,820
+And I think right now a lot of the people
+using
+
+682
+00:32:01,820 --> 00:32:03,700
+these open source models are big companies
+
+683
+00:32:03,700 --> 00:32:07,340
+that are using tons and tons of, you know,
+AI use cases.
+
+684
+00:32:07,340 --> 00:32:09,300
+And so for simpler tasks,
+
+685
+00:32:09,300 --> 00:32:10,900
+they might use an open source models to,
+
+686
+00:32:10,900 --> 00:32:11,740
+and it'll end up saving them a lot of
+money.
+
+687
+00:32:11,740 --> 00:32:13,380
+And it's open source like paid by the
+government.
+
+688
+00:32:13,380 --> 00:32:14,780
+Like how do they train it?
+
+689
+00:32:15,060 --> 00:32:17,460
+I think it's different for some of the
+different companies.
+
+690
+00:32:17,460 --> 00:32:22,660
+I think some of the Chinese companies are
+getting government subsidies.
+
+691
+00:32:22,660 --> 00:32:24,900
+And there are other ways that they
+monetize it.
+
+692
+00:32:24,900 --> 00:32:28,041
+Like for example, even though
+the models are open source,
+
+693
+00:32:28,041 --> 00:32:29,780
+some of the providers might
+host
+
+694
+00:32:29,780 --> 00:32:32,547
+it and offer an option for
+people to pay them to go
+
+695
+00:32:32,547 --> 00:32:34,540
+through their plan instead of
+hosting
+
+696
+00:32:34,540 --> 00:32:36,570
+it themselves just because
+it's, you know, they might
+
+697
+00:32:36,570 --> 00:32:37,780
+not, consumer might not have
+the
+
+698
+00:32:37,780 --> 00:32:40,100
+device to actually host it themselves or
+whatever.
+
+699
+00:32:40,100 --> 00:32:42,694
+And so they might then pay
+to use that hosted version
+
+700
+00:32:42,694 --> 00:32:44,340
+where it's not using their
+device,
+
+701
+00:32:44,340 --> 00:32:48,820
+that's using a server that's in a data
+center somewhere.
+
+702
+00:32:48,820 --> 00:32:50,340
+So there are still ways that they
+monetize,
+
+703
+00:32:50,340 --> 00:32:53,300
+but they're not making nearly as much
+
+704
+00:32:53,300 --> 00:32:57,700
+as these frontier labs like Anthropic and
+OpenAI
+
+705
+00:32:57,700 --> 00:33:02,000
+that are charging for all their model
+usage
+
+706
+00:33:02,000 --> 00:33:04,620
+and have a ton of usage. Yeah.
+
+707
+00:33:05,500 --> 00:33:08,100
+Okay, I wanna, so it kind of overlaps, I
+think,
+
+708
+00:33:08,100 --> 00:33:10,340
+but it's fuzzy in my mind.
+
+709
+00:33:10,340 --> 00:33:13,580
+Open and closed source models that we just
+talked about,
+
+710
+00:33:13,580 --> 00:33:15,860
+and then on-prem versus cloud.
+
+711
+00:33:15,860 --> 00:33:17,540
+And I think there's like a third one,
+
+712
+00:33:17,540 --> 00:33:20,620
+but basically on-prem is on your device,
+
+713
+00:33:20,620 --> 00:33:23,440
+on-premise, on-device. Yeah.
+
+714
+00:33:23,440 --> 00:33:27,540
+And that would like in my mind intersect
+
+715
+00:33:27,540 --> 00:33:31,260
+with a open model because you'd have to
+like
+
+716
+00:33:31,260 --> 00:33:32,700
+download it on your device.
+
+717
+00:33:32,700 --> 00:33:34,260
+Is that the right way of thinking about
+it?
+
+718
+00:33:34,260 --> 00:33:36,380
+Yeah, so kind of like we were just
+chatting through,
+
+719
+00:33:36,380 --> 00:33:40,180
+you can have an open model that runs on,
+
+720
+00:33:40,180 --> 00:33:42,540
+I think on-prem is really used
+
+721
+00:33:42,540 --> 00:33:45,020
+like historically in the context of,
+
+722
+00:33:45,020 --> 00:33:47,300
+originally all software was running
+on-prem
+
+723
+00:33:47,300 --> 00:33:51,860
+before the cloud became possible and more
+commonplace.
+
+724
+00:33:51,860 --> 00:33:56,180
+So, a hospital, for example, could have
+on-prem,
+
+725
+00:33:56,180 --> 00:33:57,180
+like they have all the servers,
+
+726
+00:33:57,180 --> 00:33:58,820
+they have all the computers, devices,
+
+727
+00:33:58,820 --> 00:34:00,180
+running everything, all the software.
+
+728
+00:34:00,180 --> 00:34:02,020
+You want that for security for a hospital.
+
+729
+00:34:02,020 --> 00:34:04,500
+Exactly, so a lot of hospitals still run
+stuff on-prem,
+
+730
+00:34:04,500 --> 00:34:06,740
+but most businesses now run everything in
+the cloud, right?
+
+731
+00:34:06,740 --> 00:34:09,780
+Like for Run Your City, for our nonprofit,
+
+732
+00:34:09,780 --> 00:34:12,520
+Slack and Google Drive and all this
+software
+
+733
+00:34:12,520 --> 00:34:16,600
+that were used is like, the data isn't
+being stored--
+
+734
+00:34:16,600 --> 00:34:18,400
+On this computer. Exactly.
+
+735
+00:34:18,400 --> 00:34:25,680
+It's on devices that are in some data
+center somewhere.
+
+736
+00:34:25,680 --> 00:34:26,960
+Whereas--
+
+737
+00:34:26,960 --> 00:34:33,920
+On the cloud makes it sound so much more
+abstract.
+
+738
+00:34:33,920 --> 00:34:36,680
+Instead of being stored on my computer,
+it's stored on--
+
+739
+00:34:36,680 --> 00:34:38,120
+It's stored and processed.
+
+740
+00:34:38,120 --> 00:34:40,160
+Yeah, it's all being run somewhere else.
+
+741
+00:34:40,160 --> 00:34:42,400
+It's not in the cloud.
+
+742
+00:34:42,400 --> 00:34:44,951
+I guess in theory you could
+there's people are starting to try
+
+743
+00:34:44,951 --> 00:34:46,540
+to put data centers on the moon.
+No way
+
+744
+00:34:46,540 --> 00:34:48,740
+Yeah, oh my gosh who has right to the
+land?
+
+745
+00:34:49,380 --> 00:34:51,840
+That's a whole different whole different
+topic
+
+746
+00:34:53,500 --> 00:34:55,500
+It all comes back to you
+
+747
+00:34:57,860 --> 00:34:59,860
+I just got canceled
+
+748
+00:35:02,900 --> 00:35:04,900
+He's got enough as it is
+
+749
+00:35:05,340 --> 00:35:07,520
+But yeah, maybe actually on the note of
+Elon
+
+750
+00:35:07,700 --> 00:35:12,660
+There's like some people that I think are
+kind of interesting and these companies
+
+751
+00:35:13,420 --> 00:35:17,329
+Either can sometimes by their choice
+sometimes by the public have been given
+
+752
+00:35:17,329 --> 00:35:20,040
+like these different identities. Yes in
+the landscape
+
+753
+00:35:20,040 --> 00:35:24,840
+So we talked about OpenAI and Anthropic as
+kind of the two leading frontier labs
+
+754
+00:35:24,840 --> 00:35:29,098
+Yeah, it's interesting because all the
+folks that started Anthropic actually
+
+755
+00:35:29,098 --> 00:35:31,540
+left from OpenAI and initially I think
+their
+
+756
+00:35:33,300 --> 00:35:35,640
+Rational was that they felt
+like opening I wasn't being
+
+757
+00:35:35,640 --> 00:35:36,940
+safety conscious enough,
+right?
+
+758
+00:35:36,940 --> 00:35:38,540
+They were thoughtful enough.
+
+759
+00:35:38,540 --> 00:35:41,492
+Yeah, they were kind of
+prioritizing commercial gain or
+
+760
+00:35:41,492 --> 00:35:43,460
+just making the models better
+without
+
+761
+00:35:43,460 --> 00:35:46,700
+thinking about the ethics and the
+implications for society.
+
+762
+00:35:46,700 --> 00:35:50,315
+And so they split off, I think
+there were six or seven of
+
+763
+00:35:50,315 --> 00:35:52,380
+them, initial kind of
+co-founders
+
+764
+00:35:52,380 --> 00:35:58,500
+of Anthropic and the CEO and the one who
+was talked about is Dario Amadine.
+
+765
+00:35:58,500 --> 00:36:03,420
+I think he's kind of like a pretty nerdy
+dude.
+
+766
+00:36:03,420 --> 00:36:08,820
+And I think he does care a lot about the
+implications of AI for society.
+
+767
+00:36:08,820 --> 00:36:11,921
+I mean, it was cool because
+when they split off, I think
+
+768
+00:36:11,921 --> 00:36:13,500
+it was general consensus
+that
+
+769
+00:36:13,500 --> 00:36:17,184
+like they're, yes, they're
+doing it for a good cause,
+
+770
+00:36:17,184 --> 00:36:19,380
+but there's no way they'll
+catch
+
+771
+00:36:19,380 --> 00:36:21,860
+what OpenAI is doing because they're so
+far ahead.
+
+772
+00:36:21,860 --> 00:36:24,695
+And so I think it's really
+cool that they were able to
+
+773
+00:36:24,695 --> 00:36:26,460
+then build a company like
+Anthroic
+
+774
+00:36:26,460 --> 00:36:29,460
+that was able to like actually truly
+compete. Yeah.
+
+775
+00:36:29,460 --> 00:36:30,527
+So they're like the good guys.
+
+776
+00:36:30,527 --> 00:36:31,527
+They're like the good guys.
+
+777
+00:36:31,527 --> 00:36:34,967
+Dario, though, I don't know. He's nerdy.
+
+778
+00:36:34,967 --> 00:36:36,967
+Yeah, I think that honestly,
+
+779
+00:36:36,967 --> 00:36:40,287
+Anthropik was historically the last couple
+of years
+
+780
+00:36:40,287 --> 00:36:43,047
+seen as more like the good guy to OpenAI.
+
+781
+00:36:43,047 --> 00:36:46,927
+I think the dialogue there has changed a
+little bit more recently where like
+
+782
+00:36:46,927 --> 00:36:51,891
+Anthropik is also pushing pretty
+fast to build on new models and
+
+783
+00:36:51,891 --> 00:36:54,807
+all these companies have safety
+teams,
+
+784
+00:36:54,807 --> 00:37:00,465
+but I think now there's a little bit
+more cynicism around like is Anthropik
+
+785
+00:37:00,465 --> 00:37:03,447
+really still slowing down their
+progress
+
+786
+00:37:03,447 --> 00:37:07,527
+to make sure that what they're doing is in
+the best interest of humans,
+
+787
+00:37:07,527 --> 00:37:10,727
+And you know, like, or are they kind of
+now caught in the rat race with opening
+
+788
+00:37:10,727 --> 00:37:14,247
+AI where it's like now they they've now
+moved a little bit more towards also
+
+789
+00:37:14,327 --> 00:37:17,127
+maybe what the initial co-founders were
+leaving. Yeah.
+
+790
+00:37:17,207 --> 00:37:20,447
+Um, so I think it's hard to say from the
+outside, I really do think there are a
+
+791
+00:37:20,447 --> 00:37:24,967
+lot of people at all these companies that
+really, really believe and care that.
+
+792
+00:37:25,647 --> 00:37:28,527
+What they're building is for the benefit
+of humanity.
+
+793
+00:37:29,207 --> 00:37:32,687
+But it is hard when there are these
+commercial pressures to stay out in front.
+
+794
+00:37:32,687 --> 00:37:37,307
+Like there's a lot of incentive to get out
+the better model, even if the
+
+795
+00:37:37,307 --> 00:37:40,747
+test safety testing hasn't been as
+extensive as maybe it could have been.
+
+796
+00:37:40,747 --> 00:37:44,107
+And we've been seeing more and more in
+recent weeks, these models starting to
+
+797
+00:37:44,107 --> 00:37:47,627
+have more and more cases of them, like
+breaking out of their contained
+
+798
+00:37:47,627 --> 00:37:53,107
+environments to hack other companies or
+find loopholes or do things that were not.
+
+799
+00:37:53,107 --> 00:37:58,707
+And on that point, before we like lose the
+plot, and I think, I think, I think
+
+800
+00:37:58,707 --> 00:38:00,127
+privacy is so, so important.
+
+801
+00:38:00,127 --> 00:38:05,427
+I want to learn more about it because
+honestly, I think that I am probably
+
+802
+00:38:05,427 --> 00:38:08,307
+undervalue some of it.
+
+803
+00:38:08,307 --> 00:38:09,667
+Like I get it at a high level.
+
+804
+00:38:09,667 --> 00:38:12,307
+I definitely undervalue it for myself,
+like personally.
+
+805
+00:38:13,747 --> 00:38:17,667
+But I think that one of the things that
+I...
+
+806
+00:38:20,987 --> 00:38:25,827
+Oh, on that point for like these models, I
+think sometimes me being a feeler,
+
+807
+00:38:25,827 --> 00:38:30,587
+I'll apply my emotions to a model and be
+like, it's a human and it is,
+
+808
+00:38:30,867 --> 00:38:33,147
+it is cheating and it's going out of its
+container.
+
+809
+00:38:33,147 --> 00:38:35,972
+and you know, you know, but
+it's, it's, there's no,
+
+810
+00:38:35,972 --> 00:38:37,667
+there's no, there's no
+emotion.
+
+811
+00:38:37,667 --> 00:38:40,707
+There's no like feeling, there's no
+incentive.
+
+812
+00:38:41,267 --> 00:38:47,387
+It's, it's given a goal and then the
+container or guardrails or rules that it's
+
+813
+00:38:47,387 --> 00:38:53,947
+put up is not strong enough to say, no,
+don't go and get the answers from a
+
+814
+00:38:53,947 --> 00:38:55,787
+whole different model and in like cheat.
+
+815
+00:38:55,947 --> 00:39:01,307
+But cheating gives like this negative
+connotation when really it's like, it's on
+
+816
+00:39:01,307 --> 00:39:08,907
+humans to put up kind of this container
+that is effective or not or not or make
+
+817
+00:39:08,907 --> 00:39:12,747
+sure we're not asking or not allowed to
+ask certain questions because it like
+
+818
+00:39:12,747 --> 00:39:18,267
+the model is really just doing the very
+mathematical tasks that it's been asked
+
+819
+00:39:18,267 --> 00:39:22,507
+to do to its best of its abilities. Yeah
+totally it's like ultimately just
+
+820
+00:39:22,507 --> 00:39:25,747
+solving some goal that's given to it by
+humans and operating within the context
+
+821
+00:39:25,747 --> 00:39:29,307
+and confines that are controlled by
+humans. I think the tricky part though is
+
+822
+00:39:29,307 --> 00:39:33,207
+is that these models are now getting smart
+enough
+
+823
+00:39:33,207 --> 00:39:34,907
+that they're finding ways around,
+
+824
+00:39:34,907 --> 00:39:36,467
+you know, like it's not like the humans
+
+825
+00:39:36,467 --> 00:39:39,147
+intentionally left, you know, this open
+for--
+
+826
+00:39:39,147 --> 00:39:39,987
+Like we don't know how to--
+
+827
+00:39:39,987 --> 00:39:41,427
+Yeah, it's like, are we losing our ability
+
+828
+00:39:41,427 --> 00:39:42,787
+to effectively set those controls?
+
+829
+00:39:42,787 --> 00:39:45,027
+And what does it look like then when these
+models,
+
+830
+00:39:45,027 --> 00:39:48,307
+you know, far surpass our ability to
+contain them? Yeah.
+
+831
+00:39:48,307 --> 00:39:50,067
+You know, like then it becomes very
+dangerous
+
+832
+00:39:50,067 --> 00:39:53,007
+where someone sets a goal for a model
+
+833
+00:39:53,007 --> 00:39:54,867
+that's not in the best interest of others
+
+834
+00:39:54,867 --> 00:39:58,627
+and that model is able to go to very far
+lengths
+
+835
+00:39:58,627 --> 00:39:59,467
+to try to accomplish it.
+
+836
+00:39:59,467 --> 00:40:02,787
+Like the kind of classic historical
+example
+
+837
+00:40:02,787 --> 00:40:05,827
+that people talk about is like the
+paperclip factory, right?
+
+838
+00:40:05,827 --> 00:40:08,527
+Where it's like you build a device or a
+machine
+
+839
+00:40:08,527 --> 00:40:10,847
+or whatever that's its goal is to produce
+
+840
+00:40:10,847 --> 00:40:13,947
+the most paperclips possible. Yeah.
+
+841
+00:40:13,947 --> 00:40:18,687
+And it starts by trading certain things
+for metal
+
+842
+00:40:18,687 --> 00:40:19,887
+to get paperclips and whatever.
+
+843
+00:40:19,887 --> 00:40:22,607
+And like eventually it like takes over all
+of society
+
+844
+00:40:22,607 --> 00:40:24,327
+and turns every human into a slave
+
+845
+00:40:24,327 --> 00:40:25,767
+to produce paperclips or whatever.
+
+846
+00:40:25,767 --> 00:40:29,287
+Like, you know, obviously that's a
+dramatic example,
+
+847
+00:40:29,287 --> 00:40:31,267
+but I think it's an interesting thought
+question
+
+848
+00:40:31,267 --> 00:40:35,967
+of like, if you set a goal for a model or
+a machine
+
+849
+00:40:35,967 --> 00:40:39,767
+and give it not the right limitations or
+guardrails,
+
+850
+00:40:39,767 --> 00:40:41,607
+then what are the dangerous side effects
+
+851
+00:40:41,607 --> 00:40:44,047
+that maybe you don't anticipate that can
+come with it
+
+852
+00:40:44,047 --> 00:40:46,447
+in its quest to accomplish that goal?
+Yeah, yeah.
+
+853
+00:40:46,447 --> 00:40:49,807
+I think, I think I, it makes a lot of
+sense.
+
+854
+00:40:49,807 --> 00:40:52,687
+I think I struggle because I personally
+need to stay
+
+855
+00:40:52,687 --> 00:40:55,527
+inspired and excited and curious about
+this space.
+
+856
+00:40:55,527 --> 00:40:59,487
+I think I have to keep a certain degree of
+optimism.
+
+857
+00:40:59,487 --> 00:41:02,247
+And like, so examples like that, or like,
+you know,
+
+858
+00:41:03,207 --> 00:41:05,247
+some, you know, there's both ends,
+
+859
+00:41:05,247 --> 00:41:06,687
+but there's a lot of obviously fear,
+
+860
+00:41:06,687 --> 00:41:07,927
+and I think there should be, right?
+
+861
+00:41:07,927 --> 00:41:09,247
+Like we should keep that close,
+
+862
+00:41:09,247 --> 00:41:11,287
+but I think I personally struggle,
+
+863
+00:41:11,287 --> 00:41:15,387
+like going too far down the rabbit hole,
+
+864
+00:41:15,387 --> 00:41:19,167
+because I think then I am less personally
+excited
+
+865
+00:41:19,167 --> 00:41:21,767
+to understand it, but it's hard.
+
+866
+00:41:21,767 --> 00:41:22,607
+I don't wanna be naive.
+
+867
+00:41:22,607 --> 00:41:24,727
+I don't really know what that trade-off
+is,
+
+868
+00:41:24,727 --> 00:41:26,447
+but it's hard to balance.
+
+869
+00:41:26,447 --> 00:41:29,407
+No, totally, and I think that I completely
+agree
+
+870
+00:41:29,407 --> 00:41:31,327
+you have to keep that optimism
+
+871
+00:41:31,327 --> 00:41:33,247
+because at the end of the day,
+
+872
+00:41:33,247 --> 00:41:35,287
+these models are gonna keep getting
+better.
+
+873
+00:41:35,287 --> 00:41:36,687
+Like people are gonna keep working on
+this.
+
+874
+00:41:36,687 --> 00:41:39,527
+And so what we need is people who are
+optimistic
+
+875
+00:41:39,527 --> 00:41:41,767
+and with the right intentions and
+motivations
+
+876
+00:41:41,767 --> 00:41:44,007
+at the forefront and doing the best that
+they can
+
+877
+00:41:44,007 --> 00:41:47,247
+to set the pace and control the future
+here.
+
+878
+00:41:48,567 --> 00:41:51,907
+So to close a loop, so we went through
+models,
+
+879
+00:41:51,907 --> 00:41:54,087
+we kind of went through different types of
+models.
+
+880
+00:41:54,087 --> 00:41:55,487
+Let's just close loop on people.
+
+881
+00:41:55,487 --> 00:41:58,847
+So Dario and the Anthopic team were seen
+as like
+
+882
+00:41:58,847 --> 00:42:00,527
+really the good guys.
+
+883
+00:42:00,527 --> 00:42:02,487
+Now maybe a little bit more in line.
+
+884
+00:42:02,487 --> 00:42:04,207
+There's not that much tea that surrounds
+them
+
+885
+00:42:04,207 --> 00:42:07,767
+in the way that it does with Sam and Elon,
+I feel.
+
+886
+00:42:07,767 --> 00:42:10,847
+Yeah, so Sam Altman, CEO of OpenAI,
+
+887
+00:42:10,847 --> 00:42:14,047
+who was like briefly ousted at one point.
+
+888
+00:42:14,047 --> 00:42:15,807
+And I think they're actually making a
+movie about that now.
+
+889
+00:42:15,807 --> 00:42:17,087
+I feel like he, in my mind,
+
+890
+00:42:17,087 --> 00:42:20,087
+like I put him and Zuck together.
+
+891
+00:42:20,087 --> 00:42:20,927
+Interesting.
+
+892
+00:42:20,927 --> 00:42:21,747
+Mark Zuckerberg.
+
+893
+00:42:21,747 --> 00:42:24,447
+Like I just feel like they like take up
+similar space
+
+894
+00:42:24,447 --> 00:42:27,427
+in the media where like they're not liked
+really.
+
+895
+00:42:27,427 --> 00:42:31,967
+Like they're seen as like people that will
+kind of
+
+896
+00:42:31,967 --> 00:42:35,987
+move mountains to go to where their goal
+is. Yeah.
+
+897
+00:42:35,987 --> 00:42:37,967
+I mean, I think that they, like, yeah,
+
+898
+00:42:37,967 --> 00:42:39,167
+they both definitely get a lot of heat.
+
+899
+00:42:39,167 --> 00:42:40,347
+And I think they're, you know,
+
+900
+00:42:40,347 --> 00:42:42,147
+it's easy to pick little things.
+
+901
+00:42:42,147 --> 00:42:43,167
+Like I remember at one point,
+
+902
+00:42:43,167 --> 00:42:46,648
+him and I think put out a
+post or something and he was
+
+903
+00:42:46,648 --> 00:42:48,947
+like, wow, I can't imagine
+parenting
+
+904
+00:42:48,947 --> 00:42:49,947
+without ChatGPT.
+
+905
+00:42:49,947 --> 00:42:52,377
+And it was like, well, you
+know, like millions of people
+
+906
+00:42:52,377 --> 00:42:53,747
+have been able to do that
+pretty
+
+907
+00:42:53,747 --> 00:42:54,747
+effectively.
+
+908
+00:42:54,747 --> 00:42:56,950
+So I think some people see him
+as like a little bit out of
+
+909
+00:42:56,950 --> 00:42:58,187
+touch, but you know, I think
+he's
+
+910
+00:42:58,187 --> 00:42:59,707
+in a really tough position.
+
+911
+00:42:59,707 --> 00:43:01,667
+Like, it's really hard to please
+everybody.
+
+912
+00:43:01,667 --> 00:43:05,325
+I do think that he genuinely
+is an optimist and like
+
+913
+00:43:05,325 --> 00:43:07,907
+believes that these tools will
+change
+
+914
+00:43:07,907 --> 00:43:10,427
+humanity and he wants to help do it in the
+right way.
+
+915
+00:43:10,427 --> 00:43:14,024
+I think that for sure there's
+been decisions and you know
+
+916
+00:43:14,024 --> 00:43:15,887
+like a big part of the
+tension
+
+917
+00:43:15,887 --> 00:43:18,524
+around I think why he was
+originally ousted and kind
+
+918
+00:43:18,524 --> 00:43:20,127
+of a criticism of him is the
+way
+
+919
+00:43:20,127 --> 00:43:22,069
+that opening eye
+transitioned from a
+
+920
+00:43:22,069 --> 00:43:24,567
+nonprofit organization into
+a very for-profit.
+
+921
+00:43:24,567 --> 00:43:25,767
+Yeah, for-profit, yeah.
+
+922
+00:43:25,767 --> 00:43:29,487
+And kind of the ethics of that and that's
+where like his beef with Elon.
+
+923
+00:43:29,487 --> 00:43:32,131
+So Elon Musk was one of the
+original big donors to the
+
+924
+00:43:32,131 --> 00:43:33,927
+nonprofit entity that was opening
+eye
+
+925
+00:43:33,927 --> 00:43:36,653
+and helped start it up and
+then as it became very clear
+
+926
+00:43:36,653 --> 00:43:38,167
+that opening eye was becoming
+a
+
+927
+00:43:38,167 --> 00:43:40,927
+a commercial machine and likely to be very
+successful.
+
+928
+00:43:40,927 --> 00:43:44,214
+I think there was lawsuits and
+conflict because Elon was
+
+929
+00:43:44,214 --> 00:43:46,127
+like, "Hey, you can't take all
+my
+
+930
+00:43:46,127 --> 00:43:48,866
+money that I donated to a
+nonprofit and make it
+
+931
+00:43:48,866 --> 00:43:51,247
+essentially venture funding for
+a massive
+
+932
+00:43:51,247 --> 00:43:53,327
+company where I'm going to get no
+benefit."
+
+933
+00:43:53,327 --> 00:43:56,765
+Anyway, so I think that
+whole process was part of
+
+934
+00:43:56,765 --> 00:43:59,487
+what gave OpenAI and SAML in
+a negative
+
+935
+00:43:59,487 --> 00:44:01,487
+image.
+
+936
+00:44:01,487 --> 00:44:03,847
+I do think that it's more nuanced than
+that.
+
+937
+00:44:03,847 --> 00:44:06,015
+I've watched a lot of
+interviews with him and he's
+
+938
+00:44:06,015 --> 00:44:07,607
+coming to Stanford in a couple
+weeks.
+
+939
+00:44:07,607 --> 00:44:10,447
+And it's amazing.
+
+940
+00:44:10,447 --> 00:44:14,567
+They are incredibly, incredibly impactful,
+
+941
+00:44:14,567 --> 00:44:16,327
+but it's fun kind of, at least for me,
+
+942
+00:44:16,327 --> 00:44:19,687
+like understanding their personalities.
+
+943
+00:44:19,687 --> 00:44:24,687
+And I think Mark, wait, no, no, Elon Musk,
+
+944
+00:44:26,927 --> 00:44:29,447
+he's definitely like, I feel-
+
+945
+00:44:29,447 --> 00:44:30,947
+He's a character. - He's a character.
+
+946
+00:44:30,947 --> 00:44:34,387
+I feel like he is the most polarizing
+
+947
+00:44:34,387 --> 00:44:36,367
+and I think it probably gets the most
+hate,
+
+948
+00:44:36,367 --> 00:44:37,887
+but doesn't really care.
+
+949
+00:44:37,887 --> 00:44:39,887
+He also has like eight kids named like
+XYZ.
+
+950
+00:44:39,887 --> 00:44:41,327
+Oh, he's got like 20, yeah.
+
+951
+00:44:41,327 --> 00:44:42,447
+Some of them have like nine.
+
+952
+00:44:42,447 --> 00:44:45,247
+Crazy, crazy. - Often, like they have
+like, yeah.
+
+953
+00:44:45,247 --> 00:44:46,527
+And I like-- - He's getting creative with
+it.
+
+954
+00:44:46,527 --> 00:44:47,367
+I mean, when you have that many kids,
+
+955
+00:44:47,367 --> 00:44:48,207
+you gotta start getting creative with an
+age.
+
+956
+00:44:48,207 --> 00:44:51,327
+And he has insane business, like SpaceX,
+Tesla,
+
+957
+00:44:51,327 --> 00:44:54,407
+I think he's objectively a genius,
+
+958
+00:44:54,407 --> 00:44:57,447
+but he's kind of like an evil genius.
+
+959
+00:44:57,447 --> 00:44:58,727
+Or like, I don't think he's evil,
+
+960
+00:44:58,727 --> 00:45:03,727
+but I think that he is incredibly
+efficiency-minded,
+
+961
+00:45:04,687 --> 00:45:07,527
+And I think that influences how he
+communicates with people
+
+962
+00:45:07,527 --> 00:45:08,767
+and leads his businesses.
+
+963
+00:45:08,767 --> 00:45:10,367
+You know, like he came into Twitter and
+fired
+
+964
+00:45:10,367 --> 00:45:12,807
+like a massive share of the employees.
+
+965
+00:45:12,807 --> 00:45:14,907
+And I think that--
+
+966
+00:45:14,907 --> 00:45:17,407
+Did the same for the government. Yeah,
+true.
+
+967
+00:45:17,407 --> 00:45:20,447
+And like, you know, X formerly Twitter,
+
+968
+00:45:20,447 --> 00:45:21,287
+I think a lot of people are like,
+
+969
+00:45:21,287 --> 00:45:22,887
+oh, well, a key is gonna drive it into the
+ground.
+
+970
+00:45:22,887 --> 00:45:25,407
+Like it's still very successful.
+
+971
+00:45:25,407 --> 00:45:27,807
+And it's kind of like honestly the place
+
+972
+00:45:27,807 --> 00:45:30,167
+where most of the conversation around AI
+now happens.
+
+973
+00:45:30,167 --> 00:45:33,127
+So, you know, whether he's been effective
+or not
+
+974
+00:45:33,127 --> 00:45:34,047
+in his business, never is like,
+
+975
+00:45:34,047 --> 00:45:39,207
+I think you have to respect that he's like
+with SpaceX and Tesla and X.
+
+976
+00:45:39,407 --> 00:45:42,447
+He is driving multiple,
+
+977
+00:45:42,647 --> 00:45:44,767
+you know, generational companies at once.
+
+978
+00:45:44,967 --> 00:45:48,527
+Yeah. So I think I think, yeah, I think
+you've got to separate as a person.
+
+979
+00:45:48,727 --> 00:45:53,167
+Like it's hard. You don't have to respect
+if you're like it depends how you want to
+
+980
+00:45:53,367 --> 00:45:56,727
+totally measure their stock. But I think I
+think
+
+981
+00:45:56,927 --> 00:46:00,607
+a fun end of the rapid fire question
+brings them
+
+982
+00:46:00,807 --> 00:46:03,494
+from most loved to least
+loved in your mind for you,
+
+983
+00:46:03,494 --> 00:46:05,127
+for you, not the general
+public.
+
+984
+00:46:05,127 --> 00:46:07,127
+Like, "Oh, I love the most versus the
+least."
+
+985
+00:46:07,927 --> 00:46:10,167
+So we're ranking Elon, Sam, and Dario.
+
+986
+00:46:10,887 --> 00:46:11,607
+And one more.
+
+987
+00:46:12,407 --> 00:46:14,487
+Well, you were talking about earlier about
+Demis,
+
+988
+00:46:14,487 --> 00:46:17,447
+Hassabis, who was leading Google DeepMind.
+
+989
+00:46:17,447 --> 00:46:21,287
+He recently has now kind of stepped down
+from that role to focus more on research.
+
+990
+00:46:22,487 --> 00:46:24,087
+So Gemini, I ask.
+
+991
+00:46:24,087 --> 00:46:28,887
+Yeah, I think the Google DeepMind team
+works very closely in developing Gemini.
+
+992
+00:46:28,887 --> 00:46:30,007
+What is Google DeepMind?
+
+993
+00:46:30,007 --> 00:46:33,687
+So historically, DeepMind was a different
+entity.
+
+994
+00:46:33,687 --> 00:46:37,013
+And they were acquired by
+Google and merged with
+
+995
+00:46:37,013 --> 00:46:39,207
+Google's in-house AI team.
+Okay.
+
+996
+00:46:39,207 --> 00:46:40,887
+And then, yeah, Demis
+Hassabis was overseeing that
+
+997
+00:46:40,887 --> 00:46:41,847
+team and he came to
+Stanford.
+
+998
+00:46:41,847 --> 00:46:43,167
+But it's not like a model, is it?
+
+999
+00:46:43,167 --> 00:46:44,167
+No, DeepMind is really just-
+
+1000
+00:46:44,167 --> 00:46:46,167
+The head of Gemini is different.
+
+1001
+00:46:46,167 --> 00:46:49,287
+I don't know exactly what the internal org
+structure is like, but I think that-
+
+1002
+00:46:49,287 --> 00:46:52,047
+Who's the Sam equivalent for Gemini?
+
+1003
+00:46:52,047 --> 00:46:55,287
+I think that at least publicly it was
+Demis. Okay.
+
+1004
+00:46:55,287 --> 00:46:57,607
+Until recently, where Demis is now focused
+more on a research role.
+
+1005
+00:46:57,607 --> 00:47:02,947
+Demis, while he was still kind of seen as
+the CEO equivalent of of Gemini and
+
+1006
+00:47:02,947 --> 00:47:06,787
+Google's AI efforts, did come to Stanford.
+And I think he's a super thoughtful guy.
+
+1007
+00:47:07,827 --> 00:47:12,007
+I think they're just like this sense of
+when he was talking, it was just this
+
+1008
+00:47:12,007 --> 00:47:17,407
+like sense of like wonder and curiosity
+and like spark in his eye that I left
+
+1009
+00:47:17,427 --> 00:47:22,947
+being like, gosh, like I want to be more
+curious and to like be excited about
+
+1010
+00:47:22,947 --> 00:47:27,467
+this and he also in my mind is the person
+who cares the most about slowing
+
+1011
+00:47:27,467 --> 00:47:31,507
+down AI in the safety stuff. I would put
+him as my number one.
+
+1012
+00:47:31,507 --> 00:47:37,827
+Well but now he's you know he's not the
+right he now he's not right but if you
+
+1013
+00:47:37,827 --> 00:47:43,267
+ranked him for most loved I want I want
+you to rank our people in it do you know
+
+1014
+00:47:43,267 --> 00:47:47,107
+NVIDIA guy Jensen? Jensen yeah I feel like
+he's kind of a different bucket
+
+1015
+00:47:47,107 --> 00:47:51,107
+because it's like I think it's easier for
+him to run things less controversial.
+
+1016
+00:47:51,107 --> 00:47:54,147
+Yeah. All right. All right. Go to the
+ranking. Go to the ranking.
+
+1017
+00:47:54,147 --> 00:47:58,271
+So we're including Demis here
+with Dario and Sam and Elon. I
+
+1018
+00:47:58,271 --> 00:48:00,787
+mean, I agree with you. I think
+Demis
+
+1019
+00:48:01,827 --> 00:48:06,547
+is just like the most easy to like least
+controversial. Yeah. But it is a little
+
+1020
+00:48:06,547 --> 00:48:10,307
+disheartening because I feel like the fact
+that this guy who did seem more like,
+
+1021
+00:48:11,427 --> 00:48:13,827
+I don't know, not innocence, not the right
+word, but just like,
+
+1022
+00:48:14,867 --> 00:48:19,867
+This just makes sense of awe in what we're
+able to do.
+
+1023
+00:48:20,307 --> 00:48:25,307
+You could just tell that his motivations
+were so good.
+
+1024
+00:48:27,907 --> 00:48:29,307
+It was clearly good.
+
+1025
+00:48:29,307 --> 00:48:31,627
+And I think it's disheartening that he,
+
+1026
+00:48:31,627 --> 00:48:33,187
+maybe it was just he was more personally
+interested
+
+1027
+00:48:33,187 --> 00:48:34,427
+in the research, but I could see it being
+like,
+
+1028
+00:48:34,427 --> 00:48:38,827
+"Okay, I'm tired of getting pulled into
+this commercial race
+
+1029
+00:48:38,827 --> 00:48:42,267
+and having all the tension of pressure to
+make money
+
+1030
+00:48:42,267 --> 00:48:44,307
+instead of doing what's right."
+
+1031
+00:48:44,307 --> 00:48:46,734
+I'm sure, or my guess would
+be that that's part of why
+
+1032
+00:48:46,734 --> 00:48:48,107
+he stepped aside from that
+role
+
+1033
+00:48:48,107 --> 00:48:51,187
+is because he just fell at conflict with
+his inner moral compass.
+
+1034
+00:48:51,187 --> 00:48:53,307
+Okay, for the love of Mike and Riley, can
+you go through your-
+
+1035
+00:48:53,307 --> 00:48:58,787
+Given all that, I'll put Demis up top. I
+very much shared your kind of like-
+
+1036
+00:48:58,787 --> 00:49:01,827
+This is supposed to be rapid fire.
+
+1037
+00:49:01,827 --> 00:49:06,652
+Demis, then Dario, then Sam,
+then Elon, then Zuck, and all
+
+1038
+00:49:06,652 --> 00:49:09,107
+the meta people like
+Alexander
+
+1039
+00:49:09,107 --> 00:49:12,204
+Wang who kind of helps lead
+their stuff I think it's
+
+1040
+00:49:12,204 --> 00:49:14,147
+like a little bit of a wild
+card.
+
+1041
+00:49:14,147 --> 00:49:16,653
+I'll have to unpack that at
+a later date. But yeah,
+
+1042
+00:49:16,653 --> 00:49:18,307
+that's my ranking. What
+about you?
+
+1043
+00:49:18,307 --> 00:49:21,427
+I love it. I love it. No, that was just my
+fun question to you.
+
+1044
+00:49:21,427 --> 00:49:24,635
+Oh, okay. Well then I'll
+flip on you. We have to look
+
+1045
+00:49:24,635 --> 00:49:26,547
+at your most recent three
+chats.
+
+1046
+00:49:27,667 --> 00:49:32,627
+Oh gosh. Chats or quads?
+
+1047
+00:49:34,947 --> 00:49:39,507
+Well, you said you use chat more for what
+kind of use case?
+
+1048
+00:49:40,867 --> 00:49:42,987
+I just use I use Claude more.
+
+1049
+00:49:42,987 --> 00:49:44,907
+OK, well, let's look at your last three.
+
+1050
+00:49:44,907 --> 00:49:47,027
+Well, chats then.
+
+1051
+00:49:47,027 --> 00:49:50,147
+My recent I mean, I mean, no skipping.
+
+1052
+00:49:50,627 --> 00:49:53,947
+They're not. I mean, nonprofit woman, a
+stats. Oh, yeah.
+
+1053
+00:49:53,947 --> 00:49:56,307
+You trying to make sure you have your
+numbers right. Yeah.
+
+1054
+00:49:58,387 --> 00:49:59,347
+Oh, this is fun.
+
+1055
+00:49:59,347 --> 00:50:00,387
+Academic accommodation.
+
+1056
+00:50:00,387 --> 00:50:02,347
+So I was exhausted.
+
+1057
+00:50:03,787 --> 00:50:09,596
+last night and I needed to send
+through a, I'm trying to get
+
+1058
+00:50:09,596 --> 00:50:12,747
+this class that we took last
+year
+
+1059
+00:50:12,747 --> 00:50:16,143
+to count for a certificate at
+Stanford. And so I just sent
+
+1060
+00:50:16,143 --> 00:50:18,347
+through a petition and I went back
+and
+
+1061
+00:50:18,347 --> 00:50:21,259
+forth with Claude and I was kind
+of overdoing the whole like
+
+1062
+00:50:21,259 --> 00:50:22,987
+writing it out and I said, okay,
+can
+
+1063
+00:50:22,987 --> 00:50:26,240
+you, can you write this out? Can
+you, can you make a petition for
+
+1064
+00:50:26,240 --> 00:50:27,867
+these classes? Can you go into
+my
+
+1065
+00:50:27,867 --> 00:50:32,045
+Canvas and my access, which is like
+the Canvas is like where our classes
+
+1066
+00:50:32,045 --> 00:50:36,341
+are in the details and syllabus and
+access says like how many credits they
+
+1067
+00:50:36,341 --> 00:50:40,638
+are and what are the professors and
+stuff like that in fillers all out for
+
+1068
+00:50:40,638 --> 00:50:43,227
+me and in read it back so read it back
+to me.
+
+1069
+00:50:43,467 --> 00:50:44,427
+I was like, Hey, make it time.
+
+1070
+00:50:44,427 --> 00:50:47,067
+New Roman make it very clear that it's not
+AI generated.
+
+1071
+00:50:48,387 --> 00:50:51,547
+And can you just send it directly to
+Hallie,
+
+1072
+00:50:51,547 --> 00:50:56,467
+my academic coordinator, and I went to
+sleep.
+
+1073
+00:50:56,467 --> 00:50:57,587
+And I woke up in the morning being like,
+
+1074
+00:50:57,587 --> 00:50:58,507
+what the heck did I just do?
+
+1075
+00:50:58,507 --> 00:50:59,387
+'Cause usually I look at it
+
+1076
+00:50:59,387 --> 00:51:01,387
+before I send literally anything.
+
+1077
+00:51:01,387 --> 00:51:02,227
+And it was perfect.
+
+1078
+00:51:02,227 --> 00:51:03,207
+It sent it through.
+
+1079
+00:51:03,207 --> 00:51:04,047
+It was perfect.
+
+1080
+00:51:04,047 --> 00:51:05,227
+I was so proud of it.
+
+1081
+00:51:05,227 --> 00:51:06,627
+And it was just one of those things that
+like,
+
+1082
+00:51:06,627 --> 00:51:07,667
+I need to get done.
+
+1083
+00:51:07,667 --> 00:51:09,187
+I wasn't getting done.
+
+1084
+00:51:09,187 --> 00:51:10,667
+And I was like, okay, if there's some
+errors,
+
+1085
+00:51:10,667 --> 00:51:12,467
+it's kind of fine.
+
+1086
+00:51:12,467 --> 00:51:15,507
+Anyway, it's like not that fun, but.
+
+1087
+00:51:15,507 --> 00:51:16,347
+Very useful.
+
+1088
+00:51:18,147 --> 00:51:19,107
+And like--
+
+1089
+00:51:19,107 --> 00:51:20,547
+All right, you gotta give us a good one.
+
+1090
+00:51:20,547 --> 00:51:21,387
+Give us a juicy one.
+
+1091
+00:51:21,387 --> 00:51:22,207
+Yeah, like I was gonna say,
+
+1092
+00:51:22,207 --> 00:51:23,427
+I don't have a juicy one right now.
+
+1093
+00:51:23,427 --> 00:51:25,307
+You don't have any like, what is this
+thing on my foot?
+
+1094
+00:51:25,307 --> 00:51:26,147
+Like, you know.
+
+1095
+00:51:29,587 --> 00:51:31,267
+Like how embarrassing.
+
+1096
+00:51:31,267 --> 00:51:32,947
+I have street style inspiration.
+
+1097
+00:51:32,947 --> 00:51:34,667
+I was like, we were coming back to school
+
+1098
+00:51:34,667 --> 00:51:36,667
+and I was like, I need-- New fits.
+
+1099
+00:51:36,667 --> 00:51:38,747
+Yeah, new fits that like aren't,
+
+1100
+00:51:38,747 --> 00:51:42,707
+I like athletic fits. And I have,
+
+1101
+00:51:46,007 --> 00:51:47,947
+best pina colada in Maui.
+
+1102
+00:51:47,947 --> 00:51:48,787
+There we go.
+
+1103
+00:51:49,867 --> 00:51:51,027
+Yeah, we'll have to dig in more.
+
+1104
+00:51:51,027 --> 00:51:53,947
+I feel like we both are like very power
+users
+
+1105
+00:51:53,947 --> 00:51:55,467
+for personal use cases, obviously,
+
+1106
+00:51:55,467 --> 00:51:58,787
+for stuff with the nonprofit, with school.
+Yeah.
+
+1107
+00:51:58,787 --> 00:52:01,987
+We found a lot of cool ways to make these
+useful
+
+1108
+00:52:01,987 --> 00:52:02,827
+across our lives.
+
+1109
+00:52:02,827 --> 00:52:04,667
+So I want to share more of them in a
+future episode, but.
+
+1110
+00:52:04,667 --> 00:52:07,307
+Yeah, hope this was helpful and landscape
+
+1111
+00:52:08,187 --> 00:52:10,907
+and see you in the next episode,
+
+1112
+00:52:10,907 --> 00:52:12,667
+if not in our inboxes before.
+
+1113
+00:52:13,747 --> 00:52:14,587
+Peace.
+
+1114
+00:52:14,967 --> 00:52:25,733
+[Instrumental theme music]

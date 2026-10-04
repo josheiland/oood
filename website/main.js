@@ -56,7 +56,10 @@
 
   function showEpisode(ep) {
     if (!ep || !ep.url || !ep.title) return;
-    popup.querySelector('[data-episode-kicker]').textContent = 'Latest episode';
+    var known = (cfg.episodes || []).find(function (item) { return item.url === ep.url; });
+    if (known) ep = Object.assign({}, known, ep);
+    popup.querySelector('[data-episode-kicker]').textContent =
+      'Latest episode' + (ep.number ? ' / ' + ep.number : '');
     popup.querySelector('[data-episode-title]').textContent = ep.title;
     popup.querySelector('[data-episode-blurb]').textContent =
       ep.blurb || 'Our newest episode is up. Grab a coffee and come learn with us.';
@@ -72,16 +75,61 @@
       };
       img.src = ep.thumbnail;
     }
+    showEarlierEpisodes(ep.url);
     popup.classList.add('popup--live');
     if (window.fitHero) window.fitHero();
   }
+
+  function showEarlierEpisodes(latestUrl) {
+    var grid = document.querySelector('[data-episodes]');
+    if (!grid) return;
+    grid.replaceChildren();
+    (cfg.episodes || []).filter(function (ep) { return ep.url !== latestUrl; }).forEach(function (ep) {
+      var card = document.createElement('a');
+      card.className = 'episode-card';
+      card.href = ep.url;
+      card.target = '_blank';
+      card.rel = 'noopener';
+      var image = document.createElement('img');
+      image.src = ep.thumbnail;
+      image.alt = '';
+      image.loading = 'lazy';
+      image.width = 480;
+      image.height = 360;
+      var body = document.createElement('div');
+      body.className = 'episode-card__body';
+      var label = document.createElement('span');
+      label.className = 'label';
+      label.textContent = 'Episode ' + ep.number;
+      var title = document.createElement('h3');
+      title.textContent = ep.title;
+      var blurb = document.createElement('p');
+      blurb.textContent = ep.blurb;
+      var cta = document.createElement('span');
+      cta.className = 'episode-card__cta';
+      cta.textContent = 'Watch on YouTube →';
+      body.append(label, title, blurb, cta);
+      card.append(image, body);
+      grid.appendChild(card);
+    });
+  }
+
+  // Render the verified latest upload immediately, then refresh automatically.
+  if (cfg.episodes && cfg.episodes.length) showEpisode(cfg.episodes[0]);
 
   if (cfg.pinnedEpisode) {
     showEpisode(cfg.pinnedEpisode);
   } else if (window.fetch) {
     fetch('/api/latest')
       .then(function (r) { return r.ok ? r.json() : null; })
-      .then(function (data) { if (data && data.video) showEpisode(data.video); })
+      .then(function (data) {
+        if (!data || !data.video) return;
+        var fallback = (cfg.episodes || [])[0];
+        // An older cached response must not replace the verified latest upload.
+        if (fallback && data.video.published &&
+            Date.parse(data.video.published) < Date.parse(fallback.published)) return;
+        showEpisode(data.video);
+      })
       .catch(function () {});
   }
 

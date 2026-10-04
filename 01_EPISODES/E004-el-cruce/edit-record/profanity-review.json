@@ -1,0 +1,19 @@
+{
+  "scan": "All complete source tokens; no retained detected profanity. Ambiguous C 284.64\u2013294.267 ship/shit stumble and explicit C 1200.04\u20131204.12 fuck excluded. Human auditory proof remains open.",
+  "flags": [
+    {
+      "source_id": "A",
+      "in": 1705.18,
+      "out": 1705.8,
+      "text": " pissed",
+      "retained": false
+    },
+    {
+      "source_id": "C",
+      "in": 1203.12,
+      "out": 1204.07,
+      "text": " fuck",
+      "retained": false
+    }
+  ]
+}

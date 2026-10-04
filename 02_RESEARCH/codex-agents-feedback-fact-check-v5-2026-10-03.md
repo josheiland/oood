@@ -1,0 +1,15 @@
+# Agents feedback revision v5 — restored-context check
+
+Access date: 2026-10-03. This supplements the original `codex-agents-recording-fact-check-2026-10-03.md`; its earlier spoken-claim removals remain in place.
+
+| Restored source range | Content and treatment | Evidence |
+|---|---|---|
+| 02:00.667–02:03.133 | Complete lead-in to Mary's personal egg-purchase reaction. Opinion about the hypothetical already retained; not a restored Operator transaction claim. | Raw recording and source transcript. Original mistaken historical product/request/price remains removed. |
+| 36:24.567–36:33.667 | Hosts search for the checker/guardrails term and explicitly express uncertainty, then finish the exchange before changing topics. | Raw recording. Preserve uncertainty; do not turn this into a precise product taxonomy or a guarantee that checking prevents attacks. |
+| 59:19.933–59:27.967 | Mary's complete request to explore outcome pricing, moved before the concise Sierra example as a spoken topic bridge. | Raw recording. The following Bain case counts, industry-wide adoption assertions and economic/medical detours are not restored. |
+| 01:04:43.967–01:05:07.533 | Gym equipment maps to foundation models; the gym arranging an experience maps to a company adapting models into an AI tool. Harvey is the concrete example. Completes the per-minute setup before the efficiency/outcome payoff. | Harvey Team, **Expanding Harvey's Model Offerings**, published 2025-05-13, [official article](https://www.harvey.ai/blog/expanding-harveys-model-offerings), accessed 2026-10-03. Harvey describes incorporating OpenAI, Anthropic and Google models into systems for legal tasks. This supports the basic model/product distinction, not a claim that Harvey is only superficial packaging or a current contract-price claim. Vendor self-description. |
+| Existing 56:17–56:42 and restored gym linkage | Contrast per-user, usage and agreed outcome pricing; gym is explicitly hypothetical. | Sierra / Elliot Greenwald, **Outcome-based pricing for AI agents**, published 2024-12-10, [official article](https://sierra.ai/blog/outcome-based-pricing-for-ai-agents), accessed 2026-10-03. Supports agreed valuable outcomes as a pricing basis and notes blended arrangements. The exact dollar price and universal no-charge rule remain excluded. Vendor commercial framing; no universal transition away from subscription pricing established. |
+
+The saved 400-agents hook is a comic quoted example, not verification of a 400-agent deployment. Josh selected the shortened file `01_EPISODES/E004-el-cruce/AI agents hook final.mp4`; source-frame correspondence establishes that its 145 frames come from this agents recording, starting at raw frame 45,368 (25:12.267). The saved file is preserved as supplied, and the versioned package contains a byte-identical source copy. Its folder location does not make it part of El Cruce.
+
+No new spoken correction, synthetic host speech, invented reaction, external publication or delivery is part of this revision. Transcript and sampled source/output correspondence checks are distinct from continuous host audiovisual listening and caption proofing.

@@ -1,0 +1,4 @@
+interface:
+  display_name: "OOOD Episode Producer"
+  short_description: "Raw recordings to complete episode review packages"
+  default_prompt: "Use $oood-episode-producer for this Out of Our Depth task."

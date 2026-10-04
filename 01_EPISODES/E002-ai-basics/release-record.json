@@ -1,0 +1,123 @@
+{
+  "episode": "001",
+  "title": "Who's Who in AI (Explained With a Toyota Prius)",
+  "publication_date": "2026-09-30",
+  "publication_status": "YouTube and Spotify published, confirmed by Josh",
+  "youtube": {
+    "title": "Who's Who in AI (Explained With a Toyota Prius)",
+    "author_name": "Out of Our Depth",
+    "author_url": "https://www.youtube.com/@OutOfOurDepthPod",
+    "type": "video",
+    "height": 113,
+    "width": 200,
+    "version": "1.0",
+    "provider_name": "YouTube",
+    "provider_url": "https://www.youtube.com/",
+    "thumbnail_height": 360,
+    "thumbnail_width": 480,
+    "thumbnail_url": "https://i.ytimg.com/vi/-YWPmoWKbrM/hqdefault.jpg",
+    "html": "<iframe width=\"200\" height=\"113\" src=\"https://www.youtube.com/embed/-YWPmoWKbrM?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"Who&#39;s Who in AI (Explained With a Toyota Prius)\"></iframe>",
+    "archived_thumbnail_url": "https://i.ytimg.com/vi/-YWPmoWKbrM/maxresdefault.jpg",
+    "archived_thumbnail_dimensions": [
+      1280,
+      720
+    ]
+  },
+  "drive_folder_id": "1VKme1NR8TNqgaR5JnTBqswkwIV6lgXCX",
+  "raw": {
+    "drive_id": "1z1Zdo2TLCzsOCx2oRYdi83cI9YeGGhE_",
+    "local_path": "/Users/je/Movies/Episode 1 Raw.mp4",
+    "size": 777662491,
+    "md5": "7c86087db258c0c766083a9c21ace497",
+    "sha256": "9f58d3a39c91ce4499fd3215355ddc9873051e6e32a5b26a6c73ce05caf93107"
+  },
+  "release_files": [
+    {
+      "name": "episode-001.mp4",
+      "sha256": "181624da06b3255f393fb3dbbe36bfe9f154e9c83fef32fcb5a9ebb6aeb3e87d",
+      "drive": {
+        "display_url": "https://drive.google.com/file/d/1fycZY0Em45E8XyCIYdAwifX-cq6P0wEj/view?usp=drivesdk",
+        "id": "1fycZY0Em45E8XyCIYdAwifX-cq6P0wEj",
+        "link_label": "View File in Google Drive",
+        "md5Checksum": "47da42e2bedd218cd93146f167ac6ad0",
+        "name": "episode-001.mp4",
+        "parents": [
+          "1VKme1NR8TNqgaR5JnTBqswkwIV6lgXCX"
+        ],
+        "size": "1016926540",
+        "trashed": false,
+        "webViewLink": "https://drive.google.com/file/d/1fycZY0Em45E8XyCIYdAwifX-cq6P0wEj/view?usp=drivesdk"
+      }
+    },
+    {
+      "name": "episode-001.srt",
+      "sha256": "23d2f41e3ba6d4762b101edde41faccc95d41aad7b2a8a4287ea8a319bc377ac",
+      "drive": {
+        "display_url": "https://drive.google.com/file/d/1I1hlFLLZ8faKK8WDsehsz0-pgJ5wIo0F/view?usp=drivesdk",
+        "id": "1I1hlFLLZ8faKK8WDsehsz0-pgJ5wIo0F",
+        "link_label": "View File in Google Drive",
+        "md5Checksum": "b7ee6681d03c87303301ca3177cc86ab",
+        "name": "episode-001.srt",
+        "parents": [
+          "1VKme1NR8TNqgaR5JnTBqswkwIV6lgXCX"
+        ],
+        "size": "89022",
+        "trashed": false,
+        "webViewLink": "https://drive.google.com/file/d/1I1hlFLLZ8faKK8WDsehsz0-pgJ5wIo0F/view?usp=drivesdk"
+      }
+    },
+    {
+      "name": "episode-001-thumbnail.jpg",
+      "sha256": "48acc6f3349dcd0fdd50bfe1fcb06d0b3e159d0b2886a8f3ef9d26982989992b",
+      "drive": {
+        "display_url": "https://drive.google.com/file/d/1MiTKKHETvRjK898lv2mwM0XUHV9LMPc_/view?usp=drivesdk",
+        "id": "1MiTKKHETvRjK898lv2mwM0XUHV9LMPc_",
+        "link_label": "View File in Google Drive",
+        "md5Checksum": "d968ca7f74f5557faa34027ff26f2555",
+        "name": "episode-001-thumbnail.jpg",
+        "parents": [
+          "1VKme1NR8TNqgaR5JnTBqswkwIV6lgXCX"
+        ],
+        "size": "147267",
+        "trashed": false,
+        "webViewLink": "https://drive.google.com/file/d/1MiTKKHETvRjK898lv2mwM0XUHV9LMPc_/view?usp=drivesdk"
+      }
+    },
+    {
+      "name": "episode-001-description-and-chapters.txt",
+      "sha256": "be0b7c6ea142071dd0a2c404870b8e498b1010a87a0cec8c5f8ebe1a361121d8",
+      "drive": {
+        "display_url": "https://drive.google.com/file/d/1aj0N6n0rQn7ENooLGn5d95NdPS4_boq3/view?usp=drivesdk",
+        "id": "1aj0N6n0rQn7ENooLGn5d95NdPS4_boq3",
+        "link_label": "View File in Google Drive",
+        "md5Checksum": "27c1f104e4b07e6d4b2bf8d375e8a850",
+        "name": "episode-001-description-and-chapters.txt",
+        "parents": [
+          "1VKme1NR8TNqgaR5JnTBqswkwIV6lgXCX"
+        ],
+        "size": "2491",
+        "trashed": false,
+        "webViewLink": "https://drive.google.com/file/d/1aj0N6n0rQn7ENooLGn5d95NdPS4_boq3/view?usp=drivesdk"
+      }
+    },
+    {
+      "name": "archive-manifest.json",
+      "sha256": "012200a13b8279f9b604d6f1396023c6b940325dd28923d91719b038e6a7e163",
+      "drive": {
+        "display_url": "https://drive.google.com/file/d/1vGvQL9-Pvg3iVLlgK_s8lBcBq32Av7qm/view?usp=drivesdk",
+        "id": "1vGvQL9-Pvg3iVLlgK_s8lBcBq32Av7qm",
+        "link_label": "View File in Google Drive",
+        "md5Checksum": "d33bf3f16971c018ecc990255d34e1db",
+        "name": "archive-manifest.json",
+        "parents": [
+          "1VKme1NR8TNqgaR5JnTBqswkwIV6lgXCX"
+        ],
+        "size": "3532",
+        "trashed": false,
+        "webViewLink": "https://drive.google.com/file/d/1vGvQL9-Pvg3iVLlgK_s8lBcBq32Av7qm/view?usp=drivesdk"
+      }
+    }
+  ],
+  "historical_work_archive": "99_ARCHIVE/2026-09-30-completed-launch-work.zip",
+  "caption_status": "Existing final-timeline sidecar; prior auditory proof remains unverified."
+}

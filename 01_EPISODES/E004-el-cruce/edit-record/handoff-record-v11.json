@@ -1,0 +1,26 @@
+{
+  "current_master": "/Users/je/oood/01_EPISODES/E004-el-cruce/edit/codex-personality-pass-2026-10-03/full-v5/el-cruce-personality-v11.mp4",
+  "current_review_page": "/Users/je/oood/01_EPISODES/E004-el-cruce/edit/codex-personality-pass-2026-10-03/full-v5/review-v11.html",
+  "local_review_url": "http://127.0.0.1:8772/review-v11.html",
+  "status": "Rendered and technically checked; ready for host review. Exact-version approval, continuous audiovisual review and auditory caption proof remain pending.",
+  "duration_seconds": 2689.8333333333335,
+  "frames": 80695,
+  "bytes": 883046913,
+  "sha256": "e6818d0ab7f9729fdf4c38b65a5e62c7b37864bf1055a6be003c22ae45ed7dc3",
+  "selected_layout": "C",
+  "selected_hook": "Shortened singing hook with an extra half-second laugh",
+  "caption_status": "649 retimed draft cues; structural checks passed, auditory proof pending",
+  "chapter_count": 11,
+  "finishing_verification": "finishing-verification-v11.json",
+  "all_originals_and_prior_outputs_preserved": true,
+  "new_external_delivery_or_publication": false,
+  "verification_evidence": [
+    "qc-v11/report.json",
+    "qc-v11/color-consistency.json",
+    "picture-review-v8/",
+    "source-integrity-v8.json",
+    "finishing-asset-integrity-v8.json",
+    "caption-review-status-v11.json",
+    "review-server-check-v11.json"
+  ]
+}

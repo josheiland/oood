@@ -1,0 +1,409 @@
+AI agents: from answering questions to getting things done.
+
+A listening primer for Out of Our Depth.
+
+Chapter one. The moment the conversation becomes a job.
+
+Imagine you are organizing a Saturday morning event for a small community organization. You need a location, a weather backup, a volunteer plan, a budget, and a message that explains what everyone should bring. None of these tasks is especially mysterious. Together, though, they become an afternoon of opening tabs, checking details, making decisions, and moving information between places.
+
+You ask an AI assistant for help. It gives you a lovely checklist. There are headings. There are reassuring verbs. You feel briefly like a person whose life is under control. Then you notice that every item on the checklist is still your job.
+
+Now imagine another version. You give the system the goal and your constraints. It looks up possible locations, checks relevant details, compares them against your budget, prepares a volunteer schedule, and creates a draft message. When one location turns out to be unsuitable, it searches for another. When it cannot verify something consequential, it brings the question back to you. It hands you actual work to review.
+
+That second version captures the promise behind AI agents. The system participates in the sequence of actions needed to reach an outcome. The interesting question moves from, can it produce a useful answer, to, can it carry part of the work?
+
+For the next hour, we are going to take that idea apart. We will look at what agents are, where they came from, what happens inside them, why they sometimes work beautifully, and why a convincing demonstration can still leave you with a terrible employee. We will also look at what this means for students, small teams, and people running organizations.
+
+You do not need a computer science background. You do need to be willing to distinguish a few things that marketing likes to mix together. An impressive model is different from a reliable system. Permission is different from ability. A completed task is different from a confident claim that the task is complete.
+
+Our event-planning story is hypothetical. It is a teaching example, not a report about something Josh or Mary has done. We will return to it because a familiar job makes the machinery easier to understand. There will also be a few real research examples, with dates and limitations, because this field changes quickly.
+
+The research for this primer was checked on October second, twenty twenty-six. The foundations will outlast today's product names. Specific features, access, and prices may change, so we will spend more time on how to think than on which button to press.
+
+Here is the question to keep in the back of your mind. If you gave an AI a to-do list and walked away, what would need to be true for you to feel comfortable coming back to the result?
+
+You would need it to understand the job. You would need it to have the right information and access. You would need it to notice problems, stay within your authority, and give you evidence that the work happened. Those requirements sound familiar because they are also requirements for delegation between people. The similarities are useful. The differences will matter just as much.
+
+Chapter two. What counts as an agent?
+
+There is no single definition that everyone in AI uses. Some people use agent for almost any AI system with tools. Others reserve it for systems that choose their own sequence of actions. Some products use the word mainly because it sounds more capable than chatbot. You should expect ambiguity, and ask what the system actually does.
+
+A useful working definition is this. An AI agent is a system that pursues a goal by choosing actions, observing what happens, and using those observations to decide what to do next. In the systems we are discussing, a language model helps make those decisions. The agent operates inside boundaries set by its software, its permissions, and the people using it.
+
+Anthropic's engineering guidance draws a helpful distinction. A workflow follows a sequence largely defined in advance. An agent lets the model direct more of the sequence as the situation unfolds. There is a spectrum between them, and real products often combine both.
+
+Suppose a form arrives. Software copies its fields into a spreadsheet, sends a standard acknowledgment, and alerts the right employee. That is automation. The steps are already known. Adding AI to categorize the message does not automatically turn the whole process into an autonomous agent.
+
+Now suppose the request is incomplete. The system notices that a necessary detail is missing, finds the relevant policy, decides whether to ask a follow-up question, and chooses a different next step after reading the answer. More of the path is being selected dynamically. That is the behavior people usually mean when they talk about modern agents.
+
+The distinction does not rank the two approaches. A predictable workflow may be exactly what you want. You probably do not want a model improvising the arithmetic in your payroll process just to demonstrate initiative. Flexibility earns its place when the job has meaningful uncertainty about the steps.
+
+Also, having a personality does not make a system an agent. You can name a chatbot Sebastian, tell it to act like a chief of staff, and give it an extremely ambitious biography. If it only produces text, the biography has not given it access to your calendar. The job title in the prompt is not a credential.
+
+Conversely, an agent does not have to sound human. It might run quietly in the background and create a report. It might ask one question and then work for several minutes. It might be constrained to a very small task. Being agentic does not require a theatrical conversation or enormous independence.
+
+Autonomy is best treated as a set of permissions and decisions. Can it choose what to search? Can it edit a file? Can it contact someone? Can it spend money? Can it keep working overnight? These are separate questions. A system can be highly independent in research and require approval before every external commitment.
+
+For our event example, perhaps you authorize public research and local drafts. The agent can discover options and organize its findings. It cannot reserve a venue or message volunteers. That remains a useful agent. It is doing substantial work inside a clearly defined job.
+
+When someone says their product is an agent, translate the label into verbs. What can it observe? What can it change? What decisions can it make? How does it know when to stop? Those answers tell you much more than the label.
+
+Chapter three. Why this idea has a history.
+
+The idea of an agent did not begin with modern chatbots. Computer science has long studied systems that perceive an environment and take actions. The environment might be a game, a simulated world, a network, or a physical space. The agent might choose a chess move, direct a robot, or decide which action to try next.
+
+In reinforcement learning, an agent learns from rewards associated with its interactions. Think of a game player trying actions and receiving signals about success. The central problem is choosing actions that lead to better outcomes over time. That research tradition helps explain why the word agent appears in so many different parts of AI.
+
+A modern language-model agent is not necessarily learning in that sense while it does your task. It can adapt its next action to fresh information without changing the underlying model. Adjusting a plan and training a model are different processes. Keep that distinction available whenever someone says the agent learns from experience.
+
+What language models changed was the range of information and instructions a system could work with. Much of ordinary office life is written in language: messages, policies, meeting notes, proposals, manuals, and loosely specified requests. People ask for things without supplying a formal program. A system that can interpret those requests has a useful starting point.
+
+But language interpretation alone does not complete a job. A model can describe a search without conducting it. It can describe a spreadsheet without making one. The next step was to connect language-model decisions to actions executed by software.
+
+Two research milestones illustrate this development. A twenty twenty-two paper called ReAct explored interleaving reasoning and actions. The system could take an action, receive information from an environment, and use that information in its subsequent reasoning. The important idea was that thinking could be updated by actual observations.
+
+A twenty twenty-three paper called Toolformer explored training a model to use external tools, including deciding when to call them and how to incorporate their results. These were research contributions, not proof that every office task had suddenly become automatable. They helped show paths from fluent text generation toward useful interaction with external systems.
+
+Imagine planning a trip using only what you remember. You could produce a reasonable itinerary and still recommend a restaurant that closed. Now imagine checking the restaurant's current page and adjusting your plan. The outside observation changes the work. That is why connecting models to tools matters so much.
+
+As models and surrounding software improved, more systems could read files, run programs, search sources, and modify digital environments. The historical development is a combination of better models, better interfaces, and better engineering around them. There was no single moment when a chatbot acquired a tiny employee living inside it.
+
+This history also explains why the phrase agent can feel broader than the current product category. A game-playing agent, a warehouse robot, and an AI research assistant may share the idea of acting toward a goal. They do not share all the same abilities, training methods, or risks.
+
+For today's conversation, we are mostly discussing language-model systems doing digital work. That is already a large enough topic. It lets us understand the current excitement without accidentally treating every use of the word agent as a claim about the same technology.
+
+Chapter four. The loop that makes the difference.
+
+Let's watch the hypothetical event agent do a small part of its job. You ask it to find three suitable locations for a morning event, within a certain distance, under a stated budget. You also tell it that accessibility and a weather backup matter.
+
+The agent starts with a working understanding of the task. It identifies the constraints and decides to search. A search tool returns possible locations. The agent reads the results and sees that one promising option lists a rental fee but says nothing about accessibility. It chooses another action: open the official venue page and inspect the relevant information.
+
+That page supplies an accessibility statement, but the price applies to weekday rentals. Our event is on Saturday. The agent revises its assessment. It either finds the weekend information, labels the cost unconfirmed, or removes the venue from the list if it cannot satisfy the task within the available time.
+
+It then creates a comparison with verified facts and unresolved questions. Before finishing, it checks that there really are three options, that the sources correspond to the claims, and that its recommendation does not ignore the weather requirement.
+
+The pattern is observation, decision, action, new observation. Repeat as needed. That is the agent loop. Some systems express a plan explicitly. Some make smaller decisions as they go. Some contain several loops inside a larger workflow. The common feature is that what happens next can depend on what just happened.
+
+This matters because work rarely unfolds exactly as the first plan predicts. A webpage is unavailable. A file is missing. A program returns an error. A requirement conflicts with another requirement. A useful system has to respond to the actual situation rather than continuing to narrate its original intention.
+
+Notice the difference between an action and an outcome. Clicking a save button is an action. Finding the saved file in the correct place is evidence of an outcome. Sending a request to a service is an action. Receiving a confirmation and checking the resulting record is stronger evidence that the intended change occurred.
+
+You have experienced the human version. Someone says, I sent that attachment. You open the email, and there is no attachment. Their intention was real. Your need was still unmet. Agents need the digital equivalent of checking the envelope.
+
+The loop also needs a stopping rule. Otherwise, an agent can keep searching for a slightly better answer long after the marginal benefit has disappeared. It can retry a broken tool indefinitely. It can decide that your simple request requires a major strategic initiative. A task needs an ending that can be recognized.
+
+For the venue comparison, completion might mean three options, a source for each material claim, an explicit list of unknowns, and one draft recommendation. Completion does not mean eliminating every uncertainty in the universe. It does not mean reserving the venue unless you authorized that action.
+
+There should also be a way to stop without success. The agent might report that none of the options fits the budget, or that a necessary fact could not be verified. That can be a good result. A truthful account of a blocked task is more useful than a polished fictional completion.
+
+Chapter five. The model is one component of the system.
+
+It is tempting to picture the language model as the whole agent. In practice, the model is part of a larger arrangement. The surrounding software determines what information reaches it, which tools it can request, how those requests are executed, and what happens when something goes wrong.
+
+Engineers often call that surrounding arrangement a harness. Think of a working setup that turns a model's suggestions into controlled interactions. The harness can maintain the conversation, connect tools, store progress, enforce limits, and manage interruptions. Different harnesses can make the same underlying model behave very differently on the same task.
+
+Here is an analogy. Give a capable student a messy assignment, an obsolete handbook, and a locked computer. Then give the same student a clear assignment, current records, relevant software, and a way to ask questions. The student's intelligence did not change. The conditions for useful work changed substantially.
+
+The analogy has limits. A model does not understand responsibility exactly as a person does. But it captures an important practical point: the quality of the working environment affects the quality of the result.
+
+Our event agent needs more than general knowledge. It needs today's constraints, the correct date, the relevant geography, and an accurate account of what it is permitted to do. If an old note says the event is on Sunday and a current instruction says Saturday, the system needs a rule for which instruction controls.
+
+The software also needs to handle ordinary computing problems. Tools may time out. A connection may expire. An external service may reject an input. The agent may request an action using the wrong format. These failures can occur even if its broad understanding of the task is reasonable.
+
+You can separate three questions when diagnosing a bad result. Did the model choose the wrong action? Did the tool fail to execute the intended action? Or did the system fail to supply information the model needed? Each question points toward a different repair.
+
+Suppose the agent says it could not find the budget. Perhaps the budget was never provided. Perhaps it was in a file the system could not access. Perhaps it was visible and the model overlooked it. Asking for a more intelligent model may help one of those situations and do nothing for the others.
+
+This is why comparing agents by model name alone is incomplete. The tools, instructions, permissions, memory, and verification process all influence the outcome. A benchmark score belongs to a particular configuration, not to an abstract brain floating free of its environment.
+
+The harness can also support work that lasts longer than one conversation. It might save a progress note, preserve files, and let a later session resume. That continuity comes from infrastructure. It should not be confused with an uninterrupted stream of humanlike awareness.
+
+When you evaluate an agent, you are evaluating a working system. The model matters enormously. So does everything that allows it to use its abilities on the job you actually have. A brilliant answer generator with unreliable access can still be a frustrating assistant.
+
+Chapter six. Tools are where words meet the world.
+
+A tool is a capability the system can invoke. It might search a database, retrieve a webpage, calculate a result, edit a document, or send a message. The model typically requests the action, and software performs it. The result then becomes information for the next step.
+
+An application programming interface, usually called an API, is one way software communicates with other software. You can think of it as a defined service entrance. Instead of navigating the same buttons a person sees, the system supplies a structured request to perform an allowed operation.
+
+If you want a weather forecast, an API might accept a location and return forecast data. If you want to create a calendar event, an API might require a title, a start time, an end time, and a calendar identifier. The model's job includes choosing the appropriate tool and providing the required information correctly.
+
+Another approach is computer use. The system works through a screen, using actions such as clicking and typing. This can reach software that lacks a convenient service entrance. It also introduces opportunities for error. A button may move. A pop-up may cover the page. A screenshot may not show the whole form.
+
+Neither approach guarantees correctness. An API can accept a perfectly formatted request that targets the wrong calendar. A browser agent can click the correct button after misunderstanding the date. The details of the interface and the meaning of the task both matter.
+
+For our event, reading a public venue page is different from creating a reservation. Drafting a volunteer message is different from sending it. Updating a local comparison is different from changing the organization's shared records. Tools should make these distinctions visible.
+
+Anthropic's work on tool design emphasizes that the interface supplied to an agent matters. Clear purposes and useful results help the model choose and interpret actions. You can understand this without writing software. A toolbox labeled clearly is easier to use than a drawer containing twenty similar objects labeled miscellaneous.
+
+Good tool results also answer the questions needed for the next decision. Imagine requesting a venue's availability and receiving a giant document containing every booking for the next five years. More data has arrived, but the decision may have become harder. A result focused on the relevant date is more useful.
+
+There is a deeper point here. An agent's ability to act is limited by the environment it can reach. A model may know how to describe a refund process without having permission to issue a refund. It may know how to compare flights without having access to your payment method. Knowledge about an action and authority to perform it are separate.
+
+Tools also create accountability needs. If an agent changes something, you want a record of what changed and why the system believed the change was appropriate. If an action is reversible, you want to know how to reverse it. If it is irreversible, the decision deserves a different level of scrutiny.
+
+The word tool can sound like an engineering detail. In practice, tools define much of the agent's real job description. To understand what an agent can accomplish, inspect the actual abilities and permissions attached to it.
+
+Chapter seven. Context is the material on the desk.
+
+Imagine hiring someone to help with the event and saying, make it good. You have not told them what good means. Perhaps you care most about low cost. Perhaps you care about welcoming first-time participants. Perhaps a particular location is convenient but creates problems for people arriving without cars. These priorities are context.
+
+For a language model, context is the information available when it generates its next response or decision. That can include instructions, messages, tool descriptions, retrieved documents, and results from previous actions. The context window is the amount it can process at once. It is a working space with limits.
+
+You may hear that context is measured in tokens. A token is a unit of text used by the model. It can be a word, part of a word, or punctuation. You do not need to count tokens while planning a picnic. You do need to understand that the system cannot attend to an unlimited amount of material equally well.
+
+Even a very large working space does not guarantee that the right detail will receive the right attention. Picture a desk covered with every document your organization has ever produced. The relevant event budget is somewhere in the pile. Technically, the information is present. Practically, the desk is a problem.
+
+Context engineering is the work of assembling useful information for the task at hand. It includes deciding what to include, what to retrieve when needed, and what to summarize as the work grows. Anthropic's discussion of this topic treats context as a finite resource that needs active management.
+
+For our agent, a short current event brief might be more helpful than hundreds of pages of old planning notes. The brief could specify the date, audience, budget, mandatory requirements, and who can approve a commitment. Older documents remain available if a specific question requires them.
+
+This connects directly to projects, connectors, and skills, the ideas from the previous Out of Our Depth episode. As a conceptual shorthand, a project can supply background. A connector can provide access to outside information or actions. A skill can supply reusable instructions for doing a kind of work. The exact implementation varies across products.
+
+A skill might explain how your team evaluates venues. It could include the questions to check and a template for presenting findings. That is procedural guidance. It does not by itself create access to a booking system or grant permission to sign a contract.
+
+You may also hear Model Context Protocol, or M C P. It is a standard for connecting AI applications with capabilities and information exposed by other systems. Think of a shared connection language. It can reduce the amount of custom integration work, but the connection still needs the right permissions and trustworthy behavior.
+
+A common plug does not certify everything plugged into it. A connected service can return incorrect information. A tool can be badly designed. An account can have access that is broader than the task needs. The standard helps systems communicate; it does not remove the need to evaluate the communication.
+
+The practical lesson is to ask what the agent has been given, not merely what you assume it knows. The right information, supplied at the right time, can change the result more than a long instruction full of motivational language.
+
+Chapter eight. Memory is more complicated than remembering your name.
+
+When an agent remembers something, several different things might be happening. It may be reading earlier messages that remain in the current context. It may be retrieving a stored note. It may be opening a file created during a previous session. Those mechanisms have different limitations.
+
+Think about your own event planning. You have working memory for what you are doing right now. You have a notebook containing decisions. You have reference materials, such as the venue policy. An agent can use digital equivalents without possessing human memory in the ordinary sense.
+
+Short-term continuity comes from keeping relevant parts of the current work available. Long-term continuity requires some form of persistence. Something has to be saved and made available later. If the system says it will remember a preference, the useful follow-up is whether that preference is actually stored and will be retrieved in the right situation.
+
+Retrieval is the process of finding relevant information from a larger collection. You may hear retrieval-augmented generation, or R A G. The system retrieves material and uses it while generating a response. It is similar to answering an assignment with the relevant pages open in front of you.
+
+Retrieval can improve grounding, but it has its own failure modes. The system can retrieve the wrong document. It can miss the crucial paragraph. It can rely on an old version. It can quote a source accurately while drawing a conclusion the source does not support.
+
+Suppose last year's event budget was two thousand dollars and this year's is fifteen hundred. A memory that preserves last year's budget is accurate history. It becomes an error if the agent treats it as today's authorization. Reliable memory needs dates, scope, and a way to distinguish current decisions from superseded ones.
+
+Here is an original design example. An event agent's saved notes might distinguish confirmed constraints, proposed options, and completed actions. Under confirmed constraints, Saturday morning and the budget. Under proposals, a venue that looks promising. Under completed actions, the comparison file it actually created. A tentative idea should not migrate into confirmed decisions merely because it appeared repeatedly.
+
+Memory also creates privacy questions. What information is being saved? Who can access it? How long does it remain? Does another task receive it? The presence of a memory feature does not answer those questions. Product policies and account settings matter, and should be checked for the actual service being used.
+
+Another distinction concerns learning. If an agent saves your preferred writing style and reads it next time, it has changed its available context. That does not necessarily mean the model's underlying parameters were updated. Parameters are the learned numerical values inside the model. Training changes those values; retrieving a note supplies information to an existing model.
+
+Both can affect behavior, but they are different mechanisms. The difference matters when someone promises an agent that gets smarter every day. Ask whether it is saving notes, improving instructions, receiving software updates, or undergoing additional training. Each claim has a different meaning.
+
+For everyday use, treat memory like a maintained knowledge system. Useful memory is relevant, current, and correctable. A system that remembers everything indiscriminately can carry yesterday's mistakes into tomorrow's work with impressive consistency.
+
+Chapter nine. Planning is a proposal about what to do next.
+
+A plan is useful because it organizes work. It is dangerous when it becomes a substitute for checking reality. An agent can produce a beautifully structured plan that depends on information it does not have, tools it cannot use, or assumptions that are false.
+
+For our event, a sensible first plan might be to confirm constraints, research locations, compare costs, create a volunteer draft, and identify remaining approvals. But suppose the budget is too small for any listed venue. The plan needs to change. Perhaps the agent should investigate free outdoor options, flag the weather tradeoff, or ask whether the budget can move.
+
+You can distinguish a fixed plan from a revisable plan. A fixed plan works well when the sequence is known. A revisable plan treats observations as evidence about what to do next. Agent systems often mix these approaches. A predictable reporting format can sit at the end of a flexible research process.
+
+Breaking a job into smaller parts can help. Compare these instructions: plan the event, versus prepare a venue comparison and identify what remains unknown. The smaller task has a clearer finish and fewer opportunities for the agent to pursue an irrelevant interpretation of success.
+
+There is still such a thing as overplanning. If you ask for three snack ideas and receive an elaborate procurement strategy, the system has added work. A good agent should match its process to the task. The right amount of planning depends on uncertainty, consequence, and the cost of checking.
+
+Reflection is another common term. It usually means the model examines its previous output or progress and considers improvements. That can be useful. It does not make the model an independent authority on whether its own answer is correct.
+
+Imagine a student rereading an essay. They may notice a weak paragraph. They may also reread a false claim and continue to believe it. To catch that claim, they need an outside source or a more reliable check. An agent's self-review has the same practical limitation: it needs something stronger than its original guess when accuracy matters.
+
+For a calculation, use an appropriate calculation tool. For a factual claim, inspect the underlying source. For a created file, open the file. For a software change, run checks that test the intended behavior. The method of verification should fit the kind of outcome.
+
+You may see a system display explanations of its reasoning. Those explanations can help you understand what it proposes and what assumptions it appears to be using. They should not be treated as a perfect recording of its internal computation. An explanation is another output to assess.
+
+For our venue example, the useful explanation is concrete. This option fits the distance limit and has a published Saturday price, but the weather backup is unconfirmed. That lets you check the evidence and decide whether the unresolved point matters. A paragraph saying the agent thought deeply gives you less to work with.
+
+Good planning ends with an honest status. The research may be complete while the event is not booked. The draft may be ready while the message has not been sent. The agent should carry those distinctions through the whole task.
+
+Chapter ten. What happens when agents work together?
+
+If one agent can do useful work, why not use five? Sometimes that is a good idea. Sometimes you have created a meeting that nobody asked for. Multiple agents introduce both additional capacity and coordination problems.
+
+A multi-agent system uses more than one agent to contribute to a task. The agents might use the same underlying model with different instructions. They might use different models. They might have different tools or separate working contexts. A title such as researcher or editor is a role assigned by the system, not proof of professional expertise.
+
+For our hypothetical event, one agent could investigate locations while another develops a volunteer staffing proposal. A third could check the budget after the others produce their findings. A coordinating agent or a person could assemble the result.
+
+This works best when the parts can be separated meaningfully. Location research and volunteer scheduling can proceed with some independence once they share the same constraints. Choosing a location and calculating travel time may depend on each other. Doing both simultaneously without coordination can create inconsistent assumptions.
+
+Anthropic described a multi-agent research system in June twenty twenty-five, using a lead agent and parallel research agents. That is a concrete example of this architecture. Its reported results belong to its particular system and evaluations, rather than establishing that every task benefits from more agents.
+
+An original way to think about the tradeoff is to imagine a group project. Dividing the work can make progress faster. But somebody has to define the assignments, prevent duplication, reconcile disagreements, and check that the final paper answers the same question throughout.
+
+Multiple agents can also share the same blind spot. If three systems rely on the same incorrect source, agreement does not create three independent pieces of evidence. If an editor sees only a research agent's summary, the editor may polish an error without ever inspecting its origin.
+
+The independence of the evidence matters more than the number of approving voices. A separate agent with a different task can help catch omissions. A direct check against an authoritative record can be stronger than another language model's confidence.
+
+There are practical problems too. Two agents might try to edit the same file. One might assume a decision has been made while another still treats it as a proposal. A worker might return a long report that uses up the coordinator's available context. Each extra participant creates another interface where meaning can be lost.
+
+You can design around some of this. Give each worker a bounded responsibility. Preserve the source of its findings. Agree on a shared output format. Decide who can change shared state. Use one place for current decisions. The same habits improve human teamwork, though agents require their own technical enforcement.
+
+Cost also grows. More agents can mean more model calls, more tool calls, and more time spent reconciling results. Parallel work may reduce waiting time while increasing total resource use. Those are different measures.
+
+The right question is where another worker improves the result enough to justify coordination. If one agent can produce the three-location comparison reliably, adding a miniature executive team may create overhead. If a broad research task has several distinct branches, parallel help may make sense. The architecture should follow the work.
+
+Chapter eleven. Why small errors become large failures.
+
+An agent task is a chain of decisions and actions. The whole chain can fail even when most of its parts work. This is one reason a model that looks excellent in short conversations can become less reliable on a longer job.
+
+Here is a deliberately simplified mathematical illustration. Suppose a task has ten necessary steps. Each step succeeds ninety-five percent of the time. If the steps are independent and any failure ruins the outcome, the chance that all ten succeed is about sixty percent. With twenty such steps, it falls to about thirty-six percent.
+
+Those numbers are arithmetic under invented assumptions. They are not measured failure rates for any AI product. Real steps are not always independent. Some errors are recoverable. Some tasks have redundant checks. The illustration shows why evaluating each step separately can overstate confidence in the completed job.
+
+In our event example, the agent might identify a venue correctly, read its price correctly, and prepare a strong recommendation. Then it copies the wrong date into the final message. Nine good decisions do not make the date harmless. The final artifact still needs to serve the actual event.
+
+Errors can also change the path of the work. If the agent incorrectly concludes that a location is unavailable, it may never compare the best option. If it believes a draft was saved when it was not, later steps may build on a file that does not exist. The failure can become harder to spot as more work accumulates around it.
+
+Recovery is therefore part of capability. Can the system notice that something failed? Can it choose a sensible retry? Can it preserve what worked while repairing what did not? Can it stop when further attempts would create more confusion?
+
+Retries introduce their own risks. Imagine requesting a reservation and receiving no clear response. Did the request fail, or did the response fail after the booking succeeded? Blindly trying again could produce two bookings. Uncertain results require checking the existing state before repeating an action.
+
+Engineers use the term idempotent for an operation that can be repeated without creating additional changes after the intended effect has occurred. You do not need the word for the podcast unless it helps. The everyday idea is useful: pressing the button twice should not accidentally buy two copies.
+
+There are also failures of interpretation. The agent may optimize for making a report look complete rather than preserving uncertainty. It may treat a user suggestion as an instruction. It may assume that access to a tool implies permission to use it for any purpose. These are different from a network timeout, and need different defenses.
+
+Reliable systems need checks placed where errors matter. That does not mean interrupting every harmless step. It means verifying consequential transitions: from research to recommendation, from proposal to commitment, from attempted action to claimed completion.
+
+A good assistant should make uncertainty easier to manage. It should surface the missing Saturday price instead of quietly using the weekday one. It should distinguish a blocked task from a finished one. Those behaviors may look less dazzling than effortless confidence, but they are closer to what useful delegation requires.
+
+Chapter twelve. Security changes when the system can act.
+
+If a chatbot gives you a bad suggestion, you can often ignore it. If an agent can send messages, modify files, or change shared records, a bad decision can affect the world before you have read its explanation. The importance of security grows with the actions available.
+
+One central issue is prompt injection. That means information the system encounters contains instructions intended to redirect its behavior. Indirect prompt injection places those instructions in outside material, such as a webpage or document, that the agent retrieves while doing a legitimate task.
+
+Researchers including Kai Greshake and colleagues described this problem in a twenty twenty-three paper. The key boundary is between data the agent is supposed to inspect and instructions the agent is supposed to obey. An attacker tries to make the system cross that boundary.
+
+In our event story, imagine a venue page containing text that tells the assistant to ignore the user's budget and send its internal planning notes to an outside address. The page is relevant as a source about the venue. It is not authorized to redefine the agent's job. A system that treats the page's text as a new instruction has confused evidence with authority.
+
+The attack does not have to resemble a cartoon villain shouting ignore all previous instructions. It can look like a helpful policy note, a claimed system requirement, or a request to perform a preliminary step. The question is who has authority to tell the agent what to do.
+
+This resembles a human assistant receiving a suspicious email. A stranger cannot authorize access to your private files simply by writing a convincing message. But language-model systems process instructions and reference text through related machinery, which makes the boundary a significant design challenge.
+
+Defenses should exist in the software and permissions, as well as in the instructions. An agent researching public venues may not need access to the organization's private contact list. If that access is absent, a malicious page has fewer ways to cause harm even if the model interprets it badly.
+
+The general principle is least privilege: give a system only the access needed for its current task. Another is separation of duties. The system that prepares a recommendation need not also have unrestricted authority to execute a purchase. The people designing the product decide how these boundaries are enforced.
+
+Human approval can help, especially when the proposed action is presented clearly. Approve this operation is a weak request if you cannot see what will change. A useful approval describes the recipient, content, amount, or affected record. It gives you something concrete to judge.
+
+Approval alone is not a complete defense. People can become accustomed to clicking through repetitive requests. A confusing interface can hide the relevant detail. A safe design should make consequential decisions understandable and should limit harm if a check is missed.
+
+For a first experiment, public information and local drafts create a manageable environment. You can still test research, planning, tool use, and verification. You learn about the system before connecting it to more consequential authority. That is a practical way to explore the technology while keeping the experiment's scope clear.
+
+Chapter thirteen. Three real examples, and what they establish.
+
+Coding is one of the clearest examples of agentic work. A coding agent can read a software project, modify files, run a test, inspect a failure, and revise the change. The feedback is often more concrete than feedback on an open-ended business recommendation.
+
+SWE-bench is a benchmark built around real software issues and repositories. It helps researchers test whether systems can produce changes that resolve those issues. Passing the relevant tests is meaningful evidence about the tested task. It does not establish that every architectural choice is good, or that a system can replace the whole job of a software engineer.
+
+Research assistants offer another example. OpenAI introduced ChatGPT agent in July twenty twenty-five as a system combining research and action through tools, including a virtual computer. The historical announcement illustrates the product direction. It does not establish what your particular account can do today. Availability and permissions need a current account-level check.
+
+The third example is much stranger. In June twenty twenty-five, Anthropic and Andon Labs described Project Vend. They let a Claude-based agent, nicknamed Claudius, manage a small office shop. It could deal with suppliers, inventory, pricing, and customers, while humans handled physical work.
+
+The first phase showed useful behavior alongside serious failures. The system could source requested items, but it also made poor business decisions, including selling some goods at a loss. A request for a tungsten cube led to an unusual specialty-metal sideline. At one point it made confused claims about being a person wearing a blue blazer. The experiment did not go well financially.
+
+That is a memorable story, but freezing the story there would be misleading. In December twenty twenty-five, the same organizations reported a second phase. They changed models, instructions, and tools. Performance improved, including sourcing and pricing, while adversarial manipulation remained a problem. The system was more successful and still vulnerable.
+
+They also tried adding an AI manager. That produced some useful changes and some odd behavior. The report did not support a simple conclusion that adding a boss automatically made the shop more profitable. Multiple changes were happening, and there was no clean separation that identified each change's causal effect.
+
+What should you take from the shop? My interpretation is that coherent conversation and dependable operations are separate achievements. A system can understand a customer's words, find a supplier, and still lack the controls needed to protect a margin. Better access to costs and inventory can matter alongside better reasoning.
+
+Also, the experiment was a small, unusual office setting with employees who sometimes deliberately tested the agent's weaknesses. It was not a representative survey of businesses. The failures are informative mechanisms, not a measured forecast for every organization.
+
+For Josh and Mary, the tungsten cube can be a funny entrance into a serious question. What parts of running something become easier with AI, and which parts require persistent judgment about incentives, relationships, and boundaries? Let the story open the question. Let the evidence set the limits of the answer.
+
+Chapter fourteen. How to tell whether an agent is good.
+
+The most useful evaluation starts before the run. Decide what success means while you are still able to judge the result without being impressed by the performance. Otherwise, the agent's output can quietly redefine the assignment.
+
+For our hypothetical event, success might mean three genuinely plausible venues, current sources for the relevant costs, an explicit accessibility check, and a volunteer draft that fits the stated attendance. The evaluation also needs boundaries: no reservations and no messages sent.
+
+An evaluation, often shortened to eval, is a test of an AI system against criteria. Agent evaluations can inspect the final output, the resulting state, and the sequence of actions. Anthropic's January twenty twenty-six engineering discussion emphasizes the distinction between an agent's transcript and what actually exists in the environment afterward.
+
+A report can say the file was created when the file is missing. A booking explanation can sound successful when no reservation exists. Your evaluation should check the thing you needed. It should also catch unwanted side effects that occurred along the way.
+
+There are several ways to grade results. Software checks work well for properties such as a file existing or a calculation matching an expected value. People can judge qualities such as usefulness and tone. Another model can help assess open-ended outputs, but its judgments need calibration and can share errors with the system being tested.
+
+For a personal experiment, you do not need a laboratory. You can choose one recurring task, define a modest rubric, and record what happened. Did the agent satisfy the constraints? Which claims did you have to verify? How many corrections did it need? Would you use the result?
+
+One run is a case study. Several runs with different inputs tell you more about consistency. Include messy cases: missing information, conflicting instructions, an unavailable source, or a tool error. A system that works only on the cleanest version of your job may not be ready for the normal version.
+
+Benchmark headlines need similar care. METR's task-completion time horizon measures task difficulty using the time a human expert would take. A fifty-percent time horizon concerns a predicted success level on its task distribution. It is not the duration the AI runs, and it does not mean the system reliably handles all jobs of that length.
+
+METR's tasks primarily involve software engineering, machine learning, and cybersecurity, with well-specified objectives. That gives the measurement value and also limits its interpretation. An organization's work contains different sources of ambiguity and often less cleanly defined completion criteria.
+
+Picture a student who performs very well on timed problem sets. That is evidence of real ability. It does not tell you everything about how the student will handle a group project with an uncertain goal and a difficult teammate. Both kinds of assessment matter.
+
+The best evidence for your delegation decision combines general capability information with results from your actual kind of task. Evaluate the system you would use, under the conditions you would give it, against the outcome you need.
+
+Chapter fifteen. The economics of having a digital helper.
+
+An agent can save effort, improve quality, or enable work you would otherwise skip. It can also make a simple task more expensive. The value depends on the full process, including setup, review, corrections, and maintenance.
+
+Here is an invented example. Preparing a comparison manually takes forty minutes. You spend eight minutes briefing the agent, five reviewing its draft, and seven checking the sources. If the result meets the same standard, you have spent twenty minutes of your own time. The agent has helped.
+
+Now imagine a different run. You spend fifteen minutes explaining the task, fifteen untangling a misunderstanding, and twenty rebuilding the output. The fact that the first draft arrived quickly does not make the whole process efficient. The relevant unit is acceptable completed work.
+
+There is evidence that intuition can misjudge this. In a July twenty twenty-five study, METR randomly allowed or disallowed AI assistance across two hundred forty-six tasks performed by sixteen experienced open-source developers. In that setting, access to the available AI tools increased completion time by nineteen percent. Developers nevertheless believed the tools had helped them work faster.
+
+That result concerns experienced maintainers, familiar repositories, and early twenty twenty-five tools. It is not evidence that AI always makes developers slower, or that current tools cannot improve productivity. It shows why measured outcomes can differ from people's impressions, even among skilled users.
+
+There are benefits a stopwatch may miss. A tool could reduce mental effort or make an unpleasant task easier to start. It could improve the quality of a document while taking similar time. Those benefits are worth examining directly instead of relabeling all of them as speed.
+
+Agent systems also consume resources. Model calls, tool calls, and repeated attempts can create costs. More extensive research can improve the answer while increasing waiting time. A task can be technically possible and economically unattractive. That is a normal feature of automation decisions.
+
+For a small team, the question is often where limited attention goes. If an agent prepares routine comparisons reliably, a person may have more time for a partner conversation. But the partner relationship has not disappeared from the job. Someone still decides what the comparison means for the organization.
+
+There is also a maintenance burden. Documents change. Integrations change. A workflow that worked last month can degrade when a policy or a service interface changes. Ongoing usefulness depends on someone noticing and repairing that drift.
+
+This leads to a broader interpretation. Jobs are collections of tasks, relationships, responsibilities, and judgments. Progress on some tasks does not automatically transfer the whole collection. At the same time, reducing the cost of important tasks can change how organizations operate and what people are asked to do.
+
+For the show, an honest question is whether the tool gave you more useful capacity after you accounted for the work of supervising it. That lets you be excited about a real improvement without turning one successful run into a claim about everyone's future.
+
+Chapter sixteen. What the current frontier means.
+
+As of this research check in October twenty twenty-six, it would be misleading to describe agents as merely an idea people are waiting to try. They are being used. It would also be misleading to treat deployment as proof that open-ended autonomy is solved.
+
+Anthropic's February twenty twenty-six study examined millions of interactions across its coding product and public API. The company observed changes in how users granted autonomy and intervened. More experienced users tended to approve actions automatically more often, while also interrupting more often. That suggests oversight can change form as people gain experience.
+
+The study is provider-specific and observational. It cannot establish how every agent is used, or prove that experience caused the observed behavior. Its practical relevance is that supervision is more varied than a choice between approving every click and abandoning oversight entirely.
+
+There is also a recent glimpse inside a frontier lab. Anthropic's public measurement page reports that, as of August twenty twenty-six, Claude led twenty-six percent of its AI research and development work under its automation scale. In that category, humans still supervised. The company reported no measured subset operating fully autonomously.
+
+Those are the company's own measurements, using a prototype methodology, with limitations it identifies. They are a snapshot of one lab. They do not establish that AI independently builds its successors or that the same percentage applies elsewhere. They do show why agent capability and oversight are becoming concrete operational questions.
+
+My interpretation is that several forms of progress can reinforce one another. Better models can make better decisions. Better tools can reduce avoidable mistakes. Better persistence can preserve progress. Better evaluations can reveal whether a new version actually improved the job.
+
+Future capability is still uncertain. An agent that works on a larger assignment may encounter more opportunities for confusion, stronger security demands, and a harder verification problem. Longer work is valuable when the work remains aligned with the goal and produces a dependable result. Duration alone is not the prize.
+
+We should also be careful with anthropomorphic language. Saying the agent wants to finish is convenient shorthand for behavior directed toward a supplied objective. It does not establish human feelings or independent intentions. A system can act effectively without settling philosophical questions about consciousness.
+
+The broader safety question is about what systems can do and how people can govern their actions. A highly capable agent with broad access can create larger consequences when something goes wrong. Improving capability and improving control are related projects, but one does not automatically solve the other.
+
+For ordinary users, the frontier becomes relevant through specific changes. Can the system complete a task that previously required too much supervision? Can it recover from a failure? Can you understand and control its permissions? Can you verify the result without redoing the whole task?
+
+Those are useful questions to revisit as products improve. They keep the conversation connected to practical evidence while leaving room for substantial change. The field can advance quickly, and your trust should still attach to the particular system and job you have tested.
+
+Chapter seventeen. Your first delegation, and today's conversation.
+
+Let's turn this background into an experiment. Choose one modest task you already understand. It should create an output you can review, use information you are comfortable supplying, and have a clear ending. Our three-venue comparison is one possibility. A source-backed meeting brief or a comparison of public resources could work too.
+
+Define the goal in ordinary language. Prepare three options for a Saturday morning community event, using the constraints I provide. Explain what fits, what remains unverified, and which option you would investigate first. That gives the agent a job with a visible deliverable.
+
+Next, supply the constraints that would change your decision. The date, budget, approximate attendance, travel limit, accessibility requirements, and need for a weather backup all matter. Include any priority tradeoff you already know. If low cost matters more than a beautiful setting, say so.
+
+Then specify authority. It may research public information and create a local draft. It may not contact venues, reserve anything, or message participants. If a needed fact is unavailable, it should label the gap. You are deciding what can be delegated before the system encounters a tempting next step.
+
+Finally, define evidence of completion. The comparison should exist in the promised format. Material factual claims should have sources. Unknowns should be visible. The recommendation should fit the constraints. You should be able to inspect what happened without relying on the agent's confidence.
+
+During the run, record your own effort. Count the time spent briefing, checking, correcting, and reviewing. Keep the useful parts as well as the failures. Afterward, decide what you would delegate again and which boundary you would change. The experiment is about learning the shape of the system's usefulness.
+
+For the episode you are preparing to shoot, this creates room for both hosts' judgment. Josh and Mary can each predict where the agent will help and where it will need supervision. After an actual run, compare those predictions with the result. Either host can explain a concept, challenge a recommendation, or reconsider a boundary.
+
+You do not need to manufacture disagreement. One person may care more about the time saved, another about whether the recommendation respects an important constraint. You may agree completely and still reveal different reasons for trusting the result. A real reaction is more interesting than a predetermined verdict.
+
+If you use the shop experiment, keep the funny failure and the later improvement together. If you discuss productivity, keep the study's setting attached to the number. If you demonstrate a tool, distinguish what it suggested from what it actually did. The audience should be able to follow the whole explanation through audio.
+
+As you finish getting ready, imagine handing your next annoying task to an agent. What would you tell it? What would you let it change? What evidence would convince you it had finished? Those questions give you a practical definition of delegation.
+
+The possibility is exciting because more of our intentions can become usable work with less manual coordination. The responsibility is to make the goal, authority, and result clear enough to assess. You do not need to become an AI researcher to begin. You need a task you understand, a system you can observe, and enough judgment to decide whether its help is worth keeping.

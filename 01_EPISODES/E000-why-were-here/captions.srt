@@ -1,0 +1,1009 @@
+1
+00:00:00,000 --> 00:00:02,760
+Chat was too generous with us.
+
+2
+00:00:02,760 --> 00:00:04,820
+'Cause those kids were way better looking
+
+3
+00:00:04,820 --> 00:00:05,433
+than our kids are gonna be.
+
+4
+00:00:05,433 --> 00:00:10,700
+[Instrumental theme music]
+
+5
+00:00:10,700 --> 00:00:12,450
+And we're live.
+
+6
+00:00:12,450 --> 00:00:15,090
+We're doing it.
+
+7
+00:00:15,090 --> 00:00:17,980
+Scary.
+
+8
+00:00:17,980 --> 00:00:20,380
+What is up, everyone?
+
+9
+00:00:20,460 --> 00:00:23,900
+We are doing a very quick intro video
+because we really don't want
+
+10
+00:00:23,900 --> 00:00:26,620
+this to be the start of every video.
+
+11
+00:00:26,620 --> 00:00:30,730
+But what we do want to start is a podcast
+called Out
+
+12
+00:00:30,750 --> 00:00:34,610
+of Our Depth. Because we are out of our
+depth in a lot of different
+
+13
+00:00:34,830 --> 00:00:36,380
+areas at the moment.
+
+14
+00:00:36,380 --> 00:00:38,420
+Literally everything. Pretty much all of
+them.
+
+15
+00:00:38,420 --> 00:00:40,360
+We just got married a couple weeks back.
+
+16
+00:00:40,410 --> 00:00:44,420
+We started back up at school at Stanford
+Business School, where
+
+17
+00:00:44,420 --> 00:00:47,300
+we're now in our second year of two year
+program.
+
+18
+00:00:47,350 --> 00:00:50,570
+And we're running a nonprofit together on
+top of it all and just
+
+19
+00:00:50,570 --> 00:00:53,650
+trying to figure out in the meantime how
+to keep up with AI,
+
+20
+00:00:53,650 --> 00:00:55,770
+artificial intelligence.
+
+21
+00:00:55,770 --> 00:00:59,930
+So we help to lead programming at the
+business school to
+
+22
+00:00:59,940 --> 00:01:03,340
+help raise the floor and educate students
+across the cohort.
+
+23
+00:01:03,410 --> 00:01:07,160
+But even still, we find ourselves
+struggling to keep up with all the
+
+24
+00:01:07,160 --> 00:01:09,960
+developments. And so this podcast, I
+think, is hopefully going to be
+
+25
+00:01:09,960 --> 00:01:12,150
+a forcing function for us to-- It's
+selfish.
+
+26
+00:01:12,190 --> 00:01:16,260
+Everything's selfish. But yeah, that's
+what this podcast
+
+27
+00:01:16,270 --> 00:01:20,020
+is. And we believe that
+
+28
+00:01:20,020 --> 00:01:22,770
+you've got to learn AI.
+
+29
+00:01:24,300 --> 00:01:28,690
+Why do we believe that? Because for a
+
+30
+00:01:28,720 --> 00:01:32,640
+job, for personal, it's such an efficient
+driver, but
+
+31
+00:01:32,640 --> 00:01:35,310
+also career driver.
+
+32
+00:01:35,360 --> 00:01:39,180
+And I think that AI won't replace
+
+33
+00:01:39,180 --> 00:01:43,510
+jobs, but I think it will vastly change
+them and
+
+34
+00:01:43,510 --> 00:01:45,820
+change the task. And we've got to change
+with them.
+
+35
+00:01:45,820 --> 00:01:49,190
+And I think I'm really passionate about
+making sure that women
+
+36
+00:01:49,350 --> 00:01:53,250
+adopt. And we're not 20% behind of men in
+
+37
+00:01:53,330 --> 00:01:55,020
+truly adopting.
+
+38
+00:01:55,020 --> 00:01:57,340
+I feel the same thing about nonprofits.
+
+39
+00:01:57,340 --> 00:02:00,560
+I think there's a little bit more adoption
+in nonprofits, but the
+
+40
+00:02:00,600 --> 00:02:04,590
+effective adoption in really using these
+tools to what they're
+
+41
+00:02:04,590 --> 00:02:07,540
+actually capable of doing is so much
+lower.
+
+42
+00:02:07,540 --> 00:02:11,520
+And then back to what you were saying, I
+want to make it
+
+43
+00:02:11,540 --> 00:02:13,980
+fun. AI is so bland sometimes.
+
+44
+00:02:13,980 --> 00:02:16,340
+And it's just like, we have a
+conversation.
+
+45
+00:02:16,340 --> 00:02:18,080
+It's like, yada, yada, yada.
+
+46
+00:02:18,080 --> 00:02:20,670
+Learn AI or watch certain things.
+
+47
+00:02:20,890 --> 00:02:25,080
+And for me, I love following people like
+Claire Vo,
+
+48
+00:02:25,090 --> 00:02:29,240
+but I haven't found a way to really stay
+up to date and
+
+49
+00:02:29,240 --> 00:02:31,490
+make it fun. I want the T.
+
+50
+00:02:31,780 --> 00:02:34,940
+What's the beef between Elon and Musk or
+whoever?
+
+51
+00:02:35,210 --> 00:02:36,980
+Well, first, last.
+
+52
+00:02:36,980 --> 00:02:39,160
+We're clearly learning.
+
+53
+00:02:39,170 --> 00:02:43,490
+Sam, Elon, I just want it
+
+54
+00:02:43,510 --> 00:02:45,450
+to be fun. I want everyone to learn.
+
+55
+00:02:45,590 --> 00:02:48,370
+I want especially the people who, when you
+say raise the floor, the
+
+56
+00:02:48,540 --> 00:02:51,980
+people who right now are being left
+behind.
+
+57
+00:02:51,980 --> 00:02:54,460
+I think that's silly.
+
+58
+00:02:54,460 --> 00:02:57,960
+Yeah, totally. And I feel like we're in
+this bubble out in the bay
+
+59
+00:02:57,960 --> 00:03:01,160
+at Stanford where we're surrounded by so
+many people thinking about
+
+60
+00:03:01,170 --> 00:03:03,030
+this, literally doing the work.
+
+61
+00:03:03,030 --> 00:03:05,680
+And still it feels like just impossible to
+keep up because
+
+62
+00:03:05,680 --> 00:03:09,440
+everything's moving so fast. But there is
+a lot of noise, I think
+
+63
+00:03:09,440 --> 00:03:11,450
+mixed in with like what really matters.
+
+64
+00:03:11,450 --> 00:03:14,420
+And so I think we want to use this as an
+opportunity to just kind of
+
+65
+00:03:14,420 --> 00:03:17,490
+like work together in real time to
+understand like what's actually
+
+66
+00:03:17,660 --> 00:03:20,070
+worth investing in, which tools should we
+really be experimenting
+
+67
+00:03:20,360 --> 00:03:23,130
+with versus like, what should we kind of
+be tuning out and just
+
+68
+00:03:23,220 --> 00:03:26,540
+helping make it feel more manageable, more
+exciting, more
+
+69
+00:03:26,540 --> 00:03:28,850
+accessible. Yeah, I love it.
+
+70
+00:03:28,850 --> 00:03:32,940
+I feel like there's not much else we want
+to say in the intro other
+
+71
+00:03:32,940 --> 00:03:36,730
+than that. Maybe we should touch like
+non-profit
+
+72
+00:03:37,050 --> 00:03:40,220
+stuff. Yeah, we can give like just a
+little bit of basic background,
+
+73
+00:03:40,220 --> 00:03:44,600
+maybe on like Run Your City, some of the
+like high level learnings
+
+74
+00:03:44,600 --> 00:03:47,550
+there. Yeah, like a fun background.
+
+75
+00:03:47,550 --> 00:03:49,580
+We have fun facts about us.
+
+76
+00:03:49,580 --> 00:03:51,810
+Jay is from Atlanta.
+
+77
+00:03:51,820 --> 00:03:53,620
+His name is Josh. I call him Jay.
+
+78
+00:03:53,620 --> 00:03:55,660
+If that's confusing, get over it.
+
+79
+00:03:55,660 --> 00:03:59,500
+I'm from Chicago.
+
+80
+00:03:59,500 --> 00:04:03,730
+We met at University of Virginia
+undergrad, both studies systems
+
+81
+00:04:03,730 --> 00:04:07,990
+engineering, then worked at Bain Boston
+for a few years in
+
+82
+00:04:07,990 --> 00:04:10,860
+consulting, kind of across different
+industries, Mary mostly in the
+
+83
+00:04:10,860 --> 00:04:14,450
+healthcare space. I bounced around, but
+really enjoyed the education
+
+84
+00:04:14,460 --> 00:04:17,750
+space. And so now doing a joint degree
+here at Stanford, we're both
+
+85
+00:04:17,750 --> 00:04:21,010
+in the business school. And I'm also
+tacking on an education degree,
+
+86
+00:04:21,090 --> 00:04:25,020
+really interested in intersection of AI
+with education and how it's
+
+87
+00:04:25,020 --> 00:04:28,260
+going to change the landscape. And then
+Mary's super interested in
+
+88
+00:04:28,330 --> 00:04:31,030
+AI and healthcare. Yeah, I love
+healthcare.
+
+89
+00:04:31,030 --> 00:04:35,280
+I think it feels so fundamental to kind of
+access
+
+90
+00:04:35,280 --> 00:04:39,640
+and came to Stanford to try to build and
+
+91
+00:04:39,810 --> 00:04:41,570
+learn in this crazy changing time.
+
+92
+00:04:41,620 --> 00:04:44,140
+And I think we got married a month ago.
+
+93
+00:04:44,140 --> 00:04:47,330
+And so we're learning what that looks like
+as husband and wife,
+
+94
+00:04:47,340 --> 00:04:49,260
+which still feels so crazy to say.
+
+95
+00:04:49,260 --> 00:04:53,080
+We're just babies, or at least I certainly
+am.
+
+96
+00:04:53,080 --> 00:04:56,300
+And I'm excited to go on this journey.
+
+97
+00:04:56,300 --> 00:04:59,440
+I think it's like something that we've
+been thinking about for a
+
+98
+00:04:59,470 --> 00:05:02,770
+while in terms of being a forcing function
+for us to stay up to
+
+99
+00:05:02,770 --> 00:05:04,200
+date, to learn.
+
+100
+00:05:04,230 --> 00:05:07,180
+We do trainings for our non-profit.
+
+101
+00:05:07,180 --> 00:05:10,040
+So we lead a nonprofit called Run Your
+City that I started almost
+
+102
+00:05:10,040 --> 00:05:14,000
+eight years ago. You're repping, good
+product
+
+103
+00:05:14,060 --> 00:05:18,190
+placement. And all about introducing kids
+to sports and specifically
+
+104
+00:05:18,190 --> 00:05:19,660
+the ones that are sidelined.
+
+105
+00:05:19,660 --> 00:05:23,800
+And as we think about how to upskill
+ourselves, but also our
+
+106
+00:05:23,800 --> 00:05:27,410
+team, I think this is something that we've
+kind of gone back and
+
+107
+00:05:27,500 --> 00:05:31,060
+forth. And like, what if we just kind of
+broaden it beyond the
+
+108
+00:05:31,250 --> 00:05:33,840
+volunteers in Run Your City? So I said to
+go on this journey, it'll
+
+109
+00:05:33,840 --> 00:05:36,810
+be a lot of experimentation. We're going
+to try to do two videos a
+
+110
+00:05:36,810 --> 00:05:40,660
+week. That's what we're committing to and
+see how that
+
+111
+00:05:40,690 --> 00:05:45,070
+works. And I think I always like to, I
+sort of have an optimist, but
+
+112
+00:05:45,080 --> 00:05:48,450
+I always like to think of the worst
+possible scenario and the worst
+
+113
+00:05:48,530 --> 00:05:51,810
+possible scenario is this is useful for
+literally no one.
+
+114
+00:05:51,990 --> 00:05:53,820
+But we learn along the way.
+
+115
+00:05:53,820 --> 00:05:55,500
+And I think that's so freaking fun.
+
+116
+00:05:55,500 --> 00:05:59,740
+It's already been fun to try to separate
+what
+
+117
+00:05:59,740 --> 00:06:01,200
+Elon's first and last name is.
+
+118
+00:06:01,200 --> 00:06:04,140
+Totally. Yeah. And I think like Mary said,
+we're going to try for
+
+119
+00:06:04,140 --> 00:06:07,270
+two episodes a week. We want to experiment
+and make it as useful as
+
+120
+00:06:07,300 --> 00:06:10,490
+possible for folks. So we won't stick to
+this, but I think to start,
+
+121
+00:06:10,490 --> 00:06:12,930
+we're going to try to do one that's a
+little bit more focused on
+
+122
+00:06:12,940 --> 00:06:15,640
+general developments, news, things going
+on in the AI space,
+
+123
+00:06:15,860 --> 00:06:18,890
+breaking it down, figuring out, you know,
+separating the signal from
+
+124
+00:06:18,890 --> 00:06:21,580
+the noise. And then the second one, more
+of a deep dive on a
+
+125
+00:06:21,670 --> 00:06:25,350
+particular topic or tool or kind of going
+a little bit more hands-on
+
+126
+00:06:25,540 --> 00:06:28,090
+maybe. Yeah. So yeah, we'll start with
+that.
+
+127
+00:06:28,130 --> 00:06:32,080
+We'll play around like talking versus like
+screen sharing and
+
+128
+00:06:32,080 --> 00:06:35,030
+whatnot. Right now, I kind of feel like
+the podcast, like I'm
+
+129
+00:06:35,040 --> 00:06:39,250
+envisioning if I was using something like
+this, like I mess
+
+130
+00:06:39,330 --> 00:06:43,540
+with Call Her Daddy and I, it's the
+ability to
+
+131
+00:06:43,540 --> 00:06:46,850
+just like put it on in the way to work and
+stuff.
+
+132
+00:06:46,930 --> 00:06:50,680
+Like I want that version of AI, like how
+freaking fun and silly
+
+133
+00:06:50,680 --> 00:06:54,230
+would that be? And I also want to like
+
+134
+00:06:54,440 --> 00:06:58,640
+rebrand AI as like, I know there are
+haters
+
+135
+00:06:58,700 --> 00:07:00,910
+that are like so anti AI and so valid.
+
+136
+00:07:01,050 --> 00:07:03,630
+That's not who we're trying to reach, but.
+
+137
+00:07:03,630 --> 00:07:05,090
+Hey, let's reach them.
+
+138
+00:07:05,090 --> 00:07:08,830
+Why not? Like tomato,
+
+139
+00:07:09,130 --> 00:07:13,510
+tomato, you know, I feel like they're
+definitely super valid
+
+140
+00:07:13,510 --> 00:07:16,610
+critiques of AI, like in multiple
+dimensions, right?
+
+141
+00:07:16,610 --> 00:07:18,790
+Like the environmental impact, the effect
+that it has on the
+
+142
+00:07:18,790 --> 00:07:20,530
+workplace and people's jobs.
+
+143
+00:07:20,530 --> 00:07:24,540
+But like, I think the reality is for the
+vast majority of people,
+
+144
+00:07:24,540 --> 00:07:27,070
+like this is going to change your
+industry.
+
+145
+00:07:27,070 --> 00:07:30,860
+Yeah. And also what's possible in your
+personal life.
+
+146
+00:07:30,860 --> 00:07:33,690
+So like, I think you're doing yourself a
+disservice to not at least
+
+147
+00:07:33,690 --> 00:07:36,900
+learn about it. Right. And even if it's
+learning about it, so you
+
+148
+00:07:37,010 --> 00:07:39,090
+can be more educated and effective in
+critiquing it.
+
+149
+00:07:39,100 --> 00:07:42,790
+Like I just think everybody, any
+responsible citizen of the world
+
+150
+00:07:42,880 --> 00:07:45,740
+right now needs to be trying to learn
+about AI.
+
+151
+00:07:45,740 --> 00:07:48,610
+I agree. I agree. I think, I think where I
+get most excited though,
+
+152
+00:07:48,650 --> 00:07:50,690
+is just like pocket of people who want to
+learn.
+
+153
+00:07:50,770 --> 00:07:53,000
+Totally. But the thing is just bland.
+
+154
+00:07:53,000 --> 00:07:56,730
+Like I'm over CS and engineering and AI
+being like so bland, like
+
+155
+00:07:56,730 --> 00:07:59,080
+let's make it cute. Let's make it
+creative.
+
+156
+00:07:59,080 --> 00:08:02,800
+So you're careful. Like that's what,
+that's what I get fired up by.
+
+157
+00:08:02,840 --> 00:08:05,030
+Cause then he just like, it's a doozy.
+
+158
+00:08:05,030 --> 00:08:07,360
+I'm going to listen to call her daddy
+instead.
+
+159
+00:08:07,360 --> 00:08:10,660
+Yeah. You know, um, any
+
+160
+00:08:10,780 --> 00:08:13,060
+other fun
+
+161
+00:08:13,060 --> 00:08:15,340
+facts.
+
+162
+00:08:15,340 --> 00:08:17,310
+Fun facts.
+
+163
+00:08:17,520 --> 00:08:19,730
+I inhale caffeine. Josh doesn't touch it.
+
+164
+00:08:19,810 --> 00:08:23,640
+Dang, we're not that fun.
+
+165
+00:08:23,640 --> 00:08:25,100
+We're not that fun.
+
+166
+00:08:25,100 --> 00:08:26,540
+We're kind of fun.
+
+167
+00:08:26,540 --> 00:08:30,520
+We're a lot of fun. We fostered probably
+like 15 puppies at this
+
+168
+00:08:30,660 --> 00:08:34,130
+point. Yeah. We certainly won't be doing
+that in the near term.
+
+169
+00:08:34,130 --> 00:08:37,020
+This background takes enough work to make
+it look nice.
+
+170
+00:08:37,020 --> 00:08:38,720
+Just us both living here.
+
+171
+00:08:38,720 --> 00:08:40,990
+It's usually not that clean.
+
+172
+00:08:40,990 --> 00:08:44,850
+Um, I've been dating for six years before
+I got married.
+
+173
+00:08:44,860 --> 00:08:48,450
+Six now. And took me two years to convince
+her.
+
+174
+00:08:48,470 --> 00:08:51,970
+Recently on our honeymoon, Josh,
+
+175
+00:08:51,970 --> 00:08:56,340
+um, used chat for a very interesting youth
+case
+
+176
+00:08:56,340 --> 00:09:00,060
+where he, after maybe one or two happy
+hours,
+
+177
+00:09:00,060 --> 00:09:04,450
+uploaded two photos of us and we want
+
+178
+00:09:04,680 --> 00:09:09,080
+in a world that is maybe true, maybe not.
+
+179
+00:09:09,150 --> 00:09:11,430
+I think I don't want to be held to this,
+but we, we want four kids.
+
+180
+00:09:11,440 --> 00:09:14,210
+I'd leave two girls, two boys, but like
+who's counting?
+
+181
+00:09:14,290 --> 00:09:17,380
+And he had chat every year, right?
+
+182
+00:09:17,380 --> 00:09:20,390
+Like Thanksgiving photos for us.
+
+183
+00:09:20,390 --> 00:09:24,410
+Um, so we saw kind of the future of, uh,
+kids that will be
+
+184
+00:09:24,420 --> 00:09:28,680
+far, far cuter than from the first kid
+being born
+
+185
+00:09:28,720 --> 00:09:33,060
+through like us being yeah, uh, elderly,
+like, you know,
+
+186
+00:09:33,140 --> 00:09:34,540
+family photos.
+
+187
+00:09:34,540 --> 00:09:37,890
+It was insane. Like Thanksgiving Christmas
+cards.
+
+188
+00:09:37,970 --> 00:09:41,180
+Yeah. And we all had to be in groutfits
+because I'm like over
+
+189
+00:09:41,180 --> 00:09:45,390
+the plaid and fall leaves moment, like it
+
+190
+00:09:45,480 --> 00:09:48,690
+was pretty wild to see.
+
+191
+00:09:48,700 --> 00:09:50,620
+It was kind of crazy to see. I kind of
+loved it.
+
+192
+00:09:50,620 --> 00:09:52,460
+I kind of hated it. I don't really know.
+
+193
+00:09:52,460 --> 00:09:56,510
+The issue though, is that chat was too
+generous with us because
+
+194
+00:09:56,510 --> 00:09:58,710
+those kids were like way better looking
+than our kids are going to
+
+195
+00:09:58,710 --> 00:10:02,280
+be. We were both ugly babies, like
+Instagram versus reality, like it's your
+
+196
+00:10:02,290 --> 00:10:04,930
+inverse reality. Like that's the yeah.
+
+197
+00:10:04,930 --> 00:10:09,100
+Yeah. So now when we actually have kids
+and we look at it, it's
+
+198
+00:10:09,100 --> 00:10:11,180
+going to be like, Oof. Yeah. Yeah.
+
+199
+00:10:11,300 --> 00:10:14,970
+I know. But like you have the like
+chemicals in your, in your face.
+
+200
+00:10:14,970 --> 00:10:19,220
+So like, like, like in your mind that like
+rewrap like
+
+201
+00:10:19,220 --> 00:10:21,970
+you. Oh, you mean like we'll still love
+them even though they're.
+
+202
+00:10:21,980 --> 00:10:23,560
+Yeah. Yeah. Of course. Yeah.
+
+203
+00:10:23,560 --> 00:10:26,490
+Unless they're like super ugly. And then
+we'll love them even more.
+
+204
+00:10:26,490 --> 00:10:28,260
+Then we'll ask AI what to do.
+
+205
+00:10:28,260 --> 00:10:31,020
+Um, all right. So that's what we can do.
+
+206
+00:10:31,020 --> 00:10:32,530
+Two episodes a week.
+
+207
+00:10:32,530 --> 00:10:34,030
+Let us know what would be helpful.
+
+208
+00:10:34,250 --> 00:10:35,930
+Yeah. No, please do.
+
+209
+00:10:35,940 --> 00:10:39,170
+We have a little website,
+outofourdepth.com,
+
+210
+00:10:39,280 --> 00:10:43,330
+at hi@outofourdepth.com with any
+
+211
+00:10:43,330 --> 00:10:47,540
+thoughts, reactions and we haven't
+actually made it.
+
+212
+00:10:47,540 --> 00:10:49,870
+But by the time we post it, facts.
+
+213
+00:10:50,170 --> 00:10:53,340
+Anyway, I think that's all for now.
+
+214
+00:10:53,340 --> 00:10:56,780
+We'll be back soon with just kind of a
+general overview of the AI
+
+215
+00:10:56,780 --> 00:11:00,690
+landscape and then a little bit of more
+practical tips on how we get
+
+216
+00:11:00,720 --> 00:11:04,150
+the most use and, uh, make our AI tools
+most powerful.
+
+217
+00:11:04,200 --> 00:11:06,700
+But let's have fun with it. Thanks for
+your point.
+
+218
+00:11:06,700 --> 00:11:08,680
+Yeah. Catch you on the
+
+219
+00:11:08,680 --> 00:11:09,050
+flip.
+
+220
+00:11:10,100 --> 00:11:20,867
+[Instrumental theme music]

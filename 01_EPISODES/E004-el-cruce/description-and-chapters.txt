@@ -1,0 +1,17 @@
+EL CRUCE | DESCRIPTION DRAFT — HOST APPROVAL PENDING
+
+Josh and Mary try turning an ambitious race into an AI planning experiment: shared context, a coach-and-logistics brief, gear preferences, a calendar and a website they actually want to use. The laughs, corrections and different working styles show what makes an AI request useful—and why thinking before you hit Enter matters.
+
+00:00 Probably… NOT | Our adventure and AI brief
+04:33 Turn your brainstorm into useful context
+09:50 Save the instructions, then test voice
+15:26 Ask for a plan before it builds
+18:03 What the AI asks before making a plan
+22:43 Your taste belongs in the prompt
+25:41 Bring examples the AI can work from
+27:28 Review the output and give useful feedback
+31:18 Define what good enough means
+34:57 Better thinking beats more prompting
+39:11 The result: something we want to use
+
+Recorded October 2, 2026. Tool interfaces and account access reflect this recording. Training plans remain unverified experiment outputs; medical decisions stay with qualified clinicians. Proposed calendar, check-in and purchasing workflows are not established as completed automations.

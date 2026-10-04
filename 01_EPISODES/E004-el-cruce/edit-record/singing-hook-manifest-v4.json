@@ -1,0 +1,51 @@
+{
+  "status": "Requested shortened singing hook; exact-version laugh timing review pending",
+  "saved_reference": "/Users/je/oood/01_EPISODES/E004-el-cruce/almost cruce hook.mp4",
+  "saved_sha256": "ce22f00270aae452e428cfc00586eaf51276b552f6825f059c75b1bf4a7a9795",
+  "saved_intro_begins": 8.6,
+  "raw_picture_start": 28.7,
+  "audio_alignment_offset": 28.7125,
+  "original_hook_duration": 8.6,
+  "new_hook_duration": 9.1,
+  "extension": 0.5,
+  "extension_detail": "0.4 seconds of unused real source plus 0.1 seconds from pitch-preserving slowdown of final laugh only",
+  "segments": [
+    {
+      "source": "/Users/je/Movies/2026-10-02 09-16-14.mp4",
+      "in": 28.7,
+      "out": 37.0,
+      "reason": "Same picture start as Josh\u2019s saved clip, normal timing through singing/question/probably/NOT.",
+      "timeline_in": 0,
+      "timeline_out": 8.3
+    },
+    {
+      "source": "/Users/je/oood/01_EPISODES/E004-el-cruce/edit/codex-singing-hook-2026-10-03/laugh-tail-0-8s-v2.mov",
+      "in": 0,
+      "out": 0.8,
+      "reason": "Original final 0.7-second laugh stretched to 0.8 seconds without pitch shift; no loop or synthesized reaction.",
+      "timeline_in": 8.3,
+      "timeline_out": 9.100000000000001
+    },
+    {
+      "source": "/Users/je/oood/03_ASSETS/music/oood-sting-5s.wav",
+      "in": 0,
+      "out": 5.266666666666667,
+      "still": "/Users/je/oood/03_ASSETS/codex-mono-mirrored-3digit/intro-card.png",
+      "gain_db": -3,
+      "reason": "Current recurring intro card, tagline and music.",
+      "timeline_in": 9.100000000000001,
+      "timeline_out": 14.366666666666667
+    },
+    {
+      "source": "/Users/je/oood/01_EPISODES/E004-el-cruce/edit/codex-review-2026-10-02/refinement-v4/el-cruce-refined-v4.mp4",
+      "in": 17.6,
+      "out": 36.56666666666666,
+      "reason": "Same first 18.967 seconds of the current revised episode body, without the duplicated race introduction.",
+      "timeline_in": 14.366666666666667,
+      "timeline_out": 33.33333333333333
+    }
+  ],
+  "duration": 33.33333333333333,
+  "output": "almost-cruce-singing-hook-v4.mp4",
+  "finalization": "V2 picture retained byte-for-byte at original zero-based timestamps, with V3 duration-corrected AAC; audio encoder priming adds 21.33 ms at the beginning."
+}

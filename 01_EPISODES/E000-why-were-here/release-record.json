@@ -1,0 +1,123 @@
+{
+  "episode": "000",
+  "title": "We Can\u2019t Keep Up With AI Either (So We Started a Podcast!)",
+  "publication_date": "2026-09-30",
+  "publication_status": "YouTube and Spotify published, confirmed by Josh",
+  "youtube": {
+    "title": "We Can\u2019t Keep Up With AI Either (So We Started a Podcast!)",
+    "author_name": "Out of Our Depth",
+    "author_url": "https://www.youtube.com/@OutOfOurDepthPod",
+    "type": "video",
+    "height": 113,
+    "width": 200,
+    "version": "1.0",
+    "provider_name": "YouTube",
+    "provider_url": "https://www.youtube.com/",
+    "thumbnail_height": 360,
+    "thumbnail_width": 480,
+    "thumbnail_url": "https://i.ytimg.com/vi/y0NH_zvAdEo/hqdefault.jpg",
+    "html": "<iframe width=\"200\" height=\"113\" src=\"https://www.youtube.com/embed/y0NH_zvAdEo?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"We Can\u2019t Keep Up With AI Either (So We Started a Podcast!)\"></iframe>",
+    "archived_thumbnail_url": "https://i.ytimg.com/vi/y0NH_zvAdEo/maxresdefault.jpg",
+    "archived_thumbnail_dimensions": [
+      1280,
+      720
+    ]
+  },
+  "drive_folder_id": "1BtzCXPB2v8w1y7SWS3PoUIzOsoKfaAqy",
+  "raw": {
+    "drive_id": "1UwNlneluj_hn4Z4Eb4cQ4sJSMgZRb0D2",
+    "local_path": "/Users/je/Movies/Episode 0 Raw.mp4",
+    "size": 140748755,
+    "md5": "8d2c2264b20141c344514277fbb5923c",
+    "sha256": "428bd4c2979482c540e585cddec6f4e336783284b9b1e602c5b2a78acedba15b"
+  },
+  "release_files": [
+    {
+      "name": "episode-000.mp4",
+      "sha256": "dd982e61af7508c1e0a20a1f79d17c9bddf20ccf6fd8a6e80c1a650951ba851e",
+      "drive": {
+        "display_url": "https://drive.google.com/file/d/1YWW7YfHcMTBbVHjH2YdcNUe8mUH1Q9Uy/view?usp=drivesdk",
+        "id": "1YWW7YfHcMTBbVHjH2YdcNUe8mUH1Q9Uy",
+        "link_label": "View File in Google Drive",
+        "md5Checksum": "c8f4a8c0aff7051fc72937340f315bcb",
+        "name": "episode-000.mp4",
+        "parents": [
+          "1BtzCXPB2v8w1y7SWS3PoUIzOsoKfaAqy"
+        ],
+        "size": "188620712",
+        "trashed": false,
+        "webViewLink": "https://drive.google.com/file/d/1YWW7YfHcMTBbVHjH2YdcNUe8mUH1Q9Uy/view?usp=drivesdk"
+      }
+    },
+    {
+      "name": "episode-000.srt",
+      "sha256": "8662f5896d01737f9e1144c737d3be99fbdd42c2ed459f7740f1601f84385769",
+      "drive": {
+        "display_url": "https://drive.google.com/file/d/19sNAD6Ptiotvl0xnQSNBKyWwhQIM85Rm/view?usp=drivesdk",
+        "id": "19sNAD6Ptiotvl0xnQSNBKyWwhQIM85Rm",
+        "link_label": "View File in Google Drive",
+        "md5Checksum": "e95800c247aa7450c1fb8d41b107a2c8",
+        "name": "episode-000.srt",
+        "parents": [
+          "1BtzCXPB2v8w1y7SWS3PoUIzOsoKfaAqy"
+        ],
+        "size": "17975",
+        "trashed": false,
+        "webViewLink": "https://drive.google.com/file/d/19sNAD6Ptiotvl0xnQSNBKyWwhQIM85Rm/view?usp=drivesdk"
+      }
+    },
+    {
+      "name": "episode-000-thumbnail.jpg",
+      "sha256": "6f43a747342908318767f2efef95c4e7957f47e00e2d12d3d5292afce8ca5c51",
+      "drive": {
+        "display_url": "https://drive.google.com/file/d/1zMyUcCKL8AqmWH9S45oyNGWlPptJG83p/view?usp=drivesdk",
+        "id": "1zMyUcCKL8AqmWH9S45oyNGWlPptJG83p",
+        "link_label": "View File in Google Drive",
+        "md5Checksum": "5942e3a098e9362e32ee7186e9d945f8",
+        "name": "episode-000-thumbnail.jpg",
+        "parents": [
+          "1BtzCXPB2v8w1y7SWS3PoUIzOsoKfaAqy"
+        ],
+        "size": "135854",
+        "trashed": false,
+        "webViewLink": "https://drive.google.com/file/d/1zMyUcCKL8AqmWH9S45oyNGWlPptJG83p/view?usp=drivesdk"
+      }
+    },
+    {
+      "name": "episode-000-description-and-chapters.txt",
+      "sha256": "8efe34d20d46149bb18f1d617bb820c1eaaf26c448e7ad49f9c11da1258da376",
+      "drive": {
+        "display_url": "https://drive.google.com/file/d/1w-7aIRg8V27abqUmvDZVX7QG3x-bK4ds/view?usp=drivesdk",
+        "id": "1w-7aIRg8V27abqUmvDZVX7QG3x-bK4ds",
+        "link_label": "View File in Google Drive",
+        "md5Checksum": "bf624a9d013645c31fced9228ea3e510",
+        "name": "episode-000-description-and-chapters.txt",
+        "parents": [
+          "1BtzCXPB2v8w1y7SWS3PoUIzOsoKfaAqy"
+        ],
+        "size": "1353",
+        "trashed": false,
+        "webViewLink": "https://drive.google.com/file/d/1w-7aIRg8V27abqUmvDZVX7QG3x-bK4ds/view?usp=drivesdk"
+      }
+    },
+    {
+      "name": "archive-manifest.json",
+      "sha256": "fdc86f2dddbf572cac927446eba8ed6bda30f1423efca45a8af58e10f1d6b2d2",
+      "drive": {
+        "display_url": "https://drive.google.com/file/d/1iEhoNoXWK_oLENFZcuFU57kckYJ6vWhR/view?usp=drivesdk",
+        "id": "1iEhoNoXWK_oLENFZcuFU57kckYJ6vWhR",
+        "link_label": "View File in Google Drive",
+        "md5Checksum": "b5ceac9a34f2cff102fc1b9c9657b2fb",
+        "name": "archive-manifest.json",
+        "parents": [
+          "1BtzCXPB2v8w1y7SWS3PoUIzOsoKfaAqy"
+        ],
+        "size": "3440",
+        "trashed": false,
+        "webViewLink": "https://drive.google.com/file/d/1iEhoNoXWK_oLENFZcuFU57kckYJ6vWhR/view?usp=drivesdk"
+      }
+    }
+  ],
+  "historical_work_archive": "99_ARCHIVE/2026-09-30-completed-launch-work.zip",
+  "caption_status": "Existing final-timeline sidecar; prior auditory proof remains unverified."
+}

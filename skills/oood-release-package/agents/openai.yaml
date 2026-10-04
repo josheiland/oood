@@ -1,0 +1,4 @@
+interface:
+  display_name: "OOOD Release Package"
+  short_description: "Clips, captions, show notes, and launch copy"
+  default_prompt: "Use $oood-release-package for this Out of Our Depth task."

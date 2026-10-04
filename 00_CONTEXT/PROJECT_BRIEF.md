@@ -1,104 +1,78 @@
 # Project brief
 
-Last updated: 2026-09-21
+Last updated: 2026-10-03 (repository cleanup and episode renumbering folded in)
 
-## Identity
+## Show and hosts
 
-**Out of Our Depth** is an AI-focused show created and hosted by **Josh Eiland and Mary**. The name reflects the hosts' position: curious, capable people learning a fast-moving field in public, testing what is useful, and translating it for others without pretending to know everything.
+**Out of Our Depth** is Josh Eiland and Mary's AI-focused show. Josh is a Stanford GSB MBA student and COO of Run Your City; Mary is Run Your City's founder and CEO. They are newlyweds at Stanford GSB learning AI out loud, with real experience building and operating organizations.
 
-## Purpose
+Help curious, busy professionals understand what is changing in AI, why it matters, and how to use it. Nonprofits and lean organizations supply examples; they do not define the whole audience. The hosts ask good questions, test tools honestly, and translate useful findings without pretending to be frontier researchers.
 
-Help intelligent, busy people understand what is changing in AI, why it matters, and how to use it in real life and in organizations.
+## Editorial rules
 
-The show should:
+Make the show fun, accessible, and worth watching for Josh and Mary's relationship. Preserve real reactions, affectionate disagreement, interruptions and both hosts' substantive judgment. Mary is not a clueless sidekick. A useful lesson should support the conversation, not replace it.
 
-- make AI developments understandable without flattening the important nuance;
-- connect news and technical concepts to concrete decisions and workflows;
-- show honest experimentation, including what did not work;
-- combine broad relevance with grounded experience from building and operating organizations.
+Use plain spoken English, concrete examples and minimal jargon. Strong opinions may be spicy, but factual claims must be accurate, sourced and distinguished from personal experience. Direct host choices govern cuts; preserve the requested conversation and remove clear mistakes, mishaps, repetition or specifically unwanted material. Full direction: [editorial-direction.md](editorial-direction.md).
 
-## Hosts and distinctive perspective
+No emojis by default. Website episode titles match YouTube exactly, including capitalization and punctuation. Descriptions and chapters use visible HTTPS links; shared YouTube/Spotify chapters start at 00:00, have at least three chronological entries with at least 30 seconds between starts, and a final chapter at least 30 seconds long.
 
-- Josh is an MBA student at Stanford GSB and COO of Run Your City.
-- Mary is the founder and CEO of Run Your City.
-- Their shared operating experience gives the show a credible lens on AI adoption in nonprofits and lean organizations.
-- Their advantage is not claiming to be frontier AI researchers. It is asking the questions thoughtful non-experts actually have, doing the work to find solid answers, and translating the implications.
+Standing production choices from Josh:
 
-## Audience
+- **No pop-ups.** No definition/correction overlays over camera footage, and no teaching side notes on screen shares (2026-10-03).
+- **Screen shares use layout C:** a large host window with an inset screen share and limited overlap, with no added teaching cards (2026-10-03).
+- **Length:** most episodes land near 30 minutes. That's guidance, not a cap.
+- **Covered-lens transitions:** begin after the intro with the hand already covering the lens, then uncover. At the close, end on the fully covered lens and cut to the outro before the hand withdraws.
+- **Captions:** use YouTube/Spotify auto-captions for now. Still produce a proofread SRT with each episode as a backup, but don't upload it (2026-10-03).
 
-Primary audience:
+Working content model: two main videos per week, one current-developments episode and one deep dive. This cadence remains a working assumption whose sustainability is open.
 
-- curious professionals who want to understand and use AI;
-- organization leaders and operators deciding where AI is genuinely useful;
-- people who find much AI coverage either too technical, too promotional, or too shallow.
+## Episodes
 
-Some episodes will serve narrower groups—such as nonprofit leaders—while remaining useful to a broader audience.
+Numbering follows the public order on YouTube and Spotify (Josh, 2026-10-03). Every episode folder in [`01_EPISODES/`](../01_EPISODES/README.md) has the same layout; final videos and raw recordings live in Drive.
 
-## Editorial positioning
+| # | Episode | Status | Length |
+| --- | --- | --- | --- |
+| 000 | We Can't Keep Up With AI Either (So We Started a Podcast!) | Published 2026-09-30 | 11:20.867 |
+| 001 | Projects, Connectors & Skills… Take Your AI From Fresh Intern to Full-Time Hire | Published 2026-09-30 | 33:14.267 |
+| 002 | Who's Who in AI (Explained With a Toyota Prius) | Published; re-uploaded without pop-ups 2026-10-03 | 52:25.733 |
+| 003 | AI agents | Final cut ready per Josh; not yet published | 37:36.933 (v5) |
+| 004 | El Cruce with an AI coach | Final cut ready per Josh; not yet published | 44:49.833 (v11) |
+| 005 | Personalization | Planned | |
+| 006 | Wedding planning with AI | Planned | |
+| 007 | AGI | Planned | |
 
-- Curious, direct, practical, and intellectually honest.
-- Explain jargon when it matters; avoid jargon as status signaling.
-- Be excited about meaningful capabilities without becoming uncritical boosters.
-- Surface uncertainty, limitations, tradeoffs, and evidence quality.
-- Use Josh and Mary's real experiences when they illuminate the topic.
-- Prioritize teachable frameworks, memorable examples, and practical takeaways.
-- Keep the energy modern and culturally current, not corporate or overly polished.
-- No emojis by default in project copy.
+Before 2026-10-03, 001 and 002 were the other way round. Josh re-uploaded the no-pop-up AI basics cut, which made it the newest upload and moved it to second place on both platforms, so the numbering was changed to match. Older records and the decisions ledger use the old numbers and folder names (`E001-ai-basics`, `E002-make-ai-useful`).
 
-## Content model
+The 002 re-upload has a new YouTube ID, `cp4P_2t5rRQ` (published 2026-10-03, 12:37 PT). The old ID `-YWPmoWKbrM` now returns 404, and the `release-record.json` in that folder still carries it as the original release.
 
-Working cadence: two main videos per week.
+Episode 003 was recorded 2026-10-03 from `Agents episode.mp4` (70:24.567). The cut uses Josh's shortened "me and my 400 agents" hook. Episode 004 was recorded 2026-10-02. Its cut uses layout C and the 9.1-second singing hook. On 2026-10-03 Josh said both cuts are ready and they were uploaded to Drive with captions and chapters. Public titles, release dates and publication for both remain open.
 
-1. **Current developments:** consequential AI news, launches, debates, and what they mean.
-2. **Deep dives:** a concept, sector, workflow, tool category, or use case explained and tested.
+## Brand and reusable assets
 
-Short-form clips and social posts should be derived from strong moments rather than treated as disconnected content.
+The supplied brand kit is the visual source of truth; [brand-guidelines.md](../03_ASSETS/brand-guidelines.md) records kit rules and later host overrides. Use Teachers typography, the square two-line logo and blue/cream waterline. General kit colors: blue #38B6FF, cream #FBF1E5, foam #FDF8F2 and navy #0B2A45.
 
-## Initial launch inventory
+- **Intro/outro cards:** [`03_ASSETS/intro-outro-cards/`](../03_ASSETS/intro-outro-cards/README.md) ("Mono, Mirrored", three-digit). The intro tagline is **FIGURING OUT AI TOGETHER**, with no episode-number label. The outro has no top show label, and its three footer prompts are raised 48 pixels. The prompts read: LOVE IT? TELL MARY; HATE IT? TELL JOSH; HAVE AN IDEA FOR WHAT TO COVER NEXT? LET US KNOW.
+- **Thumbnails:** Mary's paired-host format. [`03_ASSETS/thumbnail-template/`](../03_ASSETS/thumbnail-template/README.md) holds the editable format, and the current thumbnail for each episode is `thumbnail.png` in its folder.
+- **Channel art:** [`03_ASSETS/channel-art/`](../03_ASSETS/channel-art/README.md). The main icon is a photo of Josh and Mary.
+- **Caption glossary and fixer:** [`03_ASSETS/caption-glossary/`](../03_ASSETS/caption-glossary/README.md).
+- **Local-only assets:** the brand kit source, the fonts and the theme/sting/outro music are gitignored and kept in Drive. Josh confirmed music rights on 2026-09-28; the rights document itself is not in this repo.
 
-The first planned content bank includes:
+Where every asset lives: [ASSET_MANIFEST.md](../03_ASSETS/ASSET_MANIFEST.md).
 
-1. Current tips for using AI in day-to-day life.
-2. Who Josh and Mary are and why they are starting the show.
-3. A deep dive on AI for nonprofits, grounded in their experience at Run Your City.
+## Production
 
-The AI-for-nonprofits episode is currently in production. Its core narrative is that AI is increasingly important, while adoption and effective use in the social-impact sector lag the opportunity. Claims supporting that narrative must be sourced in `02_RESEARCH/`.
+Use OBS and the Logitech camera at 1920 × 1080, with both OBS and Logi Tune set to 1080p. Leaving Logi Tune at 4K caused accumulating delay. A roughly 15-minute test at matching resolution showed little or no delay. Final microphone/gain/filter settings and a full-length sync check remain unresolved.
 
-## Distribution
+Use the four [production skills](../skills/README.md) and the [usage guide](production-skills-and-models.md) for planning, editing, visuals and release assets. Final exports require full decode, audio/sync/caption/chapter checks and the color and container compatibility gate. A technical pass does not establish platform acceptance or host approval.
 
-Confirmed accounts:
+Open questions are in [OPEN_QUESTIONS.md](OPEN_QUESTIONS.md). The chronological [DECISIONS.md](DECISIONS.md) holds the full history. [SYNC_STATE.md](SYNC_STATE.md) records the last ChatGPT Project reconciliation.
 
-- Instagram: `@OutOfOurDepthPod`
-- TikTok: `@OutOfOurDepthPod`
-- YouTube: `@OutOfOurDepthPod`
-- LinkedIn: Out of Our Depth / associated show presence
-- X: `@OutOfOurDepthX` because the preferred handle exceeds X's limit
-- Facebook: intentionally deferred for now
+## Accounts, website and shared documents
 
-## Brand and creative direction
+Handles: YouTube/Instagram/TikTok @OutOfOurDepthPod (TikTok live again as of 2026-10-03), X @OutOfOurDepthX, [facebook.com/outofourdepthpod](https://facebook.com/outofourdepthpod) (live), [linkedin.com/company/outofourdepth](https://linkedin.com/company/outofourdepth).
 
-- Logo and cover art were created by Mary.
-- Music direction: modern, catchy, and vibey, with hip-hop influence; avoid old-fashioned, generic ringtone, or stock-corporate energy.
-- Variations explored include disco/funk, soul/retro, and dream-pop directions.
-- Canonical asset files and usage status still need to be added to `03_ASSETS/ASSET_MANIFEST.md`.
+[outofourdepth.com](https://outofourdepth.com) deploys from `website/` through the Vercel project `oood-website`. As of the 2026-10-03 deploy, it features 002 at the top, with 001 and then 000 under "More episodes". It shows only Instagram, X and email icons per Josh. TikTok, LinkedIn and Facebook are commented out in `website/config.js`. Details: [website/README.md](../website/README.md).
 
-## Production setup
+Josh planned a coordinated public announcement for October 3–4. The [October 1 launch primer](../04_PUBLISHING/codex-public-launch-primer-2026-10-01.md) has recommended channels and sequencing; those are recommendations, not adopted decisions.
 
-Current known setup:
-
-- Recording in OBS.
-- Logitech camera.
-- Record at 1920 × 1080 rather than 4K.
-- Set both OBS and Logi Tune to 1080p. Leaving Logi Tune at 4K caused accumulating video delay relative to audio.
-- A roughly 15-minute test after matching both settings showed little to no delay; a full-episode validation is still needed.
-- Test-recording audio quality was reported as good.
-- Final microphone choice and finalized production checklist are not yet recorded here.
-
-## Current priorities
-
-1. Record and evaluate the first full AI-for-nonprofits episode.
-2. Lock the launch sequence and release timing for the initial three pieces.
-3. Turn research claims into a traceable source pack.
-4. Finalize the repeatable recording, editing, clip, and publishing workflow.
-5. Define the newsletter's role and cadence.
-6. Reconcile final brand and production assets into this repo.
+Source documents: the [launch recording primer](https://docs.google.com/document/d/1gWK3_jPo7-Y5J_zjiGggAhPWY-EtNpHh5X3jszLH6bY/edit) and the [Marketing & Episodes Brainstorm](https://docs.google.com/document/d/1AvDfSBg6xxMyGNH7D9JhbGEzm3NP46459uxMoQDLSXc/edit). The brainstorm calls the launch episodes 1/2/3.

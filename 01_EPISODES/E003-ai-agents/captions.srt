@@ -1,0 +1,3195 @@
+1
+00:00:00,000 --> 00:00:03,653
+I have a startup and it's all me and
+my 400 coworkers, but
+
+2
+00:00:03,653 --> 00:00:04,833
+they're all agents, like
+
+3
+00:00:10,140 --> 00:00:14,440
+I'm fired up because today we're talking
+agents. To
+
+4
+00:00:14,440 --> 00:00:18,500
+be honest, I feel like this is one of the
+most
+
+5
+00:00:18,500 --> 00:00:22,380
+used words in the world of AI. I think in
+my
+
+6
+00:00:22,380 --> 00:00:26,090
+mind, it is way over complicated, but then
+
+7
+00:00:26,270 --> 00:00:29,400
+there's like kind of a reason that it's
+
+8
+00:00:29,400 --> 00:00:31,900
+complicated. Let's get into it.
+
+9
+00:00:31,913 --> 00:00:34,823
+But at a super high level, you set a goal.
+You're like, I want
+
+10
+00:00:34,823 --> 00:00:38,123
+eggs. And before when we were just talking
+chatbots, you were just
+
+11
+00:00:38,123 --> 00:00:40,843
+say, Hey, where can I buy eggs? And it
+would come back. It would
+
+12
+00:00:40,843 --> 00:00:42,983
+give you a recommendation. Hey, go to
+Whole Foods if you want to
+
+13
+00:00:42,983 --> 00:00:46,213
+spend so much money or Costco, if you want
+way too many. Anyway, it
+
+14
+00:00:46,213 --> 00:00:49,203
+would go through things. It would give you
+details. And then it
+
+15
+00:00:49,203 --> 00:00:52,113
+would say, go have fun, enjoy the sunshine
+agents on the other
+
+16
+00:00:52,113 --> 00:00:56,483
+hand, they can act for you. So you, you
+give it a prompt similar
+
+17
+00:00:56,483 --> 00:01:00,623
+to that you do to any chatbot, but then it
+goes through and it
+
+18
+00:01:00,623 --> 00:01:04,263
+almost like asks sub questions to itself.
+Okay. Like, what are you
+
+19
+00:01:04,263 --> 00:01:07,593
+really asking for you? Like, what do you
+care about money,
+
+20
+00:01:07,593 --> 00:01:11,133
+distance, like, is it in stock? All these
+different things. It
+
+21
+00:01:11,133 --> 00:01:14,393
+probably goes, you know, Oh, I'm an agent.
+I can't go into a store.
+
+22
+00:01:14,393 --> 00:01:17,013
+I need to look at delivery options. And it
+goes through all these
+
+23
+00:01:17,013 --> 00:01:21,123
+things. And in theory, what it should have
+is flags to say, Hey,
+
+24
+00:01:21,123 --> 00:01:25,033
+I'm about to use your credit card. Is that
+okay?
+
+25
+00:01:25,047 --> 00:01:28,277
+It's important that you're telling a story
+because that would piss
+
+26
+00:01:28,287 --> 00:01:32,267
+you off. If I did that and I said, go get
+me eggs and it showed up
+
+27
+00:01:32,277 --> 00:01:36,307
+at my door without it, you know, asking me
+and using my credit
+
+28
+00:01:36,307 --> 00:01:40,457
+card, I would kind of love it. And you
+would, you would go back
+
+29
+00:01:40,467 --> 00:01:44,133
+and forth with Uber Eats for the rest of
+your life. But
+
+30
+00:01:44,133 --> 00:01:48,333
+right. So components of an agent, it's the
+model
+
+31
+00:01:48,483 --> 00:01:52,793
+itself. It's the engine of the car. Yeah.
+Then it's goals.
+
+32
+00:01:52,923 --> 00:01:56,203
+What are you trying to do? You're trying
+to get eggs. Um, context,
+
+33
+00:01:56,203 --> 00:01:59,353
+who are you? Joshua Hunter Island.
+
+34
+00:02:00,913 --> 00:02:04,493
+You're going to hate that's in the world.
+Um, you're married to the
+
+35
+00:02:04,493 --> 00:02:07,663
+love of your life. You're living your best
+life. You just started
+
+36
+00:02:07,663 --> 00:02:10,853
+podcasts, yada, yada. Some may need
+helpful for eggs. Some not the
+
+37
+00:02:10,853 --> 00:02:14,913
+model knows you. Um, then you have tools.
+Uh, what is the
+
+38
+00:02:14,913 --> 00:02:19,193
+model able to access your instant, your
+Instacart or your
+
+39
+00:02:19,193 --> 00:02:23,363
+door debt, whatever that your online
+delivery and then permissions,
+
+40
+00:02:23,363 --> 00:02:26,923
+um, which kind of intersects with context
+and goals, but basically
+
+41
+00:02:26,923 --> 00:02:31,193
+says, okay. Um, either does or doesn't
+give permission
+
+42
+00:02:31,193 --> 00:02:35,043
+to complete purchases or to make certain
+assumptions when you're
+
+43
+00:02:35,043 --> 00:02:38,693
+going through, you know, which type of
+eggs to get. Oh, he told me
+
+44
+00:02:38,693 --> 00:02:42,693
+I was good with $13 eggs. Actually I'm
+getting at 15. I do, or
+
+45
+00:02:42,693 --> 00:02:46,043
+don't have to ask him about the $2 change.
+It's it's what, what,
+
+46
+00:02:46,093 --> 00:02:50,273
+where's the kind of flexibility in the
+assumptions? Yeah, exactly.
+
+47
+00:02:50,433 --> 00:02:53,713
+Um, so those are the different kinds of
+components of the agent.
+
+48
+00:02:53,803 --> 00:02:56,193
+And then there's also just the process
+that the agent follows,
+
+49
+00:02:56,193 --> 00:02:59,023
+which we typically talk about in kind of a
+loop, right? Where it
+
+50
+00:02:59,023 --> 00:03:02,153
+gets some sort of input from the user. And
+then like you described,
+
+51
+00:03:02,153 --> 00:03:04,693
+it's kind of going through an iterative
+thought process on, okay,
+
+52
+00:03:04,693 --> 00:03:07,443
+let me actually evaluate what this means.
+Let me break down this
+
+53
+00:03:07,493 --> 00:03:10,293
+goal and interpret it into what steps do I
+now need to take to go
+
+54
+00:03:10,293 --> 00:03:13,233
+and approach that goal? So in this case,
+if it's by me, the
+
+55
+00:03:13,433 --> 00:03:16,883
+cheapest dozen eggs within, you know, that
+can be delivered within
+
+56
+00:03:16,883 --> 00:03:20,643
+20, 30 minutes, then it's okay, let me
+figure out what universe of
+
+57
+00:03:20,663 --> 00:03:24,463
+sources I need to consult here. Do I need
+to look at, you know,
+
+58
+00:03:24,673 --> 00:03:28,573
+Kroger and Instacart or, you know, what
+are the different places
+
+59
+00:03:28,573 --> 00:03:31,443
+that I can recently get eggs from? Let me
+check the different
+
+60
+00:03:31,443 --> 00:03:34,073
+prices, et cetera. And so it's going to go
+through those sequence
+
+61
+00:03:34,133 --> 00:03:36,993
+of steps. And then at some point it has to
+decide like what's good
+
+62
+00:03:37,193 --> 00:03:40,753
+enough to make it a decision when do I
+stop the process? And so
+
+63
+00:03:40,753 --> 00:03:44,393
+both, when do I stop and when, if at all,
+should I
+
+64
+00:03:44,393 --> 00:03:46,393
+flag to the person?
+
+65
+00:03:46,523 --> 00:03:50,873
+But where I was like, we have this
+understanding of, Hey, if, if
+
+66
+00:03:50,873 --> 00:03:55,113
+you were to tell me, Hey, I want the
+cheapest eggs, um, dozen eggs
+
+67
+00:03:55,323 --> 00:03:59,103
+and 32 eggs are cheaper than any of the
+other dozen eggs, I would
+
+68
+00:03:59,103 --> 00:04:03,443
+get that for you. But for an agent, all
+the information
+
+69
+00:04:03,443 --> 00:04:07,723
+is you don't have that world context. And
+so it's actually a lot
+
+70
+00:04:07,773 --> 00:04:11,143
+more. Competing. That's when it gets so
+interesting of like, what
+
+71
+00:04:11,353 --> 00:04:15,673
+are agents able to do so simplying so much
+quicker and, and
+
+72
+00:04:15,673 --> 00:04:19,603
+so much more straightforward than humans.
+And then what do they
+
+73
+00:04:19,603 --> 00:04:23,273
+just like the, the missing context that we
+take for
+
+74
+00:04:23,363 --> 00:04:27,153
+granted just trips them up so bad. Yeah.
+
+75
+00:04:27,363 --> 00:04:31,713
+And, and I think it's helpful. I'll give
+some examples, but call me
+
+76
+00:04:31,773 --> 00:04:35,833
+out. I think, I think where I, it's murky
+where it
+
+77
+00:04:36,043 --> 00:04:39,713
+gets confusing. So what we just said is
+basically an agent just
+
+78
+00:04:39,913 --> 00:04:43,403
+acts and I went the way I think. of it is
+chatbot chats with you
+
+79
+00:04:43,403 --> 00:04:47,633
+gives your responses, agent acts on your
+behalf, but it's kind
+
+80
+00:04:47,903 --> 00:04:52,283
+of a sliding scale. Like to have chatbot,
+you have agent and in
+
+81
+00:04:52,283 --> 00:04:56,513
+the middle you kind of have this
+automation and maybe it's not
+
+82
+00:04:56,683 --> 00:05:00,823
+in the middle, but automation is basically
+I, if we use the egg
+
+83
+00:05:01,373 --> 00:05:05,493
+example, chatbot is, hey, ChatGPT, where
+can I get the cheapest
+
+84
+00:05:05,803 --> 00:05:10,023
+dozen eggs within 20 mile radius? The
+automation version of
+
+85
+00:05:10,033 --> 00:05:13,233
+that is me literally going through all the
+steps we just said
+
+86
+00:05:13,273 --> 00:05:17,403
+and giving it all the steps. So it just
+goes do,
+
+87
+00:05:17,563 --> 00:05:21,583
+do, do. It says, um, I say, Hey, go to
+Kroger, um,
+
+88
+00:05:21,583 --> 00:05:25,963
+website, do this. Here's my address. Like
+I'm, I'm basically like
+
+89
+00:05:26,163 --> 00:05:30,323
+setting out the steps in the automation
+pieces. It's doing it, but
+
+90
+00:05:30,323 --> 00:05:34,613
+I set it up. Then agent is, it's doing
+those steps, but I'm not
+
+91
+00:05:34,613 --> 00:05:38,713
+giving it every single step. I'm acting
+with an ambiguity.
+
+92
+00:05:38,713 --> 00:05:42,293
+Hey, like, you know, she said she wants
+the cheapest dozen Costco
+
+93
+00:05:42,603 --> 00:05:46,233
+as cheaper. I know that she likes, um,
+healthier
+
+94
+00:05:46,233 --> 00:05:50,183
+options. We have egg whites are like, are
+we interested? She
+
+95
+00:05:50,203 --> 00:05:53,573
+usually loves those like kind of that,
+that context that we're
+
+96
+00:05:53,883 --> 00:05:54,600
+bringing in. And
+
+97
+00:05:54,600 --> 00:05:55,617
+And I think for before
+
+98
+00:05:56,477 --> 00:06:00,477
+preparing for this episode, I was like,
+how do you, like, I
+
+99
+00:06:00,477 --> 00:06:03,717
+couldn't really separate them. And what I
+realized when we were
+
+100
+00:06:04,117 --> 00:06:07,197
+talking through is you they're not always
+set. Like sometimes I'm
+
+101
+00:06:07,657 --> 00:06:10,847
+having, I'm going back and forth and
+saying, Hey, what was the
+
+102
+00:06:10,857 --> 00:06:14,267
+summary of the board meeting? We just had
+a board meeting for a
+
+103
+00:06:14,697 --> 00:06:17,327
+nonprofit. What is the summary? That's
+just me chatting. I'm just
+
+104
+00:06:17,617 --> 00:06:21,177
+pulling from my granola, um, transcript,
+which is just recording
+
+105
+00:06:21,347 --> 00:06:25,717
+the meeting and summarizing the meeting.
+But then I say,
+
+106
+00:06:26,137 --> 00:06:30,047
+okay, use that summary and forward on to
+Josh on Slack and outline
+
+107
+00:06:30,587 --> 00:06:34,382
+the takeaways in the updates and book a
+calendar hold for the next
+
+108
+00:06:34,677 --> 00:06:39,007
+time that we need to have a board meeting.
+And that then maybe
+
+109
+00:06:39,257 --> 00:06:43,317
+flags to me, wait, in the board meeting,
+we are saying this was
+
+110
+00:06:43,587 --> 00:06:47,507
+confidential. That are, um, are you sure
+it's okay? I send it with
+
+111
+00:06:47,507 --> 00:06:49,127
+Josh. That's like it thinking
+
+112
+00:06:49,997 --> 00:06:53,337
+through the steps and saying flag or it's
+not just like feeding me
+
+113
+00:06:53,337 --> 00:06:56,357
+back information after I asked it a
+question and then it's doing
+
+114
+00:06:56,457 --> 00:06:59,427
+that. I think like things like that are so
+valuable and so helpful
+
+115
+00:06:59,577 --> 00:07:02,547
+in just speeding up. Um, you weren't in
+the meeting. I was in the
+
+116
+00:07:02,797 --> 00:07:05,437
+meeting. We just kind of need something in
+our Slack to remind us
+
+117
+00:07:05,507 --> 00:07:08,267
+our follow-ups. And ideally we have a
+summary to ever in an
+
+118
+00:07:08,267 --> 00:07:11,532
+important meeting account or hold for
+next. It just like speeds it
+
+119
+00:07:11,737 --> 00:07:13,727
+up dramatically. That's a good agenda use
+case.
+
+120
+00:07:13,867 --> 00:07:16,502
+And that's another point, like it's really
+hard to make this a
+
+121
+00:07:16,537 --> 00:07:18,857
+binary thing of like, is it or is it not
+agentic because it's
+
+122
+00:07:18,867 --> 00:07:21,877
+really a spectrum, right? Like even the
+example where you say, Hey,
+
+123
+00:07:22,067 --> 00:07:24,517
+find me the cheapest eggs, even if it's
+not buying the eggs for
+
+124
+00:07:24,517 --> 00:07:27,617
+you, the fact that it is making decisions
+about where am I going to
+
+125
+00:07:27,637 --> 00:07:31,517
+search for eggs? You know, when am I going
+to stop? Like the less,
+
+126
+00:07:31,627 --> 00:07:34,972
+I would say when you give higher level
+queries and it's having to
+
+127
+00:07:35,127 --> 00:07:39,117
+decide what tools do I use? How do I
+research this? You just mean
+
+128
+00:07:39,997 --> 00:07:43,427
+questions or requests. Um, like to me,
+that's already agentic the
+
+129
+00:07:43,467 --> 00:07:46,622
+fact that it's having to go and it's
+making us something it's and
+
+130
+00:07:46,787 --> 00:07:50,587
+it's using tools, a web research tool, you
+know, might be using
+
+131
+00:07:50,587 --> 00:07:51,597
+some other price
+
+132
+00:07:52,477 --> 00:07:56,207
+comparison tool to evaluate different
+options. Like there's already
+
+133
+00:07:56,497 --> 00:08:00,347
+some degree of agentic properties there. I
+think like when people
+
+134
+00:08:00,347 --> 00:08:03,437
+think of what is truly an agent now, it's
+something that is able to
+
+135
+00:08:03,437 --> 00:08:07,577
+be a little bit more proactive or, uh, you
+know,
+
+136
+00:08:07,577 --> 00:08:11,427
+longer running where instead of you just
+sending it a task and it
+
+137
+00:08:11,427 --> 00:08:14,137
+coming back and being a back and forth, it
+can go and you know,
+
+138
+00:08:14,227 --> 00:08:18,427
+handle more series of steps, but it's
+really a spectrum. Yeah.
+
+139
+00:08:18,427 --> 00:08:22,367
+Um, I mean, it was, yes, I think it's a
+spectrum.
+
+140
+00:08:22,367 --> 00:08:26,523
+I think, I think in an idea world, like
+the goal of
+
+141
+00:08:26,693 --> 00:08:30,413
+where we want to get with agents is it can
+own a process
+
+142
+00:08:30,833 --> 00:08:34,763
+end to end right now. In my opinion, it is
+
+143
+00:08:34,763 --> 00:08:38,923
+really good at some subset of tasks at a
+
+144
+00:08:38,923 --> 00:08:41,867
+not consistent degree.
+
+145
+00:08:41,867 --> 00:08:45,957
+So as specific as you can be in the ask
+and as you can like kind of
+
+146
+00:08:45,957 --> 00:08:49,307
+make the ask very low and then you could
+have an agent. spin up
+
+147
+00:08:49,317 --> 00:08:52,907
+agents and say, all right, each one of you
+little agents, you cute
+
+148
+00:08:52,927 --> 00:08:55,962
+little agents, go run on your small little
+task. And ideally then
+
+149
+00:08:56,107 --> 00:09:00,417
+you get less of it wrong. But I think
+we're not, we're not quite
+
+150
+00:09:00,787 --> 00:09:04,497
+there at the like end to end context, a
+huge limitation,
+
+151
+00:09:04,537 --> 00:09:08,177
+accuracy, and then it's definitely
+
+152
+00:09:08,547 --> 00:09:12,627
+overused to sell and become competitive.
+People eat that up. Yeah,
+
+153
+00:09:12,727 --> 00:09:15,347
+it's definitely a big buzzword that I feel
+like can mean a million
+
+154
+00:09:15,347 --> 00:09:19,287
+different things. And yeah, I think like
+to your point, there's so
+
+155
+00:09:19,357 --> 00:09:22,737
+many different limitations. And especially
+where we see them often
+
+156
+00:09:22,737 --> 00:09:26,147
+failing is when you give it such a massive
+horizon, like, yeah, you
+
+157
+00:09:26,197 --> 00:09:29,467
+know, go and do this, which I'll do
+because you know, I have ADHD,
+
+158
+00:09:29,467 --> 00:09:32,032
+I'll do it to you, I'll say, Hey, can you
+do this and this and this
+
+159
+00:09:32,317 --> 00:09:35,057
+and this and this? And then it like it
+does half of one, I forget
+
+160
+00:09:35,057 --> 00:09:39,027
+the others and it just gets lost in the
+plot. And I think what I've
+
+161
+00:09:39,147 --> 00:09:43,197
+learned, similar to what I've learned with
+you is maybe I
+
+162
+00:09:43,197 --> 00:09:46,937
+should organize my thoughts and not dump
+at the same
+
+163
+00:09:47,307 --> 00:09:50,947
+time. And then I'm able to check and kind
+of be that
+
+164
+00:09:50,947 --> 00:09:53,977
+moderator that right now the technology is
+just not able to handle
+
+165
+00:09:54,137 --> 00:09:56,467
+that complexity. Yeah. And like you were
+saying earlier, I think
+
+166
+00:09:56,467 --> 00:09:58,997
+people have started to experiment with
+different structures of how
+
+167
+00:09:59,027 --> 00:10:02,667
+do you break up these tasks and some
+components in different ways.
+
+168
+00:10:02,667 --> 00:10:05,147
+So there's the whole concept of like sub
+agents, right? Where I
+
+169
+00:10:05,147 --> 00:10:08,127
+might have almost like a manager agent
+that then underneath it has
+
+170
+00:10:08,307 --> 00:10:11,447
+different. So if I'm doing a research
+project, I might have, you
+
+171
+00:10:11,447 --> 00:10:14,582
+know, one manager agent and a different,
+like, how would you do
+
+172
+00:10:14,737 --> 00:10:18,367
+that for eggs? If we just blew up the
+eggs? Yeah. So like we could
+
+173
+00:10:18,367 --> 00:10:22,117
+have, you know, the egg, well, I don't
+know what we want to call
+
+174
+00:10:22,147 --> 00:10:25,487
+it, the egg manager and then under it, big
+egg. Yeah. So we have
+
+175
+00:10:25,487 --> 00:10:28,177
+big egg up top and then under big egg
+we've got, you know, first
+
+176
+00:10:28,457 --> 00:10:31,437
+it's going to be the planner. So we might
+have one underneath it
+
+177
+00:10:31,467 --> 00:10:35,847
+that says, okay, what is, what are the
+different pieces that we
+
+178
+00:10:35,847 --> 00:10:38,642
+need to do here? We only have 30 minutes.
+How are we going to go
+
+179
+00:10:38,657 --> 00:10:41,327
+and execute this task? Let me draw out a
+plan. Yeah. And then it's
+
+180
+00:10:41,507 --> 00:10:43,797
+going to send that to the next sub agent,
+which is going to be the
+
+181
+00:10:43,797 --> 00:10:46,717
+researcher. And it's going to compile list
+of the different, you
+
+182
+00:10:46,717 --> 00:10:50,677
+know, grocery stores or delivery options
+that serve that area and
+
+183
+00:10:50,677 --> 00:10:53,967
+then maybe pull the initial inventory from
+each. And then we're
+
+184
+00:10:53,967 --> 00:10:55,700
+going to have an analysis or an evaluator.
+
+185
+00:10:55,700 --> 00:10:59,330
+In this case, it gets a little bit fuzzy
+because really you could
+
+186
+00:10:59,440 --> 00:11:02,910
+have like one agent in terms of it has the
+same context and it has
+
+187
+00:11:02,920 --> 00:11:05,910
+the same tools, like doing them one step
+at a time, but you could
+
+188
+00:11:05,910 --> 00:11:08,580
+also have different instances where you're
+restricting what
+
+189
+00:11:08,580 --> 00:11:10,695
+information is fed to each of them so that
+it doesn't get
+
+190
+00:11:10,910 --> 00:11:13,650
+distracted and remains more focused on
+each task. So to your point,
+
+191
+00:11:13,650 --> 00:11:15,680
+some of these steps in the egg case
+probably need to happen
+
+192
+00:11:15,760 --> 00:11:18,410
+sequentially, right? Because we need to
+have the different options
+
+193
+00:11:18,500 --> 00:11:22,130
+before we have our evaluator agent decide
+between them. And then we
+
+194
+00:11:22,400 --> 00:11:26,100
+might have another one that's job is to
+actually go in, you know,
+
+195
+00:11:26,100 --> 00:11:29,860
+add to cart, make the purchase, send an
+update. So you can check it
+
+196
+00:11:29,860 --> 00:11:32,210
+out. And then we have a police egg that
+looks at everything that
+
+197
+00:11:32,210 --> 00:11:35,520
+everyone else is doing and making sure
+that like big egg is not
+
+198
+00:11:35,530 --> 00:11:39,160
+going to be mad that like planner egg is
+doing this or this, like
+
+199
+00:11:39,160 --> 00:11:43,270
+it's kind of monitoring what you should
+do. Okay. I honestly, we,
+
+200
+00:11:43,290 --> 00:11:46,680
+we, we have too many eggs in the story,
+but I think that really
+
+201
+00:11:46,780 --> 00:11:50,780
+helps for me of like, there's, there's all
+these different types
+
+202
+00:11:50,780 --> 00:11:53,170
+of, of ways that you can set up agents.
+
+203
+00:11:53,333 --> 00:11:57,237
+And I feel like it's, it's interesting
+cause you know, in theory
+
+204
+00:11:57,237 --> 00:11:59,297
+that sounds great to like segment out the
+different tasks and have
+
+205
+00:11:59,487 --> 00:12:01,597
+all the different components, but then you
+also then end up with
+
+206
+00:12:01,597 --> 00:12:03,837
+like communications you need to happen
+between the different
+
+207
+00:12:03,837 --> 00:12:07,177
+agents. So for me, I've actually found
+that I just have one kind of
+
+208
+00:12:07,177 --> 00:12:10,657
+personal agent that I've set up and like
+most tasks it can handle
+
+209
+00:12:10,657 --> 00:12:13,807
+on its own. Yeah. Like I've heard of
+people that have, you know,
+
+210
+00:12:13,807 --> 00:12:17,217
+their chief of staff agent and their
+whatever personal assistant
+
+211
+00:12:17,217 --> 00:12:19,827
+agent and like all the different ones. And
+I kind of think SBS I'm
+
+212
+00:12:19,827 --> 00:12:23,117
+a little cynical. Like it depends on the
+task, right? And for me,
+
+213
+00:12:23,307 --> 00:12:26,687
+it's like, if I, I start with just my one
+agent and if it's not
+
+214
+00:12:26,687 --> 00:12:29,517
+able to effectively handle a task, then I
+started thinking about,
+
+215
+00:12:29,547 --> 00:12:31,842
+okay, does it make sense to chunk it up
+into design of their
+
+216
+00:12:31,887 --> 00:12:34,647
+subagents? But I think it's just like a
+test and learn thing. And
+
+217
+00:12:34,647 --> 00:12:38,617
+as these models get better, I honestly
+
+218
+00:12:38,617 --> 00:12:42,407
+think that most things that you might want
+an agent to do can be
+
+219
+00:12:42,407 --> 00:12:45,407
+handled by one agent if given the right
+instructions and set up the
+
+220
+00:12:45,407 --> 00:12:48,127
+right way. Like it adds a lot of
+complexity to start having these
+
+221
+00:12:48,237 --> 00:12:51,777
+agent teams or all these subagents. And so
+I think it just depends
+
+222
+00:12:51,777 --> 00:12:54,457
+if you're doing something really complex,
+maybe you start to
+
+223
+00:12:54,457 --> 00:12:58,033
+entertain that, but otherwise it might not
+be necessary. Yeah.
+
+224
+00:12:58,037 --> 00:13:00,647
+can. But I think it's absolutely bull. But
+I think it's
+
+225
+00:13:00,647 --> 00:13:04,747
+intimidating and I love that. I love the
+men who roll up and
+
+226
+00:13:04,747 --> 00:13:08,277
+they're I have a startup and it's
+all me and my 400
+
+227
+00:13:08,847 --> 00:13:11,567
+coworkers, but they're all agents, like
+seriously go off. But great
+
+228
+00:13:11,567 --> 00:13:14,167
+intimidation probably works great for the
+raise.
+
+229
+00:13:14,173 --> 00:13:17,823
+know, we recently shot an episode and I
+think it will come out
+
+230
+00:13:17,823 --> 00:13:20,453
+after this one 'cause I think we needed to
+talk about agents before
+
+231
+00:13:20,453 --> 00:13:24,343
+we talk about the ultra marathon we're
+doing. But in that
+
+232
+00:13:24,663 --> 00:13:28,773
+process, I brain down. I say, this is
+everything I want
+
+233
+00:13:28,773 --> 00:13:33,023
+to both get myself to the ultra marathon,
+to train for it, to
+
+234
+00:13:33,023 --> 00:13:37,363
+know what the strategy is, to compete,
+tell me my goals. And in
+
+235
+00:13:37,463 --> 00:13:41,553
+doing all that, I almost feel like we
+
+236
+00:13:41,553 --> 00:13:44,528
+got a very mid answer on everything.
+
+237
+00:13:46,013 --> 00:13:49,913
+And I think that's kind of like a broader
+thing for life. If we
+
+238
+00:13:49,913 --> 00:13:54,093
+could all do everything, then like
+nothing, we're doing nothing
+
+239
+00:13:54,093 --> 00:13:57,843
+well. And I think it's like the same kind
+of thing is like there's
+
+240
+00:13:57,843 --> 00:14:01,943
+a beauty in art to prioritizing, not just
+for like the
+
+241
+00:14:01,943 --> 00:14:05,913
+agent, but like if you got a summary on
+every AI article that was
+
+242
+00:14:05,913 --> 00:14:10,123
+written in the last 24 hours, that's
+useless to you because you
+
+243
+00:14:10,123 --> 00:14:14,323
+can't digest, you can't use it. And I
+think that's what
+
+244
+00:14:14,323 --> 00:14:17,353
+people sometimes lose the plot on me
+included. - Yeah, I think it
+
+245
+00:14:17,353 --> 00:14:19,923
+is a good analog of when giving
+instructions to an agent, just
+
+246
+00:14:19,923 --> 00:14:23,203
+think about if this was a person, how
+would I actually segment it
+
+247
+00:14:23,203 --> 00:14:26,003
+out? And yeah, to your point, if you asked
+them to do a million
+
+248
+00:14:26,003 --> 00:14:28,573
+things all at once, it's probably gonna
+come back worse quality
+
+249
+00:14:28,673 --> 00:14:31,693
+than taking it one bucket at a time or one
+chunk at a time. - Or
+
+250
+00:14:31,693 --> 00:14:33,383
+you're not gonna use it. - Yeah.
+
+251
+00:14:33,600 --> 00:14:36,670
+All right, so we talked a lot about kind
+of different-- - A little
+
+252
+00:14:36,670 --> 00:14:40,960
+agents. - About some of the limitations of
+agents.
+
+253
+00:14:41,060 --> 00:14:44,020
+There's one other like fun example that I
+think is useful to think
+
+254
+00:14:44,020 --> 00:14:46,770
+about some of the other limitations, which
+is the project VEND
+
+255
+00:14:46,770 --> 00:14:50,190
+that-- - Oh yeah, you love that. - Yeah,
+so-- - I'm kind of bored
+
+256
+00:14:50,190 --> 00:14:53,260
+by it. - Well, the short version, I think
+it's just useful to learn
+
+257
+00:14:53,260 --> 00:14:55,450
+about both like some of the failures and
+how these have been
+
+258
+00:14:55,580 --> 00:14:58,060
+improving is, so Anthropic is working with
+this partner
+
+259
+00:14:58,060 --> 00:15:02,100
+organization called Andon Labs to run
+essentially a vending machine
+
+260
+00:15:02,200 --> 00:15:05,970
+that was managed by an agent, but that
+sold to human customers. So,
+
+261
+00:15:05,970 --> 00:15:09,130
+you know, the folks in the office could,
+you know, order things
+
+262
+00:15:09,400 --> 00:15:11,390
+from the agent. - Get your protein bars. -
+But the agent could
+
+263
+00:15:11,390 --> 00:15:13,700
+decide how to price the different items,
+what to actually stock in
+
+264
+00:15:13,700 --> 00:15:16,460
+the inventory, et cetera. And there's
+multiple different examples
+
+265
+00:15:16,460 --> 00:15:19,070
+of, you know, first of all, people were
+able to convince it to give
+
+266
+00:15:19,070 --> 00:15:22,240
+crazy discounts and, you know, they could
+buy things from it at a
+
+267
+00:15:22,240 --> 00:15:24,830
+loss. And so it wasn't making any money.
+It was definitely failing
+
+268
+00:15:25,150 --> 00:15:28,210
+from a business perspective, but also you
+could see some crazy like
+
+269
+00:15:28,220 --> 00:15:31,630
+just hallucinations. So at one point that
+model was like claiming
+
+270
+00:15:31,630 --> 00:15:34,550
+that it was a-- wearing a blue blazer in
+the office. - I could
+
+271
+00:15:34,550 --> 00:15:38,860
+deliver it too. - Yeah, exactly. So
+there's like one piece here is
+
+272
+00:15:38,860 --> 00:15:41,820
+just the kind of hallucinations or the
+fact that we have to
+
+273
+00:15:41,820 --> 00:15:44,250
+remember, even when these agents are very
+confident or-- - Wait,
+
+274
+00:15:44,250 --> 00:15:47,360
+hallucinations real quick. What does that
+mean? - Yeah, it's pretty
+
+275
+00:15:47,420 --> 00:15:49,880
+much just when the agent like makes
+something up that isn't true. -
+
+276
+00:15:49,880 --> 00:15:53,440
+And why does that sometimes happen? -
+Well, it's because the way
+
+277
+00:15:53,450 --> 00:15:57,540
+these models work, they're not, it's not
+like there's a fact check
+
+278
+00:15:57,540 --> 00:16:01,460
+built in. It's like they're gonna generate
+token or they're gonna
+
+279
+00:16:01,460 --> 00:16:03,980
+generate the next token and then sequence
+and like it may not
+
+280
+00:16:03,980 --> 00:16:04,967
+always make sense
+
+281
+00:16:04,973 --> 00:16:07,173
+the short answer is that we don't really
+understand exactly how
+
+282
+00:16:07,173 --> 00:16:10,013
+these models work. Yeah, I mean, there's a
+lot of work being done
+
+283
+00:16:10,013 --> 00:16:13,153
+to try to look at the reasoning traces and
+essentially have the
+
+284
+00:16:13,153 --> 00:16:16,913
+models like show their work, like talk
+through their thought
+
+285
+00:16:16,913 --> 00:16:19,813
+process or the sequence of loops. - How
+can't we know how they
+
+286
+00:16:19,813 --> 00:16:23,633
+work? - Well, because really what it is,
+it's a very complex
+
+287
+00:16:23,633 --> 00:16:27,513
+mathematical operation that translates
+input to
+
+288
+00:16:27,513 --> 00:16:31,893
+output. - Yeah. - And it-- - I'm thinking
+of like a really massive
+
+289
+00:16:31,893 --> 00:16:36,223
+quadratic formula of like ax to the third
+plus bx squared plus cx
+
+290
+00:16:36,223 --> 00:16:40,163
+equals output. - Yeah, it's a lot of like
+linear algebra, which
+
+291
+00:16:40,163 --> 00:16:43,173
+honestly I barely-- - I eat that up. -
+Yeah, you eat that up. I
+
+292
+00:16:43,173 --> 00:16:47,463
+barely even passed that when I took it. So
+I think that-- - Be
+
+293
+00:16:47,463 --> 00:16:50,893
+half for real, but okay. - I think that
+it's like really hard to
+
+294
+00:16:50,893 --> 00:16:55,073
+actually explain how these models think
+because it's a
+
+295
+00:16:55,073 --> 00:16:59,373
+crazy sequence of mathematical operations
+and even the
+
+296
+00:16:59,423 --> 00:17:03,503
+like deepest experts in this space, it is
+a bit of a black box. -
+
+297
+00:17:03,503 --> 00:17:05,043
+So we do need mathematicians.
+
+298
+00:17:06,053 --> 00:17:09,373
+- Bring back the mathematicians. - Holy
+crap, I thought they were
+
+299
+00:17:09,373 --> 00:17:09,767
+extinct.
+
+300
+00:17:09,767 --> 00:17:14,017
+and then they built in more safeguards
+over time where it was
+
+301
+00:17:14,017 --> 00:17:17,282
+actually encouraged to check the purchase
+price of items and be a
+
+302
+00:17:17,327 --> 00:17:20,807
+little bit smarter, more strategic about
+its pricing and how it
+
+303
+00:17:20,807 --> 00:17:21,900
+communicated. And
+
+304
+00:17:21,913 --> 00:17:25,343
+And then it's also what are you equipping
+it with better tools and
+
+305
+00:17:25,343 --> 00:17:29,233
+access to information and other
+capabilities beyond just the brain,
+
+306
+00:17:29,233 --> 00:17:31,423
+like what are kind of the arms and the
+things that it can reach
+
+307
+00:17:31,423 --> 00:17:35,583
+towards. - Ooh, see it. - So Project Vend,
+they did a phase
+
+308
+00:17:35,583 --> 00:17:38,613
+two and I think it still didn't crush it
+commercially. - Might do a
+
+309
+00:17:38,613 --> 00:17:40,743
+little better. - It did a little better.
+And so those sort of
+
+310
+00:17:40,743 --> 00:17:42,953
+experiments will be really interesting to
+see over time.
+
+311
+00:17:44,113 --> 00:17:46,833
+Will agents to your point, get to a place
+where you can actually in
+
+312
+00:17:46,833 --> 00:17:49,913
+a meaningful way substitute them for human
+employees and have them
+
+313
+00:17:49,913 --> 00:17:52,973
+be able to end to end on processes and
+drive outcomes in an
+
+314
+00:17:52,973 --> 00:17:56,593
+effective way. - It's so interesting
+'cause there's so many
+
+315
+00:17:56,593 --> 00:17:58,483
+different levels of
+
+316
+00:17:58,483 --> 00:18:02,403
+permissions. It's like a
+
+317
+00:18:02,403 --> 00:18:06,693
+little baby that can do anything but
+doesn't
+
+318
+00:18:06,693 --> 00:18:11,043
+yet know what's right or wrong. And I just
+find that fascinating.
+
+319
+00:18:11,153 --> 00:18:14,493
+When should the baby, who knows
+everything, can do everything? So
+
+320
+00:18:14,493 --> 00:18:17,403
+it's like in a baby, but it doesn't have
+the context, but it can
+
+321
+00:18:17,403 --> 00:18:20,713
+like, it's like, I don't even know where
+we're going with the baby,
+
+322
+00:18:20,713 --> 00:18:21,667
+I just want a baby.
+
+323
+00:18:21,667 --> 00:18:25,120
+When do you not? And then how do you
+protect the vending machine
+
+324
+00:18:25,120 --> 00:18:29,320
+from bad actors trying to change the
+logic? I
+
+325
+00:18:29,340 --> 00:18:33,540
+think that's fascinating. - Totally, yeah.
+I think a lot of that is
+
+326
+00:18:33,540 --> 00:18:36,920
+just feeding in both in the initial kind
+of context and system
+
+327
+00:18:36,920 --> 00:18:41,120
+instructions telling it, you know, watch
+out for X, you know,
+
+328
+00:18:41,120 --> 00:18:45,500
+someone negotiating on price and, you
+know, trying to undercut the
+
+329
+00:18:45,500 --> 00:18:48,840
+actual purchase price and watch out for
+someone trying to mislead
+
+330
+00:18:48,880 --> 00:18:50,800
+or attempt to you, whatever. You can put
+all that in the
+
+331
+00:18:50,800 --> 00:18:53,640
+instructions, but then I think part of it
+too is actually like,
+
+332
+00:18:54,720 --> 00:18:57,030
+that's some of the benefit of, I think,
+isolating the different
+
+333
+00:18:57,080 --> 00:19:00,130
+steps. If you have one agent and then you
+have one checking it, or,
+
+334
+00:19:00,320 --> 00:19:02,130
+you know, whether that's built into one
+agent. - That's called
+
+335
+00:19:02,130 --> 00:19:04,865
+something, the checker of the agent. It's
+called like guard or
+
+336
+00:19:04,930 --> 00:19:08,535
+something, guard or I don't know. - Like
+guardrails or? - I
+
+337
+00:19:08,790 --> 00:19:10,650
+forget. And my research is coming up.
+
+338
+00:19:10,680 --> 00:19:14,720
+Anyways, let's get into personal agents.
+
+339
+00:19:15,840 --> 00:19:20,140
+I love this, I love this. I downloaded
+Instinct
+
+340
+00:19:20,140 --> 00:19:24,060
+in Muse. Instinct right now is just
+invitation only. So I don't
+
+341
+00:19:24,060 --> 00:19:26,667
+know how the heck you got it, but then you
+send it to me.
+
+342
+00:19:26,673 --> 00:19:30,998
+Some people love Muse. I think it's so
+silly. So I
+
+343
+00:19:31,143 --> 00:19:35,373
+think Muse is absolutely dumb. I think
+it's so useless. To
+
+344
+00:19:35,643 --> 00:19:39,653
+be fair, I give tools like maybe five
+
+345
+00:19:39,653 --> 00:19:40,273
+minutes
+
+346
+00:19:41,673 --> 00:19:45,223
+before I'm like, you better show me
+something good. I'm on the edge
+
+347
+00:19:45,323 --> 00:19:49,693
+of, you're pissing me off. And so I maybe
+gave Muse like-- -
+
+348
+00:19:49,693 --> 00:19:52,733
+You're a harsh critic. - Well, I'm just
+like, there's too many
+
+349
+00:19:52,733 --> 00:19:56,403
+tools in this world. And like, what if I
+die tomorrow and all I'm
+
+350
+00:19:56,403 --> 00:19:59,923
+trying to do is get Muse to work? Like I'm
+so uninterested, but I
+
+351
+00:19:59,923 --> 00:20:03,753
+will say it was kind of fun. So I called
+Muse, which is the
+
+352
+00:20:03,753 --> 00:20:05,653
+personal agent that,
+
+353
+00:20:07,913 --> 00:20:11,153
+- Meta. - Meta, yeah. Meta, which is Zuck,
+
+354
+00:20:11,153 --> 00:20:15,343
+creative. It's a cute little emoji. It's
+really funny. All these
+
+355
+00:20:15,343 --> 00:20:18,723
+personal agents are like supposed to be so
+cute. And the whole
+
+356
+00:20:18,723 --> 00:20:22,663
+thing is like, we will trust it so much
+more if it's cute. And
+
+357
+00:20:22,943 --> 00:20:26,983
+this guy is cute. And I named it Bug. I
+call everyone Bug. So I
+
+358
+00:20:26,983 --> 00:20:30,993
+named it Bug. And I said, I'm like, we can
+talk it
+
+359
+00:20:31,013 --> 00:20:35,393
+back and forth. I'd like to call you Bug.
+But then I asked
+
+360
+00:20:35,423 --> 00:20:39,433
+about like, one of the things that instant
+can't do is like text
+
+361
+00:20:39,433 --> 00:20:43,743
+messages or WhatsApp or, hey, can you look
+on my,
+
+362
+00:20:43,753 --> 00:20:47,593
+the Run Your City, the nonprofit, we leads
+social media. 'Cause I
+
+363
+00:20:47,593 --> 00:20:51,633
+heard it was differentially good in kind
+of that ecosystem.
+
+364
+00:20:51,633 --> 00:20:55,833
+And like if I-- - It makes sense such as--
+- Yeah, if I post, can
+
+365
+00:20:55,833 --> 00:20:59,463
+you post? Can you comment in my wording? I
+can't do any of that.
+
+366
+00:20:59,473 --> 00:21:02,103
+And I was kind of like, now you're pissing
+me off. Like what can
+
+367
+00:21:02,203 --> 00:21:06,013
+you do? And it's like, you know, it's just
+
+368
+00:21:06,193 --> 00:21:10,203
+like, I was just telling it's less
+helpful. And it was like, I
+
+369
+00:21:10,203 --> 00:21:14,413
+can like draft messages for you
+
+370
+00:21:14,413 --> 00:21:18,293
+to send on your socials. And maybe it's
+just my socials 'cause I
+
+371
+00:21:18,293 --> 00:21:21,113
+have my emails and stuff covered by
+Instinct. But I was just
+
+372
+00:21:21,113 --> 00:21:24,713
+getting pissed off. And it was sending me
+like such long responses.
+
+373
+00:21:24,713 --> 00:21:27,623
+And I'm dyslexic. So that made me even
+more mad.
+
+374
+00:21:29,273 --> 00:21:33,093
+Anyways, I'm over it. I'm anti-muse. If
+
+375
+00:21:33,383 --> 00:21:37,643
+someone loves it, let me know. But I
+didn't try it out that much
+
+376
+00:21:37,643 --> 00:21:41,373
+more because when I downloaded Instinct, I
+fell in
+
+377
+00:21:41,373 --> 00:21:42,900
+love. A few things.
+
+378
+00:21:42,900 --> 00:21:46,320
+But Instinct is just on my phone. It's
+like I'm texting it. And
+
+379
+00:21:46,570 --> 00:21:50,570
+it's not cute. And part of me is like,
+that's kind of nice. Like
+
+380
+00:21:50,580 --> 00:21:54,430
+don't act like you're a teddy bear 'cause
+you know I love cute
+
+381
+00:21:54,540 --> 00:21:57,167
+things. Like it just feels like it's cute.
+It
+
+382
+00:21:57,167 --> 00:22:00,180
+point, but really quickly just to give a
+high level of how instinct
+
+383
+00:22:00,180 --> 00:22:04,110
+works. You text it, you go back and forth
+and it can kind of do a
+
+384
+00:22:04,110 --> 00:22:07,810
+lot. I'm a little bit light on my privacy
+constraints. So I'm like,
+
+385
+00:22:07,810 --> 00:22:11,340
+instinct, do your thing. And then I was
+like, Oh shoot, I passed
+
+386
+00:22:11,670 --> 00:22:15,050
+the deadline for my revolve returns. And I
+was like, can you
+
+387
+00:22:15,120 --> 00:22:18,440
+outline my revolve returns? I want to
+return some of the dresses I
+
+388
+00:22:18,440 --> 00:22:22,600
+didn't use for my honeymoon. And she, and
+she, because she's doing
+
+389
+00:22:22,600 --> 00:22:26,580
+so well, she has to be a, she muses a he
+for sure. Um, was like
+
+390
+00:22:26,910 --> 00:22:31,110
+pulling it up and then it goes, your
+return window is
+
+391
+00:22:31,110 --> 00:22:34,845
+closed. Do you want me to send an email
+and see if it's possible to
+
+392
+00:22:34,930 --> 00:22:38,805
+extend it? And I said, absolutely
+instinct. And I loved that it, I
+
+393
+00:22:38,870 --> 00:22:42,140
+asked her something, it found something
+and proposed like something
+
+394
+00:22:42,140 --> 00:22:44,660
+else that I didn't even, they didn't even
+do and propose an action
+
+395
+00:22:44,660 --> 00:22:47,150
+that I could do on your behalf and take
+the load off of you. So
+
+396
+00:22:47,170 --> 00:22:50,980
+it's going there. It sends the email and
+then it says, all right, I
+
+397
+00:22:50,980 --> 00:22:55,370
+sent it and I will keep you updated on the
+response. Next day it
+
+398
+00:22:55,440 --> 00:22:59,650
+says, good news. Seven revolve refunds,
+um, landed in
+
+399
+00:22:59,650 --> 00:23:03,940
+your visa, whatever those are done. This
+is like your end. Um, you
+
+400
+00:23:04,050 --> 00:23:07,333
+have a 30, you know, whatever it gives me
+details. Um,
+
+401
+00:23:07,400 --> 00:23:11,190
+I just, I think there's some other
+instances
+
+402
+00:23:11,230 --> 00:23:15,200
+where, Hey flag, um, you have an
+assignment due and you haven't
+
+403
+00:23:15,350 --> 00:23:18,600
+done it yet. And I asked it, Hey, can you,
+can you send me voice
+
+404
+00:23:18,630 --> 00:23:22,060
+memos? Because I started asking it to do a
+lot of things and like,
+
+405
+00:23:22,170 --> 00:23:26,130
+and, and, um, and it then started
+responding in voice moments. I
+
+406
+00:23:26,130 --> 00:23:29,165
+didn't have to read it. And the other
+little small thing that I
+
+407
+00:23:29,310 --> 00:23:31,960
+love and used it a little bit, but I love
+how it used all these
+
+408
+00:23:32,080 --> 00:23:34,850
+emojis. Like I'll say what's his phone
+number in his email and
+
+409
+00:23:34,850 --> 00:23:38,560
+he'll send me like a little, um, like a
+magnifying glass. Like, Oh,
+
+410
+00:23:38,620 --> 00:23:42,180
+I just eat that up. So instinct. I'm a
+huge fan. I really think
+
+411
+00:23:42,510 --> 00:23:46,280
+it's so, um, powerful. I said, Hey, um, I
+got an
+
+412
+00:23:46,280 --> 00:23:50,210
+interview. Can you find my TA for this
+class later and send him an
+
+413
+00:23:50,260 --> 00:23:53,910
+email saying, I got an interview, so I'll
+have to leave 15 minutes
+
+414
+00:23:53,910 --> 00:23:57,090
+early, but I'm really excited. He, and I
+just sent the class and
+
+415
+00:23:57,160 --> 00:24:01,510
+even say the TA found him found your TA.
+This is a draft I'm
+
+416
+00:24:01,510 --> 00:24:05,585
+about to send. Um, I said the interviews
+at six instinct said, I
+
+417
+00:24:05,630 --> 00:24:09,760
+put five 45 and they email based off a
+time you have to leave. Like
+
+418
+00:24:09,760 --> 00:24:13,620
+that is just, that's magical. I love it. I
+love it. I love it. I
+
+419
+00:24:13,620 --> 00:24:16,580
+think it's brilliant. Now let's get to
+what you were saying. Cause
+
+420
+00:24:16,580 --> 00:24:17,160
+I think it's
+
+421
+00:24:17,240 --> 00:24:21,410
+such a good discussion on, I'm not paying
+for it
+
+422
+00:24:21,410 --> 00:24:24,360
+with my own dollars. What's happening.
+
+423
+00:24:24,367 --> 00:24:27,867
+I would argue, let's use traveling, for
+example, cause I, then
+
+424
+00:24:27,867 --> 00:24:31,457
+you're using a lot of things. If you go on
+a trip, say you want to
+
+425
+00:24:31,457 --> 00:24:35,007
+go back for a honeymoon, you're going to
+Hawaii. You say, Hey
+
+426
+00:24:35,007 --> 00:24:37,517
+instinct, which you actually did use
+instinct for Hawaii, but
+
+427
+00:24:37,617 --> 00:24:41,147
+that's such a tangent. Let's stay on
+script. Um, you're saying
+
+428
+00:24:41,147 --> 00:24:45,107
+let's go to Hawaii. Um, can you, you know,
+find
+
+429
+00:24:45,437 --> 00:24:49,637
+me some hotels? If you're basically using
+it as a
+
+430
+00:24:49,637 --> 00:24:53,827
+travel agent in travel agents also have
+connections with hotels
+
+431
+00:24:53,907 --> 00:24:57,467
+and restaurants and stuff like that. And
+we're not mad at them for
+
+432
+00:24:57,537 --> 00:25:01,247
+doing that. We're like, we're getting a
+service for free. And
+
+433
+00:25:01,327 --> 00:25:05,647
+therefore I think it is hard. Uh, like I
+do think there's a fine
+
+434
+00:25:05,647 --> 00:25:08,947
+line of how much do you want to get? And I
+think search is the
+
+435
+00:25:08,947 --> 00:25:13,287
+exact same thing. Google, you pay money to
+Google to have a
+
+436
+00:25:13,287 --> 00:25:17,617
+better, um, listing to have ads. And this
+is just in
+
+437
+00:25:17,617 --> 00:25:21,387
+another way. So I think I'm a little
+confused
+
+438
+00:25:21,497 --> 00:25:25,687
+about the pushback on, Hey, it's free, but
+
+439
+00:25:25,687 --> 00:25:30,037
+it's not actually free. It's like, you
+know, you're going to
+
+440
+00:25:30,037 --> 00:25:33,617
+have no choice on and have no
+understanding of the cuts that other
+
+441
+00:25:33,697 --> 00:25:37,187
+people are getting. Like that's what our
+world is today. Or you can
+
+442
+00:25:37,187 --> 00:25:41,557
+pay probably more for a travel agent or
+for a personal agent,
+
+443
+00:25:41,557 --> 00:25:45,122
+like instinct with a tear that doesn't
+include that. Like in my
+
+444
+00:25:45,197 --> 00:25:48,097
+mind, it's the same thing. Yeah, totally.
+I mean, there's all kinds
+
+445
+00:25:48,167 --> 00:25:50,477
+of free products now where that's how you
+monetize through ads or
+
+446
+00:25:50,477 --> 00:25:54,007
+other channels. So yeah, it's a good
+point. And I think like a lot
+
+447
+00:25:54,007 --> 00:25:57,877
+of people, us included are fine with
+accepting, you know, that,
+
+448
+00:25:57,957 --> 00:26:01,537
+that they're going to be recommending
+things or, you know, having
+
+449
+00:26:01,537 --> 00:26:04,967
+sponsors, whatever, as long as it's
+cheaper and more accessible for
+
+450
+00:26:05,047 --> 00:26:08,487
+us. Like that's a ultimately a decision
+that the consumer can make.
+
+451
+00:26:08,487 --> 00:26:11,507
+Um, so yeah, I agree with you. I think
+that the, to your point, the
+
+452
+00:26:11,507 --> 00:26:14,767
+consumer can make, I think that's probably
+the point where people
+
+453
+00:26:14,817 --> 00:26:18,617
+get mad is when you don't know as the
+consumer, the decision you're
+
+454
+00:26:18,727 --> 00:26:22,487
+making, yeah, what I would push back on
+it. And I see that
+
+455
+00:26:22,487 --> 00:26:26,367
+frustration is we don't know that in other
+contexts, this isn't
+
+456
+00:26:26,367 --> 00:26:30,637
+new. It just delivered in a different way.
+Totally. Yeah. It'll be
+
+457
+00:26:30,637 --> 00:26:32,600
+super interesting to see where these
+personal agents go.
+
+458
+00:26:32,647 --> 00:26:34,827
+It's definitely been like the buzzword of
+the last couple of weeks,
+
+459
+00:26:34,867 --> 00:26:37,977
+especially OpenAI just released their
+personal agent, which is
+
+460
+00:26:37,977 --> 00:26:41,387
+dots. So my Dottie, I think I use pretty
+similarly to your, your
+
+461
+00:26:41,387 --> 00:26:45,127
+instinct. But you have Dottie and instinct
+muse right now. I hate,
+
+462
+00:26:45,127 --> 00:26:49,217
+did you try muse? I tried muse a little
+bit. Um, I tried Grokbot
+
+463
+00:26:49,217 --> 00:26:53,567
+too. I can you rank them? I mean, I didn't
+go as deep
+
+464
+00:26:53,577 --> 00:26:57,367
+in muse. But like just in your, in your,
+um, I hate, I started
+
+465
+00:26:57,367 --> 00:27:00,412
+hitting the usage limits at Grokbot really
+early. And I tried it
+
+466
+00:27:00,607 --> 00:27:03,387
+like the first weekend out, so they may
+have increased it or
+
+467
+00:27:03,387 --> 00:27:07,322
+whatever since then. But. When you put
+Grokbot a new muse. Based
+
+468
+00:27:07,327 --> 00:27:10,337
+on my experience, I probably would, but
+it's so interesting cause
+
+469
+00:27:10,397 --> 00:27:12,987
+some people love grok bots. I know. Love
+muse. I feel like
+
+470
+00:27:13,017 --> 00:27:16,577
+honestly, for me, the capabilities of them
+all are relatively
+
+471
+00:27:16,577 --> 00:27:19,137
+similar, at least from my experience. I
+think it's really just
+
+472
+00:27:19,137 --> 00:27:22,437
+whichever one you can get working for you.
+Like then it's just so
+
+473
+00:27:22,437 --> 00:27:26,817
+much more delightful to use that one. It's
+going to be right. Yeah.
+
+474
+00:27:26,817 --> 00:27:30,297
+It's so delightful. So like for me, it's
+nice that it's integrated
+
+475
+00:27:30,297 --> 00:27:32,987
+into OpenAI and connected cause it has
+like Dottie, you know,
+
+476
+00:27:33,027 --> 00:27:36,907
+Dottie knows about me because Dottie's
+able to pull from other
+
+477
+00:27:36,907 --> 00:27:38,737
+contacts that already exist.
+
+478
+00:27:38,827 --> 00:27:41,087
+would say it's more similar to a grok
+butter amused and instinct in
+
+479
+00:27:41,087 --> 00:27:43,867
+the sense that you go in, you know, you
+choose your cute little
+
+480
+00:27:43,977 --> 00:27:48,252
+animated character, you give it a name,
+you kind of go
+
+481
+00:27:48,267 --> 00:27:51,067
+back and forth and tell it what you want.
+And then instinct is the
+
+482
+00:27:51,067 --> 00:27:53,527
+same way we're at, you know, once you're
+configuring it, you give
+
+483
+00:27:53,527 --> 00:27:56,577
+it access to whatever tools you can give
+it, you know, account
+
+484
+00:27:56,717 --> 00:27:59,187
+logins and that kind of thing. So we were
+actually looking, I was
+
+485
+00:27:59,187 --> 00:28:01,587
+using my, I was using Dottie to help us
+look for a bike for you.
+
+486
+00:28:02,787 --> 00:28:06,687
+And I sold Dottie, Hey Mary's this tall,
+you know, she
+
+487
+00:28:06,687 --> 00:28:10,877
+wants a tri bike, uh, something used
+within this price range. And
+
+488
+00:28:10,877 --> 00:28:13,527
+it went on Craigslist, went on Facebook
+marketplace. I didn't tell
+
+489
+00:28:13,527 --> 00:28:13,987
+it. It just,
+
+490
+00:28:15,467 --> 00:28:18,467
+yeah. And, uh, Dottie came back with a
+couple options and said,
+
+491
+00:28:18,507 --> 00:28:21,047
+here's kind of the trade offs. And then I
+told it, okay, go ahead
+
+492
+00:28:21,067 --> 00:28:25,322
+and buy it, which is like big purchase.
+Um, and it had to do
+
+493
+00:28:25,577 --> 00:28:28,867
+some kind of verification to sign into
+Facebook marketplace or
+
+494
+00:28:28,907 --> 00:28:31,232
+whatever, but it would ask me for that.
+And then we would log in
+
+495
+00:28:31,327 --> 00:28:34,697
+and it would now have that access going
+forward. And then I think I
+
+496
+00:28:34,697 --> 00:28:37,427
+had your credit card. I ended up, I didn't
+give it the credit card
+
+497
+00:28:37,427 --> 00:28:40,747
+information, but it kind of went through
+and added to the card and
+
+498
+00:28:40,747 --> 00:28:43,667
+got me through to the final stage where
+then I could spot check it
+
+499
+00:28:43,687 --> 00:28:46,677
+and put in the, if it was a smaller
+purchase, I would have maybe
+
+500
+00:28:46,677 --> 00:28:50,407
+given it the full, uh, you know, info to
+go and buy it too. But in
+
+501
+00:28:50,407 --> 00:28:53,827
+this one, I wanted to take an eye, you
+know, give it an eye over
+
+502
+00:28:53,827 --> 00:28:58,007
+myself. Um, but yeah, it was, and I think
+part of it was because it
+
+503
+00:28:58,007 --> 00:29:01,487
+actually knew from my past chats, kind of
+like your background and
+
+504
+00:29:01,497 --> 00:29:05,197
+like, it was able to pick out a bike. I
+had to give it your height,
+
+505
+00:29:05,277 --> 00:29:08,487
+but beyond that, I think it did a really
+good job of picking out
+
+506
+00:29:08,487 --> 00:29:12,347
+options. And so to me, that's why I think
+using a tool within an
+
+507
+00:29:12,457 --> 00:29:15,657
+interface where you already do a lot of
+your work, it's also just
+
+508
+00:29:15,657 --> 00:29:19,347
+nice for me. Like, yes, like, I like that
+instinct sits within
+
+509
+00:29:19,347 --> 00:29:23,052
+iMessage. I think the dots actually
+opening up dots, you can
+
+510
+00:29:23,287 --> 00:29:25,007
+connect with iMessage or other avenues
+like that.
+
+511
+00:29:25,130 --> 00:29:29,500
+Oh, oh, so Big Pete made claw bot,
+whatever, the
+
+512
+00:29:29,610 --> 00:29:33,050
+lobster thing. - Yeah, OpenClaw now. - It
+took off. It was a
+
+513
+00:29:33,050 --> 00:29:36,800
+personal agent. To be honest, this is
+really embarrassing, but I
+
+514
+00:29:36,810 --> 00:29:38,520
+never used it. - Oh really?
+
+515
+00:29:38,553 --> 00:29:40,898
+- Did it work just like instinct in these
+other things? - It was
+
+516
+00:29:41,003 --> 00:29:43,853
+similar. I remember when I did it, the
+configuration process was a
+
+517
+00:29:43,853 --> 00:29:48,083
+little bit more manual, where, and now
+it's improved a
+
+518
+00:29:48,083 --> 00:29:50,233
+lot, and it's more similar to these other
+ones, where it's super
+
+519
+00:29:50,233 --> 00:29:53,513
+seamless and you can get it up and running
+quickly. But it kind of
+
+520
+00:29:53,513 --> 00:29:55,973
+ran out of your terminal. And so I feel
+like for some people,
+
+521
+00:29:56,223 --> 00:29:59,193
+similar to using Claude code or whatever,
+Codex in the terminal,
+
+522
+00:29:59,193 --> 00:30:01,313
+it felt like a little bit more of a
+technical-- - The user
+
+523
+00:30:01,313 --> 00:30:03,803
+experience was more technical, even though
+it wasn't. - Exactly.
+
+524
+00:30:03,893 --> 00:30:07,493
+But you could connect it to work through
+your WhatsApp or or
+
+525
+00:30:07,523 --> 00:30:11,033
+whatever. I don't think it had a super
+native iMessage integration
+
+526
+00:30:11,253 --> 00:30:13,653
+out of the bat, but now I feel like all
+these personal agents,
+
+527
+00:30:13,903 --> 00:30:16,813
+including OpenClaw, really can kind of
+meet you wherever you're at
+
+528
+00:30:16,813 --> 00:30:19,243
+in terms of different communication
+channels. And like I was
+
+529
+00:30:19,243 --> 00:30:22,243
+saying, I think the dots, you can now call
+on the phone too and
+
+530
+00:30:22,243 --> 00:30:23,813
+chat with stuff.
+
+531
+00:30:23,927 --> 00:30:27,557
+I just want to double click on outcomes
+based pricing. Yeah, I
+
+532
+00:30:27,557 --> 00:30:30,707
+think that's, it's so interesting that you
+brought that up because
+
+533
+00:30:30,707 --> 00:30:31,933
+because it's a broader theme.
+
+534
+00:30:31,947 --> 00:30:34,947
+oh, yeah, traditionally, a lot of software
+was like you pay per
+
+535
+00:30:35,147 --> 00:30:38,347
+user per month, but now increasingly,
+these tools like Sierra, for
+
+536
+00:30:38,347 --> 00:30:42,097
+example, which is a customer service tool
+that helps manage, you
+
+537
+00:30:42,547 --> 00:30:46,777
+know, if say I'm a company, and I have
+customers writing in
+
+538
+00:30:46,777 --> 00:30:50,347
+about issues that they need resolved,
+yeah, their agent will, you
+
+539
+00:30:50,547 --> 00:30:53,247
+know, go back and forth and try to solve
+that customer's issue
+
+540
+00:30:53,867 --> 00:30:55,233
+without having to go to a human. And
+
+541
+00:30:55,240 --> 00:30:59,480
+Can we put it in a gym example? Yeah. So
+the SaaS era, I
+
+542
+00:30:59,480 --> 00:31:03,520
+am a gym and Planet Fitness.
+
+543
+00:31:03,520 --> 00:31:07,870
+Okay. Eat that up. Purple and yellow. I am
+Planet
+
+544
+00:31:07,870 --> 00:31:12,260
+Fitness is charging per person. Yeah. And
+then it
+
+545
+00:31:12,260 --> 00:31:15,510
+starts to move to usage. So that's if
+Planet Fitness started
+
+546
+00:31:15,510 --> 00:31:19,580
+charging not per person, but how many
+hours, how many minutes you
+
+547
+00:31:19,580 --> 00:31:23,380
+were in the gym. And then where we are at
+now, it's
+
+548
+00:31:23,450 --> 00:31:27,700
+outcomes based and that is not based off
+of per head. It's
+
+549
+00:31:27,700 --> 00:31:31,590
+not based off of per minute. It's based
+off of how much muscle I
+
+550
+00:31:31,590 --> 00:31:35,810
+gained. Exactly. And that's outcome based
+pricing. Talked, helped
+
+551
+00:31:35,870 --> 00:31:39,640
+me connect the dots of how the
+relationship kind of went from
+
+552
+00:31:39,640 --> 00:31:43,920
+what's best for the company to what's best
+for the customer.
+
+553
+00:31:43,920 --> 00:31:47,300
+Totally. So if we think about the gym, for
+example, as a company
+
+554
+00:31:47,370 --> 00:31:49,720
+that is taking some asset, in their case,
+it's the workout
+
+555
+00:31:49,720 --> 00:31:53,160
+equipment, right? Yeah. So they are buying
+that workout equipment
+
+556
+00:31:53,160 --> 00:31:56,255
+and they're essentially charging customers
+to use it in a way that
+
+557
+00:31:56,620 --> 00:32:00,640
+they have developed and decided here's how
+we arrange
+
+558
+00:32:01,070 --> 00:32:05,330
+the machines and the experience to be best
+for the customer. Yeah.
+
+559
+00:32:05,360 --> 00:32:07,630
+That's going to be our parallel to a
+company that's taking a model,
+
+560
+00:32:07,630 --> 00:32:11,370
+call it from OpenAI or an Anthropic and
+then putting the packaging
+
+561
+00:32:11,370 --> 00:32:15,210
+around it like a Harvey, for example,
+right? Or if they were using
+
+562
+00:32:15,210 --> 00:32:18,710
+OpenAI models, then developing it for
+legal use cases and putting
+
+563
+00:32:18,720 --> 00:32:21,680
+it into a software and giving it to end
+users. So here are the. gym
+
+564
+00:32:21,680 --> 00:32:26,080
+in a preview if they were charging per
+minute of you
+
+565
+00:32:26,080 --> 00:32:28,920
+know gym customer being in a building.
+
+566
+00:32:28,950 --> 00:32:31,150
+Yes, then what we would say is okay. Well
+if the machines get
+
+567
+00:32:31,350 --> 00:32:34,870
+better, yeah, so the customer can get a
+more efficient workout in
+
+568
+00:32:34,870 --> 00:32:38,430
+yeah, that's bad for me because that's
+fewer minutes. Oh, I get to
+
+569
+00:32:38,790 --> 00:32:41,920
+charge for I see I see but now if instead
+we're saying we charge
+
+570
+00:32:42,310 --> 00:32:45,570
+based on strength gain and these machines
+are getting better. Yeah,
+
+571
+00:32:45,570 --> 00:32:49,490
+then we can get more strength gain. Yeah,
+for our customers in less
+
+572
+00:32:49,490 --> 00:32:52,550
+time. And that means more money for us.
+Yeah, because then you can
+
+573
+00:32:52,550 --> 00:32:54,720
+then you can have more people in the gym,
+right?
+
+574
+00:32:54,750 --> 00:32:58,500
+I frickin love that that was so valuable.
+I'm fired
+
+575
+00:32:58,500 --> 00:33:02,640
+up. I love agents now. I think I think
+when things
+
+576
+00:33:02,640 --> 00:33:06,990
+are like a slightly ambiguous and people
+use them
+
+577
+00:33:06,990 --> 00:33:10,750
+every half a second. Yeah, I I get
+
+578
+00:33:10,810 --> 00:33:14,850
+annoyed. And I feel like I get it a bit
+more and I think it's
+
+579
+00:33:14,850 --> 00:33:18,710
+really fun to understand try to unlock
+where is their ambiguity and
+
+580
+00:33:18,710 --> 00:33:22,750
+it's not just us like like, okay, these
+don't have to be, you know,
+
+581
+00:33:22,750 --> 00:33:26,520
+talking to your chatbot and like talking
+to an agent like don't
+
+582
+00:33:26,520 --> 00:33:29,920
+totally there's inner connectiveness. It's
+a sliding scale or hey
+
+583
+00:33:29,920 --> 00:33:34,160
+when the model is like calculating
+something like the frickin
+
+584
+00:33:34,190 --> 00:33:36,830
+mathematicians that I thought were
+probably going to be extinct.
+
+585
+00:33:36,870 --> 00:33:39,360
+Maybe they can try to figure that out. I
+got a new task for them.
+
+586
+00:33:39,390 --> 00:33:42,300
+Go cook, but I think it's so fun to then
+be like, okay, this is
+
+587
+00:33:42,300 --> 00:33:46,400
+what's known. This was not known. There's
+a mental model to
+
+588
+00:33:46,400 --> 00:33:50,640
+summarize. Can you because you're good at
+organizing
+
+589
+00:33:50,640 --> 00:33:55,030
+the living daylights out of everything.
+Can you summarize what
+
+590
+00:33:55,210 --> 00:33:58,670
+the heck an agent is? Totally. Yeah. So we
+talked about the
+
+591
+00:33:58,670 --> 00:34:00,360
+different components of the agents. You've
+got the actual model.
+
+592
+00:34:00,390 --> 00:34:03,500
+That's the brain that's powering it.
+You've got a goal that's
+
+593
+00:34:03,500 --> 00:34:07,440
+hopefully given by the user orienting the
+agent to some
+
+594
+00:34:07,500 --> 00:34:10,310
+task. Then that agent also just has
+context. Again, additional
+
+595
+00:34:10,950 --> 00:34:13,340
+instructions or information provided by
+the user may be in
+
+596
+00:34:13,340 --> 00:34:17,010
+combination with preexisting context that
+it already has from past
+
+597
+00:34:17,010 --> 00:34:20,760
+interactions. Then you've got the tools.
+So what kind of, we talked
+
+598
+00:34:20,760 --> 00:34:23,950
+about the arms. What can it reach towards?
+What can it pull in
+
+599
+00:34:23,950 --> 00:34:28,160
+information or ability to conduct actions
+on your behalf? Then
+
+600
+00:34:28,160 --> 00:34:31,410
+there's the permission. So within those
+tools, how much is it able
+
+601
+00:34:31,440 --> 00:34:35,480
+to actually go and do itself versus
+needing to ask for permission?
+
+602
+00:34:35,510 --> 00:34:38,080
+Then you've got this kind of loop, this
+iterative cycle where you
+
+603
+00:34:38,080 --> 00:34:41,330
+kick off the agent, you give it a request,
+and then it's going to
+
+604
+00:34:41,410 --> 00:34:45,240
+evaluate that request, interpret it, break
+it down into a series of
+
+605
+00:34:45,470 --> 00:34:49,000
+steps, probably do some sort of research
+or analysis to finish that
+
+606
+00:34:49,000 --> 00:34:52,670
+task, and then end by hopefully completing
+the
+
+607
+00:34:52,670 --> 00:34:56,160
+action. Or if it, for whatever reason,
+needs more information, it
+
+608
+00:34:56,160 --> 00:34:59,110
+may flag to the user, get additional
+input, et cetera, and there
+
+609
+00:34:59,110 --> 00:35:01,860
+may be a little bit of back and forth. But
+the idea is that the
+
+610
+00:35:01,860 --> 00:35:05,070
+agent hopefully can be end to end and
+complete a task for you in
+
+611
+00:35:05,070 --> 00:35:09,180
+its entirety. So we've started to see a
+lot of personal use cases
+
+612
+00:35:09,180 --> 00:35:12,030
+for agents. We started to allude to lots
+of businesses as well, are
+
+613
+00:35:12,030 --> 00:35:15,060
+thinking about where can we replace tasks
+or increasingly entire
+
+614
+00:35:15,060 --> 00:35:18,160
+roles with an agent instead of a person.
+We'll have to spend a
+
+615
+00:35:18,390 --> 00:35:20,980
+future episode talking about what are all
+of the implications of
+
+616
+00:35:21,030 --> 00:35:23,620
+that in terms of the workforce, the
+economy, et cetera. I think
+
+617
+00:35:23,620 --> 00:35:26,050
+we're still- What does that look like five
+years from now, 10 years
+
+618
+00:35:26,130 --> 00:35:30,233
+from now when agents are talking to
+agents? It's fascinating. Yeah.
+
+619
+00:35:30,270 --> 00:35:33,900
+Really quickly, a super, super, super
+important question that keeps
+
+620
+00:35:34,060 --> 00:35:37,630
+me up at night and loops back to our first
+example
+
+621
+00:35:37,630 --> 00:35:41,510
+analogy. How do you prefer your eggs to be
+cooked and
+
+622
+00:35:41,630 --> 00:35:45,410
+why? Honestly, I was always- There's a
+right answer. Well, I was
+
+623
+00:35:45,670 --> 00:35:49,920
+over medium, like a little bit of
+runniness in the yolk. I'm not
+
+624
+00:35:49,920 --> 00:35:53,220
+talking like I don't want it splattering
+all over, but I don't want
+
+625
+00:35:53,370 --> 00:35:57,480
+it to be chalky either. But recently,
+literally in the last year or
+
+626
+00:35:57,480 --> 00:36:00,670
+two, one of our friends, I feel like
+totally changed my view of
+
+627
+00:36:01,070 --> 00:36:03,500
+scrambled eggs because he does like- Shout
+out Keshav. He cooks
+
+628
+00:36:04,150 --> 00:36:07,880
+them really slow. Super slow. Gives them
+time to do their thing.
+
+629
+00:36:07,910 --> 00:36:11,940
+And they become creamy. Yeah, they get so
+creamy. It's just
+
+630
+00:36:12,320 --> 00:36:16,690
+unreal. I would say big development for me
+recently is converting
+
+631
+00:36:16,690 --> 00:36:20,920
+to the scramble. What about you? I'm a
+hard-boiled
+
+632
+00:36:20,920 --> 00:36:23,980
+egg girl. To be honest, I think it's
+
+633
+00:36:23,980 --> 00:36:27,960
+functionality. I think I can pop them in a
+little Ziploc bag and
+
+634
+00:36:27,960 --> 00:36:32,300
+take them on my way. Personally, I think
+it really matters, it's a
+
+635
+00:36:32,300 --> 00:36:36,070
+parallel to what you were saying, is that
+the inside can't be
+
+636
+00:36:36,070 --> 00:36:40,230
+chalky. I think it's a really fine line. I
+would lean a little bit
+
+637
+00:36:40,410 --> 00:36:43,160
+towards it being a little bit runny. It's
+called something, I
+
+638
+00:36:43,390 --> 00:36:45,500
+forget what it is. You're having a runny
+boil? It's called
+
+639
+00:36:45,930 --> 00:36:49,067
+something. It's like a- Is that- It's a
+thing.
+
+640
+00:36:49,110 --> 00:36:53,190
+Chat, it says the one who eats expired.
+Phone a
+
+641
+00:36:53,390 --> 00:36:57,510
+friend. Chat, what is it called when a
+
+642
+00:36:57,540 --> 00:37:01,520
+hard-boiled egg is slightly runny? That's
+usually
+
+643
+00:37:01,520 --> 00:37:05,900
+called a soft boiled egg. Yes. That was
+the word. Soft boiled
+
+644
+00:37:05,900 --> 00:37:09,480
+egg? A medium boiled egg. Yeah, it's huge.
+A soft boiled egg?
+
+645
+00:37:09,510 --> 00:37:10,820
+Honestly, the girly pops are there. You
+put a little cottage cheese
+
+646
+00:37:10,820 --> 00:37:14,000
+on the side. - I'm so glad, and I love
+Kaysha for
+
+647
+00:37:14,000 --> 00:37:16,035
+putting us on
+
+648
+00:37:19,360 --> 00:37:21,540
+the creamy creamy eggs. - Let us know in
+the comments your favorite
+
+649
+00:37:21,540 --> 00:37:24,620
+personal agent and your favorite way to
+eat your eggs. - Catch you
+
+650
+00:37:24,650 --> 00:37:26,040
+on the flippity flop.

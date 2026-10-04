@@ -1,0 +1,1162 @@
+[
+  {
+    "type": "recurring_card",
+    "timeline_in": 9.1,
+    "timeline_out": 14.366666666666667,
+    "picture": "/Users/je/oood/03_ASSETS/codex-mono-mirrored-3digit/intro-card.png",
+    "music": "/Users/je/oood/03_ASSETS/music/oood-sting-5s.wav",
+    "reason": "Recurring intro card and exact theme sting."
+  },
+  {
+    "type": "screen_C",
+    "timeline_in": 273.06666666666666,
+    "timeline_out": 343.56666666666666,
+    "screen_original": "/Users/je/Desktop/Screen Recording 2026-10-02 at 9.36.12\u202fAM.mov",
+    "screen_offset": 1.0725,
+    "crop": [
+      100,
+      80,
+      860,
+      960
+    ],
+    "host_box": [
+      1080,
+      590,
+      800,
+      450
+    ],
+    "screen_box": [
+      40,
+      40,
+      1440,
+      746
+    ],
+    "added_text": null
+  },
+  {
+    "type": "screen_C",
+    "timeline_in": 455.5,
+    "timeline_out": 503.43333333333334,
+    "screen_original": "/Users/je/Desktop/Screen Recording 2026-10-02 at 9.36.12\u202fAM.mov",
+    "screen_offset": 1.0725,
+    "crop": [
+      100,
+      80,
+      1820,
+      960
+    ],
+    "host_box": [
+      1080,
+      590,
+      800,
+      450
+    ],
+    "screen_box": [
+      40,
+      40,
+      1440,
+      746
+    ],
+    "added_text": null
+  },
+  {
+    "type": "screen_C",
+    "timeline_in": 503.43333333333334,
+    "timeline_out": 570.7,
+    "screen_original": "/Users/je/Desktop/Screen Recording 2026-10-02 at 9.36.12\u202fAM.mov",
+    "screen_offset": 1.0725,
+    "crop": [
+      100,
+      80,
+      1820,
+      960
+    ],
+    "host_box": [
+      1080,
+      590,
+      800,
+      450
+    ],
+    "screen_box": [
+      40,
+      40,
+      1440,
+      746
+    ],
+    "added_text": null
+  },
+  {
+    "type": "screen_C",
+    "timeline_in": 570.7,
+    "timeline_out": 590.3666666666667,
+    "screen_original": "/Users/je/Desktop/Screen Recording 2026-10-02 at 9.36.12\u202fAM.mov",
+    "screen_offset": 1.0725,
+    "crop": [
+      100,
+      80,
+      1820,
+      960
+    ],
+    "host_box": [
+      1080,
+      590,
+      800,
+      450
+    ],
+    "screen_box": [
+      40,
+      40,
+      1440,
+      746
+    ],
+    "added_text": null
+  },
+  {
+    "type": "screen_C",
+    "timeline_in": 590.3666666666667,
+    "timeline_out": 642.6666666666666,
+    "screen_original": "/Users/je/Desktop/Screen Recording 2026-10-02 at 9.36.12\u202fAM.mov",
+    "screen_offset": 1.0725,
+    "crop": [
+      100,
+      80,
+      860,
+      960
+    ],
+    "host_box": [
+      1080,
+      590,
+      800,
+      450
+    ],
+    "screen_box": [
+      40,
+      40,
+      1440,
+      746
+    ],
+    "added_text": null
+  },
+  {
+    "type": "screen_C",
+    "timeline_in": 642.6666666666666,
+    "timeline_out": 685.0,
+    "screen_original": "/Users/je/Desktop/Screen Recording 2026-10-02 at 9.36.12\u202fAM.mov",
+    "screen_offset": 1.0725,
+    "crop": [
+      100,
+      80,
+      860,
+      960
+    ],
+    "host_box": [
+      1080,
+      590,
+      800,
+      450
+    ],
+    "screen_box": [
+      40,
+      40,
+      1440,
+      746
+    ],
+    "added_text": null
+  },
+  {
+    "type": "screen_C",
+    "timeline_in": 685.0,
+    "timeline_out": 694.7666666666667,
+    "screen_original": "/Users/je/Desktop/Screen Recording 2026-10-02 at 9.36.12\u202fAM.mov",
+    "screen_offset": 1.0725,
+    "crop": [
+      100,
+      80,
+      860,
+      960
+    ],
+    "host_box": [
+      1080,
+      590,
+      800,
+      450
+    ],
+    "screen_box": [
+      40,
+      40,
+      1440,
+      746
+    ],
+    "added_text": null
+  },
+  {
+    "type": "screen_C",
+    "timeline_in": 718.8666666666667,
+    "timeline_out": 805.9666666666667,
+    "screen_original": "/Users/je/Desktop/Screen Recording 2026-10-02 at 9.36.12\u202fAM.mov",
+    "screen_offset": 1.0725,
+    "crop": [
+      100,
+      80,
+      860,
+      960
+    ],
+    "host_box": [
+      1080,
+      590,
+      800,
+      450
+    ],
+    "screen_box": [
+      40,
+      40,
+      1440,
+      746
+    ],
+    "added_text": null
+  },
+  {
+    "type": "screen_C",
+    "timeline_in": 805.9666666666667,
+    "timeline_out": 816.9666666666667,
+    "screen_original": "/Users/je/Desktop/Screen Recording 2026-10-02 at 9.36.12\u202fAM.mov",
+    "screen_offset": 1.0725,
+    "crop": [
+      100,
+      80,
+      860,
+      960
+    ],
+    "host_box": [
+      1080,
+      590,
+      800,
+      450
+    ],
+    "screen_box": [
+      40,
+      40,
+      1440,
+      746
+    ],
+    "added_text": null
+  },
+  {
+    "type": "screen_C",
+    "timeline_in": 816.9666666666667,
+    "timeline_out": 849.3,
+    "screen_original": "/Users/je/Desktop/Screen Recording 2026-10-02 at 9.36.12\u202fAM.mov",
+    "screen_offset": 1.0725,
+    "crop": [
+      100,
+      80,
+      860,
+      960
+    ],
+    "host_box": [
+      1080,
+      590,
+      800,
+      450
+    ],
+    "screen_box": [
+      40,
+      40,
+      1440,
+      746
+    ],
+    "added_text": null
+  },
+  {
+    "type": "screen_C",
+    "timeline_in": 849.3,
+    "timeline_out": 883.9666666666667,
+    "screen_original": "/Users/je/Desktop/Screen Recording 2026-10-02 at 9.36.12\u202fAM.mov",
+    "screen_offset": 1.0725,
+    "crop": [
+      100,
+      80,
+      860,
+      960
+    ],
+    "host_box": [
+      1080,
+      590,
+      800,
+      450
+    ],
+    "screen_box": [
+      40,
+      40,
+      1440,
+      746
+    ],
+    "added_text": null
+  },
+  {
+    "type": "screen_C",
+    "timeline_in": 883.9666666666667,
+    "timeline_out": 897.3,
+    "screen_original": "/Users/je/Desktop/Screen Recording 2026-10-02 at 9.36.12\u202fAM.mov",
+    "screen_offset": 1.0725,
+    "crop": [
+      100,
+      80,
+      860,
+      960
+    ],
+    "host_box": [
+      1080,
+      590,
+      800,
+      450
+    ],
+    "screen_box": [
+      40,
+      40,
+      1440,
+      746
+    ],
+    "added_text": null
+  },
+  {
+    "type": "screen_C",
+    "timeline_in": 897.3,
+    "timeline_out": 926.9666666666667,
+    "screen_original": "/Users/je/Desktop/Screen Recording 2026-10-02 at 9.36.12\u202fAM.mov",
+    "screen_offset": 1.0725,
+    "crop": [
+      100,
+      80,
+      860,
+      960
+    ],
+    "host_box": [
+      1080,
+      590,
+      800,
+      450
+    ],
+    "screen_box": [
+      40,
+      40,
+      1440,
+      746
+    ],
+    "added_text": null
+  },
+  {
+    "type": "screen_C",
+    "timeline_in": 926.9666666666667,
+    "timeline_out": 983.1,
+    "screen_original": "/Users/je/Desktop/Screen Recording 2026-10-02 at 9.36.12\u202fAM.mov",
+    "screen_offset": 1.0725,
+    "crop": [
+      330,
+      100,
+      1390,
+      930
+    ],
+    "host_box": [
+      1080,
+      590,
+      800,
+      450
+    ],
+    "screen_box": [
+      40,
+      40,
+      1440,
+      746
+    ],
+    "added_text": null
+  },
+  {
+    "type": "screen_C",
+    "timeline_in": 983.1,
+    "timeline_out": 1015.1333333333333,
+    "screen_original": "/Users/je/Desktop/Screen Recording 2026-10-02 at 9.36.12\u202fAM.mov",
+    "screen_offset": 1.0725,
+    "crop": [
+      330,
+      100,
+      1390,
+      930
+    ],
+    "host_box": [
+      1080,
+      590,
+      800,
+      450
+    ],
+    "screen_box": [
+      40,
+      40,
+      1440,
+      746
+    ],
+    "added_text": null
+  },
+  {
+    "type": "screen_C",
+    "timeline_in": 1015.1333333333333,
+    "timeline_out": 1051.1666666666667,
+    "screen_original": "/Users/je/Desktop/Screen Recording 2026-10-02 at 9.36.12\u202fAM.mov",
+    "screen_offset": 1.0725,
+    "crop": [
+      330,
+      100,
+      1390,
+      930
+    ],
+    "host_box": [
+      1080,
+      590,
+      800,
+      450
+    ],
+    "screen_box": [
+      40,
+      40,
+      1440,
+      746
+    ],
+    "added_text": null
+  },
+  {
+    "type": "screen_C",
+    "timeline_in": 1051.1666666666667,
+    "timeline_out": 1083.7333333333333,
+    "screen_original": "/Users/je/Desktop/Screen Recording 2026-10-02 at 9.36.12\u202fAM.mov",
+    "screen_offset": 1.0725,
+    "crop": [
+      330,
+      100,
+      1390,
+      930
+    ],
+    "host_box": [
+      1080,
+      590,
+      800,
+      450
+    ],
+    "screen_box": [
+      40,
+      40,
+      1440,
+      746
+    ],
+    "added_text": null
+  },
+  {
+    "type": "screen_C",
+    "timeline_in": 1083.7333333333333,
+    "timeline_out": 1163.4333333333334,
+    "screen_original": "/Users/je/Desktop/Screen Recording 2026-10-02 at 9.36.12\u202fAM.mov",
+    "screen_offset": 1.0725,
+    "crop": [
+      330,
+      100,
+      1390,
+      930
+    ],
+    "host_box": [
+      1080,
+      590,
+      800,
+      450
+    ],
+    "screen_box": [
+      40,
+      40,
+      1440,
+      746
+    ],
+    "added_text": null
+  },
+  {
+    "type": "screen_C",
+    "timeline_in": 1163.4333333333334,
+    "timeline_out": 1188.2333333333333,
+    "screen_original": "/Users/je/Desktop/Screen Recording 2026-10-02 at 9.36.12\u202fAM.mov",
+    "screen_offset": 1.0725,
+    "crop": [
+      330,
+      100,
+      1390,
+      930
+    ],
+    "host_box": [
+      1080,
+      590,
+      800,
+      450
+    ],
+    "screen_box": [
+      40,
+      40,
+      1440,
+      746
+    ],
+    "added_text": null
+  },
+  {
+    "type": "screen_C",
+    "timeline_in": 1188.2333333333333,
+    "timeline_out": 1202.4333333333334,
+    "screen_original": "/Users/je/Desktop/Screen Recording 2026-10-02 at 9.36.12\u202fAM.mov",
+    "screen_offset": 1.0725,
+    "crop": [
+      330,
+      100,
+      1390,
+      930
+    ],
+    "host_box": [
+      1080,
+      590,
+      800,
+      450
+    ],
+    "screen_box": [
+      40,
+      40,
+      1440,
+      746
+    ],
+    "added_text": null
+  },
+  {
+    "type": "screen_C",
+    "timeline_in": 1202.4333333333334,
+    "timeline_out": 1239.0666666666666,
+    "screen_original": "/Users/je/Desktop/Screen Recording 2026-10-02 at 9.36.12\u202fAM.mov",
+    "screen_offset": 1.0725,
+    "crop": [
+      330,
+      100,
+      1390,
+      930
+    ],
+    "host_box": [
+      1080,
+      590,
+      800,
+      450
+    ],
+    "screen_box": [
+      40,
+      40,
+      1440,
+      746
+    ],
+    "added_text": null
+  },
+  {
+    "type": "screen_C",
+    "timeline_in": 1239.0666666666666,
+    "timeline_out": 1275.2666666666667,
+    "screen_original": "/Users/je/Desktop/Screen Recording 2026-10-02 at 9.36.12\u202fAM.mov",
+    "screen_offset": 1.0725,
+    "crop": [
+      330,
+      100,
+      1390,
+      930
+    ],
+    "host_box": [
+      1080,
+      590,
+      800,
+      450
+    ],
+    "screen_box": [
+      40,
+      40,
+      1440,
+      746
+    ],
+    "added_text": null
+  },
+  {
+    "type": "screen_C",
+    "timeline_in": 1275.2666666666667,
+    "timeline_out": 1288.0333333333333,
+    "screen_original": "/Users/je/Desktop/Screen Recording 2026-10-02 at 9.36.12\u202fAM.mov",
+    "screen_offset": 1.0725,
+    "crop": [
+      330,
+      100,
+      1390,
+      930
+    ],
+    "host_box": [
+      1080,
+      590,
+      800,
+      450
+    ],
+    "screen_box": [
+      40,
+      40,
+      1440,
+      746
+    ],
+    "added_text": null
+  },
+  {
+    "type": "screen_C",
+    "timeline_in": 1304.0333333333333,
+    "timeline_out": 1319.4666666666667,
+    "screen_original": "/Users/je/Desktop/Screen Recording 2026-10-02 at 9.36.12\u202fAM.mov",
+    "screen_offset": 1.0725,
+    "crop": [
+      330,
+      100,
+      1390,
+      930
+    ],
+    "host_box": [
+      1080,
+      590,
+      800,
+      450
+    ],
+    "screen_box": [
+      40,
+      40,
+      1440,
+      746
+    ],
+    "added_text": null
+  },
+  {
+    "type": "screen_C",
+    "timeline_in": 1353.9,
+    "timeline_out": 1363.6,
+    "screen_original": "/Users/je/Desktop/Screen Recording 2026-10-02 at 9.36.12\u202fAM.mov",
+    "screen_offset": 1.0725,
+    "crop": [
+      330,
+      100,
+      1390,
+      930
+    ],
+    "host_box": [
+      1080,
+      590,
+      800,
+      450
+    ],
+    "screen_box": [
+      40,
+      40,
+      1440,
+      746
+    ],
+    "added_text": null
+  },
+  {
+    "type": "screen_C",
+    "timeline_in": 1363.6,
+    "timeline_out": 1407.0,
+    "screen_original": "/Users/je/Desktop/Screen Recording 2026-10-02 at 9.36.12\u202fAM.mov",
+    "screen_offset": 1.0725,
+    "crop": [
+      330,
+      100,
+      1390,
+      930
+    ],
+    "host_box": [
+      1080,
+      590,
+      800,
+      450
+    ],
+    "screen_box": [
+      40,
+      40,
+      1440,
+      746
+    ],
+    "added_text": null
+  },
+  {
+    "type": "screen_C",
+    "timeline_in": 1407.0,
+    "timeline_out": 1434.9333333333334,
+    "screen_original": "/Users/je/Desktop/Screen Recording 2026-10-02 at 9.36.12\u202fAM.mov",
+    "screen_offset": 1.0725,
+    "crop": [
+      330,
+      100,
+      1390,
+      930
+    ],
+    "host_box": [
+      1080,
+      590,
+      800,
+      450
+    ],
+    "screen_box": [
+      40,
+      40,
+      1440,
+      746
+    ],
+    "added_text": null
+  },
+  {
+    "type": "screen_C",
+    "timeline_in": 1434.9333333333334,
+    "timeline_out": 1443.4,
+    "screen_original": "/Users/je/Desktop/Screen Recording 2026-10-02 at 9.36.12\u202fAM.mov",
+    "screen_offset": 1.0725,
+    "crop": [
+      330,
+      100,
+      1390,
+      930
+    ],
+    "host_box": [
+      1080,
+      590,
+      800,
+      450
+    ],
+    "screen_box": [
+      40,
+      40,
+      1440,
+      746
+    ],
+    "added_text": null
+  },
+  {
+    "type": "screen_C",
+    "timeline_in": 1496.4,
+    "timeline_out": 1530.5,
+    "screen_original": "/Users/je/Desktop/Screen Recording 2026-10-02 at 9.36.12\u202fAM.mov",
+    "screen_offset": 1.0725,
+    "crop": [
+      330,
+      100,
+      1390,
+      930
+    ],
+    "host_box": [
+      1080,
+      590,
+      800,
+      450
+    ],
+    "screen_box": [
+      40,
+      40,
+      1440,
+      746
+    ],
+    "added_text": null
+  },
+  {
+    "type": "screen_C",
+    "timeline_in": 1648.9333333333334,
+    "timeline_out": 1683.4666666666667,
+    "screen_original": "/Users/je/Desktop/Screen Recording 2026-10-02 at 2.21.28\u202fPM.mov",
+    "screen_offset": 4.3703,
+    "crop": [
+      750,
+      130,
+      1170,
+      880
+    ],
+    "host_box": [
+      1080,
+      590,
+      800,
+      450
+    ],
+    "screen_box": [
+      40,
+      40,
+      1440,
+      746
+    ],
+    "added_text": null
+  },
+  {
+    "type": "screen_C",
+    "timeline_in": 1683.4666666666667,
+    "timeline_out": 1714.6666666666667,
+    "screen_original": "/Users/je/Desktop/Screen Recording 2026-10-02 at 2.21.28\u202fPM.mov",
+    "screen_offset": 4.3703,
+    "crop": [
+      240,
+      150,
+      1640,
+      850
+    ],
+    "host_box": [
+      1080,
+      590,
+      800,
+      450
+    ],
+    "screen_box": [
+      40,
+      40,
+      1440,
+      746
+    ],
+    "added_text": null
+  },
+  {
+    "type": "screen_C",
+    "timeline_in": 1714.6666666666667,
+    "timeline_out": 1735.1,
+    "screen_original": "/Users/je/Desktop/Screen Recording 2026-10-02 at 2.21.28\u202fPM.mov",
+    "screen_offset": 4.3703,
+    "crop": [
+      240,
+      150,
+      1640,
+      850
+    ],
+    "host_box": [
+      1080,
+      590,
+      800,
+      450
+    ],
+    "screen_box": [
+      40,
+      40,
+      1440,
+      746
+    ],
+    "added_text": null
+  },
+  {
+    "type": "screen_C",
+    "timeline_in": 1735.1,
+    "timeline_out": 1787.8666666666666,
+    "screen_original": "/Users/je/Desktop/Screen Recording 2026-10-02 at 2.21.28\u202fPM.mov",
+    "screen_offset": 4.3703,
+    "crop": [
+      240,
+      150,
+      1640,
+      850
+    ],
+    "host_box": [
+      1080,
+      590,
+      800,
+      450
+    ],
+    "screen_box": [
+      40,
+      40,
+      1440,
+      746
+    ],
+    "added_text": null
+  },
+  {
+    "type": "screen_C",
+    "timeline_in": 1787.8666666666666,
+    "timeline_out": 1842.5666666666666,
+    "screen_original": "/Users/je/Desktop/Screen Recording 2026-10-02 at 2.21.28\u202fPM.mov",
+    "screen_offset": 4.3703,
+    "crop": [
+      330,
+      100,
+      1390,
+      930
+    ],
+    "host_box": [
+      1080,
+      590,
+      800,
+      450
+    ],
+    "screen_box": [
+      40,
+      40,
+      1440,
+      746
+    ],
+    "added_text": null
+  },
+  {
+    "type": "screen_C",
+    "timeline_in": 1842.5666666666666,
+    "timeline_out": 1878.1666666666667,
+    "screen_original": "/Users/je/Desktop/Screen Recording 2026-10-02 at 2.21.28\u202fPM.mov",
+    "screen_offset": 4.3703,
+    "crop": [
+      330,
+      100,
+      1390,
+      930
+    ],
+    "host_box": [
+      1080,
+      590,
+      800,
+      450
+    ],
+    "screen_box": [
+      40,
+      40,
+      1440,
+      746
+    ],
+    "added_text": null
+  },
+  {
+    "type": "screen_C",
+    "timeline_in": 1951.2333333333333,
+    "timeline_out": 1970.1333333333334,
+    "screen_original": "/Users/je/Desktop/Screen Recording 2026-10-02 at 2.51.59\u202fPM.mov",
+    "screen_offset": 10.7038,
+    "crop": [
+      330,
+      100,
+      1390,
+      930
+    ],
+    "host_box": [
+      1080,
+      590,
+      800,
+      450
+    ],
+    "screen_box": [
+      40,
+      40,
+      1440,
+      746
+    ],
+    "added_text": null
+  },
+  {
+    "type": "screen_C",
+    "timeline_in": 1970.1333333333334,
+    "timeline_out": 1990.1666666666667,
+    "screen_original": "/Users/je/Desktop/Screen Recording 2026-10-02 at 2.51.59\u202fPM.mov",
+    "screen_offset": 10.7038,
+    "crop": [
+      330,
+      100,
+      1390,
+      930
+    ],
+    "host_box": [
+      1080,
+      590,
+      800,
+      450
+    ],
+    "screen_box": [
+      40,
+      40,
+      1440,
+      746
+    ],
+    "added_text": null
+  },
+  {
+    "type": "screen_C",
+    "timeline_in": 1990.1666666666667,
+    "timeline_out": 2015.2333333333333,
+    "screen_original": "/Users/je/Desktop/Screen Recording 2026-10-02 at 2.51.59\u202fPM.mov",
+    "screen_offset": 10.7038,
+    "crop": [
+      750,
+      130,
+      1170,
+      880
+    ],
+    "host_box": [
+      1080,
+      590,
+      800,
+      450
+    ],
+    "screen_box": [
+      40,
+      40,
+      1440,
+      746
+    ],
+    "added_text": null
+  },
+  {
+    "type": "screen_C",
+    "timeline_in": 2015.2333333333333,
+    "timeline_out": 2073.5666666666666,
+    "screen_original": "/Users/je/Desktop/Screen Recording 2026-10-02 at 2.51.59\u202fPM.mov",
+    "screen_offset": 10.7038,
+    "crop": [
+      750,
+      130,
+      1170,
+      880
+    ],
+    "host_box": [
+      1080,
+      590,
+      800,
+      450
+    ],
+    "screen_box": [
+      40,
+      40,
+      1440,
+      746
+    ],
+    "added_text": null
+  },
+  {
+    "type": "screen_C",
+    "timeline_in": 2073.5666666666666,
+    "timeline_out": 2097.866666666667,
+    "screen_original": "/Users/je/Desktop/Screen Recording 2026-10-02 at 2.51.59\u202fPM.mov",
+    "screen_offset": 10.7038,
+    "crop": [
+      330,
+      100,
+      1390,
+      930
+    ],
+    "host_box": [
+      1080,
+      590,
+      800,
+      450
+    ],
+    "screen_box": [
+      40,
+      40,
+      1440,
+      746
+    ],
+    "added_text": null
+  },
+  {
+    "type": "screen_C",
+    "timeline_in": 2351.766666666667,
+    "timeline_out": 2444.4666666666667,
+    "screen_original": "/Users/je/Desktop/Screen Recording 2026-10-02 at 2.51.59\u202fPM.mov",
+    "screen_offset": 10.7038,
+    "crop": [
+      240,
+      150,
+      1640,
+      850
+    ],
+    "host_box": [
+      1080,
+      590,
+      800,
+      450
+    ],
+    "screen_box": [
+      40,
+      40,
+      1440,
+      746
+    ],
+    "added_text": null
+  },
+  {
+    "type": "screen_C",
+    "timeline_in": 2444.4666666666667,
+    "timeline_out": 2461.9666666666667,
+    "screen_original": "/Users/je/Desktop/Screen Recording 2026-10-02 at 2.51.59\u202fPM.mov",
+    "screen_offset": 10.7038,
+    "crop": [
+      330,
+      100,
+      1390,
+      930
+    ],
+    "host_box": [
+      1080,
+      590,
+      800,
+      450
+    ],
+    "screen_box": [
+      40,
+      40,
+      1440,
+      746
+    ],
+    "added_text": null
+  },
+  {
+    "type": "screen_C",
+    "timeline_in": 2492.0666666666666,
+    "timeline_out": 2518.1666666666665,
+    "screen_original": "/Users/je/Desktop/Screen Recording 2026-10-02 at 2.51.59\u202fPM.mov",
+    "screen_offset": 10.7038,
+    "crop": [
+      330,
+      100,
+      1390,
+      930
+    ],
+    "host_box": [
+      1080,
+      590,
+      800,
+      450
+    ],
+    "screen_box": [
+      40,
+      40,
+      1440,
+      746
+    ],
+    "added_text": null
+  },
+  {
+    "type": "screen_C",
+    "timeline_in": 2548.4333333333334,
+    "timeline_out": 2570.366666666667,
+    "screen_original": "/Users/je/Desktop/Screen Recording 2026-10-02 at 2.51.59\u202fPM.mov",
+    "screen_offset": 10.7038,
+    "crop": [
+      330,
+      100,
+      1390,
+      930
+    ],
+    "host_box": [
+      1080,
+      590,
+      800,
+      450
+    ],
+    "screen_box": [
+      40,
+      40,
+      1440,
+      746
+    ],
+    "added_text": null
+  },
+  {
+    "type": "recurring_card",
+    "timeline_in": 2679.0666666666666,
+    "timeline_out": 2689.8333333333335,
+    "picture": "/Users/je/oood/03_ASSETS/codex-mono-mirrored-3digit/outro-card.png",
+    "music": "/Users/je/oood/03_ASSETS/music/oood-outro-11s.wav",
+    "reason": "Exact recurring three-prompt outro card and music."
+  }
+]

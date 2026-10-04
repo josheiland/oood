@@ -52,7 +52,7 @@
     </section>
 
     <section class="intro">
-      <p class="intro__tagline"><span>Underprepared newlyweds at Stanford GSB,</span> <span>learning AI out loud</span></p>
+      <p class="intro__tagline"><span>Underprepared newlyweds at Stanford&nbsp;GSB,</span> <span>learning AI out loud</span></p>
       <div class="listen" aria-label="Where to watch and listen">
         <a class="btn btn--youtube" href="https://www.youtube.com/@OutOfOurDepthPod" data-link="youtube" target="_blank" rel="noopener">
           <svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="1.5" y="4.5" width="21" height="15" rx="4.5" fill="currentColor"/><path d="M10 9v6l5.2-3z" fill="#38B6FF"/></svg>
@@ -77,11 +77,11 @@
     </section>
 
     <section class="latest" aria-labelledby="latest-title">
-      <div class="popup" data-popup>
+      <div class="popup popup--live" data-popup>
         <div class="popup__waterline" aria-hidden="true"></div>
-        <a class="popup__thumb" href="https://www.youtube.com/@OutOfOurDepthPod" data-episode-link target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
-          <img alt="" data-episode-thumb hidden>
-          <span class="popup__tile" data-episode-tile>
+        <a class="popup__thumb" href="https://www.youtube.com/watch?v=cp4P_2t5rRQ" data-episode-link target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img alt="" src="https://i.ytimg.com/vi/cp4P_2t5rRQ/hqdefault.jpg" data-episode-thumb>
+          <span class="popup__tile" data-episode-tile hidden>
             <span class="tile__kicker">Out of our</span>
             <span class="tile__word">Depth</span>
           </span>
@@ -89,17 +89,41 @@
         <div class="popup__body">
           <div class="popup__label label">
             <span class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
-            <span data-episode-kicker>Latest episode</span>
+            <span data-episode-kicker>Latest episode / 002</span>
           </div>
-          <h2 class="popup__title" id="latest-title" data-episode-title>First episode coming soon</h2>
-          <p class="popup__blurb" data-episode-blurb>Subscribe on YouTube and it will show up here the minute it's live.</p>
-          <a class="btn btn--navy" href="https://www.youtube.com/@OutOfOurDepthPod?sub_confirmation=1" data-episode-cta target="_blank" rel="noopener">Subscribe on YouTube</a>
+          <h2 class="popup__title" id="latest-title" data-episode-title>Who's Who in AI (Explained With a Toyota Prius)</h2>
+          <p class="popup__blurb" data-episode-blurb>We untangle AI companies, models and apps, with a little help from a Toyota Prius.</p>
+          <a class="btn btn--navy" href="https://www.youtube.com/watch?v=cp4P_2t5rRQ" data-episode-cta target="_blank" rel="noopener">Watch the episode</a>
+        </div>
+      </div>
+      <div class="episode-archive" aria-labelledby="earlier-title">
+        <h2 class="label" id="earlier-title">More episodes</h2>
+        <div class="episode-grid" data-episodes>
+          <a class="episode-card" href="https://www.youtube.com/watch?v=d-ykZl4WHjo" target="_blank" rel="noopener">
+            <img src="https://i.ytimg.com/vi/d-ykZl4WHjo/hqdefault.jpg" alt="" loading="lazy" width="480" height="360">
+            <div class="episode-card__body">
+              <span class="label">Episode 001</span>
+              <h3>Projects, Connectors &amp; Skills… Take Your AI From Fresh Intern to Full-Time Hire</h3>
+              <p>We try projects, connectors and skills to give AI context and put it to work.</p>
+              <span class="episode-card__cta">Watch on YouTube <span aria-hidden="true">&rarr;</span></span>
+            </div>
+          </a>
+          <a class="episode-card" href="https://www.youtube.com/watch?v=y0NH_zvAdEo" target="_blank" rel="noopener">
+            <img src="https://i.ytimg.com/vi/y0NH_zvAdEo/hqdefault.jpg" alt="" loading="lazy" width="480" height="360">
+            <div class="episode-card__body">
+              <span class="label">Episode 000</span>
+              <h3>We Can’t Keep Up With AI Either (So We Started a Podcast!)</h3>
+              <p>Meet Josh and Mary, and why we decided to learn AI out loud together.</p>
+              <span class="episode-card__cta">Watch on YouTube <span aria-hidden="true">&rarr;</span></span>
+            </div>
+          </a>
         </div>
       </div>
     </section>
   </main>
 
 
+  <noscript><style>.popup { opacity: 1; transform: none; }</style></noscript>
   <script src="/config.js"></script>
   <script src="/main.js"></script>
 </body>

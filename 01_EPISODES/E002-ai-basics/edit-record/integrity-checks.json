@@ -1,0 +1,23 @@
+{
+  "sha256": "e5ee8b93c9a621f6700e6df1d311fe5289321eaf58c95002087a98a5f6656bea",
+  "duration": "3145.733333",
+  "frames": 94372,
+  "chapters_identical": true,
+  "audio_full_decode_passed": true,
+  "aac_nonnegative_time_payload_sha256": "0,a,SHA256=2e7dd2f52aceee30ee6521c75bd04935f5f2c4742b875b68c57164134f3500d4",
+  "restored_picture_checks": [
+    {
+      "id": "model-access",
+      "frames": 165,
+      "min_similarity_to_original_camera": 0.994612,
+      "mean_similarity_to_original_camera": 0.9958091454545454
+    },
+    {
+      "id": "openai-structure",
+      "frames": 165,
+      "min_similarity_to_original_camera": 0.9945,
+      "mean_similarity_to_original_camera": 0.9956788060606061
+    }
+  ],
+  "caption_bytes_identical": true
+}

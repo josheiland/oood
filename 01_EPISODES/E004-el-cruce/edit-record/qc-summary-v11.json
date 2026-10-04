@@ -1,0 +1,91 @@
+{
+  "path": "/Users/je/oood/01_EPISODES/E004-el-cruce/edit/codex-personality-pass-2026-10-03/full-v5/el-cruce-personality-v11.mp4",
+  "bytes": 883046913,
+  "sha256": "e6818d0ab7f9729fdf4c38b65a5e62c7b37864bf1055a6be003c22ae45ed7dc3",
+  "duration": 2689.8333333333335,
+  "frames": 80695,
+  "color_container_passed": true,
+  "full_av_decode_passed": true,
+  "loudness": {
+    "input_i": "-16.79",
+    "input_tp": "-1.44",
+    "input_lra": "5.30",
+    "input_thresh": "-27.38",
+    "output_i": "-16.20",
+    "output_tp": "-1.50",
+    "output_lra": "5.20",
+    "output_thresh": "-26.78",
+    "normalization_type": "dynamic",
+    "target_offset": "0.20"
+  },
+  "audio_video_duration_difference": 0.0,
+  "packets": {
+    "v:0": {
+      "count": 80695,
+      "first_pts": 0.0,
+      "last_end": 2689.833333,
+      "strictly_increasing_and_contiguous": true
+    },
+    "a:0": {
+      "count": 126086,
+      "first_pts": 0.0,
+      "last_end": 2689.833333,
+      "strictly_increasing_and_contiguous": true
+    }
+  },
+  "black_spans": [],
+  "silence_events": [
+    [
+      "start",
+      "2352.633021"
+    ],
+    [
+      "end",
+      "2354.26125"
+    ]
+  ],
+  "source_audio_alignment": [
+    {
+      "source_id": "/Users/je/oood/01_EPISODES/E004-el-cruce/edit/codex-singing-hook-2026-10-03/almost-cruce-singing-hook-v4.mp4",
+      "source_time": 3,
+      "final_time": 3.0,
+      "audio_offset_seconds": 0.0,
+      "correlation": 0.9837018225581676,
+      "limit": "Measures edit-induced audio offset relative to the recorded mix, not original camera lip sync."
+    },
+    {
+      "source_id": "A",
+      "source_time": 200,
+      "final_time": 167.53333333333333,
+      "audio_offset_seconds": 0.0,
+      "correlation": 0.9809459390483889,
+      "limit": "Measures edit-induced audio offset relative to the recorded mix, not original camera lip sync."
+    },
+    {
+      "source_id": "B",
+      "source_time": 480,
+      "final_time": 1805.9333333333334,
+      "audio_offset_seconds": 0.0,
+      "correlation": 0.9546056863641526,
+      "limit": "Measures edit-induced audio offset relative to the recorded mix, not original camera lip sync."
+    },
+    {
+      "source_id": "C",
+      "source_time": 700,
+      "final_time": 2122.2333333333336,
+      "audio_offset_seconds": 0.0,
+      "correlation": 0.9953107376360295,
+      "limit": "Measures edit-induced audio offset relative to the recorded mix, not original camera lip sync."
+    },
+    {
+      "source_id": "C",
+      "source_time": 1490,
+      "final_time": 2654.7999999999993,
+      "audio_offset_seconds": 0.0,
+      "correlation": 0.9936504198129364,
+      "limit": "Measures edit-induced audio offset relative to the recorded mix, not original camera lip sync."
+    }
+  ],
+  "caption_chapter_structural_checks_passed": true,
+  "status": "Technically checked; host audiovisual review, caption auditory proof and exact-version approval remain pending."
+}

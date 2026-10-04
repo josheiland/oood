@@ -1,0 +1,4 @@
+interface:
+  display_name: "OOOD Episode Planner"
+  short_description: "Fun, accessible episodes built around your dynamic"
+  default_prompt: "Use $oood-episode-planner for this Out of Our Depth task."

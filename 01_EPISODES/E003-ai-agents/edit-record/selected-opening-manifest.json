@@ -1,0 +1,54 @@
+{
+  "assembly_segments": [
+    {
+      "id": "selected-hook",
+      "kind": "camera",
+      "source": "/Users/je/oood/01_EPISODES/E003-ai-agents/edit/codex-proposed-cut-2026-10-03/feedback-revision-v5/source-review/host-selected-400-agents-hook.mp4",
+      "audio_stream": 1,
+      "source_start_frame": 0,
+      "source_end_frame": 145,
+      "frames": 145,
+      "in": 0.0,
+      "out": 4.833333333333333,
+      "reason": "Host-selected saved shortened 400-agents hook; all 145 frames retained.",
+      "caption_source_in": 1512.2666666666667,
+      "caption_source_out": 1517.1,
+      "timeline_in": 0.0,
+      "timeline_out": 4.833333333333333
+    },
+    {
+      "source": "/Users/je/oood/03_ASSETS/music/oood-sting-5s.wav",
+      "source_start_frame": 0,
+      "source_end_frame": 158,
+      "in": 0.0,
+      "out": 5.266666666666667,
+      "frames": 158,
+      "reason": "Recurring intro card and complete music sting after the host-selected hook.",
+      "chapter": null,
+      "kind": "card",
+      "audio_stream": 0,
+      "still": "/Users/je/oood/03_ASSETS/codex-mono-mirrored-3digit/intro-card.png",
+      "gain_db": -5,
+      "timeline_in": 4.833333333333333,
+      "timeline_out": 10.1,
+      "id": "s002"
+    },
+    {
+      "id": "opening",
+      "kind": "camera",
+      "source": "/Users/je/Movies/Agents episode.mp4",
+      "audio_stream": 1,
+      "source_start_frame": 1920,
+      "source_end_frame": 2517,
+      "frames": 597,
+      "in": 64.0,
+      "out": 83.9,
+      "reason": "Same beginning of episode; selected opening preview.",
+      "mix_raw": true,
+      "timeline_in": 10.1,
+      "timeline_out": 30.0
+    }
+  ],
+  "output_file": "agents-selected-opening-v5.mp4",
+  "chapters": []
+}

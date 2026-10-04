@@ -1,0 +1,70 @@
+{
+  "intro_card": "03_ASSETS/codex-mono-mirrored-3digit/intro-card.png",
+  "outro_card": "03_ASSETS/codex-mono-mirrored-3digit/outro-card.png",
+  "intro_music": "03_ASSETS/music/oood-sting-5s.wav",
+  "outro_music": "03_ASSETS/music/oood-outro-11s.wav",
+  "full_card_cues": [
+    {
+      "output_start": 24.733333333333334,
+      "output_end": 30.0,
+      "still": "/Users/je/oood/03_ASSETS/codex-mono-mirrored-3digit/intro-card.png",
+      "music": "/Users/je/oood/03_ASSETS/music/oood-sting-5s.wav",
+      "music_in": 0.0,
+      "music_out": 5.266666666666667
+    },
+    {
+      "output_start": 2223.4,
+      "output_end": 2233.6666666666665,
+      "still": "/Users/je/oood/03_ASSETS/codex-mono-mirrored-3digit/outro-card.png",
+      "music": "/Users/je/oood/03_ASSETS/music/oood-outro-11s.wav",
+      "music_in": 0.5,
+      "music_out": 10.766666666666667
+    }
+  ],
+  "hook_card_color_check": {
+    "approved_rgb": [
+      61,
+      175,
+      244
+    ],
+    "decoded_rgb": [
+      61,
+      175,
+      245
+    ],
+    "within_codec_rounding": true
+  },
+  "overlays": "No new teaching popups; captions supplied as toggleable sidecars.",
+  "status": "Proposed; hook selection and host review pending.",
+  "picture_finishing": {
+    "phone_mask": {
+      "source_in": 2353.2,
+      "source_out": 2358.7,
+      "output_in": 1311.2333333333333,
+      "output_out": 1316.7333333333333,
+      "region": [
+        980,
+        700,
+        280,
+        380
+      ],
+      "method": "20-pixel blocks; mask the message-list screen and nearby hand, never host faces."
+    },
+    "closing_cover": {
+      "id": "s039b",
+      "source": "/Users/je/Movies/Agents episode.mp4",
+      "source_start_frame": 126455,
+      "source_end_frame": 126470,
+      "in": 4215.166666666667,
+      "out": 4215.666666666667,
+      "frames": 15,
+      "kind": "covered-transition",
+      "timeline_in": 2222.9,
+      "timeline_out": 2223.4,
+      "reason": "Continue actual hand-cover gesture to a fully covered lens. First 0.5 seconds of existing outro music play under this picture; no added host speech.",
+      "audio_source": "Existing v3 outro music; exact AAC packets preserved."
+    },
+    "audio": "All original v3 AAC packets copied without re-encoding. Music begins 0.5s before the outro card, under the actual closing hand cover."
+  },
+  "audio_note": "Exact v3 AAC copied: music starts under closing covered-camera continuation, 0.5 seconds before outro card."
+}

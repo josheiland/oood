@@ -1,0 +1,123 @@
+{
+  "episode": "002",
+  "title": "Projects, Connectors & Skills\u2026 Take Your AI From Fresh Intern to Full-Time Hire",
+  "publication_date": "2026-09-30",
+  "publication_status": "YouTube and Spotify published, confirmed by Josh",
+  "youtube": {
+    "title": "Projects, Connectors & Skills\u2026 Take Your AI From Fresh Intern to Full-Time Hire",
+    "author_name": "Out of Our Depth",
+    "author_url": "https://www.youtube.com/@OutOfOurDepthPod",
+    "type": "video",
+    "height": 113,
+    "width": 200,
+    "version": "1.0",
+    "provider_name": "YouTube",
+    "provider_url": "https://www.youtube.com/",
+    "thumbnail_height": 360,
+    "thumbnail_width": 480,
+    "thumbnail_url": "https://i.ytimg.com/vi/d-ykZl4WHjo/hqdefault.jpg",
+    "html": "<iframe width=\"200\" height=\"113\" src=\"https://www.youtube.com/embed/d-ykZl4WHjo?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"Projects, Connectors &amp; Skills\u2026 Take Your AI From Fresh Intern to Full-Time Hire\"></iframe>",
+    "archived_thumbnail_url": "https://i.ytimg.com/vi/d-ykZl4WHjo/maxresdefault.jpg",
+    "archived_thumbnail_dimensions": [
+      1280,
+      720
+    ]
+  },
+  "drive_folder_id": "1OdHgDxylP4Rs_zQ7_U8PHSlKTZZbnRBt",
+  "raw": {
+    "drive_id": "1vFkDcEq_0mWQj7rDPjTNLLFQ9FnTkhbV",
+    "local_path": "/Users/je/Movies/Episode 2 Raw.mp4",
+    "size": 471672837,
+    "md5": "57e26c08221b45453ac7d2bfa31c6d70",
+    "sha256": "087b52c20549f20118216a867005944948da8d39f013b3089789a987aa79b42d"
+  },
+  "release_files": [
+    {
+      "name": "episode-002.mp4",
+      "sha256": "2d0de694425b1e13523a6a52a4895a1accb994d7b763434f7838b7c53753e858",
+      "drive": {
+        "display_url": "https://drive.google.com/file/d/17AmIjcA2hbtamuGWVJSkVYIUGOrLiskU/view?usp=drivesdk",
+        "id": "17AmIjcA2hbtamuGWVJSkVYIUGOrLiskU",
+        "link_label": "View File in Google Drive",
+        "md5Checksum": "9367cee16904ed0845417c84ee018711",
+        "name": "episode-002.mp4",
+        "parents": [
+          "1OdHgDxylP4Rs_zQ7_U8PHSlKTZZbnRBt"
+        ],
+        "size": "706010130",
+        "trashed": false,
+        "webViewLink": "https://drive.google.com/file/d/17AmIjcA2hbtamuGWVJSkVYIUGOrLiskU/view?usp=drivesdk"
+      }
+    },
+    {
+      "name": "episode-002.srt",
+      "sha256": "f3f9278d9293df1067334217ccb2309b2d44459846fa652702f0ea5a8ab7745d",
+      "drive": {
+        "display_url": "https://drive.google.com/file/d/18DeJz21FFx0w7XKS9WCYqoOUdrS2QcHl/view?usp=drivesdk",
+        "id": "18DeJz21FFx0w7XKS9WCYqoOUdrS2QcHl",
+        "link_label": "View File in Google Drive",
+        "md5Checksum": "c716a80345d63ac125b2a9f66b684773",
+        "name": "episode-002.srt",
+        "parents": [
+          "1OdHgDxylP4Rs_zQ7_U8PHSlKTZZbnRBt"
+        ],
+        "size": "57250",
+        "trashed": false,
+        "webViewLink": "https://drive.google.com/file/d/18DeJz21FFx0w7XKS9WCYqoOUdrS2QcHl/view?usp=drivesdk"
+      }
+    },
+    {
+      "name": "episode-002-thumbnail.jpg",
+      "sha256": "af93312fbd96b74c6729ac9e11687c0d381d7112694c6d3c9d3ad7aee59bae16",
+      "drive": {
+        "display_url": "https://drive.google.com/file/d/1X0C9ZNf2gECTHYJxV_4MiNIdG_K0cIlG/view?usp=drivesdk",
+        "id": "1X0C9ZNf2gECTHYJxV_4MiNIdG_K0cIlG",
+        "link_label": "View File in Google Drive",
+        "md5Checksum": "0d241e93f20d13bb331c7523f031ab93",
+        "name": "episode-002-thumbnail.jpg",
+        "parents": [
+          "1OdHgDxylP4Rs_zQ7_U8PHSlKTZZbnRBt"
+        ],
+        "size": "132737",
+        "trashed": false,
+        "webViewLink": "https://drive.google.com/file/d/1X0C9ZNf2gECTHYJxV_4MiNIdG_K0cIlG/view?usp=drivesdk"
+      }
+    },
+    {
+      "name": "episode-002-description-and-chapters.txt",
+      "sha256": "2d2edbcd9233f0409655c706655e42808b11a96b9e88a06bafbc9f3f7ebf9ecb",
+      "drive": {
+        "display_url": "https://drive.google.com/file/d/1gBkH6E4XdDU2JTqOVGCFxjO8tTD3xTcC/view?usp=drivesdk",
+        "id": "1gBkH6E4XdDU2JTqOVGCFxjO8tTD3xTcC",
+        "link_label": "View File in Google Drive",
+        "md5Checksum": "df681408b165bb307d2a9a5d3dadefec",
+        "name": "episode-002-description-and-chapters.txt",
+        "parents": [
+          "1OdHgDxylP4Rs_zQ7_U8PHSlKTZZbnRBt"
+        ],
+        "size": "2358",
+        "trashed": false,
+        "webViewLink": "https://drive.google.com/file/d/1gBkH6E4XdDU2JTqOVGCFxjO8tTD3xTcC/view?usp=drivesdk"
+      }
+    },
+    {
+      "name": "archive-manifest.json",
+      "sha256": "376317d63eca47f7900366962d4dbaef6ba73ae30d6e233b214751cfbc390602",
+      "drive": {
+        "display_url": "https://drive.google.com/file/d/1JMWbe_B7Z8g1cOTze3PF258j89mnukvx/view?usp=drivesdk",
+        "id": "1JMWbe_B7Z8g1cOTze3PF258j89mnukvx",
+        "link_label": "View File in Google Drive",
+        "md5Checksum": "fc90a680a3d2aae2dc1d12d494251ef7",
+        "name": "archive-manifest.json",
+        "parents": [
+          "1OdHgDxylP4Rs_zQ7_U8PHSlKTZZbnRBt"
+        ],
+        "size": "3758",
+        "trashed": false,
+        "webViewLink": "https://drive.google.com/file/d/1JMWbe_B7Z8g1cOTze3PF258j89mnukvx/view?usp=drivesdk"
+      }
+    }
+  ],
+  "historical_work_archive": "99_ARCHIVE/2026-09-30-completed-launch-work.zip",
+  "caption_status": "Existing final-timeline sidecar; prior auditory proof remains unverified."
+}

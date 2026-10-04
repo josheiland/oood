@@ -1,0 +1,36 @@
+{
+  "version": "codex-no-popups-2026-10-03",
+  "video": "episode-001-no-popups.mp4",
+  "bytes": 2058534021,
+  "sha256": "e5ee8b93c9a621f6700e6df1d311fe5289321eaf58c95002087a98a5f6656bea",
+  "duration_seconds": 3145.733333,
+  "frames": 94372,
+  "status": "rendered and technically checked; local replacement ready for host review and re-upload",
+  "published": false,
+  "conversation_cuts_added": 0,
+  "definition_correction_popups": 0,
+  "retained": [
+    "all existing conversation and cuts",
+    "mastered audio",
+    "selected ep1hook",
+    "covered-lens beginning",
+    "recurring intro and music",
+    "exact Episode 000 three-prompt outro"
+  ],
+  "captions": "episode-001-no-popups.srt",
+  "description_and_chapters": "description-and-chapters.txt",
+  "verification": [
+    "integrity-checks.json",
+    "picture-review.json",
+    "color-qc.json"
+  ],
+  "source": "checksum-verified archived published final plus original raw camera intervals",
+  "audio_video_start_seconds": [
+    0.0,
+    0.0
+  ],
+  "audio_video_duration_seconds": [
+    3145.733333,
+    3145.733333
+  ]
+}

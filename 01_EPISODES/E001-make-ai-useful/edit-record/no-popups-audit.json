@@ -1,0 +1,10 @@
+{
+  "source_drive_id": "17AmIjcA2hbtamuGWVJSkVYIUGOrLiskU",
+  "source_sha256": "2d0de694425b1e13523a6a52a4895a1accb994d7b763434f7838b7c53753e858",
+  "duration": "1994.267000",
+  "frame_count": 59828,
+  "chapters": 12,
+  "overlay_findings": "No definition/correction overlays in the published renderer pipeline. Source picture flows directly from raw into source segments; later passes replace only hook/intro/outro and color tags.",
+  "visual_checks": "Three sheets of keyframe-based 30-second samples viewed across the conversation; no pop-ups observed. This is sampled picture inspection, not continuous viewing.",
+  "rerender_required": false
+}

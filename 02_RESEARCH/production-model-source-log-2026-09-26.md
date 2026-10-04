@@ -1,0 +1,15 @@
+# OOOD production model and skill source log
+
+Checked during the September 25–26 session; guidance dated 2026-09-26. Vendor docs support feature/plan descriptions, not a comparative claim about creative quality. Model assignments in the guide are recommendations based on task requirements. Exact private-account entitlements were not inspected.
+
+| Exact supported claim | Publisher / title / URL | Publication date | Access date | Limits |
+|---|---|---|---|---|
+| Sol is positioned for everyday writing/coding/judgment; Astra for ambitious and demanding analysis; Luna for efficient scoped tasks; effort trades resources for depth | OpenAI, [Model selection](https://learn.chatgpt.com/docs/model-selection) | Not displayed | 2026-09-25–26 | Product guidance, not OOOD-specific evaluation |
+| Plus is $20/month; Pro starts at $100/month with 5x/20x higher limits; Work and Codex share usage; API-key usage is priced separately | OpenAI, [Pricing](https://learn.chatgpt.com/docs/pricing) | Not displayed | 2026-09-25–26 | Rollout/account access and actual limits vary; estimates are not fixed per-task quotas |
+| Current Claude lineup includes Opus 5.5 for long-running knowledge/agent work, Sonnet 5 for speed/intelligence, and Fable 5.1 for demanding reasoning | Anthropic, [Models overview](https://platform.claude.com/docs/en/models/overview) | Not displayed | 2026-09-25–26 | API/catalog evidence alone does not establish access in Josh's consumer subscription |
+| Claude's menu supports model/effort choices; higher effort uses more time/tokens; listed models include Opus 5.5, Fable 5.1, and Sonnet 5 | Anthropic, [Change model, effort and thinking](https://support.claude.com/en/articles/8664678-change-the-model-effort-and-thinking-settings) | “Updated this week,” no absolute date captured | 2026-09-26 | Exact available choices must be checked in the user's app |
+| Claude Max 5x costs $100/month and Max 20x $200/month for web subscriptions; usage limits still apply | Anthropic, [What is the Max plan?](https://support.claude.com/en/articles/11049741-what-is-the-max-plan) | “Updated this week,” no absolute date captured | 2026-09-26 | Prices can change; mobile prices may differ; no purchase made |
+| Repository skills can be discovered in .agents/skills; skills package instructions/resources/scripts | OpenAI, [Build skills](https://learn.chatgpt.com/docs/build-skills) | Not displayed | 2026-09-25 | Discovery may require refreshing the app; no claim of web ChatGPT installation |
+| Claude supports uploading and enabling ZIP skill folders through Customize → Skills | Anthropic, [Use skills in Claude](https://support.claude.com/en/articles/12512180-use-skills-in-claude) | Absolute date not captured | 2026-09-25–26 | Code-execution/organization settings and surface access apply; no upload performed |
+
+Local FFmpeg/Pillow processing does not call a model API. The included scripts demonstrate that separation directly. A subscription upgrade does not change the local encoder or CPU; it may change available agent usage, which is a different bottleneck.

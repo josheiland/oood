@@ -351,10 +351,14 @@ a { color: inherit; }
   .tile--small { width: 48px; height: 48px; font-size: 8.1px; }
   .hero__stage { width: 100%; aspect-ratio: 100 / 72.7; }
   .hero__host--mary { left: -2cqw; top: 5cqw; width: 46cqw; }
-  .hero__host--josh { left: 52cqw; top: 9cqw; width: 50cqw; }
+  /* Josh is scaled up and raised so the stage's bottom edge cuts above the diagonal slash in his
+     cutout (it starts about 470px down the 653px image). His chin stays above DEPTH. */
+  .hero__host--josh { left: 45.5cqw; top: .5cqw; width: 70cqw; }
   .hero__kicker { top: 22.8cqw; font-size: 6.2cqw; }
   .hero__word { top: 28.5cqw; font-size: 29.3cqw; }
-  .intro__tagline span { white-space: normal; }
+  /* Two lines on phones: the phrases flow together and break before "Stanford GSB" */
+  .intro__tagline { font-size: clamp(13px, 3.7vw, 15px); letter-spacing: .06em; }
+  .intro__tagline span { display: inline; white-space: normal; }
   .btn { width: 100%; justify-content: center; }
   .listen { width: 100%; max-width: 360px; }
 }
@@ -363,4 +367,41 @@ a { color: inherit; }
   .popup { transition: none; }
   .wave i { animation: none; }
   .btn { transition: none; }
+}
+
+/* Launch episodes: compact cards beneath the featured upload. */
+.episode-archive { max-width: 1100px; margin: 24px auto 0; }
+.episode-archive > h2 { margin: 0 0 12px; font-weight: 400; }
+.episode-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.episode-card {
+  display: grid;
+  grid-template-columns: 144px minmax(0, 1fr);
+  overflow: hidden;
+  border: 1px solid var(--tint);
+  border-radius: 16px;
+  background: var(--cream);
+  text-decoration: none;
+}
+.episode-card:hover { border-color: var(--small-blue); }
+.episode-card > img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; align-self: center; }
+.episode-card__body { padding: 16px; }
+.episode-card h3 { margin: 6px 0; font-size: 22px; line-height: 1.15; font-weight: 800; }
+.episode-card p { margin: 0 0 10px; color: var(--body-muted); font-size: 15px; line-height: 1.4; }
+.episode-card__cta { font-size: 15px; font-weight: 700; }
+@media (max-width: 1000px) {
+  .episode-card { grid-template-columns: 112px minmax(0, 1fr); }
+}
+@media (max-width: 860px) {
+  .episode-grid { grid-template-columns: 1fr; }
+  .episode-card { grid-template-columns: 144px minmax(0, 1fr); }
+}
+@media (max-width: 420px) {
+  .episode-card { grid-template-columns: 104px minmax(0, 1fr); }
+  .episode-card__body { padding: 12px; }
+  .episode-card h3 { font-size: 20px; }
+}
+/* Phones: no thumbnails in More episodes, it's too cramped */
+@media (max-width: 640px) {
+  .episode-card { grid-template-columns: 1fr; }
+  .episode-card > img { display: none; }
 }

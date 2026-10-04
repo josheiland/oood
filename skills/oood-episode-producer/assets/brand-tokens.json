@@ -1,0 +1,42 @@
+{
+  "source": "Out of Our Depth Brand Kit.zip",
+  "version": "v2, September 2026",
+  "adopted": "2026-09-25",
+  "colors": {
+    "blue": "#38B6FF",
+    "small_blue": "#0E6FC0",
+    "cream": "#FBF1E5",
+    "foam": "#FDF8F2",
+    "navy": "#0B2A45",
+    "tint": "#A9DCFF"
+  },
+  "fonts": {
+    "display": {
+      "family": "Teachers",
+      "weight": 800,
+      "case": "uppercase"
+    },
+    "body": {
+      "family": "Teachers",
+      "weights": [
+        400,
+        600
+      ]
+    },
+    "labels": {
+      "family": "JetBrains Mono",
+      "case": "uppercase"
+    }
+  },
+  "waterline_fraction": [
+    0.55,
+    0.62
+  ],
+  "chapter_hold_seconds": 1.5,
+  "chapter_move_pixels": 24,
+  "lower_third_wipe_ms": 300,
+  "thumbnail_max_words": 3,
+  "thumbnail_min_cap_height_fraction": 0.12,
+  "thumbnail_tile_width_fraction": 0.11,
+  "vertical_safe_fraction": 0.14
+}

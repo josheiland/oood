@@ -1,0 +1,43 @@
+TITLE + THUMBNAIL TEXT OPTIONS
+Drafts for selection; none is a selected public title.
+The existing paired-host thumbnail design remains the visual default. Use real photography and confirm the public episode number before rendering a numbered upload thumbnail.
+
+1. RECOMMENDED
+Title: We Asked ChatGPT to Coach Us. Then We Had to Coach It.
+Thumbnail: COACHING OUR COACH
+Best match for the actual story: the output improves as you get clearer about what you want.
+
+2. PRACTICAL
+Title: How to Get ChatGPT to Make a Plan You Will Actually Use
+Thumbnail: MAKE IT USEFUL
+Clearest promise for a viewer looking for a skill they can try.
+
+3. EXPERIMENT
+Title: We Used ChatGPT to Plan a 100K Race. Here Is What Worked.
+Thumbnail: AI VS. REALITY
+Makes the real-life project the entry point, while leaving room for failures.
+
+4. HONEST FAILURE
+Title: ChatGPT Made Us a Plan. Making It Useful Was the Hard Part.
+Thumbnail: LOOKS GOOD. BUT...
+Strong expectation gap, especially with the broken-calendar example.
+
+5. RELATIONSHIP
+Title: One AI Coach. Two Very Different Goals.
+Thumbnail: SAME RACE. DIFFERENT.
+Most host-led direction, grounded in the competing goals.
+
+6. WORKFLOW
+Title: From Brain Dump to Real Plan: Building With ChatGPT
+Thumbnail: BRAIN DUMP UPGRADE
+Highlights context, priorities and the finished artifact.
+
+7. TIME AND FOCUS
+Title: The ChatGPT Rabbit Hole: How We Finally Got Something Useful
+Thumbnail: GOOD ENOUGH WINS
+Honest about the long iteration, with a concrete ending.
+
+8. SPECIFIC EPISODE
+Title: Planning El Cruce With ChatGPT: The Prompts, Mistakes and Payoff
+Thumbnail: PLAN. CHECK. REPEAT.
+Best for people already interested in El Cruce or searching for this exact experiment.

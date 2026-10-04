@@ -1,0 +1,15 @@
+00:00 400 agents and the opening
+01:44 The parts and the loop
+04:27 Workflow or agent?
+08:22 Scope and reliability
+09:25 Big Egg and subagents
+14:33 Project Vend and hallucinations
+18:21 Trust and guardrails
+19:10 Personal agents: a five-minute audition
+21:57 Instinct: useful proactive work
+24:17 Who pays for a free assistant?
+26:32 Dots, fit and the bike example
+29:25 OpenClaw and the interface
+30:23 Pay for outcomes
+32:54 What an agent actually is
+35:30 The important egg question

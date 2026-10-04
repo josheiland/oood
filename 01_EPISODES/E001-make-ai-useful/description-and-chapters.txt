@@ -1,0 +1,45 @@
+Ever asked AI something and gotten an answer so generic it could've been for anyone? Same. These are the three features that fixed that for us: projects, connectors, and skills. We use them every day and tell our friends to set them up first.
+
+We explain all three with one very committed intern metaphor, then get into what we've actually built: a grant finder that posts straight into our nonprofit's Slack, a newsletter that reads Josh's 20 other newsletters so he doesn't have to, and the brand skill Josh stole from Mary. Also, Josh cannot go to bed with unused AI credits.
+
+What's the most repetitive thing you do every week? Drop it in the comments or email hi@outofourdepth.com and we might try turning it into a skill on the show.
+
+Chapters
+00:00 Intro: why these three features
+01:43 Projects: give your AI a desk
+04:56 Mary's fitness project
+05:59 Connectors, Granola and recording consent
+08:12 Skills: reusable workflows
+08:45 Josh's bank account skill
+09:56 Teaching a skill by showing the workflow
+10:49 Projects vs. skills (hello, Dyslexify)
+11:56 Claude Design and Wispr Flow
+13:40 Leveling up your intern
+14:33 The brand skill Josh stole from Mary
+15:42 Humanizer: less AI slop
+16:29 The skills behind this podcast
+17:23 Josh vs. unused credits
+19:01 Why AI tells make people tune out
+19:49 Composio: connecting multiple accounts
+21:43 Recap: projects, connectors and skills
+22:22 One newsletter instead of 20
+23:37 A grant finder for Run Your City
+26:07 Rebuilding our whole website
+27:52 Why human effort still matters
+29:53 Where AI missed the mark
+32:09 What's next: agents
+
+Out of Our Depth: https://outofourdepth.com
+Run Your City: https://www.runyourcity.org
+AI@GSB: https://www.gsb.stanford.edu/experience/learning/applied-ai
+
+Tools we mention
+Composio: https://composio.dev
+Granola: https://www.granola.ai
+Wispr Flow: https://wisprflow.ai
+
+A note on recording and access: get everyone's OK before recording a meeting with a tool like Granola. California generally requires all parties' consent to record a confidential conversation: https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=632
+
+Composio is a third-party service, so check the permissions you're granting when you connect your accounts: https://docs.composio.dev/docs/authentication/controlling-scopes
+
+#AI #Podcast #OutOfOurDepth

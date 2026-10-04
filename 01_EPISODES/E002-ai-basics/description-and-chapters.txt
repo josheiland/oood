@@ -1,0 +1,41 @@
+Claude, ChatGPT, Opus, Astra, tokens, open weights... if you've ever nodded along to an AI conversation while secretly having no clue what anyone meant, this one's for you. (Us too. Like, yesterday.)
+
+This is our who's who of AI: who actually builds the models, the difference between a model and the app you're typing into (the model is the engine, the app is the car, and tokens are the gas; stay with us). Then it gets a little spicy. Mary thinks the world's best mathematicians are about to matter less, Josh disagrees, and we rank Demis, Dario, Sam, and Elon from most to least loved.
+
+What AI word do you still secretly not understand? Drop it in the comments or email hi@outofourdepth.com and we'll tackle it. No stupid questions (we asked most of them in this episode).
+
+Chapters
+00:00 Data centers on the moon? + AI intro
+01:09 Who actually builds the models
+02:20 Claude vs. ChatGPT: what we actually use
+05:12 Gemini, the Dodgers of AI
+06:20 Open vs. closed: how models learn
+08:49 The car analogy: models vs. apps
+12:28 Why are the model names so bad?
+13:26 Tokens are gas
+14:35 Are mathematicians out of a job?
+18:33 Jobs vs. tasks
+20:16 Who gets left behind
+21:36 Mary's coding midterm (29 or 92?)
+24:18 What's overhyped
+24:59 What we're betting on: being human
+27:14 NVIDIA and the wider AI market
+28:22 Why it's so easy to switch
+29:44 How do open models make money?
+33:05 On-prem vs. the cloud (and the moon)
+35:05 Dario and the Anthropic origin story
+37:40 When AI breaks the rules
+42:07 Sam, Zuck, and Elon
+45:56 Ranking the AI leaders
+49:21 Mary's last three AI chats and goodbye
+
+Out of Our Depth: https://www.outofourdepth.com
+Run Your City: https://www.runyourcity.org
+AI@GSB: https://www.gsb.stanford.edu/experience/learning/applied-ai
+
+Research notes:
+On AI and math: OpenAI published ten results in mathematics and theoretical computer science obtained by an internal model. These are the company's reported findings; our discussion about what they mean for mathematicians is opinion. Read the report: https://cdn.openai.com/pdf/ten-proofs-oai.pdf
+More on Astra and the math results: https://the-decoder.com/openai-announces-its-next-major-model-astra-by-dropping-ten-previously-unsolved-math-solutions
+On Demis: Google announced that Demis Hassabis handed over day-to-day Google DeepMind operations to become its chair and Alphabet's chief scientist: https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum
+
+#AI #Podcast #OutOfOurDepth

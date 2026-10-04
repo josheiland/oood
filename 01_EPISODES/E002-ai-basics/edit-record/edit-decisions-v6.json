@@ -1,0 +1,154 @@
+{
+  "title": "Out of Our Depth | Episode 1: AI basics and what changes for us",
+  "status": "v6 host-review proposal, four brief brand clarification pop-ups",
+  "source": "/Users/je/Movies/Episode 1 Raw.mp4",
+  "source_sha256": "9f58d3a39c91ce4499fd3215355ddc9873051e6e32a5b26a6c73ce05caf93107",
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "audio_stream": 1,
+  "transition": {
+    "video": "4-frame cross-dissolve",
+    "audio": "4-frame crossfade",
+    "frames": 4
+  },
+  "cuts": [
+    {
+      "in_frame": 0,
+      "out_frame": 450,
+      "reason": "Requested hand-cover opening"
+    },
+    {
+      "in_frame": 12181,
+      "out_frame": 14156,
+      "reason": "Misleading description of model weights and product modes"
+    },
+    {
+      "in_frame": 56982,
+      "out_frame": 57162,
+      "reason": "Requested Mary lost-train-of-thought passage"
+    },
+    {
+      "in_frame": 59469,
+      "out_frame": 60145,
+      "reason": "Open source without open weights claim is wrong under OSI definition"
+    },
+    {
+      "in_frame": 71075,
+      "out_frame": 71603,
+      "reason": "Requested Demis/Dario name slip and restart"
+    },
+    {
+      "in_frame": 81184,
+      "out_frame": 81459,
+      "reason": "Requested Josh lost-train-of-thought passage"
+    },
+    {
+      "in_frame": 100251,
+      "out_frame": 100417,
+      "reason": "Requested hand-cover ending"
+    }
+  ],
+  "segments": [
+    {
+      "id": "01",
+      "in_frame": 450,
+      "out_frame": 12181,
+      "raw_frames": 11731,
+      "output_start_frame_before_dissolves": 0,
+      "timeline_frame": 0
+    },
+    {
+      "id": "02",
+      "in_frame": 14156,
+      "out_frame": 56982,
+      "raw_frames": 42826,
+      "output_start_frame_before_dissolves": 11731,
+      "timeline_frame": 11727
+    },
+    {
+      "id": "03",
+      "in_frame": 57162,
+      "out_frame": 59469,
+      "raw_frames": 2307,
+      "output_start_frame_before_dissolves": 54557,
+      "timeline_frame": 54549
+    },
+    {
+      "id": "04",
+      "in_frame": 60145,
+      "out_frame": 71075,
+      "raw_frames": 10930,
+      "output_start_frame_before_dissolves": 56864,
+      "timeline_frame": 56852
+    },
+    {
+      "id": "05",
+      "in_frame": 71603,
+      "out_frame": 81184,
+      "raw_frames": 9581,
+      "output_start_frame_before_dissolves": 67794,
+      "timeline_frame": 67778
+    },
+    {
+      "id": "06",
+      "in_frame": 81459,
+      "out_frame": 100251,
+      "raw_frames": 18792,
+      "output_start_frame_before_dissolves": 77375,
+      "timeline_frame": 77355
+    }
+  ],
+  "total_frames": 96147,
+  "duration_seconds": 3204.9,
+  "graphics": [
+    {
+      "id": "model-access",
+      "source_start_frame": 4137,
+      "start_frame": 3687,
+      "end_frame": 3852,
+      "asset": "graphics/v6-model-access-cropped.png",
+      "copy": "The flagship models here are closed. OpenAI also offers open-weight gpt-oss.",
+      "source_url": "https://help.openai.com/en/articles/11870455-openai-open-weight-models",
+      "purpose": "brief factual clarification",
+      "overlay_x": 96,
+      "overlay_y": 615
+    },
+    {
+      "id": "gpu-chip",
+      "source_start_frame": 52276,
+      "start_frame": 49847,
+      "end_frame": 49967,
+      "asset": "graphics/v6-gpu-chip-cropped.png",
+      "copy": "A GPU is a chip.",
+      "source_url": "https://www.nvidia.com/en-us/geforce/news/introduction-to-pc-components/",
+      "purpose": "brief factual clarification",
+      "overlay_x": 96,
+      "overlay_y": 615
+    },
+    {
+      "id": "gpu-name",
+      "source_start_frame": 53581,
+      "start_frame": 51152,
+      "end_frame": 51257,
+      "asset": "graphics/v6-gpu-name-cropped.png",
+      "copy": "*Graphics processing unit",
+      "source_url": "https://docs.nvidia.com/cuda/cuda-programming-guide/01-introduction/introduction.html",
+      "purpose": "brief factual clarification",
+      "overlay_x": 96,
+      "overlay_y": 615
+    },
+    {
+      "id": "openai-structure",
+      "source_start_frame": 83952,
+      "start_frame": 79848,
+      "end_frame": 80013,
+      "asset": "graphics/v6-openai-structure-cropped.png",
+      "copy": "Its nonprofit still controls its for-profit arm.",
+      "source_url": "https://openai.com/our-structure/",
+      "purpose": "brief factual clarification",
+      "overlay_x": 96,
+      "overlay_y": 615
+    }
+  ]
+}

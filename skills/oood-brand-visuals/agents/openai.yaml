@@ -1,0 +1,4 @@
+interface:
+  display_name: "OOOD Brand Visuals"
+  short_description: "On-brand popups, cards, thumbnails, and social assets"
+  default_prompt: "Use $oood-brand-visuals for this Out of Our Depth task."

@@ -1,0 +1,6 @@
+[0:v]settb=1/30000,setpts=N*1000,format=yuv420p,setsar=1[base];
+[1:v]trim=end_frame=165,settb=1/30000,setpts=(N+4083)*1000,format=yuv420p,setsar=1[patch1];
+[base][patch1]overlay=eof_action=pass:repeatlast=0:shortest=0:format=yuv420:enable='gte(t,136.099999000)*lt(t,141.599999000)'[repaired1];
+[2:v]trim=end_frame=165,settb=1/30000,setpts=(N+77750)*1000,format=yuv420p,setsar=1[patch2];
+[repaired1][patch2]overlay=eof_action=pass:repeatlast=0:shortest=0:format=yuv420:enable='gte(t,2591.666665667)*lt(t,2597.166665667)'[repaired2];
+[repaired2]setparams=range=limited:color_primaries=bt709:color_trc=bt709:colorspace=bt709[vout]

@@ -1,0 +1,38 @@
+{
+  "fps": 30,
+  "total_frames": 94372,
+  "patches": [
+    {
+      "id": "model-access",
+      "final_start_frame": 4083,
+      "final_end_frame": 4248,
+      "raw_start_frame": 4137,
+      "raw_end_frame": 4302,
+      "final_seconds": [
+        136.1,
+        141.6
+      ],
+      "raw_seconds": [
+        137.9,
+        143.4
+      ]
+    },
+    {
+      "id": "openai-structure",
+      "final_start_frame": 77750,
+      "final_end_frame": 77915,
+      "raw_start_frame": 83952,
+      "raw_end_frame": 84117,
+      "final_seconds": [
+        2591.6666666666665,
+        2597.1666666666665
+      ],
+      "raw_seconds": [
+        2798.4,
+        2803.9
+      ]
+    }
+  ],
+  "audio": "copy from checksum-verified published final",
+  "timing_change": 0
+}
