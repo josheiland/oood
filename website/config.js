@@ -22,7 +22,13 @@ window.OOOD = {
   // Keep these as a fallback when YouTube is unavailable.
   episodes: [
     {
-      id: 'rxethT04zMY', number: '003', title: 'What the Heck Is an AI Agent?',
+      id: 'Fby7CJC9i-Q', number: '004', title: 'We Asked ChatGPT to Coach Our Ultramarathon. Then We Had to Coach It.',
+      published: '2026-10-06T14:54:38+00:00',
+      url: 'https://www.youtube.com/watch?v=Fby7CJC9i-Q',
+      thumbnail: 'https://i.ytimg.com/vi/Fby7CJC9i-Q/maxresdefault.jpg'
+    },
+    {
+      id: 'rxethT04zMY', number: '003', title: 'What the Heck is an AI Agent?',
       published: '2026-10-04T19:13:36+00:00',
       url: 'https://www.youtube.com/watch?v=rxethT04zMY',
       thumbnail: 'https://i.ytimg.com/vi/rxethT04zMY/maxresdefault.jpg'
@@ -35,14 +41,14 @@ window.OOOD = {
       thumbnail: 'https://i.ytimg.com/vi/cp4P_2t5rRQ/maxresdefault.jpg'
     },
     {
-      id: 'd-ykZl4WHjo', number: '001', title: "Projects, Connectors & Skills… Take Your AI From Fresh Intern to Full-Time Hire",
+      id: 'd-ykZl4WHjo', number: '001', title: "Projects, Connectors & Skills… Take Your AI from Fresh Intern to Full-Time Hire",
       blurb: 'We try projects, connectors and skills to give AI context and put it to work.',
       published: '2026-09-30T23:00:52+00:00',
       url: 'https://www.youtube.com/watch?v=d-ykZl4WHjo',
       thumbnail: 'https://i.ytimg.com/vi/d-ykZl4WHjo/maxresdefault.jpg'
     },
     {
-      id: 'y0NH_zvAdEo', number: '000', title: "We Can’t Keep Up With AI Either (So We Started a Podcast!)",
+      id: 'y0NH_zvAdEo', number: '000', title: "We Can’t Keep Up with AI Either (So We Started a Podcast!)",
       blurb: 'Meet Josh and Mary, and why we decided to learn AI out loud together.',
       published: '2026-09-30T21:31:01+00:00',
       url: 'https://www.youtube.com/watch?v=y0NH_zvAdEo',

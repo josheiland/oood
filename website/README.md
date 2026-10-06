@@ -42,6 +42,12 @@ The top bar shows Instagram, X, LinkedIn and email. Josh trimmed it to Instagram
 
 **Background (2026-10-04):** the page is tan (`--cream`) throughout, per Josh. The foam lower band under the hero is gone, and so is the cream/foam split in the share image (`images/og-v4.png`, built from `03_ASSETS/share-image/`).
 
+## Episode 004 (2026-10-06)
+
+- **Episode 004** "We Asked ChatGPT to Coach Our Ultramarathon. Then We Had to Coach It." (`Fby7CJC9i-Q`, public 10/6 7:54 a.m. PT) is the new lead in `config.js` and the no-JS cards. 003 moves into the grid.
+- Titles for 000, 001 and 003 now match YouTube's current casing ("with", "from", "is").
+- **002 is unchanged on purpose.** Its YouTube title is in a Test & Compare run, so update it here once the test picks a winner.
+
 ## Episode 003, all episodes, phone hero (2026-10-04, later)
 
 - **Episode 003** "What the Heck Is an AI Agent?" (`rxethT04zMY`, public 10/4 12:13 p.m. PT) is the new lead in `config.js` and the no-JS cards.
