@@ -55,7 +55,7 @@ window.OOOD = {
       blurb: 'Meet Josh and Mary, and why we decided to learn AI out loud together.',
       published: '2026-09-30T21:31:01+00:00',
       url: 'https://www.youtube.com/watch?v=y0NH_zvAdEo',
-      thumbnail: 'https://i.ytimg.com/vi/y0NH_zvAdEo/hqdefault.jpg'
+      thumbnail: 'https://i.ytimg.com/vi/y0NH_zvAdEo/maxresdefault.jpg'
     }
     // episodes:end
   ],
