@@ -17,10 +17,13 @@ window.OOOD = {
     { label: 'LinkedIn', icon: 'linkedin', url: 'https://www.linkedin.com/company/outofourdepth' },
   ],
 
-  // Verified public uploads, newest first. Numbering follows the public order (renumbered 2026-10-03:
-  // the AI-basics episode was re-uploaded without pop-ups, so it is now 002).
-  // Keep these as a fallback when YouTube is unavailable.
+  // Saved public uploads, newest first. Episodes are numbered in public order from 000.
+  // You don't need to edit this list: a GitHub job (scripts/sync-site-episodes.js) adds new
+  // long-form uploads, updates renamed titles and drops deleted videos every few hours, and the
+  // homepage also picks up anything newer straight from YouTube. Manual edits between the markers
+  // get overwritten, except extra fields such as `blurb`, which are kept.
   episodes: [
+    // episodes:start
     {
       id: 'Fby7CJC9i-Q', number: '004', title: 'We Asked ChatGPT to Coach Our Ultramarathon. Then We Had to Coach It.',
       published: '2026-10-06T14:54:38+00:00',
@@ -34,27 +37,32 @@ window.OOOD = {
       thumbnail: 'https://i.ytimg.com/vi/rxethT04zMY/maxresdefault.jpg'
     },
     {
-      id: 'cp4P_2t5rRQ', number: '002', title: "Who's Who in AI (Explained With a Toyota Prius)",
+      id: 'cp4P_2t5rRQ', number: '002', title: 'AI Landscape... But Not the Boring Kind',
       blurb: 'We untangle AI companies, models and apps, with a little help from a Toyota Prius.',
       published: '2026-10-03T19:37:28+00:00',
       url: 'https://www.youtube.com/watch?v=cp4P_2t5rRQ',
       thumbnail: 'https://i.ytimg.com/vi/cp4P_2t5rRQ/maxresdefault.jpg'
     },
     {
-      id: 'd-ykZl4WHjo', number: '001', title: "Projects, Connectors & Skills… Take Your AI from Fresh Intern to Full-Time Hire",
+      id: 'd-ykZl4WHjo', number: '001', title: 'Projects, Connectors & Skills… Take Your AI from Fresh Intern to Full-Time Hire',
       blurb: 'We try projects, connectors and skills to give AI context and put it to work.',
       published: '2026-09-30T23:00:52+00:00',
       url: 'https://www.youtube.com/watch?v=d-ykZl4WHjo',
       thumbnail: 'https://i.ytimg.com/vi/d-ykZl4WHjo/maxresdefault.jpg'
     },
     {
-      id: 'y0NH_zvAdEo', number: '000', title: "We Can’t Keep Up with AI Either (So We Started a Podcast!)",
+      id: 'y0NH_zvAdEo', number: '000', title: 'We Can’t Keep Up with AI Either (So We Started a Podcast!)',
       blurb: 'Meet Josh and Mary, and why we decided to learn AI out loud together.',
       published: '2026-09-30T21:31:01+00:00',
       url: 'https://www.youtube.com/watch?v=y0NH_zvAdEo',
       thumbnail: 'https://i.ytimg.com/vi/y0NH_zvAdEo/maxresdefault.jpg'
     }
+    // episodes:end
   ],
+
+  // YouTube video IDs to leave off the site, e.g. a trailer or clip uploaded as a long-form video.
+  // Hidden videos also don't count toward episode numbers.
+  hiddenVideos: [],
 
   // The latest-episode card fills itself from YouTube via /api/latest.
   // To pin a specific episode instead, fill this in, e.g.

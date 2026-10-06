@@ -111,28 +111,64 @@
     if (window.fitHero) window.fitHero();
   }
 
-  function withLatest(ep) {
-    var list = (cfg.episodes || []).slice();
-    if (!ep || !ep.url || !ep.title) return list;
-    var known = list.find(function (item) { return item.url === ep.url; });
-    var merged = known ? Object.assign({}, ep, known) : ep;
-    return [merged].concat(list.filter(function (item) { return item.url !== ep.url; }));
+  // Saved episodes (config.js, kept complete by the GitHub sync job) plus whatever YouTube lists right
+  // now. YouTube's title wins, so renames show up. Episodes are numbered in public order from 000.
+  function mergeEpisodes(saved, live) {
+    var hidden = {};
+    (cfg.hiddenVideos || []).forEach(function (id) { hidden[id] = true; });
+    var byId = {}, order = [];
+    function add(ep, fromYouTube) {
+      if (!ep || !ep.id || !ep.url || !ep.title || hidden[ep.id]) return;
+      var known = byId[ep.id];
+      if (!known) {
+        byId[ep.id] = Object.assign({}, ep);
+        order.push(ep.id);
+      } else if (fromYouTube) {
+        known.title = ep.title;
+        if (!known.published) known.published = ep.published;
+      }
+    }
+    (saved || []).forEach(function (ep) { add(ep, false); });
+    (live || []).forEach(function (ep) { add(ep, true); });
+    // Oldest first. An episode with no date (only from the Videos-tab fallback) is new, so it goes last.
+    var list = order.map(function (id, i) { return { ep: byId[id], i: i }; });
+    list.sort(function (a, b) {
+      var ta = Date.parse(a.ep.published), tb = Date.parse(b.ep.published);
+      ta = isNaN(ta) ? Infinity : ta;
+      tb = isNaN(tb) ? Infinity : tb;
+      if (ta !== tb) return ta - tb;
+      return a.ep.published || b.ep.published ? a.i - b.i : b.i - a.i;
+    });
+    return list.map(function (item, n) {
+      return Object.assign(item.ep, { number: ('00' + n).slice(-3) });
+    }).reverse();
   }
 
-  // Render the verified uploads immediately, then pick up anything newer from YouTube.
-  renderEpisodes(withLatest(cfg.pinnedEpisode));
+  function withPinned(list) {
+    var pin = cfg.pinnedEpisode;
+    if (!pin || !pin.url || !pin.title) return list;
+    var known = list.find(function (item) { return item.url === pin.url; });
+    var merged = known ? Object.assign({}, pin, known) : pin;
+    return [merged].concat(list.filter(function (item) { return item.url !== pin.url; }));
+  }
 
-  if (!cfg.pinnedEpisode && window.fetch) {
+  // Render the saved episodes immediately, then pick up new uploads and renames from YouTube.
+  var shown = mergeEpisodes(cfg.episodes, []);
+  renderEpisodes(withPinned(shown));
+
+  if (window.fetch) {
     fetch('/api/latest')
       .then(function (r) { return r.ok ? r.json() : null; })
       .then(function (data) {
-        if (!data || !data.video) return;
-        var newest = (cfg.episodes || [])[0];
-        if (newest && data.video.url === newest.url) return;
-        // An older cached response must not replace the verified latest upload.
-        if (newest && data.video.published &&
-            Date.parse(data.video.published) < Date.parse(newest.published)) return;
-        renderEpisodes(withLatest(data.video));
+        var live = data && (data.videos || (data.video ? [data.video] : []));
+        if (!live || !live.length) return;
+        var next = mergeEpisodes(cfg.episodes, live);
+        var same = next.length === shown.length && next.every(function (ep, i) {
+          return ep.id === shown[i].id && ep.title === shown[i].title;
+        });
+        if (same) return;
+        shown = next;
+        renderEpisodes(withPinned(shown));
       })
       .catch(function () {});
   }

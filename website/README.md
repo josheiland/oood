@@ -5,8 +5,8 @@ The Out of Our Depth website. Plain HTML, CSS and JS with one Vercel function. N
 ## Files
 
 - `index.html`, `styles.css`, `main.js`: the homepage
-- `config.js`: links you will change (Spotify URL, email, socials, verified episode fallbacks and an optional pinned episode)
-- `api/latest.js`: returns the newest long-form YouTube upload. The homepage card uses it, so a new episode shows up on the site on its own, within about 15 minutes of going public
+- `config.js`: links you will change (Spotify URL, email, socials, `hiddenVideos`, an optional pinned episode) plus the saved episode list, which the sync job maintains
+- `api/latest.js`: returns every public long-form YouTube upload (newest 15, no Shorts). The homepage merges it with the saved list, so a new episode, with its number and HD thumbnail, shows up on its own within about 15 minutes of going public
 - `images/`: host cutouts keyed from the kit's `banner-youtube.png`, icons and the share image (`og.png`, a crop of the same banner)
 
 Colors, type and layout follow `03_ASSETS/brand-guidelines.md`. Fonts load from Google Fonts (Teachers and JetBrains Mono, both OFL), so no font binaries live in Git.
@@ -42,11 +42,25 @@ The top bar shows Instagram, X, LinkedIn and email. Josh trimmed it to Instagram
 
 **Background (2026-10-04):** the page is tan (`--cream`) throughout, per Josh. The foam lower band under the hero is gone, and so is the cream/foam split in the share image (`images/og-v4.png`, built from `03_ASSETS/share-image/`).
 
+## Episodes update themselves (2026-10-06)
+
+Nobody needs to edit the episode list. Two pieces keep it current:
+
+1. **Live, within ~15 minutes:** `api/latest.js` reads the channel's long-form uploads feed (playlist `UULF...`, which leaves out Shorts). Backups are the channel feed and then the Videos tab. `main.js` merges that with the saved list: new uploads appear, YouTube's current title wins, and episodes are numbered 000, 001, ... in publish order.
+2. **Saved, every 6 hours:** the GitHub Action `.github/workflows/sync-site-episodes.yml` runs `scripts/sync-site-episodes.js`. It writes new uploads and renamed titles into `config.js` and the no-JS cards in `index.html` (between the `episodes:start` / `episodes:end` markers) and commits, which redeploys through Vercel. That keeps old episodes listed after they fall out of the feed's newest 15. It swaps in the HD thumbnail once YouTube has one. Run it by hand from the Actions tab, or locally with `node scripts/sync-site-episodes.js --dry-run`.
+
+Safety rules in the sync: a video is dropped only when YouTube's oEmbed says it doesn't exist (404). It never drops more than one per run; more than that fails the run, which GitHub emails about. If YouTube can't be reached, nothing changes.
+
+- **A long-form upload that isn't an episode** (trailer, clip): add its ID to `hiddenVideos` in `config.js`. It disappears and stops counting toward numbers.
+- **Re-uploads:** once the old video is deleted, the next sync drops it and renumbers, as on 10/3.
+- **Title tests:** while a YouTube title test runs, sources can disagree on the title. The site shows what the feed reports.
+- **Pull before you push:** the job commits to `main`, so run `git pull` before pushing local work.
+
 ## Episode 004 (2026-10-06)
 
 - **Episode 004** "We Asked ChatGPT to Coach Our Ultramarathon. Then We Had to Coach It." (`Fby7CJC9i-Q`, public 10/6 7:54 a.m. PT) is the new lead in `config.js` and the no-JS cards. 003 moves into the grid.
 - Titles for 000, 001 and 003 now match YouTube's current casing ("with", "from", "is").
-- **002 is unchanged on purpose.** Its YouTube title is in a Test & Compare run, so update it here once the test picks a winner.
+- 002 was left alone during its title test. The sync job now handles titles.
 
 ## Episode 003, all episodes, phone hero (2026-10-04, later)
 
