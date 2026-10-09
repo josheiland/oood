@@ -25,6 +25,12 @@ window.OOOD = {
   episodes: [
     // episodes:start
     {
+      id: '_d-hzc6Lt5c', number: '005', title: 'How to Make Your AI Look and Sound Like You',
+      published: '2026-10-09T22:11:34+00:00',
+      url: 'https://www.youtube.com/watch?v=_d-hzc6Lt5c',
+      thumbnail: 'https://i.ytimg.com/vi/_d-hzc6Lt5c/maxresdefault.jpg'
+    },
+    {
       id: 'Fby7CJC9i-Q', number: '004', title: 'We Asked ChatGPT to Coach Our Ultramarathon. Then We Had to Coach It.',
       published: '2026-10-06T14:54:38+00:00',
       url: 'https://www.youtube.com/watch?v=Fby7CJC9i-Q',
