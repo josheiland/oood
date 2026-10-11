@@ -7,6 +7,7 @@
 //   - drops a saved video only when YouTube says it no longer exists (oEmbed 404),
 //     and refuses to drop more than one per run
 //   - numbers episodes in public order from 000 (videos in `hiddenVideos` don't count)
+//   - shows `siteTitles` in place of YouTube's title on the no-JS cards (config.js keeps YouTube's)
 //   - rewrites the list between the episodes:start / episodes:end markers in website/config.js
 //     and the no-JS cards between the same markers in website/index.html
 //
@@ -107,7 +108,7 @@ function esc(s) {
   return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 }
 
-function htmlBlock(episodes) {
+function htmlBlock(episodes, siteTitles = {}) {
   const wave = '<span class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>';
   return episodes
     .map((ep, i) => {
@@ -117,7 +118,7 @@ function htmlBlock(episodes) {
         `        <a class="ep${latest ? ' ep--latest' : ''}" href="${esc(ep.url)}" target="_blank" rel="noopener">`,
         `          <span class="ep__thumb"><img src="${esc(ep.thumbnail)}" alt="" width="1280" height="720"${latest ? '' : ' loading="lazy"'}></span>`,
         `          <span class="ep__meta label">${meta}</span>`,
-        `          <h3 class="ep__title">${esc(ep.title)}</h3>`,
+        `          <h3 class="ep__title">${esc(siteTitles[ep.id] || ep.title)}</h3>`,
         `        </a>`,
       ].join('\n');
     })
@@ -195,7 +196,7 @@ async function main() {
   if (!episodes.length) fail('the merged list is empty');
 
   const nextConfig = replaceBetween(configSource, '// episodes:start', '// episodes:end', configBlock(episodes), 'config.js');
-  const nextHtml = replaceBetween(htmlSource, '<!-- episodes:start', '<!-- episodes:end', htmlBlock(episodes), 'index.html');
+  const nextHtml = replaceBetween(htmlSource, '<!-- episodes:start', '<!-- episodes:end', htmlBlock(episodes, cfg.siteTitles || {}), 'index.html');
 
   // The rewritten config must load and say exactly what we meant.
   const check = readConfig(nextConfig).episodes || [];

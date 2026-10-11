@@ -9,6 +9,10 @@
     if (cfg.youtube) a.href = cfg.youtube.replace(/\/$/, '') + '/videos';
   });
 
+  document.querySelectorAll('[data-link="apple"]').forEach(function (a) {
+    if (cfg.applePodcasts) a.href = cfg.applePodcasts;
+  });
+
   var spotify = document.querySelector('[data-link="spotify"]');
   if (spotify) {
     if (cfg.spotify) {
@@ -103,7 +107,7 @@
 
       var title = document.createElement('h3');
       title.className = 'ep__title';
-      title.textContent = ep.title;
+      title.textContent = (cfg.siteTitles || {})[ep.id] || ep.title;
 
       card.append(thumb, meta, title);
       grid.appendChild(card);
@@ -173,12 +177,53 @@
       .catch(function () {});
   }
 
-  // Size the hero so everything through the first row of episodes fits on one screen.
-  // Older episodes wrap onto later rows and scroll; the hero gets what is left.
+  // Newsletter signup: posts to /api/subscribe, which saves the address. Without JS the form
+  // posts normally and the API redirects back to /?subscribed=1#notes.
+  var notes = document.querySelector('[data-notes]');
+  if (notes) {
+    var status = notes.querySelector('[data-notes-status]');
+    var submit = notes.querySelector('button');
+    var say = function (msg, ok) {
+      status.textContent = msg;
+      status.className = 'notes__status' + (ok ? ' notes__status--ok' : ' notes__status--err');
+    };
+    if (/[?&]subscribed=1/.test(location.search)) say("You're on the list. Talk soon.", true);
+    notes.addEventListener('submit', function (e) {
+      if (!window.fetch) return;
+      e.preventDefault();
+      var email = notes.email.value.trim();
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        say('That email doesn\u2019t look right. Mind checking it?', false);
+        notes.email.focus();
+        return;
+      }
+      submit.disabled = true;
+      fetch('/api/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({ email: email, website: notes.website.value })
+      })
+        .then(function (r) { return r.json().catch(function () { return {}; }).then(function (d) { return { ok: r.ok, d: d }; }); })
+        .then(function (res) {
+          if (res.ok) {
+            say("You're on the list. Talk soon.", true);
+            notes.reset();
+          } else {
+            say(res.d.error || 'Something broke on our end. Try again in a minute?', false);
+          }
+        })
+        .catch(function () { say('Something broke on our end. Try again in a minute?', false); })
+        .then(function () { submit.disabled = false; });
+    });
+  }
+
+  // Size the hero so the tagline, the buttons and the top of the newest episode fit on one screen.
+  // The newest episode now runs full width (Josh 2026-10-11), so the rest of it and the older
+  // episodes scroll; the hero gets what is left.
   var hero = document.querySelector('.hero');
   var root = document.documentElement;
   var MIN_HERO = 180;
-  var ROW_GAP = 44; // breathing room under the first row
+  var PEEK = 160; // how much of the newest episode's thumbnail shows before scrolling
 
   function fitHero() {
     if (window.innerWidth <= 640) {
@@ -186,16 +231,11 @@
       return;
     }
     var heroBottom = hero.offsetTop + hero.offsetHeight;
-    // Everything after the hero, down to the bottom of the first row of episode cards
-    var cards = grid ? grid.children : [];
     var below = document.body.scrollHeight - heroBottom;
-    if (cards.length) {
-      var firstTop = cards[0].offsetTop, rowBottom = 0;
-      for (var i = 0; i < cards.length && cards[i].offsetTop === firstTop; i++) {
-        var r = cards[i].getBoundingClientRect();
-        rowBottom = Math.max(rowBottom, r.bottom + window.scrollY);
-      }
-      below = Math.min(below, rowBottom - heroBottom + ROW_GAP);
+    var first = grid && grid.children[0];
+    if (first) {
+      var top = first.getBoundingClientRect().top + window.scrollY;
+      below = Math.min(below, top + PEEK - heroBottom);
     }
     var above = hero.offsetTop; // the logo bar, when it sits above the hero
     var available = window.innerHeight - below - above;

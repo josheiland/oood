@@ -20,6 +20,11 @@
       "permanent": false
     },
     {
+      "source": "/apple",
+      "destination": "https://podcasts.apple.com/us/podcast/out-of-our-depth/id6819080935",
+      "permanent": false
+    },
+    {
       "source": "/youtube",
       "destination": "https://www.youtube.com/@OutOfOurDepthPod",
       "permanent": false

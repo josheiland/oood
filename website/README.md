@@ -42,6 +42,24 @@ The top bar shows Instagram, X, LinkedIn and email. Josh trimmed it to Instagram
 
 **Background (2026-10-04):** the page is tan (`--cream`) throughout, per Josh. The foam lower band under the hero is gone, and so is the cream/foam split in the share image (`images/og-v4.png`, built from `03_ASSETS/share-image/`).
 
+## Newsletter signup, tan buttons, site-only titles (2026-10-11, later)
+
+- **Signup at the bottom of the page**, from Mary's mockup, built as a navy band (option D of five Josh and Mary compared). Heading "We take notes. Want a copy?" in cream Teachers 800, held to one line at every width; subline "No more than one cute little email each month." No handwriting font: Mary didn't like the mockup's, and they chose the site's existing fonts.
+  - The form posts to `api/subscribe.js`, which saves the address to Upstash Redis: Vercel Marketplace resource **`oood-newsletter`** (free plan), connected to the `oood-website` project, which sets the `KV_*` env vars. Addresses go in the hash `newsletter:subscribers`, keyed by the lowercased address, with the time and source. A second signup keeps the first record.
+  - Bot guard: a hidden `website` field (filled in = pretend success, save nothing) and 30 signups per IP per hour. It works without JS too: a plain form post redirects back to `/?subscribed=1#notes`.
+  - **Export the list:** `vercel env pull .env.newsletter --cwd website` once (gitignored), then `node scripts/export-subscribers.js > subscribers.csv`. The export uses the read-only token.
+  - Nothing sends email yet. This only collects addresses.
+- **Listen buttons** (YouTube, Spotify, Apple Podcasts) are all tan with a navy outline and turn blue on hover or keyboard focus, per Josh.
+- **`siteTitles` in `config.js`** shows a different title on the site than on YouTube, by video ID. The sync job keeps YouTube's title in the saved list and uses `siteTitles` on the no-JS cards. First use: 004 shows as "Build With Us: Turn ChatGPT Into Your Coach".
+
+## Apple Podcasts, tagline, full-width latest episode, Mary v3 (2026-10-11)
+
+- **Apple Podcasts button** next to YouTube and Spotify, outlined like Spotify. URL is `applePodcasts` in `config.js`; short link `outofourdepth.com/apple`. On phones YouTube gets its own row and Spotify and Apple Podcasts share the next.
+- **Tagline** is centered above the buttons at every width, in sentence case (no more all caps), set in **Poppins 500**, per Josh. Poppins applies to those two lines only; everything else stays Teachers and JetBrains Mono. Phones break it into three lines: "Underprepared newlyweds at / Stanford Business School, / learning AI out loud".
+- **Newest episode runs the full content width** on every screen size; older episodes stay three across under it (text rows on phones, as before). `main.js` now sizes the laptop hero so the tagline, buttons and the top ~160px of the newest episode fit on one screen.
+- **Mary's cutout is `images/mary-v3.webp`** (610 × 1036, 2× the old size, same framing). v2 still had her far eye, nose tip and cheek keyed out along the left edge. v3 was cut fresh from the full-resolution original photo Mary texted Josh on 10/11 (macOS Vision subject lifting, local), aligned to v2's framing, colour-matched to the banner grade so she still matches `josh.webp`, and defringed. The bottom of the cutout still has rough edges, but the hero fade covers that zone at every width.
+- **Share image is `og-v5.png`**, v4's layout rendered with `mary-v3.webp`. LinkedIn caches previews about a week; re-run linkedin.com/post-inspector to refresh.
+
 ## Episodes update themselves (2026-10-06)
 
 Nobody needs to edit the episode list. Two pieces keep it current:

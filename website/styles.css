@@ -10,6 +10,7 @@
   --body-muted: #3C5A73;
   --display: 'Teachers', system-ui, sans-serif;
   --mono: 'JetBrains Mono', ui-monospace, monospace;
+  --tagline: 'Poppins', system-ui, sans-serif; /* the two tagline lines only (Josh 2026-10-11) */
   /* One content column: the wordmark, tagline, buttons and episode grid all share these edges */
   --container: 1120px;
   --gutter: clamp(20px, 5vw, 48px);
@@ -175,7 +176,7 @@ a { color: inherit; }
   line-height: .85;
 }
 
-/* Intro: tagline and one line of promise, buttons beside them */
+/* Intro: the tagline centered above the buttons at every width (Josh 2026-10-11) */
 .intro {
   display: grid;
   justify-items: center;
@@ -186,11 +187,10 @@ a { color: inherit; }
 }
 .intro__tagline {
   margin: 0;
-  font-weight: 700;
-  font-size: clamp(15px, 1.6vw, 20px);
-  letter-spacing: .08em;
-  line-height: 1.4;
-  text-transform: uppercase;
+  font-family: var(--tagline);
+  font-weight: 500;
+  font-size: clamp(16px, 1.6vw, 20px);
+  line-height: 1.45;
   color: var(--navy);
 }
 /* Always exactly two lines: one per phrase */
@@ -213,10 +213,10 @@ a { color: inherit; }
 }
 .btn:hover { transform: translateY(-2px); }
 .btn__icon { width: 22px; height: 22px; flex: none; }
-.btn--youtube { background: var(--blue); color: var(--navy); }
-.btn--youtube .btn__icon { color: var(--navy); }
-.btn--spotify { background: transparent; color: var(--navy); border-color: var(--navy); }
-.btn--spotify .btn__icon { color: var(--navy); }
+/* All three listen buttons are tan with a navy outline, and turn blue on hover (Josh 2026-10-11) */
+.btn--youtube, .btn--spotify, .btn--apple { background: var(--cream); color: var(--navy); border-color: var(--navy); }
+.btn--youtube:hover, .btn--spotify:hover, .btn--apple:hover, .btn:focus-visible { background: var(--blue); }
+.btn .btn__icon { color: var(--navy); }
 .btn--soon { opacity: .55; border-style: dashed; cursor: default; }
 .btn--soon:hover { transform: none; }
 
@@ -270,6 +270,71 @@ a { color: inherit; }
   transition: color .15s ease;
 }
 .ep:hover .ep__title { color: var(--small-blue); }
+/* The newest episode runs the full width; older ones stay three across under it (Josh 2026-10-11) */
+.ep--latest { grid-column: 1 / -1; }
+.ep--latest .ep__thumb { border-radius: 18px; }
+.ep--latest .ep__title { font-size: clamp(22px, 2.2vw, 28px); }
+
+/* Newsletter signup: a navy band closes the page (option D, Josh and Mary 2026-10-11) */
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+.notes { background: var(--navy); }
+.notes__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 24px 48px;
+  padding-top: 52px;
+  padding-bottom: 56px;
+}
+/* The heading stays on one line: it is about 13.6x its font size wide, so 7.2cqw fills the column */
+.notes__copy { container-type: inline-size; }
+.notes__title {
+  margin: 0;
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: min(40px, 7.2cqw);
+  letter-spacing: -.02em;
+  line-height: 1.05;
+  white-space: nowrap;
+  color: var(--cream);
+}
+.notes__sub { margin: 10px 0 0; font-size: 18px; line-height: 1.45; color: var(--tint); }
+.notes__row { display: flex; gap: 12px; }
+.notes__input {
+  flex: 1 1 auto;
+  min-width: 0;
+  height: 54px;
+  padding: 0 18px;
+  border: 1.5px solid var(--cream);
+  border-radius: 14px;
+  background: var(--cream);
+  color: var(--navy);
+  font: 400 17px/1 var(--display);
+}
+.notes__input::placeholder { color: #6E7C89; }
+.notes__input:focus { outline: 3px solid var(--blue); outline-offset: 0; }
+.notes__btn {
+  flex: none;
+  height: 54px;
+  padding: 0 24px;
+  border: 0;
+  border-radius: 14px;
+  background: var(--blue);
+  color: var(--navy);
+  font: 700 17px/1 var(--display);
+  cursor: pointer;
+  transition: transform .15s ease;
+}
+.notes__btn:hover { transform: translateY(-2px); }
+.notes__btn:focus-visible { outline-color: var(--cream); }
+.notes__btn:disabled { opacity: .6; cursor: progress; transform: none; }
+.notes__hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.notes__status { margin: 10px 0 0; min-height: 1.5em; font-size: 15px; color: var(--tint); }
+.notes__status--ok { color: var(--cream); font-weight: 600; }
+.notes__status--err { color: #FFB4AB; }
 
 /* Waveform bars mark the newest episode */
 .wave { display: inline-flex; align-items: center; gap: 2px; height: 12px; }
@@ -280,18 +345,6 @@ a { color: inherit; }
 .wave i:nth-child(4) { height: 65%; animation-delay: -.6s; }
 .wave i:nth-child(5) { height: 35%; background: var(--tint); animation-delay: -.8s; }
 @keyframes wave { 50% { transform: scaleY(.45); } }
-
-/* Laptop and up: tagline and buttons share one row so the page fits on one screen */
-@media (min-width: 901px) {
-  .intro {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 32px;
-    text-align: left;
-  }
-  .intro__tagline { font-size: 17px; }
-}
 
 /* Short laptop screens: tighten the spacing so the page still fits without scrolling */
 @media (min-width: 901px) and (max-height: 720px) {
@@ -307,11 +360,9 @@ a { color: inherit; }
 @media (max-width: 900px) {
   /* Below laptop width the wordmark would sit on Mary, so the bar moves above the hero */
   .topbar { position: static; background: var(--cream); }
+  /* Signup stacks: heading and copy above, the form full width below */
+  .notes__inner { grid-template-columns: 1fr; }
   .topbar__inner { padding-top: 14px; padding-bottom: 6px; }
-  /* Newest episode leads full width; the rest sit three across under it */
-  .episode-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  .ep--latest { grid-column: 1 / -1; }
-  .ep--latest .ep__title { font-size: 22px; }
 }
 
 /* Phones: heads matched, DEPTH across their chests, photos fade into tan */
@@ -335,12 +386,20 @@ a { color: inherit; }
     top: 46cqw;
     background: linear-gradient(to bottom, rgb(251 241 229 / 0), var(--cream) 16cqw);
   }
-  /* Two lines on phones: the phrases flow together and break before "Stanford Business School" */
-  .intro__tagline { font-size: clamp(13px, 3.7vw, 15px); letter-spacing: .06em; }
-  .intro__tagline span { display: inline; white-space: normal; }
-  .btn { width: 100%; justify-content: center; }
-  .listen { width: 100%; max-width: 360px; flex-wrap: nowrap; }
-  .listen .btn { padding-left: 16px; padding-right: 16px; }
+    .intro__tagline { font-size: clamp(15px, 4.1vw, 17px); }
+  /* Three lines on phones: "Underprepared newlyweds at / Stanford Business School, / learning AI out loud"
+     (the non-breaking spaces keep the school's name together) */
+  .intro__tagline span { white-space: normal; }
+  /* YouTube gets its own row; Spotify and Apple Podcasts share the one below */
+  .btn { justify-content: center; }
+  .listen { width: 100%; max-width: 360px; gap: 10px; }
+  .listen .btn { flex: 1 1 0; padding-left: 12px; padding-right: 12px; font-size: 16px; gap: 8px; white-space: nowrap; }
+  .listen .btn--youtube { flex-basis: 100%; }
+  .notes__inner { padding-top: 32px; padding-bottom: 36px; }
+  .notes__sub { font-size: 16px; }
+  .notes__row { flex-direction: column; }
+  /* 16px keeps iOS Safari from zooming into the field on tap */
+  .notes__input { font-size: 16px; }
   /* Only the newest episode keeps its thumbnail; the rest are clean text rows */
   .episode-grid { grid-template-columns: 1fr; gap: 0; }
   .ep--latest { padding-bottom: 20px; }
@@ -352,6 +411,6 @@ a { color: inherit; }
 
 @media (prefers-reduced-motion: reduce) {
   .wave i { animation: none; }
-  .btn, .ep__thumb img { transition: none; }
+  .btn, .ep__thumb img, .notes__btn { transition: none; }
   .ep:hover .ep__thumb img { transform: none; }
 }

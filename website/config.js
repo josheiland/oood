@@ -4,6 +4,8 @@ window.OOOD = {
 
   spotify: 'https://open.spotify.com/show/5uqWe60E7Vi3MfQtJki7b1',
 
+  applePodcasts: 'https://podcasts.apple.com/us/podcast/out-of-our-depth/id6819080935',
+
   email: 'hi@outofourdepth.com',
 
   // Shown as icons in the top right, in this order, followed by the email icon.
@@ -65,6 +67,12 @@ window.OOOD = {
     }
     // episodes:end
   ],
+
+  // Titles the site shows in place of YouTube's, by video ID. YouTube keeps its own title; the sync
+  // job leaves these alone and uses them on the no-JS cards too.
+  siteTitles: {
+    'Fby7CJC9i-Q': 'Build With Us: Turn ChatGPT Into Your Coach', // Josh 2026-10-11
+  },
 
   // YouTube video IDs to leave off the site, e.g. a trailer or clip uploaded as a long-form video.
   // Hidden videos also don't count toward episode numbers.
