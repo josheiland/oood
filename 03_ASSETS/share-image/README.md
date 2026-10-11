@@ -17,3 +17,5 @@ Give a new version a new filename (`og-v4.png`) and update `og:image` in `websit
 **v4 (2026-10-04):** same layout as v3 (`{"mw":"476px","mx":"24px","my":"30px","jw":"688px","jx":"500px","jy":"20px","kf":"34px","ky":"352px","wf":"262px","wy":"384px"}`), rendered with `website/images/mary-v2.webp` copied in as `mary.webp`, which repairs the notch on the left of Mary's forehead.
 
 **v5 (2026-10-11):** same layout as v4, rendered with `website/images/mary-v3.webp` copied in as `mary.webp`. v3 restores her far eye, nose tip and cheek from the full-resolution original photo. Output: `website/images/og-v5.png`.
+
+**v6 (2026-10-11, evening):** Mary v4 (`website/images/mary-v4.webp`, option1 photo) copied in as `mary.webp`, Josh unchanged. Params `{"mw":"475px","mx":"141px","my":"-5px","jw":"688px","jx":"500px","jy":"20px","kf":"34px","ky":"352px","wf":"262px","wy":"384px"}`. Output: `website/images/og-v6.png`.

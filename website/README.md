@@ -42,6 +42,14 @@ The top bar shows Instagram, X, LinkedIn and email. Josh trimmed it to Instagram
 
 **Background (2026-10-04):** the page is tan (`--cream`) throughout, per Josh. The foam lower band under the hero is gone, and so is the cream/foam split in the share image (`images/og-v4.png`, built from `03_ASSETS/share-image/`).
 
+## Hero photo: Mary v4, bar above the photos, no strip under the fade (2026-10-11, evening)
+
+- **Mary is `images/mary-v4.webp`**, cut from `~/Downloads/option1.JPG` (Josh and Mary picked it over the recut current photo and option2). Apple Vision subject lift, no colour change, a ~0.5px softening so she sits closer to Josh's softer cutout, background unmixed from the edge pixels only, and palm-frond bumps trimmed off the crown. She's scaled so her face matches Josh's (mean of eyes-to-chin and face height), eyes on one line, mirrored around the center, on laptops and phones.
+- **Josh is unchanged** (`josh.webp`, same position). A recut from his full-res original was tried; Josh preferred the existing one.
+- **Photos end where the fade is solid.** They sit in `.hero__photos`, which ends at 21.4cqw on laptops (fade solid by 21cqw) and 62.4cqw on phones, so no strip of photo can show under the fade.
+- **The logo and icons sit above the hero at every width** (they used to float over the photos on laptops, where Josh's hair ran into the icons). `main.js` already sizes the hero around whatever is above it.
+- **Share image `og-v6.png`**: same layout, Mary v4 placed by the same face match. Inputs in `03_ASSETS/share-image/` (copy `mary-v4.webp` in as `mary.webp`); params `{"mw":"475px","mx":"141px","my":"-5px","jw":"688px","jx":"500px","jy":"20px","kf":"34px","ky":"352px","wf":"262px","wy":"384px"}`.
+
 ## Newsletter signup, tan buttons, site-only titles (2026-10-11, later)
 
 - **Signup at the bottom of the page**, from Mary's mockup, built as a navy band (option D of five Josh and Mary compared). Heading "We ~~doodle~~ take notes. Want a copy?" (doodle struck through in blue, per Josh) in cream Teachers 800, held to one line at every width; subline "No more than one cute little email each month." No handwriting font: Mary didn't like the mockup's, and they chose the site's existing fonts.
