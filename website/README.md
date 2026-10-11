@@ -44,7 +44,7 @@ The top bar shows Instagram, X, LinkedIn and email. Josh trimmed it to Instagram
 
 ## Newsletter signup, tan buttons, site-only titles (2026-10-11, later)
 
-- **Signup at the bottom of the page**, from Mary's mockup, built as a navy band (option D of five Josh and Mary compared). Heading "We take notes. Want a copy?" in cream Teachers 800, held to one line at every width; subline "No more than one cute little email each month." No handwriting font: Mary didn't like the mockup's, and they chose the site's existing fonts.
+- **Signup at the bottom of the page**, from Mary's mockup, built as a navy band (option D of five Josh and Mary compared). Heading "We ~~doodle~~ take notes. Want a copy?" (doodle struck through in blue, per Josh) in cream Teachers 800, held to one line at every width; subline "No more than one cute little email each month." No handwriting font: Mary didn't like the mockup's, and they chose the site's existing fonts.
   - The form posts to `api/subscribe.js`, which saves the address to Upstash Redis: Vercel Marketplace resource **`oood-newsletter`** (free plan), connected to the `oood-website` project, which sets the `KV_*` env vars. Addresses go in the hash `newsletter:subscribers`, keyed by the lowercased address, with the time and source. A second signup keeps the first record.
   - Bot guard: a hidden `website` field (filled in = pretend success, save nothing) and 30 signups per IP per hour. It works without JS too: a plain form post redirects back to `/?subscribed=1#notes`.
   - **Export the list:** `vercel env pull .env.newsletter --cwd website` once (gitignored), then `node scripts/export-subscribers.js > subscribers.csv`. The export uses the read-only token.

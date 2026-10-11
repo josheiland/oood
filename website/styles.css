@@ -283,23 +283,32 @@ a { color: inherit; }
 .notes { background: var(--navy); }
 .notes__inner {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  /* The copy column gets a little more room so the one-line heading can stay big */
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
   align-items: center;
   gap: 24px 48px;
   padding-top: 52px;
   padding-bottom: 56px;
 }
-/* The heading stays on one line: it is about 13.6x its font size wide, so 7.2cqw fills the column */
+/* The heading stays on one line: "We doodle take notes. Want a copy?" is about 17.3x its font size
+   wide, so 5.7cqw fills the column */
 .notes__copy { container-type: inline-size; }
 .notes__title {
   margin: 0;
   font-family: var(--display);
   font-weight: 800;
-  font-size: min(40px, 7.2cqw);
+  font-size: min(40px, 5.7cqw);
   letter-spacing: -.02em;
   line-height: 1.05;
   white-space: nowrap;
   color: var(--cream);
+}
+/* "doodle", crossed out in blue (Josh 2026-10-11). Screen readers skip it and read "We take notes." */
+.notes__strike {
+  color: var(--tint);
+  text-decoration: line-through;
+  text-decoration-color: var(--blue);
+  text-decoration-thickness: .14em;
 }
 .notes__sub { margin: 10px 0 0; font-size: 18px; line-height: 1.45; color: var(--tint); }
 .notes__row { display: flex; gap: 12px; }
@@ -356,12 +365,17 @@ a { color: inherit; }
   .ep { gap: 10px; }
 }
 
+/* Signup stacks below 1100px: heading and copy above, the form full width below, so the one-line
+   heading keeps its size and the email field doesn't get squeezed */
+@media (max-width: 1099px) {
+  .notes__inner { grid-template-columns: 1fr; }
+  .notes__copy { max-width: 700px; }
+}
+
 /* Tablet and down */
 @media (max-width: 900px) {
   /* Below laptop width the wordmark would sit on Mary, so the bar moves above the hero */
   .topbar { position: static; background: var(--cream); }
-  /* Signup stacks: heading and copy above, the form full width below */
-  .notes__inner { grid-template-columns: 1fr; }
   .topbar__inner { padding-top: 14px; padding-bottom: 6px; }
 }
 
