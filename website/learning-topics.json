@@ -1,0 +1,200 @@
+[
+  {
+    "id": "llms",
+    "kind": "term",
+    "pillar": "fluency",
+    "title": "Large language models",
+    "description": "The models behind many AI chats. They learn patterns in language and generate responses a piece at a time.",
+    "exercise": "Ask for an explanation using a hobby you love. Then explain it back in your own words.",
+    "url": "https://developers.google.com/machine-learning/crash-course/llm",
+    "source": "Google · LLM introduction",
+    "starter": true
+  },
+  {
+    "id": "prompts",
+    "kind": "term",
+    "pillar": "fluency",
+    "title": "Prompts & context",
+    "description": "A prompt is what you ask. Context is the background that helps the model understand what you mean.",
+    "exercise": "Give it a goal, a real example and what a good answer looks like. Compare that with a one-line ask.",
+    "url": "https://platform.claude.com/docs/en/build-with-claude/context-windows",
+    "source": "Anthropic · Context windows",
+    "starter": true
+  },
+  {
+    "id": "tokens",
+    "kind": "term",
+    "pillar": "fluency",
+    "title": "Tokens & context windows",
+    "description": "Tokens are small pieces of text. A context window is how much information a model can work with in one response.",
+    "exercise": "Ask why a long chat can lose the thread. Try a short recap before your next request.",
+    "url": "https://platform.claude.com/docs/en/build-with-claude/context-windows",
+    "source": "Anthropic · Context windows",
+    "starter": false
+  },
+  {
+    "id": "hallucinations",
+    "kind": "term",
+    "pillar": "fluency",
+    "title": "Hallucinations & fact-checking",
+    "description": "AI can give a confident answer that is wrong—even an invented quote or source. Fluency is not proof.",
+    "exercise": "Pick one factual claim from a chat. Open the original source and see if it actually supports the claim.",
+    "url": "https://help.openai.com/en/articles/8313428-does-chatgpt-tell-the-truth",
+    "source": "OpenAI · Accuracy and uncertainty",
+    "starter": false
+  },
+  {
+    "id": "multimodal",
+    "kind": "term",
+    "pillar": "fluency",
+    "title": "Multimodal AI",
+    "description": "Some models work with more than text, such as images or audio. What you can use depends on the tool.",
+    "exercise": "Try a photo of your own notes. Ask for a summary, then check what it missed.",
+    "url": "https://developers.google.com/machine-learning/crash-course/llm",
+    "source": "Google · LLM introduction",
+    "starter": false
+  },
+  {
+    "id": "chatgpt",
+    "kind": "tool",
+    "pillar": "agency",
+    "title": "ChatGPT",
+    "description": "A place to practice thinking with AI. Start with one real task and a conversation, rather than a perfect prompt.",
+    "exercise": "Bring a small decision you are stuck on. Ask it to interview you before suggesting an answer.",
+    "url": "https://chatgpt.com/",
+    "source": "Open ChatGPT",
+    "starter": true
+  },
+  {
+    "id": "claude",
+    "kind": "tool",
+    "pillar": "agency",
+    "title": "Claude",
+    "description": "Another AI assistant to try for writing, thinking and building. Comparing answers can help you notice what you value.",
+    "exercise": "Give it the same small task as another assistant. Compare usefulness, tone and what each gets wrong.",
+    "url": "https://claude.com/product/overview",
+    "source": "Anthropic · Meet Claude",
+    "starter": false
+  },
+  {
+    "id": "notebooklm",
+    "kind": "tool",
+    "pillar": "agency",
+    "title": "NotebookLM / Gemini Notebook",
+    "description": "Google’s research notebook lets you work with sources you choose and follow citations back to them.",
+    "exercise": "Add two sources on a question you care about. Ask where they agree and disagree, then open the citations.",
+    "url": "https://support.google.com/notebooklm/answer/16164461?hl=en",
+    "source": "Google · Research notebook guide",
+    "starter": false
+  },
+  {
+    "id": "projects",
+    "kind": "tool",
+    "pillar": "agency",
+    "title": "Projects & reusable instructions",
+    "description": "Keep related chats, files and instructions together so you do not have to explain the same project from scratch.",
+    "exercise": "Make a project for one recurring task. Add your goals and an example of work you like.",
+    "url": "https://help.openai.com/en/articles/10169521-projects-in-chatgpt",
+    "source": "OpenAI · Projects guide",
+    "starter": false
+  },
+  {
+    "id": "tldraw",
+    "kind": "tool",
+    "pillar": "agency",
+    "title": "tldraw & visual thinking",
+    "description": "A whiteboard for sketching ideas and diagrams. Mary’s starting point: make the explanation something you can see.",
+    "exercise": "Sketch a process you already know. Use an AI assistant to help simplify the steps, then redraw it.",
+    "url": "https://www.tldraw.com/",
+    "source": "Open tldraw",
+    "starter": false
+  },
+  {
+    "id": "agents",
+    "kind": "term",
+    "pillar": "agency",
+    "title": "Agents & workflows",
+    "description": "A workflow follows a planned sequence. An agent can choose steps and use tools as it works toward a goal.",
+    "exercise": "Map one task into steps. Which should be fixed, which need judgment, and where should you review?",
+    "url": "https://www.anthropic.com/engineering/building-effective-agents",
+    "source": "Anthropic · Agents and workflows",
+    "starter": false
+  },
+  {
+    "id": "skills",
+    "kind": "term",
+    "pillar": "agency",
+    "title": "Skills & tool connections",
+    "description": "Skills package reusable instructions or resources. Tool connections let an assistant work with another app.",
+    "exercise": "Choose one repeated task. Write the instructions and list the apps it would need access to.",
+    "url": "https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview",
+    "source": "Anthropic · Agent Skills",
+    "starter": false
+  },
+  {
+    "id": "one-useful-thing",
+    "kind": "topic",
+    "pillar": "agency",
+    "title": "Build one useful thing",
+    "description": "Our challenge: choose a small, real problem and practice solving it with AI. The win is usefulness, not complexity.",
+    "exercise": "Pick one annoying task this week. Define what “done” means before asking AI to build anything.",
+    "url": "https://www.youtube.com/@OutOfOurDepthPod/videos",
+    "source": "Watch us experiment",
+    "starter": false
+  },
+  {
+    "id": "learning-routine",
+    "kind": "topic",
+    "pillar": "fluency",
+    "title": "A learning routine that sticks",
+    "description": "Our suggestion: a short list of sources, a vocabulary list and a format you enjoy. You do not need every update.",
+    "exercise": "Choose three unfamiliar terms. Ask for an analogy, explain them back and revisit them next week.",
+    "url": "https://www.youtube.com/@OutOfOurDepthPod/videos",
+    "source": "Learn with the show",
+    "starter": false
+  },
+  {
+    "id": "privacy",
+    "kind": "topic",
+    "pillar": "perspective",
+    "title": "Privacy & your data",
+    "description": "Before connecting an app or sharing a file, understand what data is involved and which controls you have.",
+    "exercise": "Choose a tool you use. Read its data controls and decide what you are comfortable putting into it.",
+    "url": "https://airc.nist.gov/airmf-resources/airmf/",
+    "source": "NIST · AI risk framework",
+    "starter": false
+  },
+  {
+    "id": "environment",
+    "kind": "topic",
+    "pillar": "perspective",
+    "title": "AI, energy & the environment",
+    "description": "What does AI use, what might it save, and which trade-offs depend on how and where it is deployed?",
+    "exercise": "Read the IEA overview. Separate what is measured today from what is a forecast.",
+    "url": "https://www.iea.org/reports/energy-and-ai",
+    "source": "IEA · Energy and AI",
+    "starter": false
+  },
+  {
+    "id": "future-work",
+    "kind": "topic",
+    "pillar": "perspective",
+    "title": "AI & the future of your work",
+    "description": "Go deeper on the questions that matter to your own industry, role or next career move.",
+    "exercise": "List three tasks in your work. Which might change, and what evidence would help you judge?",
+    "url": "https://hai.stanford.edu/ai-index/2025-ai-index-report",
+    "source": "Stanford HAI · AI Index 2025",
+    "starter": false
+  },
+  {
+    "id": "agi",
+    "kind": "topic",
+    "pillar": "perspective",
+    "title": "AGI & measuring progress",
+    "description": "A big question worth unpacking: what would broadly capable AI mean, and how would we know we were getting there?",
+    "exercise": "Compare two definitions. Write down what each would count as evidence and what it leaves out.",
+    "url": "https://hai.stanford.edu/ai-index/2025-ai-index-report",
+    "source": "Stanford HAI · Capabilities and trends",
+    "starter": false
+  }
+]

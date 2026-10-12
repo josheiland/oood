@@ -1,6 +1,6 @@
 # outofourdepth.com
 
-The Out of Our Depth website. Plain HTML, CSS and JS with one Vercel function. No build step.
+The Out of Our Depth website. Plain HTML, CSS and JS with Vercel functions. No build step.
 
 ## Files
 
@@ -130,3 +130,16 @@ Publication evidence: the official channel Atom feed (`https://www.youtube.com/f
 - **Spotify is live:** paste the show URL into `spotify` in `config.js`. The button switches from "Spotify soon" to a real link.
 - **Feature a specific episode:** fill in `pinnedEpisode` in `config.js`. It overrides the automatic YouTube lookup.
 - **Preview locally:** `npx vercel dev` from this folder runs the page and the function together. Opening `index.html` directly works too; the grid shows the episodes in `config.js` without the function.
+
+## Learning tab (2026-10-11)
+
+Josh requested a starter learning library for E007’s planned appended screen share, with topic upvotes to guide future episodes. `/learning` is live on the existing site and linked beside Episodes in the top bar. Eighteen initial terms, tools and topics follow fluency, agency and perspective; each has a plain-English introduction, source link and optional “Try this” exercise. Search, Terms/Tools/Topics filters and “Most wanted” sorting work in `learning.js`; `learning.html` retains all content without JavaScript. The existing hero, selected Mary v4 cutout, newsletter and episode list remain intact.
+
+- `learning-topics.json`: resource catalog and stable voting IDs. Keep IDs stable when changing copy so existing requests retain their meaning. Update the matching static cards and inline data in `learning.html` when editing the catalog.
+- `learning.css`: Learning layout and shared navigation. `main.js` now skips hero sizing when there is no hero; its existing social/newsletter behavior is reused.
+- `api/learning-votes.js`: live counts and per-browser selections in the existing Upstash Redis store. Namespaces `learning:v1:counts`, `learning:v1:voter:<anonymous-id>` and hourly rate keys. No subscriber data is read or changed. A signed HttpOnly/Secure/SameSite cookie remembers picks; visitors can request several topics, one vote each, and remove them. Counts are requests, not verified unique people. No login is required.
+- Votes use an atomic Redis script and an idempotent desired state, so concurrent repeated clicks cannot double-count. Invalid topic IDs, cross-origin writes and tampered cookies are rejected. Shared counts are never browser-only or seeded. Errors leave the resources available and offer reconnection; an uncertain write is read back instead of blindly retried.
+- Verified production deployment: `dpl_2KsvD3gUhEgCHJJNW1gCG7HZeUYh`. Live checks passed for exact assets, two-visitor shared counts, reload persistence, concurrent duplicate protection, origin/topic/cookie validation and vote removal. The temporary test vote was removed. `node scripts/check-learning-delivery.js` runs the same checks and removes its test vote in `finally`.
+- Source and delivery records: `02_RESEARCH/codex-learning-tab-sources-2026-10-11/`. Current research names Google’s notebook “NotebookLM / Gemini Notebook” because the official help page redirects to the latter name. Starter order and exercises are OOOD editorial suggestions.
+
+The screen-share recording is still to be supplied; building or deploying the tab does not mean the segment has been recorded or appended to E007.

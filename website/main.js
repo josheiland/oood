@@ -226,6 +226,7 @@
   var PEEK = 160; // how much of the newest episode's thumbnail shows before scrolling
 
   function fitHero() {
+    if (!hero) return;
     if (window.innerWidth <= 640) {
       root.style.removeProperty('--hero-h');
       return;
