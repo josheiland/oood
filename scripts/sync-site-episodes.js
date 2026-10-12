@@ -113,7 +113,7 @@ function htmlBlock(episodes, siteTitles = {}) {
   return episodes
     .map((ep, i) => {
       const latest = i === 0;
-      const meta = latest ? `${wave}New &middot; ${ep.number}` : `Episode ${ep.number}`;
+      const meta = latest ? `${wave}New episode ${ep.number}` : `Episode ${ep.number}`;
       return [
         `        <a class="ep${latest ? ' ep--latest' : ''}" href="${esc(ep.url)}" target="_blank" rel="noopener">`,
         `          <span class="ep__thumb"><img src="${esc(ep.thumbnail)}" alt="" width="1280" height="720"${latest ? '' : ' loading="lazy"'}></span>`,

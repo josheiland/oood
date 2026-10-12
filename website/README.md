@@ -42,6 +42,13 @@ The top bar shows Instagram, X, LinkedIn and email. Josh trimmed it to Instagram
 
 **Background (2026-10-04):** the page is tan (`--cream`) throughout, per Josh. The foam lower band under the hero is gone, and so is the cream/foam split in the share image (`images/og-v4.png`, built from `03_ASSETS/share-image/`).
 
+## Mary v5, copy pass, icon and accent blue (2026-10-11, late)
+
+- **Mary is `images/mary-v5.webp`**: the same option1 cutout, softened (Gaussian sigma 1.0) so her face is as sharp as Josh's on screen (within ~15% on laptops and phones; Josh's cutout is upscaled for display, which softens it). Sized and placed from face detection on the rendered page: her face box matches Josh's within 1%, eyes on one line, face centers mirrored around the middle, on laptops and phones. Share image `og-v7.png`, same match.
+- **YouTube icon:** the play triangle is tan (`#FBF1E5`) like the light strokes in the Spotify and Apple icons.
+- **Learning tab:** "feet wet." uses the accent blue (`--blue`) instead of the small-type blue.
+- **No em dashes, middle dots or ellipses in site copy**, per Josh. "New · 005" is now "New episode 005" (also in the sync job). 001 and 002 get site-only titles in `siteTitles` without the ellipses. Learning copy was edited in Josh's voice; edit `learning-topics.json` and both copies in `learning.html` together.
+
 ## Hero photo: Mary v4, bar above the photos, no strip under the fade (2026-10-11, evening)
 
 - **Mary is `images/mary-v4.webp`**, cut from `~/Downloads/option1.JPG` (Josh and Mary picked it over the recut current photo and option2). Apple Vision subject lift, no colour change, a ~0.5px softening so she sits closer to Josh's softer cutout, background unmixed from the edge pixels only, and palm-frond bumps trimmed off the crown. She's scaled so her face matches Josh's (mean of eyes-to-chin and face height), eyes on one line, mirrored around the center, on laptops and phones.

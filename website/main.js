@@ -100,7 +100,7 @@
       meta.className = 'ep__meta label';
       if (i === 0) {
         meta.innerHTML = WAVE;
-        meta.appendChild(document.createTextNode('New' + (ep.number ? ' \u00b7 ' + ep.number : '')));
+        meta.appendChild(document.createTextNode('New episode' + (ep.number ? ' ' + ep.number : '')));
       } else {
         meta.textContent = ep.number ? 'Episode ' + ep.number : 'Episode';
       }

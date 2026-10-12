@@ -146,7 +146,7 @@ a { color: inherit; }
 }
 /* Mary (mary-v4, cut from the full-res original, 2026-10-11) is scaled so her face matches Josh's
    (eyes-to-chin and face height), eyes on one line, mirrored around the center. Josh is unchanged. */
-.hero__host--mary { left: 12.33cqw; top: 2.14cqw; width: 18.09cqw; }
+.hero__host--mary { left: 12.91cqw; top: 2.68cqw; width: 16.72cqw; }
 .hero__host--josh { left: 66.4cqw; top: 3.1cqw; width: 26.2cqw; }
 
 .hero__title {
@@ -390,7 +390,7 @@ a { color: inherit; }
      ~90px past it, so a hairline of photo could show under the fade (Josh's phone, 2026-10-04) */
   .hero__stage { width: 100%; aspect-ratio: 100 / 72; overflow: hidden; }
   /* Heads matched and mirrored, as on laptops (2026-10-11) */
-  .hero__host--mary { left: 7.28cqw; top: 3.49cqw; width: 41.43cqw; }
+  .hero__host--mary { left: 8.41cqw; top: 4.65cqw; width: 38.44cqw; }
   .hero__host--josh { left: 44cqw; top: 5.7cqw; width: 60cqw; }
   .hero__photos { height: 62.4cqw; }
   /* Both chins end near 31cqw, so the title starts below them */

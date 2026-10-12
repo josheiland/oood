@@ -72,6 +72,9 @@ window.OOOD = {
   // job leaves these alone and uses them on the no-JS cards too.
   siteTitles: {
     'Fby7CJC9i-Q': 'Build With Us: Turn ChatGPT Into Your Coach', // Josh 2026-10-11
+    // No ellipses on the site (Josh 2026-10-11); YouTube keeps its own titles
+    'cp4P_2t5rRQ': 'AI Landscape, But Not the Boring Kind',
+    'd-ykZl4WHjo': 'Projects, Connectors & Skills: Take Your AI from Fresh Intern to Full-Time Hire',
   },
 
   // YouTube video IDs to leave off the site, e.g. a trailer or clip uploaded as a long-form video.

@@ -15,8 +15,8 @@
    card.hidden = !visible; if (visible) shown++;
    button.disabled = !ready || pending.has(t.id);
    button.setAttribute('aria-pressed', String(selected.has(t.id)));
-   button.querySelector('[data-count]').textContent = Object.prototype.hasOwnProperty.call(counts,t.id) ? counts[t.id] : '—';
-   button.querySelector('.learn-vote__label').textContent = pending.has(t.id) ? 'Saving…' : selected.has(t.id) ? 'Requested' : 'Explore next';
+   button.querySelector('[data-count]').textContent = Object.prototype.hasOwnProperty.call(counts,t.id) ? counts[t.id] : '';
+   button.querySelector('.learn-vote__label').textContent = pending.has(t.id) ? 'Saving' : selected.has(t.id) ? 'Requested' : 'Explore next';
    button.setAttribute('aria-label', (selected.has(t.id) ? 'Remove your request for ' : 'Explore ') + t.title + (selected.has(t.id) ? '' : ' in a future episode'));
    grid.appendChild(card);
   });
