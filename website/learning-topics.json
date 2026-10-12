@@ -139,7 +139,7 @@
     "kind": "tool",
     "title": "Claude",
     "aka": "By Anthropic",
-    "description": "Anthropic's assistant. Josh leans on it for writing and building things, so it's the one he'll nerd out about.",
+    "description": "Anthropic's assistant, and a strong pick for writing and coding. It can also make documents and small working apps right in the chat.",
     "exercise": "Give Claude and ChatGPT the exact same task. Notice which answer you'd actually use.",
     "url": "https://claude.ai/",
     "source": "Open Claude",
