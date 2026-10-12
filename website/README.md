@@ -42,6 +42,10 @@ The top bar shows Instagram, X, LinkedIn and email. Josh trimmed it to Instagram
 
 **Background (2026-10-04):** the page is tan (`--cream`) throughout, per Josh. The foam lower band under the hero is gone, and so is the cream/foam split in the share image (`images/og-v4.png`, built from `03_ASSETS/share-image/`).
 
+## Learning tab is off the public site (2026-10-11, late)
+
+Josh pulled it until it's tuned. `.vercelignore` keeps the Learning files and its vote API out of deploys, `/learning` redirects (307) to the homepage, and the top-bar link is gone. Everything is still in the repo; the votes in Redis are untouched. Preview it locally from `website/` with `python3 -m http.server` and open `/learning.html`. To bring it back, undo those three things. `scripts/check-learning-delivery.js` will fail while it's off.
+
 ## Learning tab redesign and new term list (2026-10-11, late)
 
 - **One source of truth:** edit `learning-topics.json`, then run `node scripts/build-learning.js`. It rebuilds the no-JS cards and the inline data in `learning.html`, and refuses em dashes, middle dots and ellipses. Don't hand-edit the cards between the `learn-cards` markers.

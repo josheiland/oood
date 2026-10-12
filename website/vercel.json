@@ -15,6 +15,16 @@
   ],
   "redirects": [
     {
+      "source": "/learning",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/learning.html",
+      "destination": "/",
+      "permanent": false
+    },
+    {
       "source": "/spotify",
       "destination": "https://open.spotify.com/show/5uqWe60E7Vi3MfQtJki7b1",
       "permanent": false
