@@ -42,6 +42,13 @@ The top bar shows Instagram, X, LinkedIn and email. Josh trimmed it to Instagram
 
 **Background (2026-10-04):** the page is tan (`--cream`) throughout, per Josh. The foam lower band under the hero is gone, and so is the cream/foam split in the share image (`images/og-v4.png`, built from `03_ASSETS/share-image/`).
 
+## Learning tab redesign and new term list (2026-10-11, late)
+
+- **One source of truth:** edit `learning-topics.json`, then run `node scripts/build-learning.js`. It rebuilds the no-JS cards and the inline data in `learning.html`, and refuses em dashes, middle dots and ellipses. Don't hand-edit the cards between the `learn-cards` markers.
+- **32 entries, one idea each**, sorted shallow to deep: 12 words to know (3 FT), 13 tools to try (6 FT), 7 big questions (9 FT). Combined entries were split (token and context window, skills and connectors, agent and automation, prompt on its own). New: model vs. app, knowledge cutoff, reasoning model, automation, vibe coding, Gemini, Granola, Wispr Flow, custom instructions, memory, connectors (MCP), deep research, AI slop. NotebookLM is listed as Gemini Notebook, which is what Google's site calls it now.
+- **Look:** pool depth tiles (3 FT, 6 FT, 9 FT) are the filters and the card labels; display type in Teachers 800 caps; rounded tan pills that turn blue on hover, like the homepage buttons; foam cards with no borders or shadows. "Try this" is always visible.
+- Votes were all zero when IDs changed, so nothing was lost. New IDs work automatically because the API reads the JSON.
+
 ## Mary v5, copy pass, icon and accent blue (2026-10-11, late)
 
 - **Mary is `images/mary-v5.webp`**: the same option1 cutout, softened (Gaussian sigma 1.0) so her face is as sharp as Josh's on screen (within ~15% on laptops and phones; Josh's cutout is upscaled for display, which softens it). Sized and placed from face detection on the rendered page: her face box matches Josh's within 1%, eyes on one line, face centers mirrored around the middle, on laptops and phones. Share image `og-v7.png`, same match.

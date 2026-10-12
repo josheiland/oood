@@ -59,5 +59,5 @@ module.exports = async (req, res) => {
   const [result] = await redis([['EVAL', CHANGE_VOTE, 3, COUNTS, `learning:v1:voter:${id}`, rate, body.topic, body.voted ? 1 : 0]]);
   if (result[0] === -1) return res.status(429).json({ error: 'Lots of votes from here. Give it a little time and try again.' });
   return res.status(200).json({ topic: body.topic, voted: Boolean(result[0]), count: Math.max(0, Number(result[1])) });
- } catch (error) { console.error('Learning votes failed:', error.message); return res.status(503).json({ error: 'We could not reach the votes. Reconnect to check your picks.' }); }
+ } catch (error) { console.error('Learning votes failed:', error.message); return res.status(503).json({ error: 'We couldn\u2019t reach the votes. Try again in a sec.' }); }
 };

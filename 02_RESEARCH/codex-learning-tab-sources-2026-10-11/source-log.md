@@ -132,3 +132,7 @@ Accessed 2026-10-11. These are primary sources behind the initial starter resour
 - Google’s current NotebookLM help destination redirects to “Gemini Notebook”; the card retains both names so it matches episode language and the current guide.
 - tldraw’s home page is script-rendered; its official page identifies it as a whiteboard. No automatic Claude-to-tldraw import or diagram format is promised.
 - Source pages were read in this run. Topic exercises intentionally ask viewers to verify, compare or explore rather than assert a conclusion.
+
+## Revision, 2026-10-11 late (jtan)
+
+The catalog was rebuilt with one idea per entry; `website/learning-topics.json` is the record of every title, description, exercise and link. Links added in this pass were checked to respond (HTTP 200) on 2026-10-11, except the OpenAI pages (tokenizer, memory FAQ, custom instructions, data controls, deep research), which block scripted requests with 403 and were not read. Facts checked against sources in this pass: Wikipedia credits Andrej Karpathy with coining "vibe coding" in February 2025 and notes Collins' 2025 Word of the Year; notebooklm.google's page title is now "Gemini Notebook"; Wikipedia defines a knowledge cutoff as the point after which a model has no training data. "About three quarters of a word per token" is OpenAI's long-standing rule of thumb for English. Granola, Wispr Flow and the No AI Slop skill are tools the show names in episode 001's notes.
