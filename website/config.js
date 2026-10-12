@@ -27,13 +27,19 @@ window.OOOD = {
   episodes: [
     // episodes:start
     {
+      id: 'NiEnSBPe158', number: '006', title: 'AI Planned Our Wedding',
+      published: '2026-10-11T22:31:34+00:00',
+      url: 'https://www.youtube.com/watch?v=NiEnSBPe158',
+      thumbnail: 'https://i.ytimg.com/vi/NiEnSBPe158/maxresdefault.jpg'
+    },
+    {
       id: '_d-hzc6Lt5c', number: '005', title: 'How to Make Your AI Look and Sound Like You',
       published: '2026-10-09T22:11:34+00:00',
       url: 'https://www.youtube.com/watch?v=_d-hzc6Lt5c',
       thumbnail: 'https://i.ytimg.com/vi/_d-hzc6Lt5c/maxresdefault.jpg'
     },
     {
-      id: 'Fby7CJC9i-Q', number: '004', title: 'We Asked ChatGPT to Coach Our Ultramarathon. Then We Had to Coach It.',
+      id: 'Fby7CJC9i-Q', number: '004', title: 'Can ChatGPT Coach Our Ultramarathon?',
       published: '2026-10-06T14:54:38+00:00',
       url: 'https://www.youtube.com/watch?v=Fby7CJC9i-Q',
       thumbnail: 'https://i.ytimg.com/vi/Fby7CJC9i-Q/maxresdefault.jpg'
