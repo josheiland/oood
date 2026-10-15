@@ -42,9 +42,17 @@ The top bar shows Instagram, X, LinkedIn and email. Josh trimmed it to Instagram
 
 **Background (2026-10-04):** the page is tan (`--cream`) throughout, per Josh. The foam lower band under the hero is gone, and so is the cream/foam split in the share image (`images/og-v4.png`, built from `03_ASSETS/share-image/`).
 
-## Learning tab is off the public site (2026-10-11, late)
+## Learning page is live again: one list, drawings, upvotes, suggestions (2026-10-15)
 
-Josh pulled it until it's tuned. `.vercelignore` keeps the Learning files and its vote API out of deploys, `/learning` redirects (307) to the homepage, and the top-bar link is gone. Everything is still in the repo; the votes in Redis are untouched. Preview it locally from `website/` with `python3 -m http.server` and open `/learning.html`. To bring it back, undo those three things. `scripts/check-learning-delivery.js` will fail while it's off.
+Josh and Mary picked this design over three review rounds (mockups in `04_PUBLISHING/jtan-learning-mockups-2026-10-15/`).
+
+- **What it is:** 35 AI words in one list, simplest first. Each row reads word, explainer (plus a "Think" analogy), a small pool drawing, then an upvote. The only controls are search and a "Shallow to deep" / "Most wanted" sort. Words an episode covers link to that moment on YouTube. The rest say "Not on the show yet."
+- **Edit words:** change `learning-topics.json`, then run `node scripts/build-learning.js`. It rebuilds the rows and drawings in `learning.html` and refuses dashes, dots, ellipses and curly quotes. The JSON order is the page order. A new word needs a drawing in `scripts/learning-art.js` too, or the build stops. Don't hand-edit between the `learn-rows` markers.
+- **Drawings:** Sho Hatakeyama's O-heads (from his 10/5 brand kit) are always people. The blue square with an antenna is always the AI. They're redrawn in the site's colors and drawn at build time, so no drawing code ships to the browser.
+- **Upvotes:** `api/learning-votes.js`, unchanged, keyed by word id. Counts were all zero when the ids changed on 10/15.
+- **Suggest a word:** `api/learning-suggest.js` saves entries to the same Upstash store (list `learning:suggestions`, repeat counts in `learning:suggestion-counts`). Nothing is emailed. Read them with `node scripts/export-suggestions.js --since YYYY-MM-DD`. jtan flags new ones to Josh with an add or skip recommendation.
+- **Nav:** the Episodes / Learning links are back on both pages. Their styles moved from `learning.css` into `styles.css`, so the homepage no longer loads the Learning stylesheet.
+- **`.vercelignore`** now only blocks `.env` files, because the export scripts pull store keys into `website/.env.newsletter` and Vercel would otherwise upload them.
 
 ## Learning tab redesign and new term list (2026-10-11, late)
 

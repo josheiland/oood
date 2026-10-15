@@ -1,8 +1,4 @@
-# Learning tab is off the public site while Josh and Mary tune it (2026-10-11).
-# The files stay in the repo; delete these lines (and the /learning redirects in vercel.json,
-# and put the nav link back in index.html) to bring it back.
-learning.html
-learning.js
-learning.css
-learning-topics.json
-api/learning-votes.js
+# Never upload local secrets. The export scripts pull store keys into .env.newsletter here, and
+# Vercel does not skip that name on its own (2026-10-15).
+.env
+.env.*

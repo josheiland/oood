@@ -1,82 +1,117 @@
-/* Learning and shared navigation; existing home hero and photo treatment stay in styles.css. */
-.topbar__inner { flex-wrap: wrap; column-gap: 24px; row-gap: 12px; }
-.site-nav { display: flex; gap: 24px; margin-left: auto; margin-right: 12px; font-weight: 700; }
-.site-nav a { text-decoration: none; padding: 8px 0; border-bottom: 2px solid transparent; }
-.site-nav a:hover, .site-nav a[aria-current] { border-color: var(--navy); }
-.skip-link { position: absolute; top: -100px; left: 20px; z-index: 10; background: var(--navy); color: var(--cream); padding: 12px; }
-.skip-link:focus { top: 12px; }
-/* Learning: the pool goes from the shallow end (3 FT, words) to the deep end (9 FT, big questions).
-   Brand type: Teachers 800 caps for display, JetBrains Mono for labels, rounded pills like the homepage. */
-.learning-intro { padding-top: 56px; padding-bottom: 36px; }
-.learning-intro h1 { margin: 18px 0 22px; font-weight: 800; text-transform: uppercase; letter-spacing: -.02em; line-height: .88; font-size: clamp(54px, 9vw, 116px); }
-.learning-intro__line { display: block; }
-.learning-intro__line--blue { color: var(--blue); } /* same accent blue as DEPTH (Josh 2026-10-11) */
-.learning-intro__text { max-width: 640px; margin: 0; font-size: clamp(19px, 2vw, 22px); line-height: 1.45; }
-
-/* Pool depth marker, like the tiles painted on a pool wall */
-.depth { display: inline-grid; place-items: center; min-width: 52px; height: 30px; padding: 0 8px; border-radius: 6px; background: var(--blue); color: var(--navy); font: 700 13px/1 var(--mono); letter-spacing: .06em; white-space: nowrap; }
-
-.learning-library { padding-bottom: 72px; }
-.learn-controls { display: flex; justify-content: space-between; align-items: center; gap: 16px 24px; flex-wrap: wrap; padding: 22px 0; border-top: 1px solid var(--tint); }
-.learn-filters { margin: 0; padding: 0; border: 0; display: flex; flex-wrap: wrap; gap: 10px; }
-.learn-filters button, .learn-sort, .learn-retry {
-  display: inline-flex; align-items: center; gap: 10px; min-height: 46px; padding: 7px 18px 7px 8px;
-  border: 1.5px solid var(--navy); border-radius: 999px; background: var(--cream); color: var(--navy);
-  font: 700 16px/1 var(--display); cursor: pointer; transition: background-color .15s ease, transform .15s ease;
-}
-.learn-sort, .learn-retry { padding-left: 18px; }
-.learn-filters button:hover, .learn-sort:hover, .learn-retry:hover { background: var(--blue); transform: translateY(-2px); }
-.learn-filters .depth { height: 30px; min-width: 46px; font-size: 12px; }
-.learn-filters .depth--all { background: var(--tint); }
-.learn-filters button[aria-pressed="true"], .learn-sort[aria-pressed="true"] { background: var(--navy); color: var(--cream); }
-.learn-filters button[aria-pressed="true"] .depth { background: var(--blue); }
-.learn-inputs { display: flex; gap: 10px; align-items: center; }
-.learn-inputs input { width: 240px; max-width: 100%; height: 46px; padding: 0 18px; border: 1.5px solid var(--navy); border-radius: 999px; background: #fff; color: var(--navy); font: 400 16px/1 var(--display); }
-.learn-inputs input::placeholder { color: #7D8A96; }
-.learn-status { margin: 0 0 12px; min-height: 1.4em; font-weight: 600; color: var(--small-blue); }
-.learn-retry { margin: 0 0 18px; }
-
-.learn-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
-.learn-card { display: flex; flex-direction: column; min-width: 0; padding: 22px 22px 20px; border-radius: 18px; background: var(--foam); scroll-margin-top: 24px; }
-.learn-card__top { display: flex; align-items: center; gap: 10px; }
-.learn-card__kind { font: 400 11px/1 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--body-muted); }
-.learn-card h3 { margin: 18px 0 0; font-size: 30px; font-weight: 800; line-height: 1.05; letter-spacing: -.02em; }
-.learn-card__aka { margin: 6px 0 0; font: 400 12px/1.3 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--small-blue); }
-.learn-card__desc { margin: 12px 0 16px; font-size: 17px; line-height: 1.45; }
-.learn-card__try { margin: 0 0 20px; padding-top: 14px; border-top: 1px dashed var(--tint); font-size: 15px; line-height: 1.45; color: var(--body-muted); }
-.learn-card__try span { display: block; margin-bottom: 6px; font: 700 11px/1 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--small-blue); }
-.learn-card__foot { margin-top: auto; display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
-.learn-card__foot a { font-size: 14px; font-weight: 600; text-underline-offset: 3px; }
-.learn-card__foot a:hover { color: var(--small-blue); }
-.learn-vote { display: inline-flex; align-items: center; gap: 6px; min-height: 40px; padding: 0 14px; border: 1.5px solid var(--navy); border-radius: 999px; background: var(--cream); color: var(--navy); font: 700 15px/1 var(--display); cursor: pointer; transition: background-color .15s ease, transform .15s ease; }
-.learn-vote [data-count]:empty { display: none; }
-.learn-vote:hover:not(:disabled) { background: var(--blue); transform: translateY(-2px); }
-.learn-vote[aria-pressed="true"] { background: var(--navy); color: var(--cream); }
-.learn-vote:disabled { opacity: .55; cursor: progress; }
-.learn-empty { margin: 24px 0; font-size: 18px; }
-
-.learning-outro { margin-top: 48px; padding-top: 28px; border-top: 1px solid var(--tint); display: flex; align-items: center; justify-content: space-between; gap: 16px 32px; flex-wrap: wrap; }
-.learning-outro p { margin: 0; font-size: clamp(22px, 2.6vw, 30px); font-weight: 800; letter-spacing: -.01em; }
-.learning-outro__link { display: inline-flex; align-items: center; min-height: 50px; padding: 0 24px; border: 1.5px solid var(--navy); border-radius: 999px; background: var(--cream); color: var(--navy); font-weight: 700; text-decoration: none; transition: background-color .15s ease, transform .15s ease; }
-.learning-outro__link:hover { background: var(--blue); transform: translateY(-2px); }
+/* Learning page (2026-10-15 redesign). One list, simplest word first. Each row reads word, explainer,
+   drawing, upvote. Shared header, nav, notes band and tokens live in styles.css. Every class here starts
+   with learn- so nothing collides with the homepage (which has its own .hero and .btn). */
+:root { --learn-rule: #E6D9C8; }
 [hidden] { display: none !important; }
 
-@media (max-width: 1000px) { .learn-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 640px) {
-  .topbar__inner { column-gap: 12px; }
-  .site-nav { order: 3; width: 100%; margin: 0; gap: 24px; }
-  .topbar__social { margin-left: auto; }
-  .learning-intro { padding-top: 28px; padding-bottom: 24px; }
-  .learning-intro h1 { font-size: min(54px, 12.4vw); } /* "LET'S GET OUR" stays on one line */
-  .learn-filters { gap: 8px; }
-  .learn-filters button { font-size: 15px; padding-right: 14px; }
-  .learn-inputs { width: 100%; }
-  .learn-inputs label { flex: 1; }
-  .learn-inputs input { width: 100%; }
-  .learn-grid { grid-template-columns: 1fr; gap: 14px; }
-  .learn-card h3 { font-size: 28px; }
+/* Hero */
+.learn-hero { padding-top: 44px; padding-bottom: 34px; }
+.learn-hero h1 { margin: 16px 0 18px; font-weight: 800; text-transform: uppercase; letter-spacing: -.02em; line-height: .9; font-size: clamp(44px, 7.8vw, 96px); text-wrap: balance; }
+.learn-hero h1 span { display: block; }
+.learn-hero__blue { color: var(--blue); } /* same accent blue as DEPTH */
+.learn-hero__sub { max-width: 600px; margin: 0; font-size: clamp(18px, 2vw, 21px); line-height: 1.45; }
+
+/* Search and sort. Sticks to the top on wider screens. */
+.learn-toolbar { position: sticky; top: 0; z-index: 10; background: var(--cream); border-top: 1.5px solid var(--navy); border-bottom: 1px solid var(--learn-rule); }
+.learn-toolbar__inner { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; padding-top: 12px; padding-bottom: 12px; }
+.learn-search { position: relative; }
+.learn-search input { width: 260px; height: 42px; padding: 0 14px 0 38px; border: 1.5px solid var(--navy); border-radius: 999px; background: #fff; color: var(--navy); font: 400 16px/1 var(--display); }
+.learn-search input::placeholder { color: #7D8A96; }
+.learn-search svg { position: absolute; left: 13px; top: 50%; width: 16px; height: 16px; transform: translateY(-50%); pointer-events: none; }
+/* Navy behind the buttons, so no tan shows at the rounded edge in either state */
+.learn-seg { display: inline-flex; gap: 1.5px; border: 1.5px solid var(--navy); border-radius: 999px; overflow: hidden; background: var(--navy); }
+.learn-seg button { min-height: 39px; padding: 0 16px; border: 0; background: var(--cream); color: var(--navy); font: 700 15px/1 var(--display); cursor: pointer; white-space: nowrap; }
+.learn-seg button[aria-pressed="true"] { background: var(--navy); color: var(--cream); }
+.learn-seg button:not([aria-pressed="true"]):hover { background: var(--foam); }
+
+.learn-body { padding-bottom: 8px; }
+.learn-status { margin: 14px 0 0; min-height: 0; font-weight: 600; color: var(--small-blue); }
+.learn-status:empty { display: none; }
+.learn-retry, .learn-btn { display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 0 20px; border: 1.5px solid var(--navy); border-radius: 999px; background: var(--navy); color: var(--cream); font: 700 15.5px/1 var(--display); cursor: pointer; transition: transform .15s ease; }
+.learn-retry { margin-top: 10px; background: var(--cream); color: var(--navy); }
+.learn-retry:hover, .learn-btn:hover { transform: translateY(-2px); }
+
+/* The list */
+.learn-list { list-style: none; margin: 0; padding: 0 0 8px; }
+.learn-row { display: grid; grid-template-columns: minmax(0, 220px) minmax(0, 1fr) 136px 64px; gap: 8px 28px; align-items: start; padding: 22px 12px; margin: 0 -12px; border-bottom: 1px solid var(--learn-rule); border-radius: 6px; scroll-margin-top: 90px; transition: background-color .2s ease; }
+.learn-row:hover { background: var(--foam); }
+.learn-row__term { min-width: 0; display: grid; gap: 6px; justify-items: start; }
+.learn-row__term h3 { margin: 0; font-size: 28px; line-height: 1; font-weight: 800; letter-spacing: -.015em; overflow-wrap: break-word; }
+.learn-row__rank { display: none; place-items: center; min-width: 28px; height: 24px; padding: 0 6px; border-radius: 6px; background: var(--navy); color: var(--cream); font: 700 12px/1 var(--mono); font-variant-numeric: tabular-nums; }
+.learn-list.is-ranked .learn-row__rank { display: inline-grid; }
+.learn-row__aka { margin: 0; font: 400 11.5px/1.35 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--small-blue); }
+.learn-row__body { min-width: 0; }
+.learn-row__def { margin: 0; max-width: 62ch; font-size: 17px; line-height: 1.5; }
+.learn-row__think { margin: 8px 0 0; max-width: 62ch; color: var(--body-muted); font-size: 15.5px; line-height: 1.45; }
+.learn-row__think b { margin-right: 7px; font: 700 10.5px/1 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--small-blue); }
+.learn-tag { display: inline-flex; align-items: center; gap: 6px; margin-top: 4px; padding: 5px 9px; border-radius: 999px; font: 700 10.5px/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; text-decoration: none; white-space: nowrap; }
+.learn-tag--on { background: var(--navy); color: var(--cream); }
+.learn-tag--on:hover { background: var(--small-blue); }
+.learn-tag--on svg { width: 9px; height: 9px; }
+.learn-tag--off { border: 1.5px dashed var(--small-blue); color: var(--small-blue); }
+
+/* Drawings: Sho Hatakeyama's O-heads (people) and the little blue square (the AI), one pool scene per word */
+.learn-art { width: 100%; max-width: 136px; aspect-ratio: 8 / 5; border-radius: 12px; overflow: hidden; background: var(--foam); }
+.learn-row:hover .learn-art { background: var(--cream); }
+.learn-art svg { display: block; width: 100%; height: 100%; }
+.learn-art text { font-family: var(--mono); font-weight: 700; }
+.learn-art .lbl { font-size: 7px; letter-spacing: .08em; fill: #FBF1E5; }
+.learn-art .ink { fill: #0B2A45; }
+
+/* Upvote */
+.learn-upv { display: grid; justify-items: center; align-content: center; gap: 3px; width: 64px; min-height: 70px; border: 1.5px solid var(--navy); border-radius: 14px; background: var(--cream); color: var(--navy); cursor: pointer; transition: background-color .15s ease, transform .15s ease; }
+.learn-upv:hover:not(:disabled) { background: var(--blue); transform: translateY(-2px); }
+.learn-upv svg { width: 18px; height: 18px; }
+.learn-upv .n { font: 700 15px/1 var(--mono); font-variant-numeric: tabular-nums; }
+.learn-upv .n:empty { display: none; }
+.learn-upv .w { font: 700 8.5px/1 var(--mono); letter-spacing: .06em; text-transform: uppercase; white-space: nowrap; }
+.learn-upv[aria-pressed="true"] { background: var(--navy); color: var(--cream); }
+.learn-upv:disabled { opacity: .55; cursor: default; }
+.learn-upv.is-bump { animation: learn-bump .38s ease; }
+@keyframes learn-bump { 40% { transform: scale(1.12); } 100% { transform: scale(1); } }
+
+.learn-empty { padding: 36px 0; display: grid; gap: 14px; justify-items: start; }
+.learn-empty p { margin: 0; font-size: 20px; font-weight: 700; }
+
+/* Suggest a word */
+.learn-suggest { margin: 44px 0 0; padding: 26px; border-radius: 18px; background: var(--blue); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 16px 32px; align-items: center; scroll-margin-top: 80px; }
+.learn-suggest h2 { margin: 0; font-size: clamp(26px, 3vw, 36px); font-weight: 800; text-transform: uppercase; letter-spacing: -.02em; line-height: .95; }
+.learn-suggest form { display: flex; gap: 8px; flex-wrap: wrap; }
+.learn-suggest input:not(.notes__hp) { flex: 1 1 200px; min-width: 0; height: 46px; padding: 0 16px; border: 1.5px solid var(--navy); border-radius: 999px; background: #fff; color: var(--navy); font: 400 16px/1 var(--display); }
+.learn-suggest__done { grid-column: 1 / -1; margin: 0; font-weight: 600; }
+.learn-suggest__done:empty { display: none; }
+.learn-foot { margin: 22px 0 64px; display: flex; justify-content: space-between; gap: 8px 20px; flex-wrap: wrap; font: 400 11px/1.5 var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--small-blue); }
+
+/* Vote toast */
+.learn-toast { position: fixed; left: 50%; bottom: calc(18px + env(safe-area-inset-bottom, 0px)); z-index: 40; transform: translate(-50%, 20px); opacity: 0; pointer-events: none; max-width: calc(100% - 32px); padding: 12px 18px; border-radius: 999px; background: var(--navy); color: var(--cream); font-weight: 700; font-size: 15px; transition: opacity .2s ease, transform .2s ease; }
+.learn-toast.is-on { opacity: 1; transform: translate(-50%, 0); }
+
+/* Narrower screens keep the same reading order: word and explainer, then drawing, then upvote */
+@media (max-width: 900px) {
+  .learn-toolbar { position: static; }
+  .learn-row { grid-template-columns: minmax(0, 1fr) 120px 64px; gap: 10px 18px; padding: 20px 10px; margin: 0 -10px; }
+  .learn-row__term { grid-column: 1; grid-row: 1; }
+  .learn-row__body { grid-column: 1; grid-row: 2; }
+  .learn-art { grid-column: 2; grid-row: 1 / span 2; }
+  .learn-upv { grid-column: 3; grid-row: 1 / span 2; }
+  .learn-suggest { grid-template-columns: 1fr; padding: 22px; }
+}
+@media (max-width: 560px) {
+  .learn-hero { padding-top: 28px; padding-bottom: 24px; }
+  .learn-hero h1 { font-size: 11.4vw; }
+  .learn-hero h1 span { display: inline; }
+  .learn-search { flex: 1 1 100%; }
+  .learn-search input { width: 100%; }
+  .learn-row { grid-template-columns: minmax(0, 1fr) 60px; gap: 12px; }
+  .learn-row__term, .learn-row__body { grid-column: 1 / -1; }
+  .learn-row__term { grid-row: 1; }
+  .learn-row__body { grid-row: 2; }
+  .learn-art { grid-column: 1; grid-row: 3; max-width: 150px; }
+  .learn-upv { grid-column: 2; grid-row: 3; align-self: center; width: 60px; min-height: 64px; }
+  .learn-row__term h3 { font-size: 25px; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .learn-filters button, .learn-sort, .learn-retry, .learn-vote, .learning-outro__link { transition: none; }
-  .learn-filters button:hover, .learn-sort:hover, .learn-retry:hover, .learn-vote:hover:not(:disabled), .learning-outro__link:hover { transform: none; }
+  .learn-row, .learn-upv, .learn-btn, .learn-retry, .learn-toast { transition: none; }
+  .learn-upv.is-bump { animation: none; }
+  .learn-upv:hover:not(:disabled), .learn-btn:hover, .learn-retry:hover { transform: none; }
 }

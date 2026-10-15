@@ -1,332 +1,287 @@
 [
   {
-    "id": "llms",
-    "kind": "term",
+    "id": "generative-ai",
+    "title": "Generative AI",
+    "definition": "AI that makes new things, like writing, images, music or video.",
+    "think": "The difference between a spam filter and a ghostwriter."
+  },
+  {
+    "id": "prompt",
+    "title": "Prompt",
+    "definition": "Whatever you type or say to the AI. The best ones read like a text to a smart friend who knows nothing about your life.",
+    "think": "Ordering \"food, please\" vs. \"the salmon, sauce on the side.\"",
+    "episode": {
+      "number": "004",
+      "time": "16:23"
+    }
+  },
+  {
+    "id": "llm",
     "title": "LLM",
     "aka": "Large language model",
-    "description": "The brain behind ChatGPT, Claude and Gemini. It read a mind-boggling amount of text and got really good at predicting what comes next, one little chunk at a time.",
-    "exercise": "Ask it to explain LLMs using a hobby you love. Then explain it back and ask it to grade you.",
-    "url": "https://developers.google.com/machine-learning/crash-course/llm",
-    "source": "Google's LLM crash course",
-    "starter": true
+    "definition": "The engine inside ChatGPT, Claude and Gemini. It read a huge chunk of the internet and learned to guess the next word.",
+    "think": "Autocomplete that read the whole library.",
+    "episode": {
+      "number": "002",
+      "time": "06:20"
+    }
   },
   {
     "id": "model-vs-app",
-    "kind": "term",
     "title": "Model vs. app",
     "aka": "Who's who",
-    "description": "OpenAI is the company, GPT is the model and ChatGPT is the app you actually open. Same idea as Toyota, the engine and the Prius in your driveway.",
-    "exercise": "Open the model picker in whatever app you use. Count how many models are hiding behind one app.",
-    "url": "https://www.youtube.com/watch?v=cp4P_2t5rRQ",
-    "source": "Our episode on the AI landscape",
-    "starter": true
+    "definition": "OpenAI is the company. GPT-6 Astra is one of its models. ChatGPT is the app you open.",
+    "think": "Toyota, the engine and the Prius.",
+    "episode": {
+      "number": "002",
+      "time": "08:49"
+    }
   },
   {
-    "id": "prompts",
-    "kind": "term",
-    "title": "Prompt",
-    "description": "Whatever you type or say to the AI. The good ones read less like a Google search and more like a text to a smart friend who has zero context on your life.",
-    "exercise": "Ask the same thing twice. Once in five words, once with your goal and an example of a great answer. Compare.",
-    "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview",
-    "source": "Anthropic's prompting guide",
-    "starter": true
-  },
-  {
-    "id": "tokens",
-    "kind": "term",
-    "title": "Token",
-    "description": "The bite-size pieces AI reads and writes in. One token is about three quarters of a word, which is why limits and prices get counted in tokens instead of words.",
-    "exercise": "Paste a paragraph into OpenAI's tokenizer and watch it get chopped up. Emoji and long words are the fun ones.",
-    "url": "https://platform.openai.com/tokenizer",
-    "source": "OpenAI's tokenizer",
-    "starter": false
-  },
-  {
-    "id": "context-window",
-    "kind": "term",
-    "title": "Context window",
-    "description": "How much the AI can hold in its head at once, including your messages, its replies and any files you drop in. Really long chats can push early details out, which is why they get forgetful.",
-    "exercise": "When a long chat starts losing the thread, ask for a recap, start a fresh chat and paste the recap in.",
-    "url": "https://platform.claude.com/docs/en/build-with-claude/context-windows",
-    "source": "Anthropic on context windows",
-    "starter": false
-  },
-  {
-    "id": "hallucinations",
-    "kind": "term",
+    "id": "hallucination",
     "title": "Hallucination",
-    "description": "When AI makes something up and says it with a straight face, like a quote nobody said or a study that doesn't exist.",
-    "exercise": "Pick one fact from a chat, open the source it points to and see if the source backs it up.",
-    "url": "https://help.openai.com/en/articles/8313428-does-chatgpt-tell-the-truth",
-    "source": "OpenAI on accuracy",
-    "starter": true
-  },
-  {
-    "id": "knowledge-cutoff",
-    "kind": "term",
-    "title": "Knowledge cutoff",
-    "description": "The date an AI's built-in knowledge stops. Ask about anything after that and it's guessing, unless it can search the web.",
-    "exercise": "Ask about something from this week with web search off, then turn it on and ask again.",
-    "url": "https://en.wikipedia.org/wiki/Knowledge_cutoff",
-    "source": "Wikipedia",
-    "starter": false
+    "definition": "When AI makes something up with a straight face, like a quote nobody said or a study that doesn't exist.",
+    "think": "The friend who'd rather invent an answer than say \"I don't know.\"",
+    "episode": {
+      "number": "003",
+      "time": "22:09"
+    }
   },
   {
     "id": "multimodal",
-    "kind": "term",
     "title": "Multimodal",
-    "description": "AI that works with more than text. Show it a screenshot or send a voice memo and it can work with that too.",
-    "exercise": "Snap a photo of your fridge and ask what you can make for dinner tonight.",
-    "url": "https://developers.google.com/machine-learning/crash-course/llm",
-    "source": "Google's LLM crash course",
-    "starter": false
-  },
-  {
-    "id": "reasoning-models",
-    "kind": "term",
-    "title": "Reasoning model",
-    "aka": "Thinking mode",
-    "description": "A model that takes a beat to work through a problem before it answers. Slower, but a lot better at math, planning and anything with a few moving parts.",
-    "exercise": "Give the same brain teaser to the fast mode and the thinking mode. See which one falls for it.",
-    "url": "https://platform.openai.com/docs/guides/reasoning",
-    "source": "OpenAI's reasoning guide",
-    "starter": false
-  },
-  {
-    "id": "agents",
-    "kind": "term",
-    "title": "Agent",
-    "description": "AI you hand a goal instead of a question. It picks the steps, uses tools like search or your calendar, and keeps going until it's done or stuck.",
-    "exercise": "Give an agent a small errand, like finding three dinner spots with a table for two on Friday. Watch what it does.",
-    "url": "https://www.youtube.com/watch?v=rxethT04zMY",
-    "source": "Our episode on agents",
-    "starter": false
-  },
-  {
-    "id": "automation",
-    "kind": "term",
-    "title": "Automation",
-    "aka": "Workflow",
-    "description": "A fixed set of steps that runs the same way every time, like \"when a receipt hits my inbox, save it to this folder.\" Unlike an agent, it doesn't make decisions along the way.",
-    "exercise": "Write down one thing you do every week in the exact same steps. That's an automation waiting to happen.",
-    "url": "https://www.anthropic.com/engineering/building-effective-agents",
-    "source": "Anthropic on agents vs. workflows",
-    "starter": false
-  },
-  {
-    "id": "vibe-coding",
-    "kind": "term",
-    "title": "Vibe coding",
-    "description": "Building an app by describing what you want and letting AI write all the code. Andrej Karpathy coined it in February 2025, and Collins made it Word of the Year.",
-    "exercise": "Ask an AI to build a one-page website for your dog. Don't touch a single line of code.",
-    "url": "https://en.wikipedia.org/wiki/Vibe_coding",
-    "source": "Wikipedia",
-    "starter": false
-  },
-  {
-    "id": "chatgpt",
-    "kind": "tool",
-    "title": "ChatGPT",
-    "aka": "By OpenAI",
-    "description": "The one everyone's heard of, and an easy first stop. Bring it a real task from your week instead of a test question.",
-    "exercise": "Bring a decision you're stuck on and ask it to interview you before it gives any advice.",
-    "url": "https://chatgpt.com/",
-    "source": "Open ChatGPT",
-    "starter": true
-  },
-  {
-    "id": "claude",
-    "kind": "tool",
-    "title": "Claude",
-    "aka": "By Anthropic",
-    "description": "Anthropic's assistant, and a strong pick for writing and coding. It can also make documents and small working apps right in the chat.",
-    "exercise": "Give Claude and ChatGPT the exact same task. Notice which answer you'd actually use.",
-    "url": "https://claude.ai/",
-    "source": "Open Claude",
-    "starter": false
-  },
-  {
-    "id": "gemini",
-    "kind": "tool",
-    "title": "Gemini",
-    "aka": "By Google",
-    "description": "Google's assistant, and it shows up inside Gmail, Docs and Android. Handy if your life already runs on Google.",
-    "exercise": "Ask it to find the last three emails about one plan and turn them into a to-do list.",
-    "url": "https://gemini.google.com/",
-    "source": "Open Gemini",
-    "starter": false
-  },
-  {
-    "id": "notebooklm",
-    "kind": "tool",
-    "title": "Gemini Notebook",
-    "aka": "Formerly NotebookLM",
-    "description": "Google's research notebook. You give it your own sources and it answers from those, with citations you can click to check.",
-    "exercise": "Add two articles that disagree on something. Ask where they agree and where they don't, then click the citations.",
-    "url": "https://notebooklm.google/",
-    "source": "Open Gemini Notebook",
-    "starter": false
-  },
-  {
-    "id": "tldraw",
-    "kind": "tool",
-    "title": "tldraw",
-    "description": "A free whiteboard for sketching ideas and diagrams. Mary likes to start here whenever an idea needs to be a picture.",
-    "exercise": "Sketch a process you know by heart. Ask AI to simplify the steps, then redraw it.",
-    "url": "https://www.tldraw.com/",
-    "source": "Open tldraw",
-    "starter": false
-  },
-  {
-    "id": "granola",
-    "kind": "tool",
-    "title": "Granola",
-    "description": "An AI notepad for meetings. It listens along, then turns your messy notes into clean ones once the call's over.",
-    "exercise": "Use it on one low-stakes call and compare its notes to what you remember.",
-    "url": "https://www.granola.ai/",
-    "source": "Open Granola",
-    "starter": false
-  },
-  {
-    "id": "wispr-flow",
-    "kind": "tool",
-    "title": "Wispr Flow",
-    "description": "Talk instead of type, in any app. It's great for prompts, because people say way more out loud than they'd ever bother typing.",
-    "exercise": "Next time you write a prompt, say it out loud instead and ramble a little. Compare the answer.",
-    "url": "https://wisprflow.ai/",
-    "source": "Open Wispr Flow",
-    "starter": false
-  },
-  {
-    "id": "projects",
-    "kind": "tool",
-    "title": "Projects",
-    "description": "A folder for one ongoing thing, with its own chats, files and instructions, so you stop re-explaining your situation every single time.",
-    "exercise": "Make a project for something you work on every week. Add your goal and one example of work you love.",
-    "url": "https://help.openai.com/en/articles/10169521-projects-in-chatgpt",
-    "source": "OpenAI on projects",
-    "starter": true
-  },
-  {
-    "id": "custom-instructions",
-    "kind": "tool",
-    "title": "Custom instructions",
-    "description": "Standing notes the AI reads before every chat, like \"I'm a beginner, skip the jargon\" or \"keep it short.\" Set them once and stop repeating yourself.",
-    "exercise": "Write three lines about how you like answers. Paste them into your settings and see what changes.",
-    "url": "https://help.openai.com/en/articles/8096356-custom-instructions-for-chatgpt",
-    "source": "OpenAI on custom instructions",
-    "starter": false
+    "definition": "AI that understands more than text. Send it a photo or a voice memo.",
+    "think": "Snap a photo of your fridge and ask what's for dinner.",
+    "episode": {
+      "number": "002",
+      "time": "08:29"
+    }
   },
   {
     "id": "memory",
-    "kind": "tool",
     "title": "Memory",
-    "description": "When the app remembers things about you between chats, like that you're vegetarian or training for a marathon. Handy, and worth peeking at what it's saved.",
-    "exercise": "Ask \"what do you remember about me?\" and clean up anything that's wrong or a little too personal.",
-    "url": "https://help.openai.com/en/articles/8590148-memory-faq",
-    "source": "OpenAI on memory",
-    "starter": false
+    "definition": "The app remembering things about you between chats, like your job or that you're vegetarian. You can edit it in settings.",
+    "think": "A barista who knows your usual."
   },
   {
-    "id": "skills",
-    "kind": "tool",
-    "title": "Skills",
-    "description": "Recipe cards for the AI. Each one is a set of instructions it pulls out only when a task calls for it, like \"write in my voice\" or \"make a slide deck.\"",
-    "exercise": "Pick a task you explain the same way every time and write the recipe down once.",
-    "url": "https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview",
-    "source": "Anthropic on skills",
-    "starter": false
+    "id": "custom-instructions",
+    "title": "Custom instructions",
+    "definition": "Notes the AI reads before every chat, like \"keep it short\" or \"I run a nonprofit.\"",
+    "think": "The note on the fridge for the babysitter.",
+    "episode": {
+      "number": "004",
+      "time": "09:09"
+    }
   },
   {
-    "id": "connectors",
-    "kind": "tool",
-    "title": "Connectors",
-    "aka": "MCP",
-    "description": "Plugs that let an assistant reach into your other apps, like your calendar, email or Google Drive, so it can work with your actual stuff. A lot of them run on MCP, an open standard for exactly this.",
-    "exercise": "Connect one low-stakes app, like your calendar, and ask what your week really looks like.",
-    "url": "https://modelcontextprotocol.io/",
-    "source": "What MCP is",
-    "starter": false
+    "id": "projects",
+    "title": "Projects",
+    "definition": "A folder for one ongoing thing, with its own chats, files and instructions, so you never re-explain the backstory.",
+    "think": "Giving your AI its own desk.",
+    "episode": {
+      "number": "001",
+      "time": "01:43"
+    }
   },
   {
-    "id": "deep-research",
-    "kind": "tool",
-    "title": "Deep research",
-    "description": "Ask a big question, go make a coffee, and come back to a cited report the AI pieced together from dozens of sources.",
-    "exercise": "Have it research something you already know cold, then grade its homework.",
-    "url": "https://openai.com/index/introducing-deep-research/",
-    "source": "OpenAI on deep research",
-    "starter": false
+    "id": "model-sizes",
+    "title": "Model sizes",
+    "definition": "Most AI companies sell a few sizes. Bigger is smarter, smaller is faster and cheaper. OpenAI's are Astra, Sol and Luna.",
+    "think": "Coffee sizes. Not every question needs a venti."
   },
   {
-    "id": "one-useful-thing",
-    "kind": "topic",
-    "title": "Build one useful thing",
-    "description": "Our standing challenge. Pick one annoying task from your week and get AI to help with it. Keep it small and real.",
-    "exercise": "Decide what \"done\" looks like before you ask AI for anything.",
-    "url": "https://www.youtube.com/@OutOfOurDepthPod/videos",
-    "source": "Watch us try it",
-    "starter": true
+    "id": "training",
+    "title": "Training",
+    "definition": "How a model learns. It reads a mountain of text over and over until the patterns stick.",
+    "think": "Years of reading before the first day on the job.",
+    "episode": {
+      "number": "002",
+      "time": "06:20"
+    }
   },
   {
-    "id": "learning-routine",
-    "kind": "topic",
-    "title": "Keeping up without drowning",
-    "description": "You don't need every AI headline. A couple of sources you trust and a habit you actually like will get you way further.",
-    "exercise": "Pick three words from this page you didn't know. Explain each one to a friend by Friday.",
-    "url": "https://www.youtube.com/@OutOfOurDepthPod/videos",
-    "source": "Learn along with us",
-    "starter": false
+    "id": "knowledge-cutoff",
+    "title": "Knowledge cutoff",
+    "definition": "The date a model's built-in knowledge stops. Ask about anything newer and it's guessing, unless it can search the web.",
+    "think": "A smart friend back from six months off the grid."
   },
   {
     "id": "ai-slop",
-    "kind": "topic",
     "title": "AI slop",
-    "description": "The bland, over-polished stuff AI churns out when nobody edits it. You've seen the emails that open with \"I hope this finds you well.\" We have opinions.",
-    "exercise": "Paste something AI wrote for you and ask it to find every line that sounds like a robot.",
-    "url": "https://github.com/petergyang/no-ai-slop",
-    "source": "The No AI Slop skill we use",
-    "starter": false
+    "definition": "The bland, over-polished writing AI churns out when nobody edits it. \"I hope this finds you well,\" forever.",
+    "think": "Elevator music, but for words.",
+    "episode": {
+      "number": "001",
+      "time": "15:42"
+    }
   },
   {
-    "id": "privacy",
-    "kind": "topic",
-    "title": "Privacy and your data",
-    "description": "What happens to the stuff you paste in? Worth five minutes in the settings before you upload your tax return.",
-    "exercise": "Open the data settings in the AI app you use most and decide what you're comfortable sharing.",
-    "url": "https://help.openai.com/en/articles/7730893-data-controls-faq",
-    "source": "OpenAI's data controls",
-    "starter": false
+    "id": "sycophancy",
+    "title": "Sycophancy",
+    "definition": "When AI tells you what you want to hear, like calling your so-so business plan brilliant.",
+    "think": "A yes-man with a big vocabulary.",
+    "episode": {
+      "number": "004",
+      "time": "23:43"
+    }
   },
   {
-    "id": "environment",
-    "kind": "topic",
-    "title": "AI and energy",
-    "description": "Every answer runs on a data center somewhere. How much power that takes, and whether AI ends up saving more than it uses, is still being worked out.",
-    "exercise": "Skim the IEA's overview and sort what's measured today from what's a forecast.",
-    "url": "https://www.iea.org/reports/energy-and-ai",
-    "source": "IEA's Energy and AI report",
-    "starter": false
+    "id": "deepfake",
+    "title": "Deepfake",
+    "definition": "Fake but real-looking video, audio or photos of a real person. Voice clones make scam calls sound like family.",
+    "think": "Photoshop, if Photoshop could call your grandma."
   },
   {
-    "id": "future-work",
-    "kind": "topic",
-    "title": "AI and your job",
-    "description": "Which parts of your work could get easier, which might change, and how you'd even tell. It depends a lot on the job.",
-    "exercise": "List three things you did at work this week. For each, ask whether AI could do a first draft.",
-    "url": "https://hai.stanford.edu/ai-index/2025-ai-index-report",
-    "source": "Stanford's AI Index",
-    "starter": false
+    "id": "token",
+    "title": "Token",
+    "definition": "The bite-size chunks AI reads and writes in, about three quarters of a word each. Prices and limits are counted in them.",
+    "think": "Gas in the car. Every word in and out burns a little.",
+    "episode": {
+      "number": "002",
+      "time": "13:26"
+    }
+  },
+  {
+    "id": "context-window",
+    "title": "Context window",
+    "definition": "How much the AI can hold in its head at once, including your messages, its replies and your files. In long chats, the early stuff starts to slip.",
+    "think": "A whiteboard. Fill it up and something gets erased."
+  },
+  {
+    "id": "reasoning",
+    "title": "Reasoning model",
+    "aka": "Thinking mode",
+    "definition": "A model that thinks through a problem before answering. Slower, but much better at math and anything with moving parts.",
+    "think": "Showing your work instead of blurting out the first number.",
+    "episode": {
+      "number": "004",
+      "time": "13:36"
+    }
+  },
+  {
+    "id": "deep-research",
+    "title": "Deep research",
+    "definition": "Ask a big question, go make coffee, come back to a report with sources. The AI runs dozens of searches for you.",
+    "think": "An intern who does the library run for you."
+  },
+  {
+    "id": "vibe-coding",
+    "title": "Vibe coding",
+    "definition": "Building an app by describing it in plain English and letting AI write all the code.",
+    "think": "Telling a builder what house you want and never looking at the blueprints.",
+    "episode": {
+      "number": "004",
+      "time": "23:52"
+    }
+  },
+  {
+    "id": "agent",
+    "title": "Agent",
+    "definition": "AI you give a goal instead of a question. It picks the steps, uses tools like search or your calendar, and keeps going until it's done.",
+    "think": "Asking for directions vs. handing someone your car keys.",
+    "episode": {
+      "number": "003",
+      "time": "00:00"
+    }
+  },
+  {
+    "id": "skills",
+    "title": "Skills",
+    "definition": "Saved instructions for specific jobs, like your brand rules or how you write a grant. The AI grabs the right one when it needs it.",
+    "think": "A binder of how-tos a new hire actually reads.",
+    "episode": {
+      "number": "001",
+      "time": "08:12"
+    }
+  },
+  {
+    "id": "computer-use",
+    "title": "Computer use",
+    "definition": "AI using a computer the way you do, looking at the screen, clicking and typing.",
+    "think": "Handing someone your laptop and watching over their shoulder."
+  },
+  {
+    "id": "mcp",
+    "title": "MCP",
+    "aka": "Model Context Protocol",
+    "definition": "A standard plug that connects AI to your other apps, like Gmail or Google Drive, so it can get things done there.",
+    "think": "USB for AI. One plug shape, lots of devices.",
+    "episode": {
+      "number": "001",
+      "time": "05:59"
+    }
+  },
+  {
+    "id": "prompt-injection",
+    "title": "Prompt injection",
+    "definition": "Sneaky instructions hidden in a webpage or email that trick AI into doing something you didn't ask for.",
+    "think": "A note slipped into the to-do pile: \"also, wire $500 to this account.\""
+  },
+  {
+    "id": "open-closed",
+    "title": "Open vs. closed models",
+    "definition": "Open models, like DeepSeek and Qwen, can be downloaded and run by anyone. Closed ones, like the models in ChatGPT, Claude and Gemini, only live behind the company's app.",
+    "think": "A recipe you can cook at home vs. a dish you can only order at the restaurant.",
+    "episode": {
+      "number": "002",
+      "time": "06:20"
+    }
+  },
+  {
+    "id": "benchmark",
+    "title": "Benchmark",
+    "definition": "A standardized test for AI. Labs love bragging about scores, and the tests keep getting harder because models keep acing them.",
+    "think": "The SAT, for robots."
+  },
+  {
+    "id": "gpu",
+    "title": "GPU",
+    "aka": "Graphics processing unit",
+    "definition": "The chips that do AI's heavy math. Nvidia makes most of them, and everyone wants more.",
+    "think": "Gaming graphics cards that got drafted into a much bigger job."
+  },
+  {
+    "id": "data-center",
+    "title": "Data center",
+    "definition": "Warehouses full of those chips, running around the clock. Their power and water use is a big part of the AI debate.",
+    "think": "The kitchen behind every AI answer."
+  },
+  {
+    "id": "rag",
+    "title": "RAG",
+    "aka": "Retrieval-augmented generation",
+    "definition": "AI that checks your documents before answering, so it can cite sources instead of going from memory.",
+    "think": "An open-book test instead of a closed-book one."
+  },
+  {
+    "id": "fine-tuning",
+    "title": "Fine-tuning",
+    "definition": "Extra training on a focused set of examples so a model gets great at one job, like writing in your company's voice.",
+    "think": "A residency after med school."
+  },
+  {
+    "id": "scaling-laws",
+    "title": "Scaling laws",
+    "definition": "The pattern that models get smarter as they get bigger and train on more data with more chips. Whether it keeps holding is the trillion-dollar question.",
+    "think": "Adding horsepower to a car. Works great, until it doesn't."
+  },
+  {
+    "id": "alignment",
+    "title": "Alignment",
+    "definition": "Getting AI to do what people actually want, without cutting corners or causing harm. It matters more as models get smarter.",
+    "think": "Raising a kid who'll end up smarter than you."
   },
   {
     "id": "agi",
-    "kind": "topic",
     "title": "AGI",
     "aka": "Artificial general intelligence",
-    "description": "AI that can do most things a person can. Everyone defines it a little differently, so \"how close are we?\" turns into a pretty fun argument.",
-    "exercise": "Find two definitions of AGI. For each, write down what would convince you we'd hit it.",
-    "url": "https://hai.stanford.edu/ai-index/2025-ai-index-report",
-    "source": "Stanford's AI Index",
-    "starter": false
+    "definition": "AI that can do pretty much any thinking job a person can. Nobody agrees on the definition or when it arrives.",
+    "think": "A finish line everyone's racing toward, but each team drew it somewhere else."
+  },
+  {
+    "id": "superintelligence",
+    "title": "Superintelligence",
+    "definition": "AI that beats the best humans at nearly everything. The step after AGI.",
+    "think": "The student who passes the teacher and keeps going."
   }
 ]

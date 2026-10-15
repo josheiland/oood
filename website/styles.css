@@ -430,3 +430,17 @@ a { color: inherit; }
   .btn, .ep__thumb img, .notes__btn { transition: none; }
   .ep:hover .ep__thumb img { transform: none; }
 }
+
+/* Main nav (Episodes / Learning) and the skip link, shared by both pages. Moved here from learning.css on
+   2026-10-15 so the homepage doesn't need the Learning stylesheet. */
+.topbar__inner { flex-wrap: wrap; column-gap: 24px; row-gap: 12px; }
+.site-nav { display: flex; gap: 24px; margin-left: auto; margin-right: 12px; font-weight: 700; }
+.site-nav a { text-decoration: none; padding: 8px 0; border-bottom: 2px solid transparent; }
+.site-nav a:hover, .site-nav a[aria-current] { border-color: var(--navy); }
+.skip-link { position: absolute; top: -100px; left: 20px; z-index: 10; background: var(--navy); color: var(--cream); padding: 12px; }
+.skip-link:focus { top: 12px; }
+@media (max-width: 640px) {
+  .topbar__inner { column-gap: 12px; }
+  .site-nav { order: 3; width: 100%; margin: 0; gap: 24px; }
+  .topbar__social { margin-left: auto; }
+}

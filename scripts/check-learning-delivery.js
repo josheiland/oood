@@ -20,7 +20,7 @@ async function vote(cookie,topic,voted,origin=base) {
  }
  const one=await snapshot(); const two=await snapshot();
  assert.equal(Object.keys(one.data.counts).length,JSON.parse(fs.readFileSync('website/learning-topics.json','utf8')).length);assert.equal(one.data.selected.length,0);assert.equal(two.data.selected.length,0);
- const topic='tokens', before=one.data.counts[topic];let wrote=false;
+ const topic='token', before=one.data.counts[topic];let wrote=false;
  try {
   const bad=await vote(one.cookie,topic,true,'https://invalid.example');assert.equal(bad.status,403);
   const unknown=await vote(one.cookie,'invented-topic',true);assert.equal(unknown.status,400);
