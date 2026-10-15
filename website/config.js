@@ -33,13 +33,13 @@ window.OOOD = {
       thumbnail: 'https://i.ytimg.com/vi/NiEnSBPe158/maxresdefault.jpg'
     },
     {
-      id: '_d-hzc6Lt5c', number: '005', title: 'How to Make Your AI Look and Sound Like You',
+      id: '_d-hzc6Lt5c', number: '005', title: 'How to Make AI Actually Write Like You',
       published: '2026-10-09T22:11:34+00:00',
       url: 'https://www.youtube.com/watch?v=_d-hzc6Lt5c',
       thumbnail: 'https://i.ytimg.com/vi/_d-hzc6Lt5c/maxresdefault.jpg'
     },
     {
-      id: 'Fby7CJC9i-Q', number: '004', title: 'Can ChatGPT Coach Our Ultramarathon?',
+      id: 'Fby7CJC9i-Q', number: '004', title: 'ChatGPT as Our Running Coach: What We Had to Fix',
       published: '2026-10-06T14:54:38+00:00',
       url: 'https://www.youtube.com/watch?v=Fby7CJC9i-Q',
       thumbnail: 'https://i.ytimg.com/vi/Fby7CJC9i-Q/maxresdefault.jpg'
@@ -51,14 +51,14 @@ window.OOOD = {
       thumbnail: 'https://i.ytimg.com/vi/rxethT04zMY/maxresdefault.jpg'
     },
     {
-      id: 'cp4P_2t5rRQ', number: '002', title: 'AI Landscape... But Not the Boring Kind',
+      id: 'cp4P_2t5rRQ', number: '002', title: "ChatGPT vs Claude vs Gemini: What's the Difference?",
       blurb: 'We untangle AI companies, models and apps, with a little help from a Toyota Prius.',
       published: '2026-10-03T19:37:28+00:00',
       url: 'https://www.youtube.com/watch?v=cp4P_2t5rRQ',
       thumbnail: 'https://i.ytimg.com/vi/cp4P_2t5rRQ/maxresdefault.jpg'
     },
     {
-      id: 'd-ykZl4WHjo', number: '001', title: 'Projects, Connectors & Skills… Take Your AI from Fresh Intern to Full-Time Hire',
+      id: 'd-ykZl4WHjo', number: '001', title: 'Claude/ChatGPT Skills, Projects & Connectors, Explained Simply',
       blurb: 'We try projects, connectors and skills to give AI context and put it to work.',
       published: '2026-09-30T23:00:52+00:00',
       url: 'https://www.youtube.com/watch?v=d-ykZl4WHjo',
@@ -78,9 +78,8 @@ window.OOOD = {
   // job leaves these alone and uses them on the no-JS cards too.
   siteTitles: {
     'Fby7CJC9i-Q': 'Build With Us: Turn ChatGPT Into Your Coach', // Josh 2026-10-11
-    // No ellipses on the site (Josh 2026-10-11); YouTube keeps its own titles
-    'cp4P_2t5rRQ': 'AI Landscape, But Not the Boring Kind',
-    'd-ykZl4WHjo': 'Projects, Connectors & Skills: Take Your AI from Fresh Intern to Full-Time Hire',
+    // No ellipses on the site (Josh 2026-10-11). The E001/E002 overrides that stripped them were
+    // dropped 2026-10-14, when the YouTube titles changed to ones without ellipses.
   },
 
   // YouTube video IDs to leave off the site, e.g. a trailer or clip uploaded as a long-form video.
