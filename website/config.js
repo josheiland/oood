@@ -33,7 +33,7 @@ window.OOOD = {
       thumbnail: 'https://i.ytimg.com/vi/NiEnSBPe158/maxresdefault.jpg'
     },
     {
-      id: '_d-hzc6Lt5c', number: '005', title: 'How to Make AI Actually Come Across Like You',
+      id: '_d-hzc6Lt5c', number: '005', title: 'How to Make AI Actually Sound Like You',
       published: '2026-10-09T22:11:34+00:00',
       url: 'https://www.youtube.com/watch?v=_d-hzc6Lt5c',
       thumbnail: 'https://i.ytimg.com/vi/_d-hzc6Lt5c/maxresdefault.jpg'
