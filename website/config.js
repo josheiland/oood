@@ -27,6 +27,12 @@ window.OOOD = {
   episodes: [
     // episodes:start
     {
+      id: '82qlgC3QcEw', number: '007', title: 'How to Learn AI Without Feeling Behind',
+      published: '2026-10-17T15:43:55+00:00',
+      url: 'https://www.youtube.com/watch?v=82qlgC3QcEw',
+      thumbnail: 'https://i.ytimg.com/vi/82qlgC3QcEw/maxresdefault.jpg'
+    },
+    {
       id: 'NiEnSBPe158', number: '006', title: 'AI Planned Our Wedding',
       published: '2026-10-11T22:31:34+00:00',
       url: 'https://www.youtube.com/watch?v=NiEnSBPe158',
