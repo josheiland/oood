@@ -27,6 +27,12 @@ window.OOOD = {
   episodes: [
     // episodes:start
     {
+      id: 'lGp5szF6HI4', number: '008', title: 'Will AI Take Our Jobs? What AGI Actually Means',
+      published: '2026-10-21T22:49:52+00:00',
+      url: 'https://www.youtube.com/watch?v=lGp5szF6HI4',
+      thumbnail: 'https://i.ytimg.com/vi/lGp5szF6HI4/maxresdefault.jpg'
+    },
+    {
       id: '82qlgC3QcEw', number: '007', title: 'How to Learn AI Without Feeling Behind',
       published: '2026-10-17T15:43:55+00:00',
       url: 'https://www.youtube.com/watch?v=82qlgC3QcEw',
