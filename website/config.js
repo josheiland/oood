@@ -27,6 +27,12 @@ window.OOOD = {
   episodes: [
     // episodes:start
     {
+      id: 'yhVYY1N7hDg', number: '009', title: '[BONUS EPISODE] The Art of Personalization: Teaching AI YOUR voice & style',
+      published: '2026-10-26T19:40:45+00:00',
+      url: 'https://www.youtube.com/watch?v=yhVYY1N7hDg',
+      thumbnail: 'https://i.ytimg.com/vi/yhVYY1N7hDg/maxresdefault.jpg'
+    },
+    {
       id: 'lGp5szF6HI4', number: '008', title: 'Will AI Take Our Jobs? What AGI Actually Means',
       published: '2026-10-21T22:49:52+00:00',
       url: 'https://www.youtube.com/watch?v=lGp5szF6HI4',
