@@ -116,13 +116,15 @@ a { color: inherit; }
   container-type: inline-size;
   /* main.js sets --hero-h to whatever height is left once everything below the
      hero fits on screen. Without JS it falls back to about a third of the screen. */
-  width: min(100%, 1600px, calc(var(--hero-h, 32vh) * 100 / 23));
+  width: min(100%, 1600px, calc(var(--hero-h, 32vh) * 100 / 24.7));
   margin: 0 auto;
-  aspect-ratio: 100 / 23;
+  /* 24.7 not 23 (Mary 2026-10-28): the gap under DEPTH now lives inside the stage (the intro has no top
+     padding), so the tan space above "Out of our" and below DEPTH stay equal at every laptop width. */
+  aspect-ratio: 100 / 24.7;
   overflow: hidden;
 }
 /* Fade both host photos into the page tan on desktop/tablet, beneath the title.
-   Solid by 21cqw, leaving a tan buffer before the stage ends at 23cqw. */
+   Solid by 21cqw, leaving a tan buffer before the stage ends at 24.7cqw. */
 .hero__stage::after {
   content: "";
   position: absolute;
@@ -144,9 +146,9 @@ a { color: inherit; }
   user-select: none;
   pointer-events: none;
 }
-/* Mary (mary-v4, cut from the full-res original, 2026-10-11) is scaled so her face matches Josh's
-   (eyes-to-chin and face height), eyes on one line, mirrored around the center. Josh is unchanged. */
-.hero__host--mary { left: 12.91cqw; top: 2.68cqw; width: 16.72cqw; }
+/* Mary one step back (90%, Mary 2026-10-28): her head width now matches Josh's. She shrinks around her
+   eyes, so they stay on Josh's eye line and mirrored opposite him. Josh is unchanged. */
+.hero__host--mary { left: 13.62cqw; top: 3.37cqw; width: 15.05cqw; }
 .hero__host--josh { left: 66.4cqw; top: 3.1cqw; width: 26.2cqw; }
 
 .hero__title {
@@ -164,7 +166,7 @@ a { color: inherit; }
   position: absolute;
   left: 0;
   right: 0;
-  top: 4cqw;
+  top: 4.8cqw;
   font-weight: 700;
   font-size: 2.95cqw;
   letter-spacing: .02em;
@@ -174,7 +176,7 @@ a { color: inherit; }
   position: absolute;
   left: 0;
   right: 0;
-  top: 6.4cqw;
+  top: 7.2cqw;
   font-weight: 800;
   font-size: 15.6cqw;
   letter-spacing: -.02em;
@@ -186,9 +188,17 @@ a { color: inherit; }
   display: grid;
   justify-items: center;
   gap: 20px;
-  padding-top: 24px;
+  padding-top: 0; /* the gap under DEPTH is part of the hero now (2026-10-28) */
   padding-bottom: 32px;
   text-align: center;
+}
+/* "learning AI out loud" gets a light blue highlighter swipe across its lower half (Mary 2026-10-28).
+   A <mark> so the phone rule that turns the tagline's spans into lines doesn't stretch it full width. */
+.intro__hl {
+  color: inherit;
+  background: linear-gradient(to top, transparent 4%, #BDE5FF 4%, #BDE5FF 64%, transparent 64%);
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 .intro__tagline {
   margin: 0;
@@ -363,7 +373,7 @@ a { color: inherit; }
 /* Short laptop screens: tighten the spacing so the page still fits without scrolling */
 @media (min-width: 901px) and (max-height: 720px) {
   .topbar__inner { padding-top: 16px; padding-bottom: 16px; }
-  .intro { padding-top: 16px; padding-bottom: 20px; }
+  .intro { padding-top: 8px; padding-bottom: 20px; } /* matches the 8px taller logo bar, keeps the gaps equal */
   .episodes { padding-bottom: 24px; }
   .episodes__head { padding-top: 16px; }
   .episode-grid { margin-top: 14px; }
@@ -390,7 +400,7 @@ a { color: inherit; }
      ~90px past it, so a hairline of photo could show under the fade (Josh's phone, 2026-10-04) */
   .hero__stage { width: 100%; aspect-ratio: 100 / 72; overflow: hidden; }
   /* Heads matched and mirrored, as on laptops (2026-10-11) */
-  .hero__host--mary { left: 8.41cqw; top: 4.65cqw; width: 38.44cqw; }
+  .hero__host--mary { left: 10.4cqw; top: 6.03cqw; width: 34.6cqw; } /* 90%, 2026-10-28 */
   .hero__host--josh { left: 44cqw; top: 5.7cqw; width: 60cqw; }
   .hero__photos { height: 62.4cqw; }
   /* Both chins end near 31cqw, so the title starts below them */
@@ -402,7 +412,9 @@ a { color: inherit; }
     top: 46cqw;
     background: linear-gradient(to bottom, rgb(251 241 229 / 0), var(--cream) 16cqw);
   }
-    .intro__tagline { font-size: clamp(15px, 4.1vw, 17px); }
+  .intro { padding-top: 24px; }
+  .intro__tagline { font-size: clamp(15px, 4.1vw, 17px); }
+
   /* Three lines on phones: "Underprepared newlyweds at / Stanford Business School, / learning AI out loud"
      (the non-breaking spaces keep the school's name together) */
   .intro__tagline span { display: block; white-space: normal; }
