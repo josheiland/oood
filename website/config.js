@@ -27,6 +27,12 @@ window.OOOD = {
   episodes: [
     // episodes:start
     {
+      id: 'V_DVa4fi3q0', number: '010', title: 'Claude Skills Tutorial: Teach AI Your Voice and Style',
+      published: '2026-10-28T21:56:35+00:00',
+      url: 'https://www.youtube.com/watch?v=V_DVa4fi3q0',
+      thumbnail: 'https://i.ytimg.com/vi/V_DVa4fi3q0/maxresdefault.jpg'
+    },
+    {
       id: 'yhVYY1N7hDg', number: '009', title: '[BONUS EPISODE] The Art of Personalization: Teaching AI YOUR voice & style',
       published: '2026-10-26T19:40:45+00:00',
       url: 'https://www.youtube.com/watch?v=yhVYY1N7hDg',
