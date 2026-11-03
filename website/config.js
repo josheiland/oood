@@ -27,6 +27,12 @@ window.OOOD = {
   episodes: [
     // episodes:start
     {
+      id: 'cH2al7Y1QKA', number: '011', title: 'How to Use Al as a Student Without Getting Dumber',
+      published: '2026-11-03T07:20:28+00:00',
+      url: 'https://www.youtube.com/watch?v=cH2al7Y1QKA',
+      thumbnail: 'https://i.ytimg.com/vi/cH2al7Y1QKA/maxresdefault.jpg'
+    },
+    {
       id: 'V_DVa4fi3q0', number: '010', title: 'Claude Skills Tutorial: Teach AI Your Voice and Style',
       published: '2026-10-28T21:56:35+00:00',
       url: 'https://www.youtube.com/watch?v=V_DVa4fi3q0',
