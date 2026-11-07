@@ -456,3 +456,99 @@ a { color: inherit; }
   .site-nav { order: 3; width: 100%; margin: 0; gap: 24px; }
   .topbar__social { margin-left: auto; }
 }
+
+/* Newsletter pop-up (popup.js, homepage only, 2026-11-06). The same navy, cream and blue as the signup
+   bar, which stays. A centered card on laptops; a sheet that slides up from the bottom on phones. */
+.signup-pop {
+  width: min(480px, calc(100vw - 2 * var(--gutter)));
+  max-width: none;
+  max-height: none;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--cream);
+  overflow: visible;
+}
+.signup-pop::backdrop { background: rgb(11 42 69 / .55); }
+.signup-pop[open] { animation: signup-pop-in .22s ease-out; }
+.signup-pop__card {
+  position: relative;
+  padding: 36px 32px 24px;
+  border-radius: 22px;
+  background: var(--navy);
+  box-shadow: 0 24px 60px rgb(11 42 69 / .35);
+}
+.signup-pop__label {
+  margin: 0 0 14px;
+  font: 400 12px/1 var(--mono);
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--blue);
+}
+.signup-pop__title {
+  margin: 0;
+  padding-right: 28px;
+  font: 800 32px/1.05 var(--display);
+  text-wrap: balance;
+  letter-spacing: -.02em;
+  color: var(--cream);
+}
+.signup-pop__sub { margin: 12px 0 22px; font-size: 17px; line-height: 1.45; color: var(--tint); }
+.signup-pop__form { display: grid; gap: 10px; }
+.signup-pop__input, .signup-pop__btn { width: 100%; }
+.signup-pop__status { margin: 0; }
+.signup-pop__x {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--tint);
+  cursor: pointer;
+}
+.signup-pop__x svg { width: 20px; height: 20px; }
+.signup-pop__x:hover { color: var(--cream); background: rgb(169 220 255 / .12); }
+.signup-pop__x:focus-visible, .signup-pop__later:focus-visible { outline-color: var(--blue); }
+.signup-pop__later {
+  display: block;
+  margin: 4px auto 0;
+  padding: 8px 12px;
+  border: 0;
+  background: transparent;
+  color: var(--tint);
+  font: 400 15px/1.2 var(--display);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+.signup-pop__later:hover { color: var(--cream); }
+.signup-pop--done .signup-pop__input,
+.signup-pop--done .signup-pop__btn { display: none; }
+@keyframes signup-pop-in { from { opacity: 0; transform: translateY(12px); } }
+
+@media (max-width: 640px) {
+  .signup-pop {
+    width: 100%;
+    margin: auto 0 0;
+    inset: auto 0 0 0;
+  }
+  .signup-pop__card {
+    padding: 28px 20px calc(16px + env(safe-area-inset-bottom));
+    border-radius: 22px 22px 0 0;
+  }
+  .signup-pop__title { font-size: 27px; }
+  .signup-pop__sub { font-size: 16px; margin-bottom: 18px; }
+  .signup-pop__input { font-size: 16px; }
+  .signup-pop[open] { animation: signup-pop-up .28s ease-out; }
+  @keyframes signup-pop-up { from { transform: translateY(100%); } }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .signup-pop[open] { animation: none; }
+}

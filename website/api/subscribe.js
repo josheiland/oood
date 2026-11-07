@@ -8,6 +8,7 @@
 // Accepts JSON (the page's fetch) or a plain form post (no JS). Form posts redirect back to
 // /?subscribed=1#notes. A hidden `website` field catches bots: when it's filled in, the request
 // looks successful and nothing is saved. Each IP gets 30 signups an hour (a room on one wifi can all sign up).
+// The pop-up sends source 'popup', saved as 'website-popup'; everything else is saved as 'website', as before.
 
 const HASH = 'newsletter:subscribers';
 const LIMIT_PER_HOUR = 30;
@@ -67,7 +68,7 @@ module.exports = async (req, res) => {
     if (count > LIMIT_PER_HOUR) {
       return reply(429, { error: 'Too many tries from here. Give it an hour?' });
     }
-    const record = JSON.stringify({ email, subscribedAt: new Date().toISOString(), source: 'website' });
+    const record = JSON.stringify({ email, subscribedAt: new Date().toISOString(), source: body.source === 'popup' ? 'website-popup' : 'website' });
     await redis([['HSETNX', HASH, email, record]]);
     return reply(200, { ok: true });
   } catch (err) {
