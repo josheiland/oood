@@ -208,6 +208,7 @@
           if (res.ok) {
             say("You're on the list. Talk soon.", true);
             notes.reset();
+            try { localStorage.setItem('oood.popup', '{"subscribed":true}'); } catch (err) {}
           } else {
             say(res.d.error || 'Something broke on our end. Try again in a minute?', false);
           }

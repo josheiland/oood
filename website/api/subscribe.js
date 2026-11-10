@@ -11,6 +11,7 @@
 
 const HASH = 'newsletter:subscribers';
 const LIMIT_PER_HOUR = 30;
+const SOURCES = ['website', 'popup']; // the band at the bottom of the homepage, and the pop-up
 const EMAIL = /^[^\s@<>()[\]\\,;:"]+@[^\s@<>()[\]\\,;:"]+\.[a-z]{2,}$/i;
 
 async function redis(commands) {
@@ -67,7 +68,8 @@ module.exports = async (req, res) => {
     if (count > LIMIT_PER_HOUR) {
       return reply(429, { error: 'Too many tries from here. Give it an hour?' });
     }
-    const record = JSON.stringify({ email, subscribedAt: new Date().toISOString(), source: 'website' });
+    const source = SOURCES.includes(body.source) ? body.source : 'website';
+    const record = JSON.stringify({ email, subscribedAt: new Date().toISOString(), source });
     await redis([['HSETNX', HASH, email, record]]);
     return reply(200, { ok: true });
   } catch (err) {

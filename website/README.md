@@ -42,6 +42,15 @@ The top bar shows Instagram, X, LinkedIn and email. Josh trimmed it to Instagram
 
 **Background (2026-10-04):** the page is tan (`--cream`) throughout, per Josh. The foam lower band under the hero is gone, and so is the cream/foam split in the share image (`images/og-v4.png`, built from `03_ASSETS/share-image/`).
 
+## Email pop-up (2026-11-10, Mary; on branch `popup-email`, not live until Josh or Mary merge it)
+
+- **What it is:** `popup.js` plus the `.pop` styles at the end of `styles.css`, loaded on the homepage and the Learning page. Same heading, copy, colors and form as the signup band ("We ~~doodle~~ take notes. Want a copy?").
+- **When it shows**, whichever comes first, never on page load: laptops after 20 seconds, scrolling half the page, or the mouse heading for the tab bar; phones after 30 seconds or half the page. On phones it is a sheet along the bottom (about a third of the screen, no dark scrim) so it never blocks the page, which Google penalizes on mobile.
+- **How often:** once per visit; gone for 14 days after "No thanks", the close button, Esc or a click outside; never again after a signup from either form (`localStorage` key `oood.popup`, which `main.js` also sets when the band signup works).
+- **Where emails go:** the same `api/subscribe.js` and Redis hash. Records now carry `source: "popup"` or `"website"` (the band), so the export shows which form works.
+- **Preview it any time:** add `?popup=1` to the URL.
+- **Counting:** `popup.js` sends Vercel Analytics custom events (`popup_shown_timer|scroll|exit`, `popup_dismissed`, `popup_subscribed`). Custom events need a Vercel Pro plan; on Hobby they are ignored and the `source` field in the export is the measure.
+
 ## Learning page is live again: one list, drawings, upvotes, suggestions (2026-10-15)
 
 Josh and Mary picked this design over three review rounds (mockups in `04_PUBLISHING/jtan-learning-mockups-2026-10-15/`).
