@@ -27,6 +27,12 @@ window.OOOD = {
   episodes: [
     // episodes:start
     {
+      id: 'NKtHzD6y60s', number: '012', title: 'How Bad Is AI for the Environment?',
+      published: '2026-11-11T03:50:48+00:00',
+      url: 'https://www.youtube.com/watch?v=NKtHzD6y60s',
+      thumbnail: 'https://i.ytimg.com/vi/NKtHzD6y60s/maxresdefault.jpg'
+    },
+    {
       id: 'cH2al7Y1QKA', number: '011', title: 'How to Use AI as a Student Without Getting Dumber',
       published: '2026-11-03T07:20:28+00:00',
       url: 'https://www.youtube.com/watch?v=cH2al7Y1QKA',
