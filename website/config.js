@@ -27,6 +27,12 @@ window.OOOD = {
   episodes: [
     // episodes:start
     {
+      id: 'IWYHJ2VxDNA', number: '013', title: 'The Jensen Huang Scandal, Explained Simply',
+      published: '2026-11-15T18:53:19+00:00',
+      url: 'https://www.youtube.com/watch?v=IWYHJ2VxDNA',
+      thumbnail: 'https://i.ytimg.com/vi/IWYHJ2VxDNA/maxresdefault.jpg'
+    },
+    {
       id: 'NKtHzD6y60s', number: '012', title: 'How Bad Is AI for the Environment?',
       published: '2026-11-11T03:50:48+00:00',
       url: 'https://www.youtube.com/watch?v=NKtHzD6y60s',
