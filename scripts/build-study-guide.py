@@ -343,7 +343,7 @@ pdf = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><title>AI f
 <section class="flow" style="margin-top:14pt">
   <div class="sec-head" style="margin-bottom:8pt"><p class="kick">Level 1.0, done</p><h2>You're at <span class="blue">1</span></h2><p>Check off every word you could explain to a friend. Anything left, go back and try it once more.</p></div>
   <ul class="boxes">{boxes}</ul>
-  <p class="contact">Which word still confuses you? Tell us at <a href="mailto:hi@outofourdepth.com">hi@outofourdepth.com</a>. Get the notes at <a href="https://outofourdepth.com">outofourdepth.com</a></p>
+  <p class="contact">Get the notes at <a href="https://outofourdepth.com">outofourdepth.com</a></p>
 </section>
 </body></html>'''
 pdf = soften(pdf)
