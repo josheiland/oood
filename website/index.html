@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Out of Our Depth | Newlyweds learning AI out loud</title>
-  <meta name="description" content="Josh and Mary Eiland are newlyweds at Stanford Business School, learning AI out loud.">
-  <meta name="theme-color" content="#38B6FF">
+  <title>Out of Our Depth | AI for normal people</title>
+  <meta name="description" content="Mary and Josh try the AI everyone's talking about and tell you what actually worked, in plain English. Free AI from 0 to 1 study guide.">
+  <meta name="theme-color" content="#FBF1E5">
   <link rel="canonical" href="https://outofourdepth.com/">
 
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://outofourdepth.com/">
-  <meta property="og:title" content="Out of Our Depth">
-  <meta property="og:description" content="Underprepared newlyweds at Stanford Business School, learning AI out loud.">
+  <meta property="og:title" content="Out of Our Depth | AI for normal people">
+  <meta property="og:description" content="Mary and Josh try the AI everyone's talking about and tell you what actually worked, in plain English.">
   <meta property="og:image" content="https://outofourdepth.com/images/og-v7.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -23,65 +23,78 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Teachers:wght@400..800&family=Poppins:wght@500&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Teachers:wght@400..800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/home.css">
   <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
   </script>
   <script defer src="/_vercel/insights/script.js"></script>
 </head>
-<body>
-  <header class="topbar">
-    <div class="topbar__inner">
-      <a class="wordmark" href="/" aria-label="Out of Our Depth home">
-        <span class="wordmark__kicker">Out of our</span>
-        <span class="wordmark__word">Depth</span>
-      </a>
-      <nav class="site-nav" aria-label="Main"><a href="/" aria-current="page">Episodes</a><a href="/learning">Learning</a></nav>
-      <nav class="topbar__social" aria-label="Find us" data-socials></nav>
+<body class="home">
+  <header class="h-nav">
+    <div class="h-wrap h-nav__inner">
+      <a class="h-wm" href="/" aria-label="Out of Our Depth home"><span class="h-wm__k">Out of our</span><span>Depth</span></a>
+      <nav class="h-links" aria-label="Main"><a href="#episodes">Episodes</a><a href="/guide">Study guide</a></nav>
+      <a class="h-btn h-btn--sm" href="https://www.youtube.com/@OutOfOurDepthPod" data-link="youtube" target="_blank" rel="noopener">Watch the show</a>
     </div>
   </header>
 
   <main>
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero__stage">
-        <div class="hero__photos">
-          <img class="hero__host hero__host--mary" src="/images/mary-v5.webp" alt="Mary" width="609" height="1470">
-          <img class="hero__host hero__host--josh" src="/images/josh.webp" alt="Josh" width="441" height="653">
+    <section class="h-hero" id="notes" aria-labelledby="h-title">
+      <div class="h-wrap h-hero__inner">
+        <h1 id="h-title"><span class="h-hero__kick">AI for</span><span class="h-hero__big">Normal <span class="h-blue">people</span></span></h1>
+        <img class="h-hosts" src="/images/hosts-sticker.webp" srcset="/images/hosts-sticker-640.webp 640w, /images/hosts-sticker.webp 956w" sizes="(max-width: 700px) 86vw, 440px" width="956" height="629" alt="Mary and Josh">
+        <p class="h-lead">We're Mary and Josh. We try the AI everyone's talking about and tell you what actually worked, in plain English.</p>
+        <form class="h-form" action="/api/subscribe" method="post" data-notes novalidate>
+          <div class="h-form__row">
+            <label class="visually-hidden" for="notes-email">Email address</label>
+            <input class="h-input" id="notes-email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="Your email" required>
+            <button class="h-btn" type="submit">Send me the notes</button>
+          </div>
+          <input class="notes__hp" name="website" type="text" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <p class="h-note">We only email when we've got something worth writing. Written by us, not AI.</p>
+          <p class="notes__status" data-notes-status role="status" aria-live="polite"></p>
+        </form>
+        <div class="h-listen" aria-label="Where to watch and listen">
+          <a class="lbtn" href="https://www.youtube.com/@OutOfOurDepthPod" data-link="youtube" target="_blank" rel="noopener"><svg class="lbtn__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="1.5" y="4.5" width="21" height="15" rx="4.5" fill="currentColor"/><path d="M10 9v6l5.2-3z" fill="#FBF1E5"/></svg>YouTube</a>
+          <a class="lbtn" href="https://open.spotify.com/show/5uqWe60E7Vi3MfQtJki7b1" data-link="spotify" target="_blank" rel="noopener"><svg class="lbtn__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="currentColor"/><path d="M6.8 9.4c3.5-1 7.4-.7 10.4 1M7.4 12.4c2.9-.8 6-.5 8.6.9M8 15.2c2.3-.6 4.6-.4 6.6.7" fill="none" stroke="#FBF1E5" stroke-width="1.6" stroke-linecap="round"/></svg><span data-spotify-label>Spotify</span></a>
+          <a class="lbtn" href="https://podcasts.apple.com/us/podcast/out-of-our-depth/id6819080935" data-link="apple" target="_blank" rel="noopener"><svg class="lbtn__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="9.6" r="2.4" fill="currentColor"/><path d="M10.6 13.6h2.8l-.5 7h-1.8z" fill="currentColor"/><path d="M7.2 14.4a6 6 0 1 1 9.6 0M4.6 17a9.5 9.5 0 1 1 14.8 0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Apple Podcasts</a>
         </div>
-        <h1 class="hero__title" id="hero-title">
-          <span class="hero__kicker">Out of our</span>
-          <span class="hero__word">Depth</span>
-        </h1>
       </div>
     </section>
 
-    <section class="intro container">
-      <div class="intro__copy">
-        <p class="intro__tagline"><span>Underprepared newlyweds at Stanford&nbsp;Business&nbsp;School,</span> <span><mark class="intro__hl">learning AI out loud</mark></span></p>
-      </div>
-      <div class="listen" aria-label="Where to watch and listen">
-        <a class="btn btn--youtube" href="https://www.youtube.com/@OutOfOurDepthPod" data-link="youtube" target="_blank" rel="noopener">
-          <svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="1.5" y="4.5" width="21" height="15" rx="4.5" fill="currentColor"/><path d="M10 9v6l5.2-3z" fill="#FBF1E5"/></svg>
-          YouTube
-        </a>
-        <a class="btn btn--spotify" href="#" data-link="spotify" target="_blank" rel="noopener">
-          <svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="currentColor"/><path d="M6.8 9.4c3.5-1 7.4-.7 10.4 1M7.4 12.4c2.9-.8 6-.5 8.6.9M8 15.2c2.3-.6 4.6-.4 6.6.7" fill="none" stroke="#FDF8F2" stroke-width="1.6" stroke-linecap="round"/></svg>
-          <span data-spotify-label>Spotify</span>
-        </a>
-        <a class="btn btn--apple" href="https://podcasts.apple.com/us/podcast/out-of-our-depth/id6819080935" data-link="apple" target="_blank" rel="noopener">
-          <svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="9.6" r="2.4" fill="currentColor"/><path d="M10.6 13.6h2.8l-.5 7h-1.8z" fill="currentColor"/><path d="M7.2 14.4a6 6 0 1 1 9.6 0M4.6 17a9.5 9.5 0 1 1 14.8 0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-          Apple Podcasts
-        </a>
+    <section class="h-sec h-get" aria-label="What you get">
+      <div class="h-wrap h-three">
+        <div><p class="h-mono">Watch</p><h2>We test it on camera</h2><p>New episodes every week. Two people, one AI question, an honest take.</p></div>
+        <div><p class="h-mono">Learn</p><h2>A free study guide</h2><p>AI from 0 to 1: the 35 words you need, in six short levels you can do in an afternoon.</p></div>
+        <div><p class="h-mono">Read</p><h2>The notes</h2><p>What worked, what flopped and what we'd try next. Only when it's worth writing.</p></div>
       </div>
     </section>
 
-    <section class="episodes container" aria-labelledby="episodes-title">
-      <div class="episodes__head">
-        <h2 class="label" id="episodes-title">Episodes</h2>
-        <a class="episodes__all label" href="https://www.youtube.com/@OutOfOurDepthPod/videos" data-link="youtube-videos" target="_blank" rel="noopener">See all <span aria-hidden="true">&rarr;</span></a>
+    <section class="h-sec h-rule" aria-labelledby="guide-title">
+      <div class="h-wrap h-guide">
+        <a class="h-guide__cover" href="/guide"><img src="/images/guide-cover.webp" width="612" height="792" alt="Cover of the AI from 0 to 1 study guide" loading="lazy"></a>
+        <div class="h-guide__copy">
+          <p class="h-mono">Free study guide</p>
+          <h2 id="guide-title">AI from <span class="h-blue">0 to 1</span></h2>
+          <p>The words everyone throws around, explained the way we explain them to each other. Each level ends with ten minutes of things to try and a few questions to check yourself.</p>
+          <ul class="h-guide__levels">
+            <li><b>0.0</b> Say hi</li><li><b>0.2</b> Make it yours</li><li><b>0.4</b> Spot the traps</li>
+            <li><b>0.6</b> Under the hood</li><li><b>0.8</b> AI that does things</li><li><b>1.0</b> The big questions</li>
+          </ul>
+          <a class="h-btn" href="/guide">Get the free guide</a>
+        </div>
       </div>
-      <div class="episode-grid" data-episodes>
+    </section>
+
+    <section class="h-sec h-rule" id="episodes" aria-labelledby="episodes-title">
+      <div class="h-wrap">
+        <div class="h-head">
+          <h2 id="episodes-title">Latest <span class="h-blue">episodes</span></h2>
+          <a class="h-mono h-head__all" href="https://www.youtube.com/@OutOfOurDepthPod/videos" data-link="youtube-videos" target="_blank" rel="noopener">All on YouTube <span aria-hidden="true">&rarr;</span></a>
+        </div>
+        <div class="h-eps" data-episodes>
         <!-- episodes:start (generated by scripts/sync-site-episodes.js) -->
         <a class="ep ep--latest" href="https://www.youtube.com/watch?v=IWYHJ2VxDNA" target="_blank" rel="noopener">
           <span class="ep__thumb"><img src="https://i.ytimg.com/vi/IWYHJ2VxDNA/maxresdefault.jpg" alt="" width="1280" height="720"></span>
@@ -154,28 +167,21 @@
           <h3 class="ep__title">We Can’t Keep Up with AI Either (So We Started a Podcast!)</h3>
         </a>
         <!-- episodes:end -->
-      </div>
-    </section>
-
-    <section class="notes" aria-labelledby="notes-title">
-      <div class="notes__inner container">
-        <div class="notes__copy">
-          <h2 class="notes__title" id="notes-title">We <s class="notes__strike" aria-hidden="true">doodle</s> take notes. Want a copy?</h2>
-          <p class="notes__sub">No more than one cute little email each month.</p>
         </div>
-        <form class="notes__form" action="/api/subscribe" method="post" data-notes novalidate>
-          <div class="notes__row">
-            <label class="visually-hidden" for="notes-email">Email address</label>
-            <input class="notes__input" id="notes-email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="you@email.com" required>
-            <button class="notes__btn" type="submit">Send me the notes</button>
-          </div>
-          <!-- Honeypot: people never see this field, bots fill it in -->
-          <input class="notes__hp" name="website" type="text" tabindex="-1" autocomplete="off" aria-hidden="true">
-          <p class="notes__status" data-notes-status role="status" aria-live="polite"></p>
-        </form>
       </div>
     </section>
   </main>
+
+  <footer class="h-foot">
+    <div class="h-wrap">
+      <p class="h-foot__big" aria-hidden="true">AI for normal <span class="h-blue">people</span></p>
+      <div class="h-foot__row">
+        <nav class="h-foot__links" aria-label="Footer"><a href="#episodes">Episodes</a><a href="/guide">Study guide</a><a href="mailto:hi@outofourdepth.com">hi@outofourdepth.com</a></nav>
+        <nav class="h-foot__social topbar__social" aria-label="Find us" data-socials></nav>
+      </div>
+      <p class="h-foot__sign">Built with AI, argued over by humans.</p>
+    </div>
+  </footer>
 
   <script src="/config.js"></script>
   <script src="/main.js"></script>

@@ -4,7 +4,8 @@ The Out of Our Depth website. Plain HTML, CSS and JS with Vercel functions. No b
 
 ## Files
 
-- `index.html`, `styles.css`, `main.js`: the homepage
+- `index.html`, `home.css`, `main.js`: the homepage (`styles.css` holds shared styles and the pop-up)
+- `guide.html`, `guide.css`, `downloads/`: the free AI from 0 to 1 study guide, built by `scripts/build-study-guide.py`
 - `config.js`: links you will change (Spotify URL, email, socials, `hiddenVideos`, an optional pinned episode) plus the saved episode list, which the sync job maintains
 - `api/latest.js`: returns every public long-form YouTube upload (newest 15, no Shorts). The homepage merges it with the saved list, so a new episode, with its number and HD thumbnail, shows up on its own within about 15 minutes of going public
 - `images/`: host cutouts keyed from the kit's `banner-youtube.png`, icons and the share image (`og.png`, a crop of the same banner)
@@ -41,6 +42,13 @@ The top bar shows Instagram, X, LinkedIn and email. Josh trimmed it to Instagram
 **Hero fade (2026-10-04):** host photos fade into the page tan on desktop and tablet too, per Josh. The wider-layout fade runs from 16cqw to solid tan at 22cqw, with the title above it. The phone fade remains at 46–62cqw.
 
 **Background (2026-10-04):** the page is tan (`--cream`) throughout, per Josh. The foam lower band under the hero is gone, and so is the cream/foam split in the share image (`images/og-v4.png`, built from `03_ASSETS/share-image/`).
+
+## Homepage C1 and the AI from 0 to 1 study guide (2026-11-21, Mary; on branch `c1-homepage-study-guide`, not live until merged)
+
+- **Homepage:** `index.html` plus `home.css` (loads after `styles.css`, everything scoped to `body.home` or `h-` classes). Hero: "AI for / Normal people," the hosts sticker (`images/hosts-sticker.webp`, 640px version for phones), one lead line, the email form (`data-notes`, same `/api/subscribe`), then YouTube, Spotify and Apple Podcasts. Then what you get, the study guide band, the six newest episodes (three on tablets, three on phones, all with thumbnails) and a navy footer with the social icons. `main.js`, `config.js`, the sync job and its `episodes:start` markers all work as before. `fitHero` does nothing here because there's no `.hero`.
+- **Email copy:** "We only email when we've got something worth writing. Written by us, not AI." on the homepage, the guide and the pop-up. No monthly promise.
+- **Study guide:** `/guide` is `guide.html` plus `guide.css`; the PDF is `downloads/ai-0-to-1-study-guide.pdf` (free, no email gate). Both are generated, so don't hand-edit them. Edit words in `learning-topics.json` and levels, try-its and questions in `03_ASSETS/study-guide/guide-levels.json`, then run `python3 scripts/build-study-guide.py` (needs Playwright and Chrome; `CHROME=/path/to/chrome` picks one). It refuses dashes, middle dots, ellipses and curly quotes, and stops if a word is missing or listed twice.
+- **Redirects:** `/learning` and `/study-guide` go to `/guide` (temporary, in `vercel.json`). The old Learning files and vote/suggestion APIs are still in the repo, just unlinked.
 
 ## Email pop-up (2026-11-10, Mary; on branch `popup-email`, not live until Josh or Mary merge it)
 

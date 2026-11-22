@@ -71,7 +71,7 @@ Open questions are in [OPEN_QUESTIONS.md](OPEN_QUESTIONS.md). The chronological 
 
 Handles: YouTube/Instagram/TikTok @OutOfOurDepthPod (TikTok live again as of 2026-10-03), X @OutOfOurDepthX, [facebook.com/outofourdepthpod](https://facebook.com/outofourdepthpod) (live), [linkedin.com/company/outofourdepth](https://linkedin.com/company/outofourdepth).
 
-[outofourdepth.com](https://outofourdepth.com) deploys from `website/` through the Vercel project `oood-website`. As of the 2026-10-03 deploy, it features 002 at the top, with 001 and then 000 under "More episodes". It shows only Instagram, X and email icons per Josh. TikTok, LinkedIn and Facebook are commented out in `website/config.js`. Details: [website/README.md](../website/README.md).
+[outofourdepth.com](https://outofourdepth.com) deploys from `website/` through the Vercel project `oood-website`. As of the 2026-10-03 deploy, it features 002 at the top, with 001 and then 000 under "More episodes". It shows only Instagram, X and email icons per Josh. TikTok, LinkedIn and Facebook are commented out in `website/config.js`. Details: [website/README.md](../website/README.md). **Pending review (2026-11-21):** branch `c1-homepage-study-guide` has Mary's new C1 homepage and replaces the Learning list with the free "AI from 0 to 1" study guide at `/guide` (web page plus PDF); see the 2026-11-21 entry in `DECISIONS.md`.
 
 Josh planned a coordinated public announcement for October 3–4. The [October 1 launch primer](../04_PUBLISHING/codex-public-launch-primer-2026-10-01.md) has recommended channels and sequencing; those are recommendations, not adopted decisions.
 

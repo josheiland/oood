@@ -56,7 +56,7 @@
       '</button>' +
       '<p class="pop__kicker">The notes</p>' +
       '<h2 class="pop__title" id="pop-title">We <s class="pop__strike" aria-hidden="true">doodle</s> take notes. Want a copy?</h2>' +
-      '<p class="pop__sub" id="pop-sub">What we learned from each episode, in plain words. No more than one cute little email each month.</p>' +
+      '<p class="pop__sub" id="pop-sub">What we learned, in plain words. We only email when we\'ve got something worth writing. Written by us, not AI.</p>' +
       '<form class="pop__form" action="/api/subscribe" method="post" novalidate>' +
         '<label class="visually-hidden" for="pop-email">Email address</label>' +
         '<input class="pop__input" id="pop-email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="you@email.com" required>' +

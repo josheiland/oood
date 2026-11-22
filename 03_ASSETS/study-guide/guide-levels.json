@@ -1,0 +1,101 @@
+{
+  "edition": "November 2026 edition",
+  "levels": [
+    {
+      "n": "0.0",
+      "name": "Say hi",
+      "promise": "What AI is, what to call things, and the one habit that fixes most bad answers.",
+      "words": ["generative-ai", "prompt", "llm", "model-vs-app", "hallucination", "multimodal"],
+      "try": [
+        "Ask for a birthday message twice. First just \"write a birthday message.\" Then write it like a text to a smart friend: who it's for, how you know them, one inside joke, how long. Compare the two.",
+        "Ask it for a fact with a source. Click the source. Does it exist and say what the AI claimed?",
+        "Snap a photo of your fridge and ask what you can make for dinner."
+      ],
+      "check": [
+        "In one sentence, what's the difference between a model and an app?",
+        "Why does a better prompt usually beat a better model?",
+        "Name one time you'd double check an AI answer before using it."
+      ]
+    },
+    {
+      "n": "0.2",
+      "name": "Make it yours",
+      "promise": "Stop re-explaining yourself. Set it up once so every chat starts smarter.",
+      "words": ["memory", "custom-instructions", "projects", "model-sizes", "reasoning", "deep-research"],
+      "try": [
+        "Write three lines of custom instructions: who you are, how you like answers, and one thing to never do.",
+        "Start a project for one ongoing thing in your life, like a trip, a job search or a class. Add one file.",
+        "Give the same planning question to the regular mode and to the thinking mode. Which answer would you actually use?"
+      ],
+      "check": [
+        "What's the difference between memory and custom instructions?",
+        "When is a small, fast model the right pick?",
+        "What kind of question is worth a deep research report?"
+      ]
+    },
+    {
+      "n": "0.4",
+      "name": "Spot the traps",
+      "promise": "The ways AI quietly lets you down, and the easy habits that protect you.",
+      "words": ["knowledge-cutoff", "ai-slop", "sycophancy", "deepfake", "prompt-injection"],
+      "try": [
+        "Share an idea you like and ask: \"What would a smart skeptic say? Be blunt.\" Compare that to its first reaction.",
+        "Ask about something from this week with web search off, then on. Notice the difference.",
+        "Pick a family safe word you'd ask for if \"you\" ever called asking for money."
+      ],
+      "check": [
+        "How can you tell a model is past its knowledge cutoff?",
+        "What are two signs a piece of writing is AI slop?",
+        "Why is prompt injection a bigger deal once AI can take actions for you?"
+      ]
+    },
+    {
+      "n": "0.6",
+      "name": "Under the hood",
+      "promise": "Enough of how it works to follow the news and ask good questions.",
+      "words": ["training", "token", "context-window", "open-closed", "benchmark", "gpu", "data-center", "rag", "fine-tuning"],
+      "try": [
+        "Search \"tokenizer\" and paste in a sentence. Watch how it gets chopped into tokens.",
+        "Upload a long PDF and ask three questions, each with the page number of the answer. Check one.",
+        "In a very long chat, ask what you said in your first message. Did it slip?"
+      ],
+      "check": [
+        "Why do long chats sometimes get worse?",
+        "RAG or fine-tuning: which one would you use to answer questions about your company handbook, and why?",
+        "Why do AI companies care so much about GPUs and data centers?"
+      ]
+    },
+    {
+      "n": "0.8",
+      "name": "AI that does things",
+      "promise": "The jump from answering questions to getting work done for you.",
+      "words": ["agent", "skills", "mcp", "computer-use", "vibe-coding"],
+      "try": [
+        "Vibe code something tiny: \"Make me a tip calculator for splitting dinner with friends.\" Use it once for real.",
+        "Connect one app you already use, like your calendar or Drive, and ask it to find something for you.",
+        "Give an agent a job with a clear finish line, like \"find three Saturday hikes under an hour away and put them in a table.\""
+      ],
+      "check": [
+        "What makes something an agent and not just a chatbot?",
+        "What's one task you'd hand to an agent, and one you wouldn't yet?",
+        "What would you want to approve before AI clicks buy or send for you?"
+      ]
+    },
+    {
+      "n": "1.0",
+      "name": "The big questions",
+      "promise": "The debates everyone is having. You don't need answers, just your own take.",
+      "words": ["scaling-laws", "alignment", "agi", "superintelligence"],
+      "try": [
+        "Pick one big question below. Write your own opinion in three sentences before you ask AI anything.",
+        "Then ask AI for the strongest argument against you. Did it change your mind or sharpen it?",
+        "Bring it up at dinner. See where people land."
+      ],
+      "check": [
+        "If AGI arrived tomorrow, how would you know?",
+        "Who should decide what AI is allowed to do?",
+        "What's one thing you'd never hand to AI, no matter how good it gets?"
+      ]
+    }
+  ]
+}
