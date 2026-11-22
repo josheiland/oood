@@ -220,7 +220,7 @@
   {
     "id": "open-closed",
     "title": "Open vs. closed models",
-    "definition": "Open models, like DeepSeek and Qwen, can be downloaded and run by anyone. Closed ones, like the models in ChatGPT, Claude and Gemini, only live behind the company's app.",
+    "definition": "Open models, like DeepSeek and Qwen, can be downloaded and run by anyone. Closed ones, like the models in ChatGPT, Claude and Gemini, can't be downloaded. You use them through the company's own apps, or through other apps that plug into them.",
     "think": "A recipe you can cook at home vs. a dish you can only order at the restaurant.",
     "episode": {
       "number": "002",

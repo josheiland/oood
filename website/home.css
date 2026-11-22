@@ -32,19 +32,23 @@
 .h-nav .h-btn { justify-self: end; }
 
 /* Hero */
-.h-hero { padding: 64px 0 88px; text-align: center; }
+/* Base sizes live in custom properties so the phone breakpoint can change them; --hs (set by the
+   fit script after the hero in index.html) shrinks them so the form and the listen line load on screen */
+.h-hero { --pad: 64px; --kick: 52px; --big: 150px; --gap: 40px; --mary: 184px; --josh: 232px;
+  padding: calc(var(--pad) * var(--hs, 1)) 0 88px; text-align: center; }
 .h-hero__inner { display: flex; flex-direction: column; align-items: center; }
 .h-hero h1 { margin: 0; font-weight: 800; text-transform: uppercase; }
-.h-hero__kick { display: block; font-size: 52px; line-height: 1; letter-spacing: -.01em; }
-.h-hero__big { display: block; font-size: 150px; line-height: .86; letter-spacing: -.03em; }
-.h-hosts { display: flex; align-items: flex-end; justify-content: center; gap: 24px; margin: 40px 0 0; }
+.h-hero__kick { display: block; font-size: calc(var(--kick) * max(var(--hs, 1), var(--hsmin, 0))); line-height: 1; letter-spacing: -.01em; }
+.h-hero__big { display: block; font-size: calc(var(--big) * max(var(--hs, 1), var(--hsmin, 0))); line-height: .86; letter-spacing: -.03em; }
+.h-hosts { display: flex; align-items: flex-end; justify-content: center; gap: 24px; margin: calc(var(--gap) * var(--hs, 1)) 0 0; }
 /* Floating, like Get It Girl's sticker: up about 12px with a degree or two of tilt, slow, each on its own rhythm */
 .h-host { position: relative; padding: 0; border: 0; background: none; cursor: pointer; animation: h-float 6s ease-in-out infinite alternate; }
 .h-host img { display: block; height: auto; }
+.h-hero__big .h-blue { display: block; } /* Normal / people always stack, even when the scale lets them fit on one line */
 .h-host--mary { --tilt: -1.6deg; }
-.h-host--mary img { width: 184px; }
+.h-host--mary img { width: calc(var(--mary) * var(--hs, 1)); }
 .h-host--josh { --tilt: 1.4deg; animation-duration: 6.8s; animation-delay: -3.2s; }
-.h-host--josh img { width: 232px; }
+.h-host--josh img { width: calc(var(--josh) * var(--hs, 1)); }
 @keyframes h-float { from { transform: translateY(0) rotate(0); } to { transform: translateY(-12px) rotate(var(--tilt)); } }
 .h-host:focus-visible { outline: 0; }
 .h-host:focus-visible img { filter: drop-shadow(0 0 10px rgba(56,182,255,.9)); }
@@ -56,7 +60,7 @@
 .h-normal { position: relative; }
 .h-normal::after { content: '-ish'; position: absolute; right: -.1em; top: -.05em; transform: rotate(8deg) scale(.6); font-family: var(--mono); font-size: 38px; letter-spacing: 0; text-transform: none; color: var(--blue); opacity: 0; transition: opacity .2s, transform .25s cubic-bezier(.2, 1.6, .4, 1); }
 .h-hero h1:hover .h-normal::after { opacity: 1; transform: rotate(8deg) scale(1); }
-.h-lead { margin: 22px auto 30px; max-width: 500px; font-size: 20px; line-height: 1.5; font-weight: 500; }
+.h-lead { margin: calc(22px * var(--hs, 1)) auto calc(30px * var(--hs, 1)); max-width: 500px; font-size: 20px; line-height: 1.5; font-weight: 500; }
 
 .h-form { width: 100%; max-width: 560px; }
 .h-form__row { display: flex; gap: 8px; justify-content: center; }
@@ -67,6 +71,10 @@
 .h-input::placeholder { color: var(--muted); }
 .h-input:focus { outline: 3px solid var(--blue); outline-offset: 1px; }
 .h-note { margin: 14px 0 0; font-size: 15px; color: var(--muted); }
+.h-hero .h-form { max-width: none; }
+.h-hero .h-form__row { max-width: 560px; margin: 0 auto; }
+.h-hero .h-note { white-space: nowrap; }
+.home .notes__status:empty { min-height: 0; margin: 0; }
 .home .notes__status { margin: 8px 0 0; min-height: 1.4em; font-size: 15px; color: var(--muted); }
 .home .notes__status--ok { color: var(--navy); font-weight: 700; }
 .home .notes__status--err { color: #B3261E; }
@@ -133,7 +141,7 @@
 
 /* Laptops */
 @media (max-width: 1100px) {
-  .h-hero__big { font-size: 120px; }
+  .h-hero { --big: 120px; }
   .h-foot__big { font-size: 120px; }
 }
 
@@ -151,14 +159,14 @@
 /* Phones */
 @media (max-width: 640px) {
   .h-wrap { padding: 0 20px; }
-  .h-nav__inner { grid-template-columns: 1fr auto; height: 72px; }
-  .h-links { display: none; }
-  .h-hero { padding: 36px 0 64px; }
-  .h-hero__kick { font-size: 26px; }
-  .h-hero__big { font-size: 58px; }
-  .h-hosts { gap: 14px; margin-top: 44px; }
-  .h-host--mary img { width: 140px; }
-  .h-host--josh img { width: 176px; }
+  .h-nav__inner { grid-template-columns: 1fr auto; grid-template-areas: 'wm btn' 'links links'; height: auto; padding-top: 14px; padding-bottom: 2px; row-gap: 8px; }
+  .h-wm { grid-area: wm; }
+  .h-nav .h-btn { grid-area: btn; }
+  .h-links { grid-area: links; justify-content: space-between; gap: 10px; }
+  .h-links a { font-size: 11px; letter-spacing: .1em; }
+  .h-hero { --pad: 36px; --kick: 26px; --big: 58px; --gap: 44px; --mary: 140px; --josh: 176px; --hsmin: .82; padding-bottom: 64px; }
+  .h-hosts { gap: 14px; }
+  .h-hero .h-note { white-space: normal; text-wrap: balance; font-size: 14px; }
   .h-bubble { font-size: 13px; max-width: 160px; }
   .h-normal::after { font-size: 18px; }
   .h-lead { font-size: 17px; margin: 18px auto 24px; }

@@ -144,6 +144,8 @@
 .g-help { font-weight: 700; }
 .g-help a { color: var(--sky); }
 .next-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.next h3 { overflow-wrap: anywhere; }
+.dk .h-btn { background: var(--blue); color: var(--navy); box-shadow: 4px 4px 0 var(--cream); }
 .next { display: flex; flex-direction: column; border-radius: 18px; padding: 18px 20px; background: rgba(255,255,255,.07); color: var(--cream); text-decoration: none; transition: transform .15s; }
 .next:hover { transform: translateY(-3px); }
 .next .lbl { margin: 0 0 6px; }
@@ -177,6 +179,8 @@
   .g-hero__big { font-size: 132px; }
   .map-row { grid-template-columns: 1fr 1fr; }
   .g-end__cols { grid-template-columns: 1fr; gap: 40px; }
+  .next-row { grid-template-columns: 1fr; }
+  .next h3 { min-height: 0; }
 }
 @media (max-width: 700px) {
   .gauge { display: none; }
