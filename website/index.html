@@ -43,8 +43,11 @@
   <main>
     <section class="h-hero" id="notes" aria-labelledby="h-title">
       <div class="h-wrap h-hero__inner">
-        <h1 id="h-title"><span class="h-hero__kick">AI for</span><span class="h-hero__big">Normal <span class="h-blue">people</span></span></h1>
-        <img class="h-hosts" src="/images/hosts-sticker.webp" srcset="/images/hosts-sticker-640.webp 640w, /images/hosts-sticker.webp 956w" sizes="(max-width: 700px) 86vw, 440px" width="956" height="629" alt="Mary and Josh">
+        <h1 id="h-title"><span class="h-hero__kick">AI for</span><span class="h-hero__big"><span class="h-normal">Normal</span> <span class="h-blue">people</span></span></h1>
+        <div class="h-hosts">
+          <button class="h-host h-host--mary" type="button" data-host="mary" aria-label="Say hi to Mary"><img src="/images/mary-sticker.webp" width="395" height="629" alt="Mary"><span class="h-bubble" role="status"></span></button>
+          <button class="h-host h-host--josh" type="button" data-host="josh" aria-label="Say hi to Josh"><img src="/images/josh-sticker.webp" width="497" height="578" alt="Josh"><span class="h-bubble" role="status"></span></button>
+        </div>
         <p class="h-lead">We're Mary and Josh. We try the AI everyone's talking about and tell you what actually worked, in plain English</p>
         <form class="h-form" action="/api/subscribe" method="post" data-notes novalidate>
           <div class="h-form__row">
@@ -189,12 +192,31 @@
         <nav class="h-foot__links" aria-label="Footer"><a href="#episodes">Episodes</a><a href="/guide">Study guide</a><a href="mailto:hi@outofourdepth.com">hi@outofourdepth.com</a></nav>
         <nav class="h-foot__social topbar__social" aria-label="Find us" data-socials></nav>
       </div>
-      <p class="h-foot__sign">Built WITH AI (we&#39;ll flag it when it&#39;s straight-up AI slop)</p>
+      <div class="h-foot__fine"><p class="h-foot__sign">Built WITH AI (we&#39;ll flag it when it&#39;s straight-up AI slop)</p><p class="h-foot__sign">Made on our couch</p></div>
     </div>
   </footer>
 
   <script src="/config.js"></script>
   <script src="/main.js"></script>
   <script src="/popup.js" defer></script>
+  <script>
+    // Tap us: a little speech bubble with a new line each time (Mary 2026-11-21)
+    (function () {
+      var LINES = {
+        mary: ['Hi! I make it pretty', 'Proudly dyslexic. Spellcheck is my co-host', 'AI planned our wedding. Ask me how that went', 'Subscribe or I\'m telling Josh'],
+        josh: ['I read the manual so you don\'t have to', 'I edit every episode. Well, my AI does', 'Mary made me say hi', 'Don\'t tell Mary, but I subscribed twice']
+      };
+      var seen = { mary: 0, josh: 0 };
+      document.querySelectorAll('[data-host]').forEach(function (btn) {
+        var who = btn.getAttribute('data-host'), bubble = btn.querySelector('.h-bubble'), t;
+        btn.addEventListener('click', function () {
+          bubble.textContent = LINES[who][seen[who]++ % LINES[who].length];
+          btn.classList.add('is-talking');
+          clearTimeout(t);
+          t = setTimeout(function () { btn.classList.remove('is-talking'); }, 2600);
+        });
+      });
+    })();
+  </script>
 </body>
 </html>

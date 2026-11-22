@@ -187,7 +187,7 @@
       status.textContent = msg;
       status.className = 'notes__status' + (ok ? ' notes__status--ok' : ' notes__status--err');
     };
-    if (/[?&]subscribed=1/.test(location.search)) say("You're on the list. Talk soon.", true);
+    if (/[?&]subscribed=1/.test(location.search)) say("You're in! Josh is already overthinking the first one", true);
     notes.addEventListener('submit', function (e) {
       if (!window.fetch) return;
       e.preventDefault();
@@ -206,7 +206,7 @@
         .then(function (r) { return r.json().catch(function () { return {}; }).then(function (d) { return { ok: r.ok, d: d }; }); })
         .then(function (res) {
           if (res.ok) {
-            say("You're on the list. Talk soon.", true);
+            say("You're in! Josh is already overthinking the first one", true);
             notes.reset();
             try { localStorage.setItem('oood.popup', '{"subscribed":true}'); } catch (err) {}
           } else {

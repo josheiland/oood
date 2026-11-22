@@ -122,6 +122,21 @@
 .week span:last-child { font-size: 17px; color: var(--muted); }
 @media (max-width: 640px) { .week li { grid-template-columns: 50px minmax(0, 1fr); } .week span:last-child { grid-column: 2; } }
 
+/* Why we made this + what we still do ourselves */
+.g-why { padding-top: 40px; padding-bottom: 8px; }
+.g-why p:not(.kick) { margin: 0 0 14px; font-size: 19px; line-height: 1.6; }
+.g-ours { margin-top: 48px; max-width: 860px; }
+.g-ours h3 { font-size: 34px; line-height: .95; margin-bottom: 14px; }
+.g-ours ul { margin: 0; padding-left: 22px; font-size: 18px; line-height: 1.55; }
+.g-ours li { margin-bottom: 6px; }
+.g-help { font-weight: 700; }
+.g-help a { color: var(--ink); }
+.g-why .g-narrow { margin: 0 auto; }
+/* The sticker floats, like the homepage */
+.g-hero__hosts { animation: g-float 6s ease-in-out infinite alternate; }
+@keyframes g-float { from { transform: translateY(0) rotate(-2deg); } to { transform: translateY(-12px) rotate(-3.4deg); } }
+@media (prefers-reduced-motion: reduce) { .g-hero__hosts { animation: none; } }
+
 /* If you get stuck: one narrow column, like her guides */
 .g-narrow { max-width: 760px; }
 .g-stuck h2 { margin-bottom: 22px; }

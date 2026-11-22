@@ -134,6 +134,9 @@ stuck = ''.join(f'<p><b>{e(phrase(a))}</b> {e(b)}</p>' for a, b in guide['stuck'
 nxt = ''.join(f'<a class="next" href="{html.escape(u)}" target="_blank" rel="noopener"><span class="lbl">{e(who)}</span><h3>{e(t)}</h3><p>{e(len_)}</p></a>' for t, who, len_, u in guide['next'])
 US = ('<a class="next next--us" href="https://www.youtube.com/@OutOfOurDepthPod?sub_confirmation=1" target="_blank" rel="noopener">'
       '<span class="lbl">Us, obviously</span><h3>Out of Our Depth</h3><p>New episodes every week. Would it kill ya to subscribe?</p></a>')
+WHY = ''.join(f'<p>{e(x)}</p>' for x in guide['why'])
+OURS = ''.join(f'<li>{e(x)}</li>' for x in guide['ourselves'])
+HELP = 'Stuck on one? Email <a href="mailto:hi@outofourdepth.com">hi@outofourdepth.com</a>, tell us which one, and we\'ll help'
 week = ''.join(f'<li><span class="lbl">{e(d)}</span><b>{e(n)}</b><span>{e(t)}</span></li>' for d, n, t in guide['first_week'])
 boxes = ''.join(f'<li>{e(topics[w]["title"])}</li>' for lv in levels for w in lv['words'])
 NOTE = "We only email when we've got something worth writing (by us humans! Well, realistically Josh. Mary's proudly dyslexic, so go ahead and thank her for the humor + designs)"
@@ -171,14 +174,14 @@ a { color:var(--ink); text-decoration:none; }
 .cover img { position:absolute; right:.6in; bottom:1.1in; width:3.9in; transform:rotate(-3deg); }
 .cover .by { margin-top:auto; font-family:'JetBrains Mono', monospace; font-size:7.5pt; letter-spacing:.14em; text-transform:uppercase; color:var(--sky); }
 /* start here + contents */
-.start h2 { font-size:38pt; }
+.start h2 { font-size:30pt; }
 .start-time { font-family:'JetBrains Mono', monospace; font-size:7.5pt; letter-spacing:.12em; text-transform:uppercase; color:var(--ink); margin:8pt 0 14pt; }
 .steps { margin:0; padding-left:16pt; font-size:12pt; max-width:5.6in; }
-.steps li { margin-bottom:7pt; }
-.tenhours { margin:16pt 0 0; background:var(--navy); color:var(--cream); border-radius:12pt; padding:13pt 15pt; font-size:10.5pt; max-width:5.6in; }
+.steps li { margin-bottom:4pt; }
+.tenhours { margin:10pt 0 0; background:var(--navy); color:var(--cream); border-radius:12pt; padding:13pt 15pt; font-size:10.5pt; max-width:5.6in; }
 .tenhours b { color:var(--blue); margin-right:3pt; }
-.toc { list-style:none; margin:30pt 0 0; padding:0; }
-.toc li { display:grid; grid-template-columns:.7in 1.9in 1fr; align-items:baseline; gap:10pt; padding:6pt 0; }
+.toc { list-style:none; margin:16pt 0 0; padding:0; }
+.toc li { display:grid; grid-template-columns:.7in 1.9in 1fr; align-items:baseline; gap:10pt; padding:3pt 0; }
 .toc-n { font-weight:800; font-size:18pt; color:var(--blue); }
 .toc-name { font-weight:800; text-transform:uppercase; font-size:11.5pt; }
 .toc-p { font-size:9.5pt; color:var(--muted); }
@@ -214,7 +217,7 @@ a { color:var(--ink); text-decoration:none; }
 .prompt .kick { margin-bottom:4pt; }
 .prompt p { margin:0; font-size:9.3pt; }
 /* first week */
-.week { list-style:none; margin:0; padding:0; display:grid; gap:12pt; max-width:6in; }
+.week { list-style:none; margin:0; padding:0; display:grid; gap:5pt; max-width:6.4in; }
 .week li { display:grid; grid-template-columns:.6in 1.6in 1fr; align-items:baseline; gap:10pt; }
 .week .lbl { margin:0; font-size:8pt; }
 .week b { font-weight:800; text-transform:uppercase; font-size:12pt; }
@@ -222,7 +225,7 @@ a { color:var(--ink); text-decoration:none; }
 /* finish */
 .stuck p { margin:0 0 9pt; max-width:5.8in; font-size:10.5pt; }
 .stuck b { font-weight:800; margin-right:3pt; }
-.nexts { margin-top:28pt; }
+.nexts { margin-top:12pt; }
 .nexts h2, .done h2 { font-size:22pt; margin-bottom:12pt; }
 .next-row { display:grid; grid-template-columns:repeat(4,1fr); gap:10pt; align-items:stretch; }
 .next { display:flex; flex-direction:column; background:var(--foam); border-radius:12pt; padding:10pt 11pt; color:var(--navy); }
@@ -235,6 +238,13 @@ a { color:var(--ink); text-decoration:none; }
 .boxes { columns:3; column-gap:16pt; list-style:none; margin:6pt 0 14pt; padding:0; }
 .boxes li { break-inside:avoid; padding:2.5pt 0 2.5pt 15pt; position:relative; font-size:9.5pt; }
 .boxes li::before { content:''; position:absolute; left:0; top:4.5pt; width:8pt; height:8pt; border:1.2pt solid var(--navy); border-radius:2pt; }
+.why { max-width:5.9in; margin-bottom:16pt; }
+.why p:not(.kick) { margin:0 0 5pt; font-size:10.3pt; }
+.ours { margin-top:12pt; }
+.ours h3 { font-size:16pt; margin-bottom:6pt; }
+.ours ul { margin:0; padding-left:14pt; columns:2; column-gap:20pt; font-size:9.6pt; }
+.ours li { margin-bottom:3pt; break-inside:avoid; }
+.help { margin-top:8pt !important; font-weight:700; }
 .contact { margin-top:16pt; font-size:10pt; color:var(--muted); }
 .sign { margin-top:14pt; font-family:'JetBrains Mono', monospace; font-size:8pt; letter-spacing:.06em; color:var(--ink); }
 .outro { background:var(--navy); color:var(--cream); border-radius:12pt; padding:13pt 15pt; font-size:10.5pt; }
@@ -254,6 +264,7 @@ pdf = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><title>AI f
 </section>
 <section class="intro">
   <span class="wm" aria-hidden="true">0</span>
+  <div class="why"><p class="kick">Why we made this</p>{WHY}</div>
   {START}
   <ol class="toc">{toc}<li><span class="toc-n">+</span><span class="toc-name">Start building</span><span class="toc-p">Eight fun first projects with prompts to copy</span></li><li><span class="toc-n">+</span><span class="toc-name">Your first week</span><span class="toc-p">One small thing a day</span></li></ol>
 </section>
@@ -264,13 +275,14 @@ pdf = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><title>AI f
   <div class="builds">{builds_pdf}</div>
 </section>
 <section class="flow">
-  <div class="sec-head" style="margin-top:28pt"><p class="kick">One small thing a day</p><h2>Your first <span class="blue">week</span></h2><p>Ten hours sounds like a lot. Split it up and it's one fun thing a day.</p></div>
+  <div class="sec-head" style="margin-top:14pt"><p class="kick">One small thing a day</p><h2>Your first <span class="blue">week</span></h2><p>Ten hours sounds like a lot. Split it up and it's one fun thing a day.</p></div>
   <ol class="week">{week}</ol>
+  <div class="ours"><p class="kick">The parts that need us</p><h3>What we still do <span class="blue">ourselves</span></h3><ul>{OURS}</ul></div>
   <div class="nexts"><p class="kick">Want more?</p><h2>Where to go <span class="blue">next</span></h2><div class="next-row">{US}{nxt}</div></div>
 </section>
 <section class="page">
   <span class="wm" aria-hidden="true">?</span>
-  <div class="stuck"><p class="kick">Happens to everyone</p><h2 style="font-size:22pt;margin-bottom:12pt">If you get <span class="blue">stuck</span></h2>{stuck}</div>
+  <div class="stuck"><p class="kick">Happens to everyone</p><h2 style="font-size:22pt;margin-bottom:12pt">If you get <span class="blue">stuck</span></h2>{stuck}<p class="help">{HELP}</p></div>
 </section>
 <section class="flow" style="margin-top:28pt">
   <div class="sec-head"><p class="kick">Level 1.0, done</p><h2>You're at <span class="blue">1</span></h2><p>Check off every word you could explain to a friend. Anything left, go back and try it once more.</p></div>
@@ -335,6 +347,7 @@ page = f'''<!doctype html>
         <img class="g-hero__hosts" src="/images/hosts-sticker-640.webp" width="640" height="421" alt="Mary and Josh">
       </div>
     </section>
+    <section class="g-why h-wrap"><div class="g-narrow"><p class="kick">Why we made this</p>{WHY}</div></section>
     <nav class="g-jump h-wrap" aria-label="Sections">{jump}</nav>
     <section class="g-start h-wrap" id="start-here">{START}</section>
     {''.join(level_block(lv, i, 'h-wrap') for i, lv in enumerate(levels))}
@@ -346,10 +359,12 @@ page = f'''<!doctype html>
       <span class="wm" aria-hidden="true">7</span>
       <div class="sec-head"><p class="kick">One small thing a day</p><h2>Your first <span class="blue">week</span></h2><p>Ten hours sounds like a lot. Split it up and it's one fun thing a day</p></div>
       <ol class="week">{week}</ol>
+      <div class="g-ours"><p class="kick">The parts that need us</p><h3>What we still do <span class="blue">ourselves</span></h3><ul>{OURS}</ul></div>
     </div></section>
     <section class="level g-stuck" id="stuck"><div class="h-wrap g-narrow">
-      <p class="kick">{SPARK} Happens to everyone</p><h2>If you get stuck</h2>
+      <p class="kick">{SPARK} Happens to everyone</p><h2>If you get <span class="blue">stuck</span></h2>
       {stuck}
+      <p class="g-help">{HELP}</p>
     </div></section>
     <section class="level g-next"><div class="h-wrap">
       <p class="kick">Want more?</p><h2>Where to go next</h2>
@@ -390,7 +405,7 @@ page = f'''<!doctype html>
     document.querySelectorAll('[data-copy]').forEach(function (b) {{
       b.addEventListener('click', function () {{
         var t = document.getElementById(b.getAttribute('data-copy')).textContent;
-        var done = function () {{ b.textContent = 'Copied'; setTimeout(function () {{ b.textContent = 'Copy prompt'; }}, 1600); }};
+        var done = function () {{ b.textContent = 'Copied! Go make something'; setTimeout(function () {{ b.textContent = 'Copy prompt'; }}, 2200); }};
         if (navigator.clipboard) navigator.clipboard.writeText(t).then(done, function () {{}}); else done();
       }});
     }});

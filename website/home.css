@@ -37,8 +37,24 @@
 .h-hero h1 { margin: 0; font-weight: 800; text-transform: uppercase; }
 .h-hero__kick { display: block; font-size: 52px; line-height: 1; letter-spacing: -.01em; }
 .h-hero__big { display: block; font-size: 150px; line-height: .86; letter-spacing: -.03em; }
-.h-hosts { width: 440px; height: auto; margin: 40px 0 0; transition: transform .35s cubic-bezier(.2, .8, .2, 1); }
-.h-hosts:hover { transform: rotate(-1.5deg) scale(1.02); }
+.h-hosts { display: flex; align-items: flex-end; justify-content: center; gap: 24px; margin: 40px 0 0; }
+/* Floating, like Get It Girl's sticker: up about 12px with a degree or two of tilt, slow, each on its own rhythm */
+.h-host { position: relative; padding: 0; border: 0; background: none; cursor: pointer; animation: h-float 6s ease-in-out infinite alternate; }
+.h-host img { display: block; height: auto; }
+.h-host--mary { --tilt: -1.6deg; }
+.h-host--mary img { width: 184px; }
+.h-host--josh { --tilt: 1.4deg; animation-duration: 6.8s; animation-delay: -3.2s; }
+.h-host--josh img { width: 232px; }
+@keyframes h-float { from { transform: translateY(0) rotate(0); } to { transform: translateY(-12px) rotate(var(--tilt)); } }
+.h-host:focus-visible { outline: 3px solid var(--blue); outline-offset: 6px; border-radius: 20px; }
+/* Speech bubble on tap */
+.h-bubble { position: absolute; left: 50%; bottom: calc(100% - 18px); transform: translate(-50%, 8px) scale(.9); width: max-content; max-width: 220px; padding: 10px 14px; border-radius: 14px; background: var(--navy); color: var(--cream); font: 700 15px/1.3 var(--display); text-align: center; opacity: 0; pointer-events: none; transition: opacity .2s, transform .2s; }
+.h-bubble::after { content: ''; position: absolute; left: 50%; top: 100%; margin-left: -7px; border: 7px solid transparent; border-top-color: var(--navy); }
+.h-host.is-talking .h-bubble { opacity: 1; transform: translate(-50%, 0) scale(1); }
+/* Hover NORMAL and an "-ish" slaps on */
+.h-normal { position: relative; }
+.h-normal::after { content: '-ish'; position: absolute; right: -.1em; top: -.05em; transform: rotate(8deg) scale(.6); font-family: var(--mono); font-size: 38px; letter-spacing: 0; text-transform: none; color: var(--blue); opacity: 0; transition: opacity .2s, transform .25s cubic-bezier(.2, 1.6, .4, 1); }
+.h-hero h1:hover .h-normal::after { opacity: 1; transform: rotate(8deg) scale(1); }
 .h-lead { margin: 22px auto 30px; max-width: 500px; font-size: 20px; line-height: 1.5; font-weight: 500; }
 
 .h-form { width: 100%; max-width: 560px; }
@@ -110,6 +126,8 @@
 .h-foot .social { color: var(--cream); }
 .h-foot .social:hover { background: var(--cream); color: var(--navy); }
 .h-foot .h-foot__social { margin: 0; }
+.h-foot__fine { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px 24px; margin-top: 24px; }
+.h-foot__fine .h-foot__sign { margin: 0; }
 .h-foot__sign { margin: 24px 0 0; font-family: var(--mono); font-size: 13px; letter-spacing: .04em; color: var(--sky); text-align: left; }
 
 /* Laptops */
@@ -137,7 +155,11 @@
   .h-hero { padding: 36px 0 64px; }
   .h-hero__kick { font-size: 26px; }
   .h-hero__big { font-size: 58px; }
-  .h-hosts { width: 100%; max-width: 330px; margin-top: 28px; }
+  .h-hosts { gap: 14px; margin-top: 44px; }
+  .h-host--mary img { width: 140px; }
+  .h-host--josh img { width: 176px; }
+  .h-bubble { font-size: 13px; max-width: 160px; }
+  .h-normal::after { font-size: 18px; }
   .h-lead { font-size: 17px; margin: 18px auto 24px; }
   .h-form__row { flex-direction: column; }
   .h-input { flex: none; width: 100%; font-size: 16px; } /* 16px keeps iOS Safari from zooming in */
@@ -160,9 +182,11 @@
   .h-foot__row { flex-direction: column; align-items: center; }
   .h-foot__links { justify-content: center; gap: 16px; }
   .h-foot__sign { text-align: center; }
+  .h-foot__fine { justify-content: center; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .h-btn, .h-hosts, .h-guide__cover { transition: none; }
-  .h-hosts:hover, .h-guide__cover:hover { transform: none; }
+  .h-btn, .h-guide__cover { transition: none; }
+  .h-host { animation: none; }
+  .h-guide__cover:hover { transform: none; }
 }

@@ -29,14 +29,14 @@ a { color:var(--ink); text-decoration:none; }
 .cover img { position:absolute; right:.6in; bottom:1.1in; width:3.9in; transform:rotate(-3deg); }
 .cover .by { margin-top:auto; font-family:'JetBrains Mono', monospace; font-size:7.5pt; letter-spacing:.14em; text-transform:uppercase; color:var(--sky); }
 /* start here + contents */
-.start h2 { font-size:38pt; }
+.start h2 { font-size:30pt; }
 .start-time { font-family:'JetBrains Mono', monospace; font-size:7.5pt; letter-spacing:.12em; text-transform:uppercase; color:var(--ink); margin:8pt 0 14pt; }
 .steps { margin:0; padding-left:16pt; font-size:12pt; max-width:5.6in; }
-.steps li { margin-bottom:7pt; }
-.tenhours { margin:16pt 0 0; background:var(--navy); color:var(--cream); border-radius:12pt; padding:13pt 15pt; font-size:10.5pt; max-width:5.6in; }
+.steps li { margin-bottom:4pt; }
+.tenhours { margin:10pt 0 0; background:var(--navy); color:var(--cream); border-radius:12pt; padding:13pt 15pt; font-size:10.5pt; max-width:5.6in; }
 .tenhours b { color:var(--blue); margin-right:3pt; }
-.toc { list-style:none; margin:30pt 0 0; padding:0; }
-.toc li { display:grid; grid-template-columns:.7in 1.9in 1fr; align-items:baseline; gap:10pt; padding:6pt 0; }
+.toc { list-style:none; margin:16pt 0 0; padding:0; }
+.toc li { display:grid; grid-template-columns:.7in 1.9in 1fr; align-items:baseline; gap:10pt; padding:3pt 0; }
 .toc-n { font-weight:800; font-size:18pt; color:var(--blue); }
 .toc-name { font-weight:800; text-transform:uppercase; font-size:11.5pt; }
 .toc-p { font-size:9.5pt; color:var(--muted); }
@@ -72,7 +72,7 @@ a { color:var(--ink); text-decoration:none; }
 .prompt .kick { margin-bottom:4pt; }
 .prompt p { margin:0; font-size:9.3pt; }
 /* first week */
-.week { list-style:none; margin:0; padding:0; display:grid; gap:12pt; max-width:6in; }
+.week { list-style:none; margin:0; padding:0; display:grid; gap:5pt; max-width:6.4in; }
 .week li { display:grid; grid-template-columns:.6in 1.6in 1fr; align-items:baseline; gap:10pt; }
 .week .lbl { margin:0; font-size:8pt; }
 .week b { font-weight:800; text-transform:uppercase; font-size:12pt; }
@@ -80,7 +80,7 @@ a { color:var(--ink); text-decoration:none; }
 /* finish */
 .stuck p { margin:0 0 9pt; max-width:5.8in; font-size:10.5pt; }
 .stuck b { font-weight:800; margin-right:3pt; }
-.nexts { margin-top:28pt; }
+.nexts { margin-top:12pt; }
 .nexts h2, .done h2 { font-size:22pt; margin-bottom:12pt; }
 .next-row { display:grid; grid-template-columns:repeat(4,1fr); gap:10pt; align-items:stretch; }
 .next { display:flex; flex-direction:column; background:var(--foam); border-radius:12pt; padding:10pt 11pt; color:var(--navy); }
@@ -93,6 +93,13 @@ a { color:var(--ink); text-decoration:none; }
 .boxes { columns:3; column-gap:16pt; list-style:none; margin:6pt 0 14pt; padding:0; }
 .boxes li { break-inside:avoid; padding:2.5pt 0 2.5pt 15pt; position:relative; font-size:9.5pt; }
 .boxes li::before { content:''; position:absolute; left:0; top:4.5pt; width:8pt; height:8pt; border:1.2pt solid var(--navy); border-radius:2pt; }
+.why { max-width:5.9in; margin-bottom:16pt; }
+.why p:not(.kick) { margin:0 0 5pt; font-size:10.3pt; }
+.ours { margin-top:12pt; }
+.ours h3 { font-size:16pt; margin-bottom:6pt; }
+.ours ul { margin:0; padding-left:14pt; columns:2; column-gap:20pt; font-size:9.6pt; }
+.ours li { margin-bottom:3pt; break-inside:avoid; }
+.help { margin-top:8pt !important; font-weight:700; }
 .contact { margin-top:16pt; font-size:10pt; color:var(--muted); }
 .sign { margin-top:14pt; font-family:'JetBrains Mono', monospace; font-size:8pt; letter-spacing:.06em; color:var(--ink); }
 .outro { background:var(--navy); color:var(--cream); border-radius:12pt; padding:13pt 15pt; font-size:10.5pt; }
@@ -108,6 +115,7 @@ a { color:var(--ink); text-decoration:none; }
 </section>
 <section class="intro">
   <span class="wm" aria-hidden="true">0</span>
+  <div class="why"><p class="kick">Why we made this</p><p>We&#x27;re Mary and Josh. We started Out of Our Depth because AI was moving faster than we could keep up, and we were tired of nodding along to words we only half understood</p><p>Mary came into business school with zero AI background. Josh reads the manual. Between the two of us we&#x27;ve made most of the mistakes in here already, so you don&#x27;t have to</p><p>This is the guide we wish someone had handed us. Words in plain English, habits that keep you out of trouble, and fun things to build. You can read it in an afternoon</p></div>
   <div class="start"><p class="kick"><svg class="spark" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.5v21M2.9 6.75l18.2 10.5M2.9 17.25l18.2-10.5" stroke="currentColor" stroke-width="3.4" stroke-linecap="round"/></svg> Start here</p>
   <h2>New here? Do this first</h2><p class="start-time">20 minutes</p>
   <ol class="steps"><li>Pick one app: ChatGPT, Claude or Gemini. The free version is fine to start, and you can always switch</li><li>Check your privacy setting. It takes two minutes. See &quot;Your data&quot; in level 0.4</li><li>Do the level 0.0 try-its, then pick one build from Start building. Make something today</li></ol>
@@ -165,13 +173,14 @@ a { color:var(--ink); text-decoration:none; }
   <div class="builds"><article class="build"><p class="lbl">5 min  /  Any app with photos</p><h3>What&#x27;s for dinner?</h3><p>The fastest way to see what multimodal means</p><div class="prompt"><p class="kick">Copy this</p><p id="p-dinner">Here&#x27;s a photo of my fridge. Give me three dinners I can make tonight with what&#x27;s in here, plus anything I&#x27;d need to grab. Keep each one under 30 minutes</p></div></article><article class="build"><p class="lbl">15 min  /  Custom instructions  /  <a href="https://www.youtube.com/watch?v=_d-hzc6Lt5c" target="_blank" rel="noopener">&#9654;&#xFE0E; ep 005</a></p><h3>Teach it your voice</h3><p>Every draft after this sounds a little more like you</p><div class="prompt"><p class="kick">Copy this</p><p id="p-voice">Interview me one question at a time about how I write: who I usually write to, words I use a lot, and things I&#x27;d never say. After eight questions, write a short voice guide I can paste into my custom instructions</p></div></article><article class="build"><p class="lbl">10 min  /  Learning  /  <a href="https://www.youtube.com/watch?v=cH2al7Y1QKA" target="_blank" rel="noopener">&#9654;&#xFE0E; ep 011</a></p><h3>Quiz me, don&#x27;t tell me</h3><p>Use AI to learn faster without letting it do the thinking</p><div class="prompt"><p class="kick">Copy this</p><p id="p-quiz">I&#x27;m learning [topic]. Quiz me one question at a time. Don&#x27;t give me the answer until I&#x27;ve tried. If I&#x27;m wrong, give me a hint first, then the answer</p></div></article><article class="build"><p class="lbl">15 min  /  Projects  /  <a href="https://www.youtube.com/watch?v=Fby7CJC9i-Q" target="_blank" rel="noopener">&#9654;&#xFE0E; ep 004</a></p><h3>Your own coach</h3><p>A project that remembers your goal and checks in on it</p><div class="prompt"><p class="kick">Copy this</p><p id="p-coach">You&#x27;re my coach for [goal]. Start by asking me five questions about where I am now and what gets in my way. Then give me a plan for this week. Every time I come back, ask how it went before you give advice. Be honest, not a cheerleader</p></div></article><article class="build"><p class="lbl">10 min  /  Vibe coding</p><h3>Build a tiny app</h3><p>You just made software. No code required</p><div class="prompt"><p class="kick">Copy this</p><p id="p-app">Make me a simple, colorful web app that splits a dinner bill. I type the total, the tip and everyone&#x27;s names, and it shows what each person owes. Make it easy to use on my phone</p></div></article><article class="build"><p class="lbl">15 min  /  Reasoning  /  <a href="https://www.youtube.com/watch?v=NiEnSBPe158" target="_blank" rel="noopener">&#9654;&#xFE0E; ep 006</a></p><h3>Plan the party</h3><p>We planned parts of our wedding this way. It handles the boring logistics so you can do the fun part</p><div class="prompt"><p class="kick">Copy this</p><p id="p-party">I&#x27;m planning [event] for [number] people on [date] with a budget of [amount]. Ask me what matters most first. Then give me a timeline, a checklist and three ideas that would make it feel like us</p></div></article><article class="build"><p class="lbl">10 min  /  Thinking partner</p><h3>Settle a debate</h3><p>Our favorite use. It won&#x27;t pick a side, and that&#x27;s the point</p><div class="prompt"><p class="kick">Copy this</p><p id="p-debate">My partner and I disagree about [topic]. Give the strongest case for each side, then tell us what evidence would change each of our minds. Don&#x27;t pick a winner</p></div></article><article class="build"><p class="lbl">10 min  /  Delegation</p><h3>Clear your week</h3><p>Figure out what AI should do for you, and what you should still do yourself</p><div class="prompt"><p class="kick">Copy this</p><p id="p-week">Here&#x27;s everything on my plate this week: [paste your list]. Sort it into three piles: things AI could do for me, things AI could help me do, and things I should do myself. Explain each pick in one line</p></div></article></div>
 </section>
 <section class="flow">
-  <div class="sec-head" style="margin-top:28pt"><p class="kick">One small thing a day</p><h2>Your first <span class="blue">week</span></h2><p>Ten hours sounds like a lot. Split it up and it's one fun thing a day</p></div>
+  <div class="sec-head" style="margin-top:14pt"><p class="kick">One small thing a day</p><h2>Your first <span class="blue">week</span></h2><p>Ten hours sounds like a lot. Split it up and it's one fun thing a day</p></div>
   <ol class="week"><li><span class="lbl">Mon</span><b>Say hi</b><span>Do the three level 0.0 try-its. Birthday message twice, fact check, fridge photo</span></li><li><span class="lbl">Tue</span><b>Make it yours</b><span>Write your three lines of custom instructions and start one project</span></li><li><span class="lbl">Wed</span><b>Check your settings</b><span>Two minutes in privacy settings. Then ask for a smart skeptic&#x27;s take on an idea you love</span></li><li><span class="lbl">Thu</span><b>Quiz me</b><span>Pick something you&#x27;re learning and run the Quiz me, don&#x27;t tell me prompt</span></li><li><span class="lbl">Fri</span><b>Build a tiny app</b><span>Make the dinner bill splitter, then use it at dinner</span></li><li><span class="lbl">Sat</span><b>Settle a debate</b><span>Run the debate prompt on something you and a friend actually disagree about</span></li><li><span class="lbl">Sun</span><b>Clear your week</b><span>Sort next week into three piles: AI does it, AI helps, you do it</span></li></ol>
+  <div class="ours"><p class="kick">The parts that need us</p><h3>What we still do <span class="blue">ourselves</span></h3><ul><li>The ideas and the opinions. AI can argue both sides, but our take is ours</li><li>The jokes, and the real replies to real people</li><li>The final say on anything with our names on it</li><li>Anything that&#x27;s supposed to sound like it came from our hearts</li></ul></div>
   <div class="nexts"><p class="kick">Want more?</p><h2>Where to go <span class="blue">next</span></h2><div class="next-row"><a class="next next--us" href="https://www.youtube.com/@OutOfOurDepthPod?sub_confirmation=1" target="_blank" rel="noopener"><span class="lbl">Us, obviously</span><h3>Out of Our Depth</h3><p>New episodes every week. Would it kill ya to subscribe?</p></a><a class="next" href="https://www.anthropic.com/ai-fluency" target="_blank" rel="noopener"><span class="lbl">Anthropic</span><h3>AI Fluency</h3><p>Free online course</p></a><a class="next" href="https://openai.com/academy" target="_blank" rel="noopener"><span class="lbl">OpenAI Academy</span><h3>AI Foundations</h3><p>Free online course</p></a><a class="next" href="https://www.elementsofai.com/" target="_blank" rel="noopener"><span class="lbl">University of Helsinki</span><h3>Elements of AI</h3><p>Free online course</p></a></div></div>
 </section>
 <section class="page">
   <span class="wm" aria-hidden="true">?</span>
-  <div class="stuck"><p class="kick">Happens to everyone</p><h2 style="font-size:22pt;margin-bottom:12pt">If you get <span class="blue">stuck</span></h2><p><b>It sounds generic</b> Show it, don&#x27;t describe it. Paste an example you love and say &quot;more like this.&quot;</p><p><b>It got something wrong</b> Tell it exactly what&#x27;s off, like you&#x27;d tell a new coworker. Then ask it to double check its own answer</p><p><b>It agrees with everything</b> Ask &quot;What would a smart skeptic say?&quot; or &quot;What am I missing?&quot;</p><p><b>It forgot what you said</b> Long chats slip. Start a fresh chat with a quick summary, or keep the work in a project</p><p><b>You don&#x27;t know what to ask</b> Let it interview you: &quot;Here&#x27;s my week. What could you help with?&quot;</p></div>
+  <div class="stuck"><p class="kick">Happens to everyone</p><h2 style="font-size:22pt;margin-bottom:12pt">If you get <span class="blue">stuck</span></h2><p><b>It sounds generic</b> Show it, don&#x27;t describe it. Paste an example you love and say &quot;more like this.&quot;</p><p><b>It got something wrong</b> Tell it exactly what&#x27;s off, like you&#x27;d tell a new coworker. Then ask it to double check its own answer</p><p><b>It agrees with everything</b> Ask &quot;What would a smart skeptic say?&quot; or &quot;What am I missing?&quot;</p><p><b>It forgot what you said</b> Long chats slip. Start a fresh chat with a quick summary, or keep the work in a project</p><p><b>You don&#x27;t know what to ask</b> Let it interview you: &quot;Here&#x27;s my week. What could you help with?&quot;</p><p class="help">Stuck on one? Email <a href="mailto:hi@outofourdepth.com">hi@outofourdepth.com</a>, tell us which one, and we'll help</p></div>
 </section>
 <section class="flow" style="margin-top:28pt">
   <div class="sec-head"><p class="kick">Level 1.0, done</p><h2>You're at <span class="blue">1</span></h2><p>Check off every word you could explain to a friend. Anything left, go back and try it once more</p></div>

@@ -350,5 +350,16 @@
       "Clear your week",
       "Sort next week into three piles: AI does it, AI helps, you do it"
     ]
+  ],
+  "why": [
+    "We're Mary and Josh. We started Out of Our Depth because AI was moving faster than we could keep up, and we were tired of nodding along to words we only half understood.",
+    "Mary came into business school with zero AI background. Josh reads the manual. Between the two of us we've made most of the mistakes in here already, so you don't have to.",
+    "This is the guide we wish someone had handed us. Words in plain English, habits that keep you out of trouble, and fun things to build. You can read it in an afternoon."
+  ],
+  "ourselves": [
+    "The ideas and the opinions. AI can argue both sides, but our take is ours",
+    "The jokes, and the real replies to real people",
+    "The final say on anything with our names on it",
+    "Anything that's supposed to sound like it came from our hearts"
   ]
 }

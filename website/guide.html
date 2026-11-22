@@ -45,6 +45,7 @@
         <img class="g-hero__hosts" src="/images/hosts-sticker-640.webp" width="640" height="421" alt="Mary and Josh">
       </div>
     </section>
+    <section class="g-why h-wrap"><div class="g-narrow"><p class="kick">Why we made this</p><p>We&#x27;re Mary and Josh. We started Out of Our Depth because AI was moving faster than we could keep up, and we were tired of nodding along to words we only half understood</p><p>Mary came into business school with zero AI background. Josh reads the manual. Between the two of us we&#x27;ve made most of the mistakes in here already, so you don&#x27;t have to</p><p>This is the guide we wish someone had handed us. Words in plain English, habits that keep you out of trouble, and fun things to build. You can read it in an afternoon</p></div></section>
     <nav class="g-jump h-wrap" aria-label="Sections"><a href="#start-here">Start here</a><a href="#level-0-0"><b>0.0</b> Say hi</a><a href="#level-0-2"><b>0.2</b> Make it yours</a><a href="#level-0-4"><b>0.4</b> Spot the traps</a><a href="#level-0-6"><b>0.6</b> Under the hood</a><a href="#level-0-8"><b>0.8</b> AI that does things</a><a href="#level-1-0"><b>1.0</b> The big questions</a><a href="#start-building">Start building</a><a href="#first-week">Your first week</a><a href="#stuck">If you get stuck</a></nav>
     <section class="g-start h-wrap" id="start-here"><div class="start"><p class="kick"><svg class="spark" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.5v21M2.9 6.75l18.2 10.5M2.9 17.25l18.2-10.5" stroke="currentColor" stroke-width="3.4" stroke-linecap="round"/></svg> Start here</p>
   <h2>New here? Do this first</h2><p class="start-time">20 minutes</p>
@@ -103,10 +104,12 @@
       <span class="wm" aria-hidden="true">7</span>
       <div class="sec-head"><p class="kick">One small thing a day</p><h2>Your first <span class="blue">week</span></h2><p>Ten hours sounds like a lot. Split it up and it's one fun thing a day</p></div>
       <ol class="week"><li><span class="lbl">Mon</span><b>Say hi</b><span>Do the three level 0.0 try-its. Birthday message twice, fact check, fridge photo</span></li><li><span class="lbl">Tue</span><b>Make it yours</b><span>Write your three lines of custom instructions and start one project</span></li><li><span class="lbl">Wed</span><b>Check your settings</b><span>Two minutes in privacy settings. Then ask for a smart skeptic&#x27;s take on an idea you love</span></li><li><span class="lbl">Thu</span><b>Quiz me</b><span>Pick something you&#x27;re learning and run the Quiz me, don&#x27;t tell me prompt</span></li><li><span class="lbl">Fri</span><b>Build a tiny app</b><span>Make the dinner bill splitter, then use it at dinner</span></li><li><span class="lbl">Sat</span><b>Settle a debate</b><span>Run the debate prompt on something you and a friend actually disagree about</span></li><li><span class="lbl">Sun</span><b>Clear your week</b><span>Sort next week into three piles: AI does it, AI helps, you do it</span></li></ol>
+      <div class="g-ours"><p class="kick">The parts that need us</p><h3>What we still do <span class="blue">ourselves</span></h3><ul><li>The ideas and the opinions. AI can argue both sides, but our take is ours</li><li>The jokes, and the real replies to real people</li><li>The final say on anything with our names on it</li><li>Anything that&#x27;s supposed to sound like it came from our hearts</li></ul></div>
     </div></section>
     <section class="level g-stuck" id="stuck"><div class="h-wrap g-narrow">
-      <p class="kick"><svg class="spark" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.5v21M2.9 6.75l18.2 10.5M2.9 17.25l18.2-10.5" stroke="currentColor" stroke-width="3.4" stroke-linecap="round"/></svg> Happens to everyone</p><h2>If you get stuck</h2>
+      <p class="kick"><svg class="spark" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.5v21M2.9 6.75l18.2 10.5M2.9 17.25l18.2-10.5" stroke="currentColor" stroke-width="3.4" stroke-linecap="round"/></svg> Happens to everyone</p><h2>If you get <span class="blue">stuck</span></h2>
       <p><b>It sounds generic</b> Show it, don&#x27;t describe it. Paste an example you love and say &quot;more like this.&quot;</p><p><b>It got something wrong</b> Tell it exactly what&#x27;s off, like you&#x27;d tell a new coworker. Then ask it to double check its own answer</p><p><b>It agrees with everything</b> Ask &quot;What would a smart skeptic say?&quot; or &quot;What am I missing?&quot;</p><p><b>It forgot what you said</b> Long chats slip. Start a fresh chat with a quick summary, or keep the work in a project</p><p><b>You don&#x27;t know what to ask</b> Let it interview you: &quot;Here&#x27;s my week. What could you help with?&quot;</p>
+      <p class="g-help">Stuck on one? Email <a href="mailto:hi@outofourdepth.com">hi@outofourdepth.com</a>, tell us which one, and we'll help</p>
     </div></section>
     <section class="level g-next"><div class="h-wrap">
       <p class="kick">Want more?</p><h2>Where to go next</h2>
@@ -147,7 +150,7 @@
     document.querySelectorAll('[data-copy]').forEach(function (b) {
       b.addEventListener('click', function () {
         var t = document.getElementById(b.getAttribute('data-copy')).textContent;
-        var done = function () { b.textContent = 'Copied'; setTimeout(function () { b.textContent = 'Copy prompt'; }, 1600); };
+        var done = function () { b.textContent = 'Copied! Go make something'; setTimeout(function () { b.textContent = 'Copy prompt'; }, 2200); };
         if (navigator.clipboard) navigator.clipboard.writeText(t).then(done, function () {}); else done();
       });
     });
