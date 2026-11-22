@@ -196,7 +196,7 @@
 
 /* about */
 .h-about__head { margin-bottom: 18px; }
-.h-about__lead { margin: 0 0 40px; max-width: 680px; font-size: 21px; line-height: 1.5; font-weight: 500; }
+.h-about__lead { margin: 0 0 40px; text-wrap: pretty; font-size: 21px; line-height: 1.5; font-weight: 500; }
 .h-about__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
 .h-who { display: grid; grid-template-columns: 150px 1fr; gap: 24px; align-items: center; padding: 28px; border-radius: 24px; background: var(--foam); }
 .h-who img { width: 100%; height: auto; transform: rotate(-2deg); }

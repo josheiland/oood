@@ -529,8 +529,7 @@
  ],
  "why": [
   "We're Mary and Josh. We started Out of Our Depth because AI was moving faster than we could keep up, and we were tired of nodding along to words we only half understood.",
-  "Mary came into business school with zero AI background. Josh reads the manual. Between the two of us we've made most of the mistakes in here already, so you don't have to.",
-  "This is the guide we wish someone had handed us. Words in plain English, habits that keep you out of trouble, and fun things to build. You can read it in an afternoon."
+  "This is the guide we wish someone had handed us. Words in plain English, habits that keep you out of trouble, and fun things to build. You can read it in an afternoon (if you're not dyslexic, sry Mary)"
  ],
  "ourselves": [
   "The ideas and the opinions. AI can argue both sides, but our take is ours",
@@ -640,8 +639,7 @@
    "level": "Thinking partner",
    "prompt": "My partner and I disagree about [topic]. Give the strongest case for each side, then tell us what evidence would change each of our minds. Don't pick a winner.",
    "what": "Hand AI both sides of an argument and ask for the best case for each. Think referee, not judge",
-   "get": "The strongest version of each side, and what would change each mind",
-   "ours": "We run our own fights through it. Need one to start? Grab any of the 10 debates at the bottom"
+   "get": "The strongest version of each side, and what would change each mind"
   }
  ]
 }
