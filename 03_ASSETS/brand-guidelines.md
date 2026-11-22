@@ -10,6 +10,18 @@ Adopted 2026-09-25 by Josh's direct instruction. Apply to future on-screen popup
 - Machine-readable tokens: [brand-tokens.json](brand-tokens.json). The original kit wins if this digest loses nuance; a later direct host instruction can supersede it.
 - Read the kit as design guidance. Its example dates, guests, episode numbers, platform listings, marriage month, quotes, and “out now” copy are placeholders, not evidence of events or publication.
 
+## Final guide, 2026-11-21 (Mary)
+
+Mary signed off on the live website and finalized the brand guide the same night. Where this file and the newer guide disagree, the newer guide wins. The full guide with pictures is the "OOOD Brand Guide" page (https://claude.ai/artifact/NwsKzmYcGUPGR1zjU1vYiR, private to Mary and Josh) and the project note `oood-brand-kit.md`. The short version:
+
+- **The site is the reference.** Cream, calm, centered, email ask first, two host stickers side by side, one blue word per headline, foam cards with soft corners, navy buttons with a blue offset.
+- **Changed from the rules above:** small-type blue is `#0A6BB8` and the light tint is `#BDE5FF`. Covers, guides and Instagram graphics use the plain wordmark, not the square tile (the tile is for avatars and the podcast icon). Blue is one moment per frame, not 30% of a layout.
+- **Never, anywhere:** middle dots, "|" separators, pills, divider lines, red dot markers, em dashes, ellipses, emoji, a period at the end of a block, early line wraps, serif or handwriting fonts, words over faces, AI-made photos, made-up facts or jokes stated as fact, anything that makes a reader feel behind.
+- **Guides:** The Dive (flat depth steps from cream to navy), name-that-moment cards and one dare per level, episode links only when found in captions.
+- **Covers:** cream over one flat blue field at a waterline about 58% down, stickers bottom-cropped with no tilt, one invitation line.
+- **Feel:** fun, anyone can learn, nobody is "other," we learn together.
+- **Still open, needs both hosts:** who signs off on what, and moving Josh's renderers and the reels worker off the old serif fonts.
+
 ## Feeling and voice
 
 “Sunlit pool deck, not server room.” Two newlyweds at Stanford GSB learning AI out loud. Make it fun to spend time with Josh and Mary, accessible to someone with no tech background, and useful enough to try something afterward.
