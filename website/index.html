@@ -35,7 +35,7 @@
   <header class="h-nav">
     <div class="h-wrap h-nav__inner">
       <a class="h-wm" href="/" aria-label="Out of Our Depth home"><span class="h-wm__k">Out of our</span><span>Depth</span></a>
-      <nav class="h-links" aria-label="Main"><a href="#episodes">Episodes</a><a href="/guide#start-building">Try it</a><a href="/guide">Study guide</a></nav>
+      <nav class="h-links" aria-label="Main"><a href="#episodes">Episodes</a><a href="/builds">Builds</a><a href="/guide">Study guide</a><a href="#about">About</a></nav>
       <a class="h-btn h-btn--sm" href="https://www.youtube.com/@OutOfOurDepthPod" data-link="youtube" target="_blank" rel="noopener">Watch the show</a>
     </div>
   </header>
@@ -48,7 +48,7 @@
           <button class="h-host h-host--mary" type="button" data-host="mary" aria-label="Say hi to Mary"><img src="/images/mary-sticker.webp" width="395" height="629" alt="Mary"><span class="h-bubble" role="status"></span></button>
           <button class="h-host h-host--josh" type="button" data-host="josh" aria-label="Say hi to Josh"><img src="/images/josh-sticker.webp" width="497" height="578" alt="Josh"><span class="h-bubble" role="status"></span></button>
         </div>
-        <p class="h-lead">We're Mary and Josh. We try the AI everyone's talking about and tell you what actually worked, in plain freakin English</p>
+        <p class="h-lead">We're Mary and Josh. We try the AI everyone's talking about and tell you what actually worked, in plain English</p>
         <form class="h-form" action="/api/subscribe" method="post" data-notes novalidate>
           <div class="h-form__row">
             <label class="visually-hidden" for="notes-email">Email address</label>
@@ -56,7 +56,7 @@
             <button class="h-btn" type="submit">Send me the notes</button>
           </div>
           <input class="notes__hp" name="website" type="text" tabindex="-1" autocomplete="off" aria-hidden="true">
-          <p class="h-note">We only email when it's worth it. Written by real humans: Josh handles the spelling, Mary handles the jokes (proudly dyslexic + still wrote this subheader #flex)</p>
+          <p class="h-note">We only email when it's worth it. Josh spells, Mary jokes (proudly dyslexic, still wrote this #flex)</p>
           <p class="notes__status" data-notes-status role="status" aria-live="polite"></p>
         </form>
         <p class="h-listen">New episodes every week on <a href="https://www.youtube.com/@OutOfOurDepthPod" data-link="youtube" target="_blank" rel="noopener">YouTube</a>, <a href="https://open.spotify.com/show/5uqWe60E7Vi3MfQtJki7b1" data-link="spotify" target="_blank" rel="noopener"><span data-spotify-label>Spotify</span></a> and <a href="https://podcasts.apple.com/us/podcast/out-of-our-depth/id6819080935" data-link="apple" target="_blank" rel="noopener">Apple Podcasts</a></p>
@@ -75,11 +75,11 @@
       <div class="h-wrap">
         <div class="h-head">
           <h2 id="try-title">Try it <span class="h-blue">yourself</span></h2>
-          <a class="h-mono h-head__all" href="/guide#start-building">All five <span aria-hidden="true">&rarr;</span></a>
+          <a class="h-mono h-head__all" href="/builds">See what we built <span aria-hidden="true">&rarr;</span></a>
         </div>
         <div class="h-three h-try">
           <a class="h-card" href="/guide#start-building"><span class="h-mono h-card__k">Episode 005  /  15 min</span><span class="h-card__t">Teach it your voice</span><span class="h-card__p">An interview prompt that turns into a voice guide, so drafts sound like you</span><span class="h-mono h-card__go">Copy the prompt</span></a>
-          <a class="h-card" href="/guide#start-building"><span class="h-mono h-card__k">Episode 011  /  10 min</span><span class="h-card__t">Quiz me, don't tell me</span><span class="h-card__p">The prompt we use to get quizzed instead of getting answers</span><span class="h-mono h-card__go">Copy the prompt</span></a>
+          <a class="h-card" href="/guide#start-building"><span class="h-mono h-card__k">Episode 004  /  15 min</span><span class="h-card__t">Your own coach</span><span class="h-card__p">One chat that knows your goal and asks how it went. We built one for a trail race</span><span class="h-mono h-card__go">Copy the prompt</span></a>
           <a class="h-card" href="/guide#start-building"><span class="h-mono h-card__k">Vibe coding  /  10 min</span><span class="h-card__t">Build a tiny app</span><span class="h-card__p">A dinner bill splitter for your phone. No code required</span><span class="h-mono h-card__go">Copy the prompt</span></a>
         </div>
       </div>
@@ -183,13 +183,31 @@
         </div>
       </div>
     </section>
+    <section class="h-sec h-about" id="about" aria-labelledby="about-title">
+      <div class="h-wrap">
+        <div class="h-head h-about__head"><div><p class="h-mono">About</p><h2 id="about-title">Who are <span class="h-blue">we</span></h2></div></div>
+        <p class="h-about__lead">We're newlyweds who work together and argue about AI at dinner. We're not experts. We just kept asking each other "wait, what does that actually mean?" so we hit record</p>
+        <div class="h-about__grid">
+          <article class="h-who">
+            <img src="/images/mary-sticker.webp" width="395" height="629" alt="Mary" loading="lazy">
+            <div><p class="h-mono">Jokes + design</p><h3>Mary Blankemeier</h3>
+            <ul><li>Founder and CEO of Run Your City, a nonprofit bringing free sports to kids</li><li>Stanford GSB MBA, class of 2027</li><li>Came to AI with zero background. Proudly dyslexic</li></ul></div>
+          </article>
+          <article class="h-who">
+            <img src="/images/josh-sticker.webp" width="497" height="578" alt="Josh" loading="lazy">
+            <div><p class="h-mono">Spelling + editing</p><h3>Josh Eiland</h3>
+            <ul><li>COO of Run Your City</li><li>Stanford GSB MBA and MA in Education</li><li>Used to work at Bain. Reads the manual so Mary doesn't have to</li></ul></div>
+          </article>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="h-foot">
     <div class="h-wrap">
       <p class="h-foot__big" aria-hidden="true">AI for normal <span class="h-blue">people</span></p>
       <div class="h-foot__row">
-        <nav class="h-foot__links" aria-label="Footer"><a href="#episodes">Episodes</a><a href="/guide">Study guide</a><a href="mailto:hi@outofourdepth.com">hi@outofourdepth.com</a></nav>
+        <nav class="h-foot__links" aria-label="Footer"><a href="#episodes">Episodes</a><a href="/builds">Builds</a><a href="/guide">Study guide</a><a href="#about">About</a><a href="mailto:hi@outofourdepth.com">hi@outofourdepth.com</a></nav>
         <nav class="h-foot__social topbar__social" aria-label="Find us" data-socials></nav>
       </div>
       <div class="h-foot__fine"><p class="h-foot__sign">Can&#39;t lie, Claude built this</p></div>

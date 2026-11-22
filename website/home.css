@@ -193,3 +193,16 @@
   .h-host { animation: none; }
   .h-guide__cover:hover { transform: none; }
 }
+
+/* about */
+.h-about__head { margin-bottom: 18px; }
+.h-about__lead { margin: 0 0 40px; max-width: 680px; font-size: 21px; line-height: 1.5; font-weight: 500; }
+.h-about__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.h-who { display: grid; grid-template-columns: 150px 1fr; gap: 24px; align-items: center; padding: 28px; border-radius: 24px; background: var(--foam); }
+.h-who img { width: 100%; height: auto; transform: rotate(-2deg); }
+.h-who:nth-child(2) img { transform: rotate(2deg); }
+.h-who h3 { margin: 6px 0 12px; font-weight: 800; font-size: 30px; line-height: .95; text-transform: uppercase; }
+.h-who ul { margin: 0; padding-left: 18px; font-size: 17px; line-height: 1.45; }
+.h-who li { margin-bottom: 6px; }
+@media (max-width: 900px) { .h-about__grid { grid-template-columns: 1fr; } }
+@media (max-width: 520px) { .h-who { grid-template-columns: 96px 1fr; gap: 16px; padding: 20px; } .h-who h3 { font-size: 24px; } .h-about__lead { font-size: 18px; } }

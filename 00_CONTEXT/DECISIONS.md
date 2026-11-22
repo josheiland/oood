@@ -807,4 +807,4 @@ The v11 recurring cards correct an implicit RGB-to-BT.601 conversion before BT.7
 - Try-its and check-yourself questions are replaced by "name that moment": three tap-to-flip cards per level plus a one-line dare. In the PDF the answers print upside down.
 - "Not on the show yet" labels are removed. A word shows an episode link only when the moment was found in the caption files. Rechecked all twelve unlinked words; only scaling laws turned up (ep 013 at 14:26).
 - Footer sign-off on every page: "Can't lie, Claude built this". Host bubbles are white thought bubbles.
-
+- Later the same night (Mary): new `/builds` page ("Things we built") with four real builds, how we built each and a prompt to copy. It is hand-written, not generated. Nav is Episodes / Builds / Study guide / About. Homepage gets an About section with Mary and Josh. The five starter cards in the guide now say what each one is, what you get and what we made. Homepage lead drops "freakin". Email line is "We only email when it's worth it. Josh spells, Mary jokes (proudly dyslexic, still wrote this #flex)".

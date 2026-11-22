@@ -135,11 +135,14 @@ def level_web(lv, i):
 </div></section>'''
 
 def way_card(b, web):
+    """What it is, what you get, what we made with it, then the prompt. All visible, nothing behind a click."""
     watch = f'  /  <a href="{html.escape(ep_url(b["watch"]))}" target="_blank" rel="noopener">&#9654;&#xFE0E; ep {b["watch"]}</a>' if b.get('watch') else ''
     copy = f'<button class="copy" type="button" data-copy="p-{b["id"]}">Copy prompt</button>' if web else ''
-    return (f'<article class="build"><p class="lbl">{e(b["time"])}  /  {e(b["level"])}{watch}</p>'
-            f'<h3>{e(b["title"])}</h3><p>{e(b["why"])}</p>'
-            f'<div class="prompt"><p class="kick">Copy this</p><p id="p-{b["id"]}">{e(b["prompt"])}</p>{copy}</div></article>')
+    ours = f'<p class="way__row"><b>What we made</b> {e(b["ours"])}</p>' if b.get('ours') else ''
+    return (f'<article class="build"><div class="way__info"><p class="lbl">{e(b["time"])}  /  {e(b["level"])}{watch}</p>'
+            f'<h3>{e(b["title"])}</h3><p class="way__what">{e(b["what"])}</p>'
+            f'<p class="way__row"><b>You get</b> {e(b["get"])}</p>{ours}</div>'
+            f'<div class="prompt"><p class="kick">Copy this into any AI app</p><p id="p-{b["id"]}">{e(b["prompt"])}</p>{copy}</div></article>')
 
 sh = guide['start_here']
 start_steps = ''.join(f'<li>{e(s)}</li>' for s in sh['steps'])
@@ -165,7 +168,7 @@ WHY = ''.join(f'<p>{e(x)}</p>' for x in guide['why'])
 OURS = ''.join(f'<li>{e(x)}</li>' for x in guide['ourselves'])
 HELP = 'Stuck on one? Email <a href="mailto:hi@outofourdepth.com">hi@outofourdepth.com</a>, tell us which one, and we\'ll help'
 boxes = ''.join(f'<li>{e(topics[w]["title"])}</li>' for lv in levels for w in lv['words'])
-NOTE = "We only email when it's worth it. Written by real humans: Josh handles the spelling, Mary handles the jokes (proudly dyslexic + still wrote this subheader #flex)"
+NOTE = "We only email when it's worth it. Josh spells, Mary jokes (proudly dyslexic, still wrote this #flex)"
 SIGN = "Can't lie, Claude built this"
 PITCH = f'{N} words, 10 debates and 5 fun ways to get started'
 
@@ -241,6 +244,9 @@ a { color:var(--ink); text-decoration:none; }
 .build { break-inside:avoid; }
 .build .lbl { margin:0 0 5pt; }
 .build p { margin:4pt 0 0; }
+.way__row b { color:var(--ink); font-weight:700; margin-right:3pt; }
+.builds { grid-template-columns:1fr 1fr 1fr !important; gap:12pt 14pt !important; font-size:9pt; }
+.builds .prompt p { font-size:8.6pt; }
 .prompt { margin-top:8pt; background:var(--foam); border-radius:12pt; padding:10pt 12pt; }
 .prompt .kick { margin-bottom:4pt; }
 .prompt p { margin:0; font-size:9.3pt; }
@@ -373,7 +379,7 @@ page = f'''<!doctype html>
   <header class="h-nav">
     <div class="h-wrap h-nav__inner">
       <a class="h-wm" href="/" aria-label="Out of Our Depth home"><span class="h-wm__k">Out of our</span><span>Depth</span></a>
-      <nav class="h-links" aria-label="Main"><a href="/#episodes">Episodes</a><a href="/guide#start-building">Try it</a><a href="/guide" aria-current="page">Study guide</a></nav>
+      <nav class="h-links" aria-label="Main"><a href="/#episodes">Episodes</a><a href="/builds">Builds</a><a href="/guide" aria-current="page">Study guide</a><a href="/#about">About</a></nav>
       <a class="h-btn h-btn--sm" href="https://www.youtube.com/@OutOfOurDepthPod" data-link="youtube" target="_blank" rel="noopener">Watch the show</a>
     </div>
   </header>
@@ -391,7 +397,8 @@ page = f'''<!doctype html>
     <section class="g-why h-wrap"><div class="g-narrow"><p class="kick">Why we made this</p>{WHY}</div></section>
     <section class="g-ways" id="start-building"><div class="h-wrap">
       <div class="sec-head"><p class="kick">{SPARK} Dip a toe in</p><h2>5 fun ways to get <span class="blue">started</span></h2><p>The fastest way to learn AI is to make something with it. Pick one, paste the prompt into any AI app, and fill in the [brackets].</p></div>
-      <div class="cards cards--ways">{ways}{TEN}</div>
+      <div class="ways">{ways}</div>
+      {TEN}
     </div></section>
     {''.join(level_web(lv, i) for i, lv in enumerate(levels))}
     <section class="lv lv--6 dk" data-depth id="debates"><div class="h-wrap">
@@ -428,7 +435,7 @@ page = f'''<!doctype html>
     <div class="h-wrap">
       <p class="h-foot__big" aria-hidden="true">AI for normal <span class="h-blue">people</span></p>
       <div class="h-foot__row">
-        <nav class="h-foot__links" aria-label="Footer"><a href="/#episodes">Episodes</a><a href="/guide">Study guide</a><a href="mailto:hi@outofourdepth.com">hi@outofourdepth.com</a></nav>
+        <nav class="h-foot__links" aria-label="Footer"><a href="/#episodes">Episodes</a><a href="/builds">Builds</a><a href="/guide">Study guide</a><a href="/#about">About</a><a href="mailto:hi@outofourdepth.com">hi@outofourdepth.com</a></nav>
         <nav class="h-foot__social topbar__social" aria-label="Find us" data-socials></nav>
       </div>
       <p class="h-foot__sign">{e(SIGN)}</p>

@@ -37,19 +37,31 @@
 .think { font-size: 15px !important; opacity: .82; }
 .think b { font-weight: 700; }
 
-/* 5 ways */
+/* 5 ways: one row each. Left says what it is and what we made, right is the prompt */
 .g-ways { padding: 56px 0 90px; }
-.build { background: var(--foam); display: flex; flex-direction: column; }
+.ways { display: grid; gap: 14px; }
+.build { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: stretch; background: var(--foam); border-radius: 24px; padding: 28px; }
 .build .lbl { margin: 0 0 8px; }
 .build .lbl a { color: inherit; }
-.prompt { margin-top: 14px; padding: 14px 16px; border-radius: 14px; background: var(--cream); flex: 1; display: flex; flex-direction: column; }
-.prompt .kick { margin-bottom: 6px; font-size: 11px; }
-.guide .prompt p:not(.kick) { margin: 0; font-size: 15px; }
+.build h3 { font-size: 30px; line-height: .95; }
+.guide .way__what { margin: 10px 0 0; font-size: 18px; line-height: 1.45; }
+.guide .way__row { margin: 12px 0 0; font-size: 16px; line-height: 1.45; }
+.way__row b { display: block; font-family: var(--mono); font-weight: 500; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink); }
+.prompt { padding: 20px 22px; border-radius: 18px; background: var(--cream); display: flex; flex-direction: column; }
+.prompt .kick { margin-bottom: 8px; font-size: 11px; }
+.guide .prompt p:not(.kick) { margin: 0 0 16px; font-size: 16px; line-height: 1.5; }
 .copy { margin-top: auto; align-self: flex-start; height: 38px; padding: 0 14px; border: 0; border-radius: 8px; background: var(--navy); color: var(--cream); cursor: pointer; font-family: var(--mono); font-size: 12px; letter-spacing: .06em; text-transform: uppercase; }
-.prompt p + .copy { margin-top: 14px; }
 .copy:hover { background: var(--blue); color: var(--navy); }
-.tenhours { margin: 0; border-radius: 20px; padding: 24px; background: var(--navy); color: var(--cream); font-size: 18px; line-height: 1.5; display: flex; flex-direction: column; justify-content: center; }
-.tenhours b { display: block; margin-bottom: 8px; font-weight: 800; text-transform: uppercase; font-size: 24px; line-height: 1; color: var(--blue); }
+.tenhours { margin: 14px 0 0; border-radius: 24px; padding: 24px 28px; background: var(--navy); color: var(--cream); font-size: 18px; line-height: 1.5; }
+.tenhours b { margin-right: 8px; font-weight: 800; text-transform: uppercase; color: var(--blue); }
+
+.how { margin: 6px 0 0; padding-left: 20px; font-size: 16px; line-height: 1.45; }
+.how li { margin-bottom: 6px; }
+.g-hero--builds { padding-bottom: 8px; }
+.g-hero__big--sm { font-size: 150px; }
+.g-more { margin: 28px 0 0; font-size: 18px; font-weight: 500; }
+.g-more a { color: var(--ink); font-weight: 700; }
+@media (max-width: 700px) { .g-hero__big--sm { font-size: 84px; } }
 
 /* levels: each one a shade deeper */
 .lv { padding: 90px 0 100px; }
@@ -168,7 +180,8 @@
   .g-hero__ctas { flex-direction: column; align-self: stretch; }
   .g-hero__hosts { width: 86%; margin-top: 28px; }
   .g-why p:not(.kick) { font-size: 17px; }
-  .guide .cards, .mos, .debates, .map-row { grid-template-columns: 1fr; }
+  .guide .cards, .mos, .debates, .map-row, .build { grid-template-columns: 1fr; }
+  .build { padding: 20px; gap: 18px; } .build h3 { font-size: 24px; }
   .lv { padding: 56px 0 64px; }
   .lv-head { grid-template-columns: 1fr; gap: 8px; }
   .ft, .lv-head--word .ft { font-size: 52px; }

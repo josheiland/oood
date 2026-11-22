@@ -597,8 +597,9 @@
    "title": "What's for dinner?",
    "time": "5 min",
    "level": "Any app with photos",
-   "why": "The fastest way to see what multimodal means",
-   "prompt": "Here's a photo of my fridge. Give me three dinners I can make tonight with what's in here, plus anything I'd need to grab. Keep each one under 30 minutes."
+   "prompt": "Here's a photo of my fridge. Give me three dinners I can make tonight with what's in here, plus anything I'd need to grab. Keep each one under 30 minutes.",
+   "what": "Take a photo of your fridge. AI looks at the picture and plans dinner around what's in there",
+   "get": "Three dinners you can make tonight, plus a tiny shopping list"
   },
   {
    "id": "voice",
@@ -606,8 +607,10 @@
    "time": "15 min",
    "level": "Custom instructions",
    "watch": "005",
-   "why": "Every draft after this sounds a little more like you.",
-   "prompt": "Interview me one question at a time about how I write: who I usually write to, words I use a lot, and things I'd never say. After eight questions, write a short voice guide I can paste into my custom instructions."
+   "prompt": "Interview me one question at a time about how I write: who I usually write to, words I use a lot, and things I'd never say. After eight questions, write a short voice guide I can paste into my custom instructions.",
+   "what": "AI interviews you about how you write, then writes a cheat sheet on your style. Paste it in once and drafts stop sounding like a robot",
+   "get": "A one-page voice guide you can reuse everywhere",
+   "ours": "Mary's guide was built from her real emails and texts. It knows she says \"thank you so big,\" signs off \"Fired up,\" and never uses a long dash"
   },
   {
    "id": "coach",
@@ -615,24 +618,30 @@
    "time": "15 min",
    "level": "Projects",
    "watch": "004",
-   "why": "A project that remembers your goal and checks in on it",
-   "prompt": "You're my coach for [goal]. Start by asking me five questions about where I am now and what gets in my way. Then give me a plan for this week. Every time I come back, ask how it went before you give advice. Be honest, not a cheerleader."
+   "prompt": "You're my coach for [goal]. Start by asking me five questions about where I am now and what gets in my way. Then give me a plan for this week. Every time I come back, ask how it went before you give advice. Be honest, not a cheerleader.",
+   "what": "Set up one chat that knows your goal and asks how it went every time you come back",
+   "get": "A plan for this week and a coach that remembers last week",
+   "ours": "We built a coach and a logistics helper for our El Cruce trail race, then had to coach the coach. It's all in ep 004"
   },
   {
    "id": "app",
    "title": "Build a tiny app",
    "time": "10 min",
    "level": "Vibe coding",
-   "why": "You just made software. No code required.",
-   "prompt": "Make me a simple, colorful web app that splits a dinner bill. I type the total, the tip and everyone's names, and it shows what each person owes. Make it easy to use on my phone."
+   "prompt": "Make me a simple, colorful web app that splits a dinner bill. I type the total, the tip and everyone's names, and it shows what each person owes. Make it easy to use on my phone.",
+   "what": "Describe an app in plain English and AI writes the code. You never have to read any of it",
+   "get": "A working bill splitter you can open on your phone",
+   "ours": "This whole website. We described it and Claude built it"
   },
   {
    "id": "debate",
    "title": "Settle a debate",
    "time": "10 min",
    "level": "Thinking partner",
-   "why": "Our favorite use. It won't pick a side, and that's the point.",
-   "prompt": "My partner and I disagree about [topic]. Give the strongest case for each side, then tell us what evidence would change each of our minds. Don't pick a winner."
+   "prompt": "My partner and I disagree about [topic]. Give the strongest case for each side, then tell us what evidence would change each of our minds. Don't pick a winner.",
+   "what": "Hand AI both sides of an argument and ask for the best case for each. Think referee, not judge",
+   "get": "The strongest version of each side, and what would change each mind",
+   "ours": "We run our own fights through it. Need one to start? Grab any of the 10 debates at the bottom"
   }
  ]
 }
