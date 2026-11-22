@@ -1,423 +1,638 @@
 {
-  "episodes": {
-    "010": "V_DVa4fi3q0",
-    "011": "cH2al7Y1QKA",
-    "012": "NKtHzD6y60s",
-    "013": "IWYHJ2VxDNA",
-    "007": "82qlgC3QcEw",
-    "008": "lGp5szF6HI4",
-    "009": "yhVYY1N7hDg"
+ "episodes": {
+  "010": "V_DVa4fi3q0",
+  "011": "cH2al7Y1QKA",
+  "012": "NKtHzD6y60s",
+  "013": "IWYHJ2VxDNA",
+  "007": "82qlgC3QcEw",
+  "008": "lGp5szF6HI4",
+  "009": "yhVYY1N7hDg"
+ },
+ "start_here": {
+  "title": "New here? Do this first",
+  "time": "20 minutes",
+  "steps": [
+   "Pick one app: ChatGPT, Claude or Gemini. The free version is fine to start, and you can always switch.",
+   "Check your privacy setting. It takes two minutes. See \"Your data\" in level 0.4.",
+   "Pick one of the 5 fun ways to get started near the back. Make something today."
+  ]
+ },
+ "ten_hours": "Wharton professor Ethan Mollick's rule of thumb: AI starts to click after about ten hours of real use. Use it on stuff you already know, so you can tell when it's wrong.",
+ "extra_words": {
+  "jagged-frontier": {
+   "id": "jagged-frontier",
+   "title": "Jagged frontier",
+   "definition": "AI is amazing at some things and weirdly bad at others, and the split isn't what you'd guess. The only way to find the edges is to try it on your own stuff.",
+   "think": "A genius who still can't fold a fitted sheet.",
+   "episode": {
+    "number": "008",
+    "time": "02:39"
+   }
   },
-  "start_here": {
-    "title": "New here? Do this first",
-    "time": "20 minutes",
-    "steps": [
-      "Pick one app: ChatGPT, Claude or Gemini. The free version is fine to start, and you can always switch.",
-      "Check your privacy setting. It takes two minutes. See \"Your data\" in level 0.4.",
-      "Do the level 0.0 try-its, then pick one build from Start building. Make something today."
-    ]
+  "your-data": {
+   "id": "your-data",
+   "title": "Your data",
+   "aka": "Privacy settings",
+   "definition": "On free and personal plans, your chats can be used to train future models unless you switch that off in settings. Either way, don't paste in passwords, account numbers or anything you'd hate to see again.",
+   "think": "Talking in a coffee shop. Mostly fine, but you lower your voice for some things.",
+   "episode": {
+    "number": "002",
+    "time": "37:58"
+   }
   },
-  "ten_hours": "Wharton professor Ethan Mollick's rule of thumb: AI starts to click after about ten hours of real use. Use it on stuff you already know, so you can tell when it's wrong.",
-  "extra_words": {
-    "jagged-frontier": {
-      "id": "jagged-frontier",
-      "title": "Jagged frontier",
-      "definition": "AI is amazing at some things and weirdly bad at others, and the split isn't what you'd guess. The only way to find the edges is to try it on your own stuff.",
-      "think": "A genius who still can't fold a fitted sheet.",
-      "episode": {
-        "number": "008",
-        "time": "02:39"
-      }
-    },
-    "your-data": {
-      "id": "your-data",
-      "title": "Your data",
-      "aka": "Privacy settings",
-      "definition": "On free and personal plans, your chats can be used to train future models unless you switch that off in settings. Either way, don't paste in passwords, account numbers or anything you'd hate to see again.",
-      "think": "Talking in a coffee shop. Mostly fine, but you lower your voice for some things.",
-      "episode": {
-        "number": "002",
-        "time": "37:58"
-      }
-    },
-    "bias": {
-      "id": "bias",
-      "title": "Bias",
-      "definition": "AI learned from human writing, so it picked up our blind spots too, like picturing every CEO as a man. Notice it, and ask for other angles.",
-      "think": "A mirror that can also magnify."
-    },
-    "human-in-the-loop": {
-      "id": "human-in-the-loop",
-      "title": "Human in the loop",
-      "definition": "You stay the one who checks and signs off, especially before AI sends, buys or posts anything for you. Your name is on it, not the AI's.",
-      "think": "Autopilot still needs a pilot."
-    }
+  "bias": {
+   "id": "bias",
+   "title": "Bias",
+   "definition": "AI learned from human writing, so it picked up our blind spots too, like picturing every CEO as a man. Notice it, and ask for other angles.",
+   "think": "A mirror that can also magnify."
   },
-  "levels": [
-    {
-      "n": "0.0",
-      "name": "Say hi",
-      "promise": "You don't need to know how it works to start. You need a few words and one good habit.",
-      "words": [
-        "generative-ai",
-        "prompt",
-        "llm",
-        "model-vs-app",
-        "hallucination",
-        "multimodal",
-        "jagged-frontier"
-      ],
-      "try": [
-        "Ask for a birthday message twice. First just \"write a birthday message.\" Then write it like a text to a smart friend: who it's for, how you know them, one inside joke, how long. Compare the two.",
-        "Ask it for a fact with a source. Click the source. Does it exist and say what the AI claimed?",
-        "Snap a photo of your fridge and ask what you can make for dinner."
-      ],
-      "check": [
-        "In one sentence, what's the difference between a model and an app?",
-        "Why does a better prompt usually beat a better model?",
-        "Name one time you'd double check an AI answer before using it."
-      ],
-      "accent": "hi"
-    },
-    {
-      "n": "0.2",
-      "name": "Make it yours",
-      "promise": "Stop re-explaining yourself every chat. Set it up once and it starts smarter every time.",
-      "words": [
-        "memory",
-        "custom-instructions",
-        "projects",
-        "model-sizes",
-        "reasoning",
-        "deep-research"
-      ],
-      "try": [
-        "Write three lines of custom instructions: who you are, how you like answers, and one thing to never do.",
-        "Start a project for one ongoing thing in your life, like a trip, a job search or a class. Add one file.",
-        "Give the same planning question to the regular mode and to the thinking mode. Which answer would you actually use?"
-      ],
-      "check": [
-        "What's the difference between memory and custom instructions?",
-        "When is a small, fast model the right pick?",
-        "What kind of question is worth a deep research report?"
-      ],
-      "accent": "yours"
-    },
-    {
-      "n": "0.4",
-      "name": "Spot the traps",
-      "promise": "AI fails quietly and confidently. These are the ways it happens, and the easy habits that protect you.",
-      "words": [
-        "your-data",
-        "knowledge-cutoff",
-        "ai-slop",
-        "sycophancy",
-        "bias",
-        "deepfake",
-        "prompt-injection"
-      ],
-      "try": [
-        "Open Settings and find the privacy or data controls. Decide on purpose whether your chats can be used for training.",
-        "Share an idea you like and ask: \"What would a smart skeptic say? Be blunt.\" Compare that to its first reaction.",
-        "Pick a family safe word you'd ask for if \"you\" ever called asking for money."
-      ],
-      "check": [
-        "What's one thing you'd never paste into a chatbot?",
-        "What are two signs a piece of writing is AI slop?",
-        "Why is prompt injection a bigger deal once AI can take actions for you?"
-      ],
-      "accent": "traps"
-    },
-    {
-      "n": "0.6",
-      "name": "Under the hood",
-      "promise": "Just enough of how it works to follow the news, ask good questions and not get fooled by hype.",
-      "words": [
-        "training",
-        "token",
-        "context-window",
-        "open-closed",
-        "benchmark",
-        "gpu",
-        "data-center",
-        "rag",
-        "fine-tuning"
-      ],
-      "try": [
-        "Search \"tokenizer\" and paste in a sentence. Watch how it gets chopped into tokens.",
-        "Upload a long PDF and ask three questions, each with the page number of the answer. Check one.",
-        "In a very long chat, ask what you said in your first message. Did it slip?"
-      ],
-      "check": [
-        "Why do long chats sometimes get worse?",
-        "RAG or fine-tuning: which one would you use to answer questions about your company handbook, and why?",
-        "Why do AI companies care so much about GPUs and data centers?"
-      ],
-      "accent": "hood"
-    },
-    {
-      "n": "0.8",
-      "name": "AI that does things",
-      "promise": "The jump from answering questions to actually getting stuff done for you, with you still in charge.",
-      "words": [
-        "agent",
-        "skills",
-        "mcp",
-        "computer-use",
-        "vibe-coding",
-        "human-in-the-loop"
-      ],
-      "try": [
-        "Vibe code something tiny, like the dinner bill splitter in Start building. Use it once for real.",
-        "Connect one app you already use, like your calendar or Drive, and ask it to find something for you.",
-        "Give an agent a job with a clear finish line, like \"find three Saturday hikes under an hour away and put them in a table.\""
-      ],
-      "check": [
-        "What makes something an agent and not just a chatbot?",
-        "What's one task you'd hand to an agent, and one you wouldn't yet?",
-        "What would you want to approve before AI clicks buy or send for you?"
-      ],
-      "accent": "does"
-    },
-    {
-      "n": "1.0",
-      "name": "The big questions",
-      "promise": "The debates everyone is having. Nobody has the answers yet, so your take counts.",
-      "words": [
-        "scaling-laws",
-        "alignment",
-        "agi",
-        "superintelligence"
-      ],
-      "try": [
-        "Pick one big question below. Write your own opinion in three sentences before you ask AI anything.",
-        "Then ask AI for the strongest argument against you. Did it change your mind or sharpen it?",
-        "Bring it up at dinner. See where people land."
-      ],
-      "check": [
-        "If AGI arrived tomorrow, how would you know?",
-        "Who should decide what AI is allowed to do?",
-        "What's one thing you'd never hand to AI, no matter how good it gets?"
-      ],
-      "accent": "big"
-    }
-  ],
-  "builds": [
-    {
-      "id": "dinner",
-      "title": "What's for dinner?",
-      "time": "5 min",
-      "level": "Any app with photos",
-      "why": "The fastest way to see what multimodal means",
-      "prompt": "Here's a photo of my fridge. Give me three dinners I can make tonight with what's in here, plus anything I'd need to grab. Keep each one under 30 minutes."
-    },
-    {
-      "id": "voice",
-      "title": "Teach it your voice",
-      "time": "15 min",
-      "level": "Custom instructions",
-      "watch": "005",
-      "why": "Every draft after this sounds a little more like you.",
-      "prompt": "Interview me one question at a time about how I write: who I usually write to, words I use a lot, and things I'd never say. After eight questions, write a short voice guide I can paste into my custom instructions."
-    },
-    {
-      "id": "quiz",
-      "title": "Quiz me, don't tell me",
-      "time": "10 min",
-      "level": "Learning",
-      "watch": "011",
-      "why": "Use AI to learn faster without letting it do the thinking.",
-      "prompt": "I'm learning [topic]. Quiz me one question at a time. Don't give me the answer until I've tried. If I'm wrong, give me a hint first, then the answer."
-    },
-    {
-      "id": "coach",
-      "title": "Your own coach",
-      "time": "15 min",
-      "level": "Projects",
-      "watch": "004",
-      "why": "A project that remembers your goal and checks in on it",
-      "prompt": "You're my coach for [goal]. Start by asking me five questions about where I am now and what gets in my way. Then give me a plan for this week. Every time I come back, ask how it went before you give advice. Be honest, not a cheerleader."
-    },
-    {
-      "id": "app",
-      "title": "Build a tiny app",
-      "time": "10 min",
-      "level": "Vibe coding",
-      "why": "You just made software. No code required.",
-      "prompt": "Make me a simple, colorful web app that splits a dinner bill. I type the total, the tip and everyone's names, and it shows what each person owes. Make it easy to use on my phone."
-    },
-    {
-      "id": "party",
-      "title": "Plan the party",
-      "time": "15 min",
-      "level": "Reasoning",
-      "watch": "006",
-      "why": "We planned parts of our wedding this way. It handles the boring logistics so you can do the fun part.",
-      "prompt": "I'm planning [event] for [number] people on [date] with a budget of [amount]. Ask me what matters most first. Then give me a timeline, a checklist and three ideas that would make it feel like us."
-    },
-    {
-      "id": "debate",
-      "title": "Settle a debate",
-      "time": "10 min",
-      "level": "Thinking partner",
-      "why": "Our favorite use. It won't pick a side, and that's the point.",
-      "prompt": "My partner and I disagree about [topic]. Give the strongest case for each side, then tell us what evidence would change each of our minds. Don't pick a winner."
-    },
-    {
-      "id": "week",
-      "title": "Clear your week",
-      "time": "10 min",
-      "level": "Delegation",
-      "why": "Figure out what AI should do for you, and what you should still do yourself.",
-      "prompt": "Here's everything on my plate this week: [paste your list]. Sort it into three piles: things AI could do for me, things AI could help me do, and things I should do myself. Explain each pick in one line."
-    }
-  ],
-  "stuck": [
-    [
-      "It sounds generic.",
-      "Show it, don't describe it. Paste an example you love and say \"more like this.\""
-    ],
-    [
-      "It got something wrong.",
-      "Tell it exactly what's off, like you'd tell a new coworker. Then ask it to double check its own answer."
-    ],
-    [
-      "It agrees with everything.",
-      "Ask \"What would a smart skeptic say?\" or \"What am I missing?\""
-    ],
-    [
-      "It forgot what you said.",
-      "Long chats slip. Start a fresh chat with a quick summary, or keep the work in a project."
-    ],
-    [
-      "You don't know what to ask.",
-      "Let it interview you: \"Here's my week. What could you help with?\""
-    ]
-  ],
-  "next": [
-    [
-      "AI Fluency",
-      "Anthropic",
-      "Free online course",
-      "https://www.anthropic.com/ai-fluency"
-    ],
-    [
-      "AI Foundations",
-      "OpenAI Academy",
-      "Free online course",
-      "https://openai.com/academy"
-    ],
-    [
-      "Elements of AI",
-      "University of Helsinki",
-      "Free online course",
-      "https://www.elementsofai.com/"
-    ]
-  ],
-  "overrides": {
-    "model-vs-app": {
-      "definition": "OpenAI is the company. GPT is its family of models. ChatGPT is the app you open. Same idea for Anthropic, Claude models and the Claude app."
-    },
-    "model-sizes": {
-      "definition": "Most AI companies sell a few sizes of the same model. Bigger is smarter, smaller is faster and cheaper, and the names change every few months."
-    },
-    "gpu": {
-      "definition": "The chips that do AI's heavy math. Nvidia makes most of them, and every AI company wants more.",
-      "episode": {
-        "number": "013",
-        "time": "07:36"
-      }
-    },
-    "agi": {
-      "episode": {
-        "number": "008",
-        "time": "01:24"
-      }
-    },
-    "superintelligence": {
-      "episode": {
-        "number": "008",
-        "time": "04:56"
-      }
-    },
-    "benchmark": {
-      "episode": {
-        "number": "008",
-        "time": "14:53"
-      }
-    },
-    "data-center": {
-      "episode": {
-        "number": "012",
-        "time": "01:05"
-      }
-    },
-    "memory": {
-      "episode": {
-        "number": "001",
-        "time": "18:39"
-      }
-    },
-    "context-window": {
-      "episode": {
-        "number": "001",
-        "time": "03:12"
-      }
-    },
-    "fine-tuning": {
-      "episode": {
-        "number": "002",
-        "time": "11:24"
-      }
-    }
+  "human-in-the-loop": {
+   "id": "human-in-the-loop",
+   "title": "Human in the loop",
+   "definition": "You stay the one who checks and signs off, especially before AI sends, buys or posts anything for you. Your name is on it, not the AI's.",
+   "think": "Autopilot still needs a pilot."
   },
-  "first_week": [
+  "chatbot": {
+   "id": "chatbot",
+   "title": "Chatbot vs. assistant",
+   "definition": "A chatbot talks. An assistant talks and does things for you, like searching, reading your files or booking the table. Most AI apps started as the first and are turning into the second.",
+   "think": "A pen pal vs. a coworker."
+  },
+  "voice-mode": {
+   "id": "voice-mode",
+   "title": "Voice mode",
+   "definition": "Talking to AI out loud and hearing it talk back. Great for walks, dishes and thinking out loud.",
+   "think": "A phone call instead of a text thread."
+  },
+  "image-generation": {
+   "id": "image-generation",
+   "title": "Image generation",
+   "definition": "AI that makes pictures from a description. It builds a brand new image instead of finding an old one.",
+   "think": "A sketch artist who draws whatever you describe."
+  },
+  "system-prompt": {
+   "id": "system-prompt",
+   "title": "System prompt",
+   "definition": "The hidden instructions an app gives the AI before you type a word. It's why the same model acts differently in different apps.",
+   "think": "The staff handbook you never get to read."
+  },
+  "jailbreak": {
+   "id": "jailbreak",
+   "title": "Jailbreak",
+   "definition": "Tricking an AI into breaking its own rules, usually with a sneaky story or a role-play.",
+   "think": "Convincing the bouncer you're on the list."
+  },
+  "ai-companion": {
+   "id": "ai-companion",
+   "title": "AI companion",
+   "definition": "An AI built to feel like a friend or a partner. It can be comforting, and it's also designed to keep you coming back.",
+   "think": "A friend whose paycheck depends on your screen time."
+  },
+  "watermark": {
+   "id": "watermark",
+   "title": "Watermark",
+   "definition": "A hidden marker that says AI made this. Helpful when it's there, but easy to strip out, so no watermark doesn't mean it's real.",
+   "think": "A \"made in\" tag that can be cut off."
+  },
+  "ai-detector": {
+   "id": "ai-detector",
+   "title": "AI detector",
+   "definition": "A tool that guesses whether a human or an AI wrote something. They get it wrong a lot, in both directions, so never treat one as proof.",
+   "think": "A lie detector that's also guessing."
+  },
+  "api": {
+   "id": "api",
+   "title": "API",
+   "definition": "The side door that lets other apps plug into an AI model. It's how AI shows up inside tools that aren't chat apps.",
+   "think": "The drive-through window. Apps order without ever walking in."
+  },
+  "inference": {
+   "id": "inference",
+   "title": "Inference",
+   "definition": "The AI actually answering you. Training is the studying. Inference is taking the test, every time you hit send.",
+   "think": "Cooking the meal, not writing the cookbook."
+  },
+  "compute": {
+   "id": "compute",
+   "title": "Compute",
+   "definition": "The raw computing power AI runs on. When companies say they need more of it, they mean more chips, more data centers and more electricity.",
+   "think": "Horsepower, for AI."
+  }
+ },
+ "levels": [
+  {
+   "n": "0.0",
+   "name": "Say hi",
+   "promise": "You don't need to know how it works to start. You need a few words and one good habit.",
+   "words": [
+    "generative-ai",
+    "prompt",
+    "llm",
+    "model-vs-app",
+    "hallucination",
+    "multimodal",
+    "jagged-frontier",
+    "chatbot",
+    "voice-mode",
+    "image-generation"
+   ],
+   "accent": "hi",
+   "moments": [
     [
-      "Mon",
-      "Say hi",
-      "Do the three level 0.0 try-its. Birthday message twice, fact check, fridge photo"
+     "It swore the restaurant was real. It was not",
+     "hallucination"
     ],
     [
-      "Tue",
-      "Make it yours",
-      "Write your three lines of custom instructions and start one project"
+     "It wrote your wedding toast but can't count the R's in strawberry",
+     "jagged-frontier"
     ],
     [
-      "Wed",
-      "Check your settings",
-      "Two minutes in privacy settings. Then ask for a smart skeptic's take on an idea you love"
-    ],
-    [
-      "Thu",
-      "Quiz me",
-      "Pick something you're learning and run the Quiz me, don't tell me prompt"
-    ],
-    [
-      "Fri",
-      "Build a tiny app",
-      "Make the dinner bill splitter, then use it at dinner"
-    ],
-    [
-      "Sat",
-      "Settle a debate",
-      "Run the debate prompt on something you and a friend actually disagree about"
-    ],
-    [
-      "Sun",
-      "Clear your week",
-      "Sort next week into three piles: AI does it, AI helps, you do it"
+     "You sent a photo of your fridge and it planned dinner",
+     "multimodal"
     ]
+   ],
+   "dare": "Send it a photo of your fridge and ask what's for dinner",
+   "depth": "0 ft"
+  },
+  {
+   "n": "0.2",
+   "name": "Make it yours",
+   "promise": "Stop re-explaining yourself every chat. Set it up once and it starts smarter every time.",
+   "words": [
+    "memory",
+    "custom-instructions",
+    "projects",
+    "model-sizes",
+    "reasoning",
+    "deep-research",
+    "system-prompt"
+   ],
+   "accent": "yours",
+   "moments": [
+    [
+     "You said you're vegetarian in March. It still knows in June",
+     "memory"
+    ],
+    [
+     "You're tired of typing \"keep it short\" every single time",
+     "custom-instructions"
+    ],
+    [
+     "It read 40 websites while you made coffee, then handed you a report",
+     "deep-research"
+    ]
+   ],
+   "dare": "Ask it \"what do you know about me?\" Then fix whatever it got wrong",
+   "depth": "3 ft"
+  },
+  {
+   "n": "0.4",
+   "name": "Spot the traps",
+   "promise": "AI fails quietly and confidently. These are the ways it happens, and the easy habits that protect you.",
+   "words": [
+    "your-data",
+    "knowledge-cutoff",
+    "ai-slop",
+    "sycophancy",
+    "bias",
+    "deepfake",
+    "prompt-injection",
+    "jailbreak",
+    "ai-companion",
+    "watermark",
+    "ai-detector"
+   ],
+   "accent": "traps",
+   "moments": [
+    [
+     "It called your business plan genius. Again",
+     "sycophancy"
+    ],
+    [
+     "It has no idea who won last night's game",
+     "knowledge-cutoff"
+    ],
+    [
+     "A celebrity is selling a miracle cream they've never heard of",
+     "deepfake"
+    ]
+   ],
+   "dare": "Ask it to roast your favorite idea instead of praising it",
+   "depth": "6 ft"
+  },
+  {
+   "n": "0.6",
+   "name": "Under the hood",
+   "promise": "Just enough of how it works to follow the news, ask good questions and not get fooled by hype.",
+   "words": [
+    "training",
+    "token",
+    "context-window",
+    "open-closed",
+    "benchmark",
+    "gpu",
+    "data-center",
+    "rag",
+    "fine-tuning",
+    "api",
+    "inference",
+    "compute"
+   ],
+   "accent": "hood",
+   "moments": [
+    [
+     "Long chat, and it forgot what you said at the start",
+     "context-window"
+    ],
+    [
+     "A new model \"crushes every test\" and you still can't tell if it's good",
+     "benchmark"
+    ],
+    [
+     "The company says it needs more chips, more power, more everything",
+     "compute"
+    ]
+   ],
+   "dare": "Ask it how many tokens are in your full name",
+   "depth": "9 ft"
+  },
+  {
+   "n": "0.8",
+   "name": "AI that does things",
+   "promise": "The jump from answering questions to actually getting stuff done for you, with you still in charge.",
+   "words": [
+    "agent",
+    "skills",
+    "mcp",
+    "computer-use",
+    "vibe-coding",
+    "human-in-the-loop"
+   ],
+   "accent": "does",
+   "moments": [
+    [
+     "You asked it to plan the trip. It planned it and booked it",
+     "agent"
+    ],
+    [
+     "You described an app in plain English and got a working app",
+     "vibe-coding"
+    ],
+    [
+     "It drafts the email, but you hit send",
+     "human-in-the-loop"
+    ]
+   ],
+   "dare": "Hand it one real chore this week, then check its work",
+   "depth": "12 ft"
+  },
+  {
+   "n": "1.0",
+   "name": "The big questions",
+   "promise": "The debates everyone is having. Nobody has the answers yet, so your take counts.",
+   "words": [
+    "scaling-laws",
+    "alignment",
+    "agi",
+    "superintelligence"
+   ],
+   "accent": "big",
+   "moments": [
+    [
+     "Bigger model, more data, more chips, better AI. So far",
+     "scaling-laws"
+    ],
+    [
+     "An AI that could do any job a person does at a desk",
+     "agi"
+    ],
+    [
+     "Making sure what it wants and what we want are the same thing",
+     "alignment"
+    ]
+   ],
+   "dare": "Ask two different AIs when AGI shows up. Compare the dodges",
+   "depth": "The deep end"
+  }
+ ],
+ "builds": [
+  {
+   "id": "dinner",
+   "title": "What's for dinner?",
+   "time": "5 min",
+   "level": "Any app with photos",
+   "why": "The fastest way to see what multimodal means",
+   "prompt": "Here's a photo of my fridge. Give me three dinners I can make tonight with what's in here, plus anything I'd need to grab. Keep each one under 30 minutes."
+  },
+  {
+   "id": "voice",
+   "title": "Teach it your voice",
+   "time": "15 min",
+   "level": "Custom instructions",
+   "watch": "005",
+   "why": "Every draft after this sounds a little more like you.",
+   "prompt": "Interview me one question at a time about how I write: who I usually write to, words I use a lot, and things I'd never say. After eight questions, write a short voice guide I can paste into my custom instructions."
+  },
+  {
+   "id": "quiz",
+   "title": "Quiz me, don't tell me",
+   "time": "10 min",
+   "level": "Learning",
+   "watch": "011",
+   "why": "Use AI to learn faster without letting it do the thinking.",
+   "prompt": "I'm learning [topic]. Quiz me one question at a time. Don't give me the answer until I've tried. If I'm wrong, give me a hint first, then the answer."
+  },
+  {
+   "id": "coach",
+   "title": "Your own coach",
+   "time": "15 min",
+   "level": "Projects",
+   "watch": "004",
+   "why": "A project that remembers your goal and checks in on it",
+   "prompt": "You're my coach for [goal]. Start by asking me five questions about where I am now and what gets in my way. Then give me a plan for this week. Every time I come back, ask how it went before you give advice. Be honest, not a cheerleader."
+  },
+  {
+   "id": "app",
+   "title": "Build a tiny app",
+   "time": "10 min",
+   "level": "Vibe coding",
+   "why": "You just made software. No code required.",
+   "prompt": "Make me a simple, colorful web app that splits a dinner bill. I type the total, the tip and everyone's names, and it shows what each person owes. Make it easy to use on my phone."
+  },
+  {
+   "id": "party",
+   "title": "Plan the party",
+   "time": "15 min",
+   "level": "Reasoning",
+   "watch": "006",
+   "why": "We planned parts of our wedding this way. It handles the boring logistics so you can do the fun part.",
+   "prompt": "I'm planning [event] for [number] people on [date] with a budget of [amount]. Ask me what matters most first. Then give me a timeline, a checklist and three ideas that would make it feel like us."
+  },
+  {
+   "id": "debate",
+   "title": "Settle a debate",
+   "time": "10 min",
+   "level": "Thinking partner",
+   "why": "Our favorite use. It won't pick a side, and that's the point.",
+   "prompt": "My partner and I disagree about [topic]. Give the strongest case for each side, then tell us what evidence would change each of our minds. Don't pick a winner."
+  },
+  {
+   "id": "week",
+   "title": "Clear your week",
+   "time": "10 min",
+   "level": "Delegation",
+   "why": "Figure out what AI should do for you, and what you should still do yourself.",
+   "prompt": "Here's everything on my plate this week: [paste your list]. Sort it into three piles: things AI could do for me, things AI could help me do, and things I should do myself. Explain each pick in one line."
+  }
+ ],
+ "stuck": [
+  [
+   "It sounds generic.",
+   "Show it, don't describe it. Paste an example you love and say \"more like this.\""
   ],
-  "why": [
-    "We're Mary and Josh. We started Out of Our Depth because AI was moving faster than we could keep up, and we were tired of nodding along to words we only half understood.",
-    "Mary came into business school with zero AI background. Josh reads the manual. Between the two of us we've made most of the mistakes in here already, so you don't have to.",
-    "This is the guide we wish someone had handed us. Words in plain English, habits that keep you out of trouble, and fun things to build. You can read it in an afternoon."
+  [
+   "It got something wrong.",
+   "Tell it exactly what's off, like you'd tell a new coworker. Then ask it to double check its own answer."
   ],
-  "ourselves": [
-    "The ideas and the opinions. AI can argue both sides, but our take is ours",
-    "The jokes, and the real replies to real people",
-    "The final say on anything with our names on it",
-    "Anything that's supposed to sound like it came from our hearts"
+  [
+   "It agrees with everything.",
+   "Ask \"What would a smart skeptic say?\" or \"What am I missing?\""
   ],
-  "episode_sources": "Timestamps found 2026-11-21 by searching the final caption files in Drive (Video Files/Final). Ep 012's came from the v8 review cut. Episodes 007 and 010 had no caption files to search."
+  [
+   "It forgot what you said.",
+   "Long chats slip. Start a fresh chat with a quick summary, or keep the work in a project."
+  ],
+  [
+   "You don't know what to ask.",
+   "Let it interview you: \"Here's my week. What could you help with?\""
+  ]
+ ],
+ "next": [
+  [
+   "AI Fluency",
+   "Anthropic",
+   "Free online course",
+   "https://www.anthropic.com/ai-fluency"
+  ],
+  [
+   "AI Foundations",
+   "OpenAI Academy",
+   "Free online course",
+   "https://openai.com/academy"
+  ],
+  [
+   "Elements of AI",
+   "University of Helsinki",
+   "Free online course",
+   "https://www.elementsofai.com/"
+  ]
+ ],
+ "overrides": {
+  "model-vs-app": {
+   "definition": "OpenAI is the company. GPT is its family of models. ChatGPT is the app you open. Same idea for Anthropic, Claude models and the Claude app."
+  },
+  "model-sizes": {
+   "definition": "Most AI companies sell a few sizes of the same model. Bigger is smarter, smaller is faster and cheaper, and the names change every few months."
+  },
+  "gpu": {
+   "definition": "The chips that do AI's heavy math. Nvidia makes most of them, and every AI company wants more.",
+   "episode": {
+    "number": "013",
+    "time": "07:36"
+   }
+  },
+  "agi": {
+   "episode": {
+    "number": "008",
+    "time": "01:24"
+   }
+  },
+  "superintelligence": {
+   "episode": {
+    "number": "008",
+    "time": "04:56"
+   }
+  },
+  "benchmark": {
+   "episode": {
+    "number": "008",
+    "time": "14:53"
+   }
+  },
+  "data-center": {
+   "episode": {
+    "number": "012",
+    "time": "01:05"
+   }
+  },
+  "memory": {
+   "episode": {
+    "number": "001",
+    "time": "18:39"
+   }
+  },
+  "context-window": {
+   "episode": {
+    "number": "001",
+    "time": "03:12"
+   }
+  },
+  "fine-tuning": {
+   "episode": {
+    "number": "002",
+    "time": "11:24"
+   }
+  },
+  "scaling-laws": {
+   "episode": {
+    "number": "013",
+    "time": "14:26"
+   }
+  }
+ },
+ "first_week": [
+  [
+   "Mon",
+   "Say hi",
+   "Do the three level 0.0 try-its. Birthday message twice, fact check, fridge photo"
+  ],
+  [
+   "Tue",
+   "Make it yours",
+   "Write your three lines of custom instructions and start one project"
+  ],
+  [
+   "Wed",
+   "Check your settings",
+   "Two minutes in privacy settings. Then ask for a smart skeptic's take on an idea you love"
+  ],
+  [
+   "Thu",
+   "Quiz me",
+   "Pick something you're learning and run the Quiz me, don't tell me prompt"
+  ],
+  [
+   "Fri",
+   "Build a tiny app",
+   "Make the dinner bill splitter, then use it at dinner"
+  ],
+  [
+   "Sat",
+   "Settle a debate",
+   "Run the debate prompt on something you and a friend actually disagree about"
+  ],
+  [
+   "Sun",
+   "Clear your week",
+   "Sort next week into three piles: AI does it, AI helps, you do it"
+  ]
+ ],
+ "why": [
+  "We're Mary and Josh. We started Out of Our Depth because AI was moving faster than we could keep up, and we were tired of nodding along to words we only half understood.",
+  "Mary came into business school with zero AI background. Josh reads the manual. Between the two of us we've made most of the mistakes in here already, so you don't have to.",
+  "This is the guide we wish someone had handed us. Words in plain English, habits that keep you out of trouble, and fun things to build. You can read it in an afternoon."
+ ],
+ "ourselves": [
+  "The ideas and the opinions. AI can argue both sides, but our take is ours",
+  "The jokes, and the real replies to real people",
+  "The final say on anything with our names on it",
+  "Anything that's supposed to sound like it came from our hearts"
+ ],
+ "episode_sources": "Timestamps found 2026-11-21 by searching the final caption files in Drive (Video Files/Final). Ep 012's came from the v8 review cut. Episodes 007 and 010 had no caption files to search. Rechecked 2026-11-21: of the 12 words with no link, only scaling laws turned up (ep 013). Words with no confirmed moment show no label at all.",
+ "debates": [
+  [
+   "Would you be mad if AI wrote your apology?",
+   "Yes. The effort is the apology",
+   "No. The right words are the right words"
+  ],
+  [
+   "Should kids use AI for homework?",
+   "Yes. It's a tutor that never gets tired",
+   "No. The struggle is the learning"
+  ],
+  [
+   "Is AI making us better or just faster?",
+   "Better. It handles the busywork so we can think",
+   "Faster. We're skipping the part where we learn"
+  ],
+  [
+   "If an AI makes you feel understood, does it matter that nobody understood you?",
+   "It matters. Feeling heard needs a someone",
+   "It doesn't. Comfort is comfort"
+  ],
+  [
+   "Do you have to tell people when AI helped?",
+   "Always. Hiding it is a little bit lying",
+   "Nope. Nobody discloses spellcheck"
+  ],
+  [
+   "Is it still yours if the idea was yours and the words weren't?",
+   "Yes. The idea is the hard part",
+   "No. The words are the work"
+  ],
+  [
+   "Will AI take your job or just the boring parts?",
+   "The boring parts. The job gets better",
+   "The job. The boring parts were the job"
+  ],
+  [
+   "Who should make the rules for AI?",
+   "The people building it. They understand it",
+   "Everyone else. They have to live with it"
+  ],
+  [
+   "Would you hand an AI your credit card?",
+   "Sure, with a spending limit",
+   "Not until it can explain itself"
+  ],
+  [
+   "Smarter-than-human AI: exciting or terrifying?",
+   "Exciting. Think cures and free time",
+   "Terrifying. Nobody knows how to steer it"
+  ]
+ ],
+ "ways": [
+  {
+   "id": "dinner",
+   "title": "What's for dinner?",
+   "time": "5 min",
+   "level": "Any app with photos",
+   "why": "The fastest way to see what multimodal means",
+   "prompt": "Here's a photo of my fridge. Give me three dinners I can make tonight with what's in here, plus anything I'd need to grab. Keep each one under 30 minutes."
+  },
+  {
+   "id": "voice",
+   "title": "Teach it your voice",
+   "time": "15 min",
+   "level": "Custom instructions",
+   "watch": "005",
+   "why": "Every draft after this sounds a little more like you.",
+   "prompt": "Interview me one question at a time about how I write: who I usually write to, words I use a lot, and things I'd never say. After eight questions, write a short voice guide I can paste into my custom instructions."
+  },
+  {
+   "id": "coach",
+   "title": "Your own coach",
+   "time": "15 min",
+   "level": "Projects",
+   "watch": "004",
+   "why": "A project that remembers your goal and checks in on it",
+   "prompt": "You're my coach for [goal]. Start by asking me five questions about where I am now and what gets in my way. Then give me a plan for this week. Every time I come back, ask how it went before you give advice. Be honest, not a cheerleader."
+  },
+  {
+   "id": "app",
+   "title": "Build a tiny app",
+   "time": "10 min",
+   "level": "Vibe coding",
+   "why": "You just made software. No code required.",
+   "prompt": "Make me a simple, colorful web app that splits a dinner bill. I type the total, the tip and everyone's names, and it shows what each person owes. Make it easy to use on my phone."
+  },
+  {
+   "id": "debate",
+   "title": "Settle a debate",
+   "time": "10 min",
+   "level": "Thinking partner",
+   "why": "Our favorite use. It won't pick a side, and that's the point.",
+   "prompt": "My partner and I disagree about [topic]. Give the strongest case for each side, then tell us what evidence would change each of our minds. Don't pick a winner."
+  }
+ ]
 }

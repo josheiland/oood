@@ -799,3 +799,12 @@ The v11 recurring cards correct an implicit RGB-to-BT.601 conversion before BT.7
 - **Evergreen:** no model names or dates (guide-only overrides for model vs. app, model sizes and GPU in `guide-levels.json`; `learning-topics.json` unchanged). Added **Your first week** (one small thing a day).
 - **Where to go next:** us first ("Would it kill ya to subscribe?"), then only free courses: Anthropic AI Fluency, OpenAI Academy AI Foundations, University of Helsinki Elements of AI (Google AI Essentials dropped because it isn't free).
 - **Email line everywhere (homepage, guide, PDF, pop-up), Mary's words:** "We only email when we've got something worth writing (by us humans! Well, realistically Josh. Mary's proudly dyslexic, so go ahead and thank her for the humor + designs)"
+
+## 2026-11-21: Study guide becomes The Dive (Mary)
+
+- /guide is now one scroll that gets deeper: cream at 0 ft, bluer each level, navy at the deep end, with a depth gauge on the side. Mary picked it from five formats.
+- The cover promise is 50 words, 10 debates and 5 fun ways to get started. Eleven words added (guide-only, in guide-levels.json), eight builds cut to five, ten debates added at the bottom. The first-week plan is gone.
+- Try-its and check-yourself questions are replaced by "name that moment": three tap-to-flip cards per level plus a one-line dare. In the PDF the answers print upside down.
+- "Not on the show yet" labels are removed. A word shows an episode link only when the moment was found in the caption files. Rechecked all twelve unlinked words; only scaling laws turned up (ep 013 at 14:26).
+- Footer sign-off on every page: "Can't lie, Claude built this". Host bubbles are white thought bubbles.
+
