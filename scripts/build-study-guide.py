@@ -252,6 +252,9 @@ a { color:var(--ink); text-decoration:none; }
 .way__row b { color:var(--ink); font-weight:700; margin-right:3pt; }
 .builds { grid-template-columns:1fr 1fr 1fr !important; gap:12pt 14pt !important; font-size:9pt; }
 .builds .prompt p { font-size:8.6pt; }
+.builds .prompt .kick { letter-spacing:.06em; white-space:nowrap; }
+.builds .lbl { letter-spacing:.04em; }
+.builds .lbl a { white-space:nowrap; }
 .prompt { margin-top:8pt; background:var(--foam); border-radius:12pt; padding:10pt 12pt; }
 .prompt .kick { margin-bottom:4pt; }
 .prompt p { margin:0; font-size:9.3pt; }
@@ -340,8 +343,7 @@ pdf = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><title>AI f
 <section class="flow" style="margin-top:14pt">
   <div class="sec-head" style="margin-bottom:8pt"><p class="kick">Level 1.0, done</p><h2>You're at <span class="blue">1</span></h2><p>Check off every word you could explain to a friend. Anything left, go back and try it once more.</p></div>
   <ul class="boxes">{boxes}</ul>
-  <p class="contact">Which word still confuses you? Tell us at <a href="mailto:hi@outofourdepth.com">hi@outofourdepth.com</a>. Get the notes at <a href="https://outofourdepth.com">outofourdepth.com</a>. {e(NOTE)}</p>
-  <p class="sign">{e(SIGN)}</p>
+  <p class="contact">Which word still confuses you? Tell us at <a href="mailto:hi@outofourdepth.com">hi@outofourdepth.com</a>. Get the notes at <a href="https://outofourdepth.com">outofourdepth.com</a></p>
 </section>
 </body></html>'''
 pdf = soften(pdf)
@@ -498,6 +500,60 @@ foot = (PAINT + '<div style="position:absolute;left:0;right:0;bottom:0;height:.6
         'display:flex;justify-content:space-between;align-items:center;padding:0 .7in;box-sizing:border-box">'
         '<span>OUT OF OUR DEPTH  /  AI FROM 0 TO 1</span><span class="pageNumber"></span></div>')
 import pypdf, io
+from pypdf.generic import (ArrayObject, BooleanObject, DictionaryObject, FloatObject, NameObject,
+                           NumberObject, StreamObject, TextStringObject)
+
+
+def add_checkboxes(writer, titles):
+    """Chrome can't print form fields, so lay a checkbox field over each drawn box on the You're at 1 page.
+    Each box sits 15pt left of its word (the li's padding in .boxes); the word's position comes from the PDF text."""
+    page = writer.pages[-1]
+    runs = []
+    def seen(text, cm, tm, fd, fs):
+        t = text.strip()
+        if t:
+            runs.append((cm[0] * tm[4] + cm[2] * tm[5] + cm[4], cm[1] * tm[4] + cm[3] * tm[5] + cm[5], t))
+    page.extract_text(visitor_text=seen)
+    left, spots = list(titles), []
+    for x, y, t in runs:
+        sq = t.replace(' ', '')  # kerning can split a word in the PDF text ("W atermark")
+        hit = (next((k for k in left if k.replace(' ', '') == sq), None)
+               or next((k for k in left if len(t) > 3 and k.startswith(t + ' ')), None))
+        if hit:
+            left.remove(hit)
+            spots.append((hit, x, y))
+    if left:
+        sys.exit(f'checkboxes: could not find {left} on the last page')
+    size = 10.4  # 8pt box plus two 1.2pt borders
+    def ap(on):
+        s = StreamObject()
+        s.update({NameObject('/Type'): NameObject('/XObject'), NameObject('/Subtype'): NameObject('/Form'),
+                  NameObject('/BBox'): ArrayObject([FloatObject(0), FloatObject(0), FloatObject(size), FloatObject(size)])})
+        # A navy tick for on; nothing for off, so the printed box shows through
+        s.set_data(b'0.043 0.165 0.271 RG 1.6 w 1 J 1 j 2.2 5.4 m 4.3 3 l 8.4 7.9 l S' if on else b'')
+        return writer._add_object(s)
+    on, off = ap(True), ap(False)
+    fields = ArrayObject()
+    annots = page.get('/Annots') or ArrayObject()
+    for i, (title, x, y) in enumerate(spots):
+        x0, y0 = x - 15, y - 2.4
+        f = DictionaryObject({
+            NameObject('/Type'): NameObject('/Annot'), NameObject('/Subtype'): NameObject('/Widget'),
+            NameObject('/FT'): NameObject('/Btn'), NameObject('/T'): TextStringObject(f'word{i + 1:02d}'),
+            NameObject('/TU'): TextStringObject(title), NameObject('/F'): NumberObject(4),
+            NameObject('/Rect'): ArrayObject([FloatObject(x0), FloatObject(y0), FloatObject(x0 + size), FloatObject(y0 + size)]),
+            NameObject('/V'): NameObject('/Off'), NameObject('/AS'): NameObject('/Off'),
+            NameObject('/MK'): DictionaryObject(),
+            NameObject('/AP'): DictionaryObject({NameObject('/N'): DictionaryObject({NameObject('/Yes'): on, NameObject('/Off'): off})}),
+            NameObject('/P'): page.indirect_reference,
+        })
+        ref = writer._add_object(f)
+        annots.append(ref)
+        fields.append(ref)
+    page[NameObject('/Annots')] = annots
+    writer._root_object[NameObject('/AcroForm')] = DictionaryObject({NameObject('/Fields'): fields, NameObject('/NeedAppearances'): BooleanObject(False)})
+
+
 with sync_playwright() as p:
     kw = {'executable_path': os.environ['CHROME']} if os.environ.get('CHROME') else {}
     b = p.chromium.launch(**kw)
@@ -516,6 +572,7 @@ for part in (cover, rest):
     for page in pypdf.PdfReader(io.BytesIO(part)).pages:
         w.add_page(page)
 w.add_metadata({'/Title': 'AI from 0 to 1: a free study guide', '/Author': 'Out of Our Depth (Mary and Josh)'})
+add_checkboxes(w, [topics[x]['title'] for x in used])
 with open(out, 'wb') as f:
     w.write(f)
 
