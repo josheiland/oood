@@ -53,6 +53,12 @@
 .guide .prompt p:not(.kick) { margin: 0 0 16px; font-size: 16px; line-height: 1.5; }
 .copy { margin-top: auto; align-self: flex-start; height: 38px; padding: 0 14px; border: 0; border-radius: 8px; background: var(--navy); color: var(--cream); cursor: pointer; font-family: var(--mono); font-size: 12px; letter-spacing: .06em; text-transform: uppercase; }
 .copy:hover { background: var(--blue); color: var(--navy); }
+.build .minis { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.minis .prompt .kick { display: block; }
+.prompt .kick a { color: inherit; white-space: nowrap; }
+.guide .prompt p.mini-note { margin-top: -6px; font-size: 14px; color: var(--ink); opacity: .8; }
+.guide .build p.dl-note { margin: 4px 0 0; font-size: 16px; line-height: 1.45; }
+.guide .build p.dl { margin: 16px 0 0; }
 .tenhours { margin: 14px 0 0; border-radius: 24px; padding: 24px 28px; background: var(--navy); color: var(--cream); font-size: 18px; line-height: 1.5; }
 .tenhours b { margin-right: 8px; font-weight: 800; text-transform: uppercase; color: var(--blue); }
 
@@ -138,6 +144,8 @@
 .g-help { font-weight: 700; }
 .g-help a { color: var(--sky); }
 .next-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.next h3 { overflow-wrap: anywhere; }
+.dk .h-btn { background: var(--blue); color: var(--navy); box-shadow: 4px 4px 0 var(--cream); }
 .next { display: flex; flex-direction: column; border-radius: 18px; padding: 18px 20px; background: rgba(255,255,255,.07); color: var(--cream); text-decoration: none; transition: transform .15s; }
 .next:hover { transform: translateY(-3px); }
 .next .lbl { margin: 0 0 6px; }
@@ -171,6 +179,8 @@
   .g-hero__big { font-size: 132px; }
   .map-row { grid-template-columns: 1fr 1fr; }
   .g-end__cols { grid-template-columns: 1fr; gap: 40px; }
+  .next-row { grid-template-columns: 1fr; }
+  .next h3 { min-height: 0; }
 }
 @media (max-width: 700px) {
   .gauge { display: none; }
@@ -181,7 +191,7 @@
   .g-hero__ctas { flex-direction: column; align-self: stretch; }
   .g-hero__hosts { width: 86%; margin-top: 28px; }
   .g-why p:not(.kick) { font-size: 17px; }
-  .guide .cards, .mos, .debates, .map-row, .build { grid-template-columns: 1fr; }
+  .guide .cards, .mos, .debates, .map-row, .build, .build .minis { grid-template-columns: 1fr; }
   .build { padding: 20px; gap: 18px; } .build h3 { font-size: 24px; }
   .lv { padding: 56px 0 64px; }
   .lv-head { grid-template-columns: 1fr; gap: 8px; }

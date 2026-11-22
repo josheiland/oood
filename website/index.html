@@ -62,6 +62,35 @@
         <p class="h-listen">New episodes every week on <a href="https://www.youtube.com/@OutOfOurDepthPod" data-link="youtube" target="_blank" rel="noopener">YouTube</a>, <a href="https://open.spotify.com/show/5uqWe60E7Vi3MfQtJki7b1" data-link="spotify" target="_blank" rel="noopener"><span data-spotify-label>Spotify</span></a> and <a href="https://podcasts.apple.com/us/podcast/out-of-our-depth/id6819080935" data-link="apple" target="_blank" rel="noopener">Apple Podcasts</a></p>
       </div>
     </section>
+    <script>
+      // Fit the hero to the window: shrink the headline and stickers (the --hs scale in home.css) until the
+      // email form and the "New episodes every week" line load on screen. Phones refit only when the width
+      // changes, so the address bar sliding away while scrolling doesn't resize the page under your thumb.
+      (function () {
+        var root = document.documentElement, end = document.querySelector('.h-listen');
+        if (!end) return;
+        function bottom() { return end.getBoundingClientRect().bottom + window.scrollY; }
+        function fit() {
+          var room = window.innerHeight - 16, lo = 0.3, hi = 1;
+          root.style.setProperty('--hs', '1');
+          if (bottom() <= room) return;
+          for (var i = 0; i < 8; i++) {
+            var mid = (lo + hi) / 2;
+            root.style.setProperty('--hs', String(mid));
+            if (bottom() <= room) lo = mid; else hi = mid;
+          }
+          root.style.setProperty('--hs', String(lo));
+        }
+        fit();
+        var lastW = window.innerWidth, t, hover = window.matchMedia && window.matchMedia('(hover: hover)').matches;
+        window.addEventListener('resize', function () {
+          if (!hover && window.innerWidth === lastW) return;
+          lastW = window.innerWidth;
+          clearTimeout(t); t = setTimeout(fit, 80);
+        });
+        if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+      })();
+    </script>
 
     <section class="h-sec h-get" aria-label="What you get">
       <div class="h-wrap h-three">
@@ -222,7 +251,6 @@
 
   <script src="/config.js"></script>
   <script src="/main.js"></script>
-  <script src="/popup.js" defer></script>
   <script>
     // Tap us: a little speech bubble with a new line each time (Mary 2026-11-21)
     (function () {
