@@ -139,7 +139,7 @@ OURS = ''.join(f'<li>{e(x)}</li>' for x in guide['ourselves'])
 HELP = 'Stuck on one? Email <a href="mailto:hi@outofourdepth.com">hi@outofourdepth.com</a>, tell us which one, and we\'ll help'
 week = ''.join(f'<li><span class="lbl">{e(d)}</span><b>{e(n)}</b><span>{e(t)}</span></li>' for d, n, t in guide['first_week'])
 boxes = ''.join(f'<li>{e(topics[w]["title"])}</li>' for lv in levels for w in lv['words'])
-NOTE = "We only email when it's worth it. Written by real humans: Josh handles the spelling, Mary handles the jokes (proudly dyslexic, so be nice)"
+NOTE = "We only email when it's worth it. Written by real humans: Josh handles the spelling, Mary handles the jokes (proudly dyslexic + still wrote this subheader #flex)"
 
 # ---------- PDF ----------
 sticker = (WEB / 'images' / 'hosts-sticker.webp').as_uri()
