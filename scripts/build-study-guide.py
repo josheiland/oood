@@ -288,7 +288,7 @@ pdf = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><title>AI f
   <div class="sec-head"><p class="kick">Level 1.0, done</p><h2>You're at <span class="blue">1</span></h2><p>Check off every word you could explain to a friend. Anything left, go back and try it once more.</p></div>
   <ul class="boxes">{boxes}</ul>
   <p class="contact">Which word still confuses you? Tell us at <a href="mailto:hi@outofourdepth.com">hi@outofourdepth.com</a>. Get the notes at <a href="https://outofourdepth.com">outofourdepth.com</a>. {e(NOTE)}</p>
-  <p class="sign">Built WITH AI (we&#39;ll flag it when it&#39;s straight-up AI slop)</p>
+  <p class="sign">AI helped build this. The arguing was 100% human</p>
 
 </section>
 </body></html>'''
@@ -396,7 +396,7 @@ page = f'''<!doctype html>
         <nav class="h-foot__links" aria-label="Footer"><a href="/#episodes">Episodes</a><a href="/guide">Study guide</a><a href="mailto:hi@outofourdepth.com">hi@outofourdepth.com</a></nav>
         <nav class="h-foot__social topbar__social" aria-label="Find us" data-socials></nav>
       </div>
-      <p class="h-foot__sign">Built WITH AI (we&#39;ll flag it when it&#39;s straight-up AI slop)</p>
+      <p class="h-foot__sign">AI helped build this. The arguing was 100% human</p>
     </div>
   </footer>
   <script src="/config.js"></script>
