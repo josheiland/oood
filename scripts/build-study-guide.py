@@ -197,18 +197,17 @@ a { color:var(--ink); text-decoration:none; }
 .lv-head, .sec-head { margin-bottom:16pt; max-width:5.4in; }
 .lv-head h2, .sec-head h2 { font-size:32pt; }
 .promise, .sec-head p:not(.kick) { margin:8pt 0 0; font-size:11.5pt; line-height:1.4; }
-/* cover: cream over one blue pool, by the brand kit (waterline at 58%, no tilts or shadows). Mary picked it 2026-11-21 */
+/* cover: calm center. Cream page, the marker asterisk, the title and one line, wordmark at the bottom. Mary picked it 2026-11-22, replacing the pool cover */
 .cover { margin:0 -.75in; height:11in; page-break-after:always; position:relative; overflow:hidden; background:var(--cream); }
 .cv { position:absolute; left:0; top:0; width:816px; height:1056px; }
-.cv img { position:absolute; }
-.cv h1 { position:absolute; white-space:nowrap; line-height:.85; letter-spacing:-.02em; }
-.cv-wm { position:absolute; left:72px; top:64px; font-weight:800; text-transform:uppercase; line-height:.9; }
-.cv-wm small { display:block; font-size:12px; } .cv-wm b { display:block; font-size:34px; letter-spacing:-.02em; }
-.cv-m { position:absolute; margin:0; font-family:'JetBrains Mono', monospace; font-size:13px; letter-spacing:.18em; text-transform:uppercase; color:var(--ink); white-space:nowrap; }
-.cv-a { left:72px; top:200px; font-size:60px; }
-.cv-b { left:64px; top:264px; font-size:236px; color:var(--blue); }
-.cv-pool { position:absolute; left:0; right:0; top:612px; bottom:0; background:var(--blue); }
-.cv-c { left:0; right:0; top:650px; text-align:center; font-size:40px; color:var(--cream); }
+.cv-in { position:absolute; inset:0; padding:65px 73px 163px; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; }
+.cv-in h1, .cv-in p { margin:0; font-weight:800; text-transform:uppercase; letter-spacing:-.02em; white-space:nowrap; }
+.cv-star { width:90px; margin-bottom:57px; display:block; }
+.cv-a { font-size:62px; line-height:.9; margin-bottom:13px !important; }
+.cv-b { font-size:180px; line-height:.86; color:var(--blue); margin-bottom:73px !important; }
+.cv-s { font-size:41px; line-height:1.06; }
+.cv-wm { position:absolute; left:0; right:0; bottom:65px; text-align:center; font-weight:800; text-transform:uppercase; line-height:.9; }
+.cv-wm small { display:block; font-size:13px; } .cv-wm b { display:block; font-size:37px; letter-spacing:-.02em; }
 /* start here + contents */
 .start h2 { font-size:30pt; }
 .start-time { font-family:'JetBrains Mono', monospace; font-size:7.5pt; letter-spacing:.12em; text-transform:uppercase; color:var(--ink); margin:8pt 0 14pt; }
@@ -311,11 +310,12 @@ pdf = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><title>AI f
 <link href="https://fonts.googleapis.com/css2?family=Teachers:wght@400..800&family=JetBrains+Mono:wght@400;700&display=block" rel="stylesheet">
 <style>{PDF_CSS}</style></head><body>
 <section class="cover"><div class="cv">
-  <div class="cv-wm"><small>Out of our</small><b>Depth</b></div><p class="cv-m" style="right:72px;top:76px">A free study guide</p>
-  <h1 class="cv-a">AI from</h1><h1 class="cv-b">0 to 1</h1>
-  <p class="cv-m" style="left:72px;top:520px">50 words  /  10 debates  /  5 fun ways to start</p>
-  <div class="cv-pool"></div><img src="{(WEB / 'images' / 'mary-sticker.webp').as_uri()}" alt="" style="width:300px;left:40px;bottom:-110px"><img src="{(WEB / 'images' / 'josh-sticker.webp').as_uri()}" alt="" style="width:380px;right:20px;bottom:-110px">
-  <h1 class="cv-c">Come on in</h1>
+  <div class="cv-in">
+    <svg class="cv-star" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M25 5 Q22 22 24.5 43 M6 15 Q22 27 42 33 M8 37 Q26 21 40 10" fill="none" stroke="#38B6FF" stroke-width="6.5" stroke-linecap="round"/></svg>
+    <h1 class="cv-a">AI from</h1><h1 class="cv-b">0 to 1</h1>
+    <p class="cv-s">Anyone can learn this.<br>Start here</p>
+  </div>
+  <div class="cv-wm"><small>Out of our</small><b>Depth</b></div>
 </div></section>
 <section class="intro">
   <span class="wm" aria-hidden="true">0</span>
