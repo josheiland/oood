@@ -387,7 +387,7 @@ page = f'''<!doctype html>
   <main>
     <section class="g-hero">
       <div class="h-wrap g-hero__inner">
-        <p class="kick">Free study guide  /  no sign-up</p>
+        <p class="kick">Free study guide</p>
         <h1><span class="g-hero__kick">AI from</span><span class="g-hero__big">0 to 1</span></h1>
         <p class="g-hero__sub">{PITCH}. Keep scrolling, it gets deeper</p>
         <div class="g-hero__ctas"><a class="h-btn" href="#level-0-0">Dive in</a><a class="h-btn h-btn--ghost" href="{PDF_URL}" download>Download the PDF</a></div>
