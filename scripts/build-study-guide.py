@@ -168,7 +168,7 @@ WHY = ''.join(f'<p>{e(x)}</p>' for x in guide['why'])
 OURS = ''.join(f'<li>{e(x)}</li>' for x in guide['ourselves'])
 HELP = 'Stuck on one? Email <a href="mailto:hi@outofourdepth.com">hi@outofourdepth.com</a>, tell us which one, and we\'ll help'
 boxes = ''.join(f'<li>{e(topics[w]["title"])}</li>' for lv in levels for w in lv['words'])
-NOTE = "We only email when it's worth it. Josh spells, Mary jokes (proudly dyslexic, still wrote this #flex)"
+NOTE = "We only email when it's worth it. Josh fixes the typos, Mary makes them (proudly dyslexic #flex)"
 SIGN = "Can't lie, Claude built this"
 PITCH = f'{N} words, 10 debates and 5 fun ways to get started'
 
@@ -190,20 +190,25 @@ a { color:var(--ink); text-decoration:none; }
 .lbl { display:block; font-family:'JetBrains Mono', monospace; font-size:6.8pt; letter-spacing:.08em; text-transform:uppercase; color:var(--ink); margin-top:5pt; }
 .lbl--off { color:#8C99A6; }
 .page { page-break-before:always; position:relative; }
+.intro { position:relative; }
+/* Everything after the cover prints at 95%, the size the layout was tuned at */
+.intro, .level, body > .page, .flow { zoom:.95; width:105.26%; }
 .wm { position:absolute; top:-.35in; right:-.45in; font-weight:800; font-size:150pt; line-height:1; letter-spacing:-.03em; color:var(--wm); z-index:-1; }
 .lv-head, .sec-head { margin-bottom:16pt; max-width:5.4in; }
 .lv-head h2, .sec-head h2 { font-size:32pt; }
 .promise, .sec-head p:not(.kick) { margin:8pt 0 0; font-size:11.5pt; line-height:1.4; }
-/* cover: navy, like her full-color cover */
-.cover { margin:0 -.75in; height:11in; box-sizing:border-box; padding:.8in .85in .75in; background:var(--navy); color:var(--cream); display:flex; flex-direction:column; page-break-after:always; position:relative; overflow:hidden; }
-.cover .brand { font-weight:800; text-transform:uppercase; line-height:.9; font-size:11pt; }
-.cover .brand b { display:block; font-size:22pt; }
-.cover .kick { color:var(--sky); margin-top:1.5in; }
-.cover h1 { font-size:58pt; margin-top:8pt; }
-.cover h1 span { display:block; color:var(--blue); font-size:132pt; line-height:.84; }
-.cover .sub { font-size:14pt; margin:22pt 0 0; max-width:4.6in; color:var(--sky); }
-.cover img { position:absolute; right:.6in; bottom:1.1in; width:3.9in; transform:rotate(-3deg); }
-.cover .by { margin-top:auto; font-family:'JetBrains Mono', monospace; font-size:7.5pt; letter-spacing:.14em; text-transform:uppercase; color:var(--sky); }
+/* cover: cream over one blue pool, by the brand kit (waterline at 58%, no tilts or shadows). Mary picked it 2026-11-21 */
+.cover { margin:0 -.75in; height:11in; page-break-after:always; position:relative; overflow:hidden; background:var(--cream); }
+.cv { position:absolute; left:0; top:0; width:816px; height:1056px; }
+.cv img { position:absolute; }
+.cv h1 { position:absolute; white-space:nowrap; line-height:.85; letter-spacing:-.02em; }
+.cv-wm { position:absolute; left:72px; top:64px; font-weight:800; text-transform:uppercase; line-height:.9; }
+.cv-wm small { display:block; font-size:12px; } .cv-wm b { display:block; font-size:34px; letter-spacing:-.02em; }
+.cv-m { position:absolute; margin:0; font-family:'JetBrains Mono', monospace; font-size:13px; letter-spacing:.18em; text-transform:uppercase; color:var(--ink); white-space:nowrap; }
+.cv-a { left:72px; top:200px; font-size:60px; }
+.cv-b { left:64px; top:264px; font-size:236px; color:var(--blue); }
+.cv-pool { position:absolute; left:0; right:0; top:612px; bottom:0; background:var(--blue); }
+.cv-c { left:0; right:0; top:650px; text-align:center; font-size:40px; color:var(--cream); }
 /* start here + contents */
 .start h2 { font-size:30pt; }
 .start-time { font-family:'JetBrains Mono', monospace; font-size:7.5pt; letter-spacing:.12em; text-transform:uppercase; color:var(--ink); margin:8pt 0 14pt; }
@@ -302,14 +307,13 @@ a { color:var(--ink); text-decoration:none; }
 pdf = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><title>AI from 0 to 1 | Out of Our Depth</title>
 <link href="https://fonts.googleapis.com/css2?family=Teachers:wght@400..800&family=JetBrains+Mono:wght@400;700&display=block" rel="stylesheet">
 <style>{PDF_CSS}</style></head><body>
-<section class="cover">
-  <div class="brand">Out of our<b>Depth</b></div>
-  <p class="kick">A free study guide</p>
-  <h1>AI from<span>0 to 1</span></h1>
-  <p class="sub">{PITCH}. It gets deeper as you go</p>
-  <img src="{sticker}" alt="">
-  <p class="by">Mary and Josh  /  outofourdepth.com/guide</p>
-</section>
+<section class="cover"><div class="cv">
+  <div class="cv-wm"><small>Out of our</small><b>Depth</b></div><p class="cv-m" style="right:72px;top:76px">A free study guide</p>
+  <h1 class="cv-a">AI from</h1><h1 class="cv-b">0 to 1</h1>
+  <p class="cv-m" style="left:72px;top:520px">50 words  /  10 debates  /  5 fun ways to start</p>
+  <div class="cv-pool"></div><img src="{(WEB / 'images' / 'mary-sticker.webp').as_uri()}" alt="" style="width:300px;left:40px;bottom:-110px"><img src="{(WEB / 'images' / 'josh-sticker.webp').as_uri()}" alt="" style="width:380px;right:20px;bottom:-110px">
+  <h1 class="cv-c">Come on in</h1>
+</div></section>
 <section class="intro">
   <span class="wm" aria-hidden="true">0</span>
   <div class="why"><p class="kick">Why we made this</p>{WHY}</div>

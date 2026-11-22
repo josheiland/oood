@@ -14,20 +14,25 @@ a { color:var(--ink); text-decoration:none; }
 .lbl { display:block; font-family:'JetBrains Mono', monospace; font-size:6.8pt; letter-spacing:.08em; text-transform:uppercase; color:var(--ink); margin-top:5pt; }
 .lbl--off { color:#8C99A6; }
 .page { page-break-before:always; position:relative; }
+.intro { position:relative; }
+/* Everything after the cover prints at 95%, the size the layout was tuned at */
+.intro, .level, body > .page, .flow { zoom:.95; width:105.26%; }
 .wm { position:absolute; top:-.35in; right:-.45in; font-weight:800; font-size:150pt; line-height:1; letter-spacing:-.03em; color:var(--wm); z-index:-1; }
 .lv-head, .sec-head { margin-bottom:16pt; max-width:5.4in; }
 .lv-head h2, .sec-head h2 { font-size:32pt; }
 .promise, .sec-head p:not(.kick) { margin:8pt 0 0; font-size:11.5pt; line-height:1.4; }
-/* cover: navy, like her full-color cover */
-.cover { margin:0 -.75in; height:11in; box-sizing:border-box; padding:.8in .85in .75in; background:var(--navy); color:var(--cream); display:flex; flex-direction:column; page-break-after:always; position:relative; overflow:hidden; }
-.cover .brand { font-weight:800; text-transform:uppercase; line-height:.9; font-size:11pt; }
-.cover .brand b { display:block; font-size:22pt; }
-.cover .kick { color:var(--sky); margin-top:1.5in; }
-.cover h1 { font-size:58pt; margin-top:8pt; }
-.cover h1 span { display:block; color:var(--blue); font-size:132pt; line-height:.84; }
-.cover .sub { font-size:14pt; margin:22pt 0 0; max-width:4.6in; color:var(--sky); }
-.cover img { position:absolute; right:.6in; bottom:1.1in; width:3.9in; transform:rotate(-3deg); }
-.cover .by { margin-top:auto; font-family:'JetBrains Mono', monospace; font-size:7.5pt; letter-spacing:.14em; text-transform:uppercase; color:var(--sky); }
+/* cover: cream over one blue pool, by the brand kit (waterline at 58%, no tilts or shadows). Mary picked it 2026-11-21 */
+.cover { margin:0 -.75in; height:11in; page-break-after:always; position:relative; overflow:hidden; background:var(--cream); }
+.cv { position:absolute; left:0; top:0; width:816px; height:1056px; }
+.cv img { position:absolute; }
+.cv h1 { position:absolute; white-space:nowrap; line-height:.85; letter-spacing:-.02em; }
+.cv-wm { position:absolute; left:72px; top:64px; font-weight:800; text-transform:uppercase; line-height:.9; }
+.cv-wm small { display:block; font-size:12px; } .cv-wm b { display:block; font-size:34px; letter-spacing:-.02em; }
+.cv-m { position:absolute; margin:0; font-family:'JetBrains Mono', monospace; font-size:13px; letter-spacing:.18em; text-transform:uppercase; color:var(--ink); white-space:nowrap; }
+.cv-a { left:72px; top:200px; font-size:60px; }
+.cv-b { left:64px; top:264px; font-size:236px; color:var(--blue); }
+.cv-pool { position:absolute; left:0; right:0; top:612px; bottom:0; background:var(--blue); }
+.cv-c { left:0; right:0; top:650px; text-align:center; font-size:40px; color:var(--cream); }
 /* start here + contents */
 .start h2 { font-size:30pt; }
 .start-time { font-family:'JetBrains Mono', monospace; font-size:7.5pt; letter-spacing:.12em; text-transform:uppercase; color:var(--ink); margin:8pt 0 14pt; }
@@ -122,14 +127,13 @@ a { color:var(--ink); text-decoration:none; }
 .debate p { margin:3pt 0 0; font-size:9.3pt; color:var(--muted); }
 .debate p b { color:var(--ink); font-weight:700; margin-right:3pt; }
 </style></head><body>
-<section class="cover">
-  <div class="brand">Out of our<b>Depth</b></div>
-  <p class="kick">A free study guide</p>
-  <h1>AI from<span>0 to 1</span></h1>
-  <p class="sub">50 words, 10 debates and 5 fun ways to get started. It gets deeper as you go</p>
-  <img src="file:///home/claude/oood/website/images/hosts-sticker.webp" alt="">
-  <p class="by">Mary and Josh  /  outofourdepth.com/guide</p>
-</section>
+<section class="cover"><div class="cv">
+  <div class="cv-wm"><small>Out of our</small><b>Depth</b></div><p class="cv-m" style="right:72px;top:76px">A free study guide</p>
+  <h1 class="cv-a">AI from</h1><h1 class="cv-b">0 to 1</h1>
+  <p class="cv-m" style="left:72px;top:520px">50 words  /  10 debates  /  5 fun ways to start</p>
+  <div class="cv-pool"></div><img src="file:///home/claude/oood/website/images/mary-sticker.webp" alt="" style="width:300px;left:40px;bottom:-110px"><img src="file:///home/claude/oood/website/images/josh-sticker.webp" alt="" style="width:380px;right:20px;bottom:-110px">
+  <h1 class="cv-c">Come on in</h1>
+</div></section>
 <section class="intro">
   <span class="wm" aria-hidden="true">0</span>
   <div class="why"><p class="kick">Why we made this</p><p>We&#x27;re Mary and Josh. We started Out of Our Depth because AI was moving faster than we could keep up, and we were tired of nodding along to words we only half understood</p><p>This is the guide we wish someone had handed us. Words in plain English, habits that keep you out of trouble, and fun things to build. You can read it in an afternoon (if you&#x27;re not dyslexic, sry Mary)</p></div>
@@ -203,7 +207,7 @@ a { color:var(--ink); text-decoration:none; }
 <section class="flow" style="margin-top:14pt">
   <div class="sec-head" style="margin-bottom:8pt"><p class="kick">Level 1.0, done</p><h2>You're at <span class="blue">1</span></h2><p>Check off every word you could explain to a friend. Anything left, go back and try it once more</p></div>
   <ul class="boxes"><li>Generative AI</li><li>Prompt</li><li>LLM</li><li>Model vs. app</li><li>Hallucination</li><li>Multimodal</li><li>Jagged frontier</li><li>Chatbot vs. assistant</li><li>Voice mode</li><li>Image generation</li><li>Memory</li><li>Custom instructions</li><li>Projects</li><li>Model sizes</li><li>Reasoning model</li><li>Deep research</li><li>System prompt</li><li>Your data</li><li>Knowledge cutoff</li><li>AI slop</li><li>Sycophancy</li><li>Bias</li><li>Deepfake</li><li>Prompt injection</li><li>Jailbreak</li><li>AI companion</li><li>Watermark</li><li>AI detector</li><li>Training</li><li>Token</li><li>Context window</li><li>Open vs. closed models</li><li>Benchmark</li><li>GPU</li><li>Data center</li><li>RAG</li><li>Fine-tuning</li><li>API</li><li>Inference</li><li>Compute</li><li>Agent</li><li>Skills</li><li>MCP</li><li>Computer use</li><li>Vibe coding</li><li>Human in the loop</li><li>Scaling laws</li><li>Alignment</li><li>AGI</li><li>Superintelligence</li></ul>
-  <p class="contact">Which word still confuses you? Tell us at <a href="mailto:hi@outofourdepth.com">hi@outofourdepth.com</a>. Get the notes at <a href="https://outofourdepth.com">outofourdepth.com</a>. We only email when it&#x27;s worth it. Josh spells, Mary jokes (proudly dyslexic, still wrote this #flex)</p>
+  <p class="contact">Which word still confuses you? Tell us at <a href="mailto:hi@outofourdepth.com">hi@outofourdepth.com</a>. Get the notes at <a href="https://outofourdepth.com">outofourdepth.com</a>. We only email when it&#x27;s worth it. Josh fixes the typos, Mary makes them (proudly dyslexic #flex)</p>
   <p class="sign">Can&#x27;t lie, Claude built this</p>
 </section>
 </body></html>
