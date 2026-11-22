@@ -29,11 +29,29 @@
 
 /* Jump links: small rounded tags, no lines */
 .g-jump { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; padding-top: 28px; padding-bottom: 8px; }
-.g-jump a { display: inline-flex; align-items: center; gap: 6px; padding: 10px 14px; border-radius: 8px; background: var(--foam); text-decoration: none; font-weight: 700; font-size: 15px; transition: background .15s, color .15s; }
+.g-jump { gap: 6px 22px !important; }
+.g-jump a { display: inline-flex; align-items: center; gap: 6px; padding: 6px 0; text-decoration: none; font-weight: 700; font-size: 15px; border-bottom: 2px solid transparent; }
 .g-jump b { color: var(--blue); font-weight: 800; }
-.g-jump a:hover { background: var(--navy); color: var(--cream); }
+.g-jump a:hover { border-color: var(--blue); }
 
-/* Cards and tags (shared by words, builds, start here, next) */
+/* Words, builds and next steps: soft cards, plain text labels (pills only sparingly, Mary) */
+.guide .word, .guide .build, .guide .next, .guide .start { display: block; background: var(--foam); border-radius: 22px; padding: 26px 28px; color: var(--navy); text-decoration: none; }
+.guide .word h3, .guide .build h3, .guide .next h3 { font-size: 26px; line-height: 1; }
+.guide .word p, .guide .build p { margin: 10px 0 0; font-size: 17px; line-height: 1.5; }
+.guide .lbl { display: block; margin-top: 12px; font-family: var(--mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink); text-decoration: none; }
+.guide a.lbl:hover, .guide .lbl a:hover { text-decoration: underline; }
+.guide .lbl a { color: var(--ink); text-decoration: none; }
+.guide .lbl--off { color: #8C99A6; }
+.guide .build .lbl, .guide .next .lbl { margin: 0 0 10px; }
+.guide .next { display: flex; flex-direction: column; }
+.guide .next h3 { font-size: 22px; line-height: 1.05; min-height: 2.1em; } /* two lines for every title, so the lines below all start level */
+.guide .next p { color: var(--muted); font-size: 16px; margin-top: 10px; }
+.guide .next--us { background: var(--navy); color: var(--cream); }
+.guide a.next--us .lbl, .guide a.next--us p { color: var(--sky); }
+.guide .next--us:hover { background: #12385C; }
+.next-row { align-items: stretch; }
+
+/* Old card and tag styles, kept for safety */
 .guide .card { display: block; background: var(--foam); border-radius: 22px; padding: 26px 28px; color: var(--navy); text-decoration: none; }
 .guide .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
 .guide .tag { display: inline-block; padding: 5px 9px; border-radius: 6px; background: var(--sky); color: var(--navy); font-family: var(--mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; text-decoration: none; }
@@ -50,6 +68,7 @@
 /* Start here */
 .g-start { padding-top: 40px; padding-bottom: 24px; }
 .guide .start { padding: 40px 44px; }
+.guide .start .kick { margin-bottom: 0; }
 .guide .start h2 { margin-top: 18px; font-size: 44px; line-height: .95; }
 .start-time { margin: 8px 0 18px !important; font-family: var(--mono); font-size: 13px !important; letter-spacing: .12em; text-transform: uppercase; color: var(--ink); }
 .steps { margin: 0; padding-left: 22px; font-size: 19px; line-height: 1.5; }
@@ -59,14 +78,16 @@
 
 /* Levels */
 .guide .level { padding: 72px 0 24px; scroll-margin-top: 12px; }
-.lv-head { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 28px; align-items: end; margin-bottom: 28px; }
-.lv-n { font-weight: 800; font-size: 128px; line-height: .78; letter-spacing: -.03em; color: var(--blue); }
-.lv-head h2 { font-size: 56px; line-height: .9; letter-spacing: -.025em; }
-.promise { margin: 10px 0 0; font-size: 19px; color: var(--muted); }
+.lv-head { position: relative; max-width: 760px; margin-bottom: 32px; }
+.guide .level > div, .guide .g-start { position: relative; }
+.guide .wm { position: absolute; top: -40px; right: 20px; z-index: -1; font-weight: 800; font-size: 220px; line-height: 1; letter-spacing: -.03em; color: #E2EEF6; pointer-events: none; }
+.guide .blue { color: var(--blue); }
+.lv-head h2 { font-size: 64px; line-height: .9; letter-spacing: -.025em; }
+.promise { margin: 14px 0 0; font-size: 20px; line-height: 1.45; }
 .pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-top: 16px; }
 .try { background: var(--navy); color: var(--cream); border-radius: 22px; padding: 28px 30px; }
 .try .kick { color: var(--sky) !important; }
-.check { background: var(--sky); border-radius: 22px; padding: 28px 30px; }
+.check { padding: 8px 4px; }
 .check .kick { color: var(--navy) !important; }
 .pair ol { margin: 6px 0 0; padding-left: 20px; font-size: 17px; line-height: 1.5; }
 .pair li { margin-bottom: 10px; }
@@ -87,11 +108,19 @@
 .sec-head { margin-bottom: 28px; }
 .sec-head h2, .g-stuck h2, .g-next h2 { font-size: 56px; line-height: .9; letter-spacing: -.025em; }
 .sec-head p:not(.kick) { margin: 14px 0 0; max-width: 600px; font-size: 19px; line-height: 1.5; color: var(--muted); }
-.prompt { margin-top: 18px; padding: 18px 20px; border-radius: 16px; background: var(--cream); border: 1.5px dashed var(--dash); }
+.prompt { margin-top: 18px; padding: 18px 20px; border-radius: 16px; background: var(--cream); }
 .prompt .kick { margin-bottom: 6px !important; }
 .guide .prompt p:not(.kick) { margin: 0; font-size: 16px; }
 .copy { margin-top: 14px; height: 38px; padding: 0 14px; border: 0; border-radius: 6px; background: var(--navy); color: var(--cream); cursor: pointer; font-family: var(--mono); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; }
 .copy:hover { background: var(--blue); color: var(--navy); }
+
+/* Your first week */
+.week { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; max-width: 860px; }
+.week li { display: grid; grid-template-columns: 70px 260px minmax(0, 1fr); align-items: baseline; gap: 16px; padding: 18px 22px; border-radius: 16px; background: var(--foam); }
+.week .lbl { margin: 0; }
+.week b { font-weight: 800; text-transform: uppercase; font-size: 19px; }
+.week span:last-child { font-size: 17px; color: var(--muted); }
+@media (max-width: 640px) { .week li { grid-template-columns: 50px minmax(0, 1fr); } .week span:last-child { grid-column: 2; } }
 
 /* If you get stuck: one narrow column, like her guides */
 .g-narrow { max-width: 760px; }
@@ -137,13 +166,13 @@
   .guide .start { padding: 26px 22px; }
   .guide .start h2 { font-size: 32px; }
   .steps { font-size: 17px; }
-  .guide .card { padding: 22px; border-radius: 18px; }
-  .guide .card h3 { font-size: 22px; }
-  .guide .card p { font-size: 16px; }
+  .guide .word, .guide .build, .guide .next { padding: 22px; border-radius: 18px; }
+  .guide .word h3, .guide .build h3, .guide .next h3 { font-size: 22px; }
+  .guide .word p, .guide .build p { font-size: 16px; }
   .guide .level { padding-top: 52px; }
   .lv-head { gap: 16px; }
-  .lv-n { font-size: 68px; }
-  .lv-head h2 { font-size: 34px; }
+  .guide .wm { font-size: 120px; top: -20px; right: 0; }
+  .lv-head h2 { font-size: 40px; }
   .promise { font-size: 16px; }
   .try, .check { padding: 22px; border-radius: 18px; }
   .pair ol { font-size: 16px; }

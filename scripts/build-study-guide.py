@@ -11,8 +11,8 @@ Writes website/guide.html, website/downloads/ai-0-to-1-study-guide.pdf, website/
 and the print HTML at 03_ASSETS/study-guide/study-guide.html. Needs Python 3, Pillow and Playwright with
 Chromium or Chrome (set CHROME=/path/to/chrome to pick one). Fonts load from Google Fonts at build time.
 
-House style (Mary 2026-11-21): no divider lines, and no period after a phrase that isn't a full
-sentence. "Think of it like" lines and level promises lose a final period unless they hold two sentences.
+House style (Mary 2026-11-21): no divider lines, pills and the snowflake only sparingly, and no period
+at the end of a paragraph, list item or label (soften() strips them from the finished HTML).
 """
 import html, json, os, re, sys
 from pathlib import Path
@@ -23,6 +23,8 @@ SRC = ROOT / '03_ASSETS' / 'study-guide'
 guide = json.loads((SRC / 'guide-levels.json').read_text())
 topics = {t['id']: t for t in json.loads((WEB / 'learning-topics.json').read_text())}
 topics.update(guide.get('extra_words', {}))
+for k, v in guide.get('overrides', {}).items():
+    topics[k] = {**topics[k], **v}  # evergreen wording for the guide; learning-topics.json stays as Josh wrote it
 levels = guide['levels']
 
 yt = dict(re.findall(r"'(\d{3})':\s*'([^']+)'", (ROOT / 'scripts' / 'build-learning.js').read_text()))
@@ -43,6 +45,11 @@ def check(text):
     return text
 e = lambda s: html.escape(check(str(s)), quote=True)
 
+END_DOT = re.compile(r'\.(\s*</(?:p|li|span|div|a|b|h1|h2|h3)>)')
+def soften(doc):
+    """Mary: the last sentence or phrase of a block doesn't get a period. Feels more human."""
+    return END_DOT.sub(r'\1', doc)
+
 def phrase(s):
     """Drop the final period from a one-clause phrase; keep it when the text holds two sentences."""
     s = s.strip()
@@ -61,9 +68,9 @@ def ep_url(number, time=None):
 def tag(t):
     ep = t.get('episode')
     if not ep:
-        return '<span class="tag tag--off">Not on the show yet</span>'
-    label = f"Ep {ep['number']} at {ep['time']}" if ep['time'] != '00:00' else f"All of ep {ep['number']}"
-    return f'<a class="tag" href="{html.escape(ep_url(ep["number"], ep["time"]))}" target="_blank" rel="noopener">&#9654;&#xFE0E; {label}</a>'
+        return '<span class="lbl lbl--off">Not on the show yet</span>'
+    label = f"Watch ep {ep['number']} at {ep['time']}" if ep['time'] != '00:00' else f"Watch all of ep {ep['number']}"
+    return f'<a class="lbl" href="{html.escape(ep_url(ep["number"], ep["time"]))}" target="_blank" rel="noopener">&#9654;&#xFE0E; {label}</a>'
 
 SPARK = '<svg class="spark" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.5v21M2.9 6.75l18.2 10.5M2.9 17.25l18.2-10.5" stroke="currentColor" stroke-width="3.4" stroke-linecap="round"/></svg>'
 slug = lambda n: 'level-' + n.replace('.', '-')
@@ -71,9 +78,9 @@ slug = lambda n: 'level-' + n.replace('.', '-')
 # ---------- shared pieces ----------
 def word_card(t):
     aka = f'<span class="aka">{e(t["aka"])}</span>' if t.get('aka') else ''
-    return (f'<article class="card word" id="{t["id"]}"><div class="tags">{tag(t)}</div>'
+    return (f'<article class="word" id="{t["id"]}">'
             f'<h3>{e(t["title"])}</h3>{aka}<p>{e(t["definition"])}</p>'
-            f'<p class="think"><b>Think of it like</b> {e(phrase(t["think"]))}</p></article>')
+            f'<p class="think"><b>Think of it like</b> {e(phrase(t["think"]))}</p>{tag(t)}</article>')
 
 def try_check(lv):
     tries = ''.join(f'<li>{e(x)}</li>' for x in lv['try'])
@@ -91,25 +98,32 @@ MAP = f'''<div class="map"><p class="kick">{SPARK} The whole thing on one page</
     <div><b>Act</b><p>Doing something in the world: sending, booking, clicking, writing code</p><i>Agents, skills, computer use</i></div>
   </div></div>'''
 
+def headline(name, accent):
+    if accent and accent.lower() in name.lower():
+        i = name.lower().index(accent.lower())
+        return e(name[:i]) + f'<span class="blue">{e(name[i:i + len(accent)])}</span>' + e(name[i + len(accent):])
+    return e(name)
+
 def level_block(lv, i, wrap=''):
     words = ''.join(word_card(topics[w]) for w in lv['words'])
     return f'''<section class="level" id="{slug(lv["n"])}" aria-labelledby="{slug(lv["n"])}-t"><div class="{wrap}">
-  <header class="lv-head"><span class="lv-n">{lv["n"]}</span><div><p class="kick">Level {i + 1} of {len(levels)}  /  {len(lv["words"])} words</p><h2 id="{slug(lv["n"])}-t">{e(lv["name"])}</h2><p class="promise">{e(phrase(lv["promise"]))}</p></div></header>
+  <span class="wm" aria-hidden="true">{lv["n"]}</span>
+  <header class="lv-head"><p class="kick">Level {lv["n"]}  /  {len(lv["words"])} words</p><h2 id="{slug(lv["n"])}-t">{headline(lv["name"], lv.get("accent"))}</h2><p class="promise">{e(lv["promise"])}</p></header>
   <div class="cards">{words}</div>
   {try_check(lv)}
   {MAP if lv["n"] == "0.6" else ""}
 </div></section>'''
 
 def build_card(b, web):
-    watch = f'<a class="tag" href="{html.escape(ep_url(b["watch"]))}" target="_blank" rel="noopener">&#9654;&#xFE0E; Watch ep {b["watch"]}</a>' if b.get('watch') else ''
+    watch = f'  /  <a href="{html.escape(ep_url(b["watch"]))}" target="_blank" rel="noopener">&#9654;&#xFE0E; ep {b["watch"]}</a>' if b.get('watch') else ''
     copy = f'<button class="copy" type="button" data-copy="p-{b["id"]}">Copy prompt</button>' if web else ''
-    return (f'<article class="card build"><div class="tags"><span class="tag tag--solid">{e(b["time"])}</span><span class="tag tag--off">{e(b["level"])}</span>{watch}</div>'
+    return (f'<article class="build"><p class="lbl">{e(b["time"])}  /  {e(b["level"])}{watch}</p>'
             f'<h3>{e(b["title"])}</h3><p>{e(b["why"])}</p>'
             f'<div class="prompt"><p class="kick">Copy this</p><p id="p-{b["id"]}">{e(b["prompt"])}</p>{copy}</div></article>')
 
 sh = guide['start_here']
 start_steps = ''.join(f'<li>{e(s)}</li>' for s in sh['steps'])
-START = f'''<div class="card start"><span class="badge">{SPARK} Start here</span>
+START = f'''<div class="start"><p class="kick">{SPARK} Start here</p>
   <h2>{e(sh["title"])}</h2><p class="start-time">{e(sh["time"])}</p>
   <ol class="steps">{start_steps}</ol>
   <p class="tenhours"><b>The ten-hour rule</b> {e(guide["ten_hours"])}</p></div>'''
@@ -117,109 +131,113 @@ START = f'''<div class="card start"><span class="badge">{SPARK} Start here</span
 builds = ''.join(build_card(b, True) for b in guide['builds'])
 builds_pdf = ''.join(build_card(b, False) for b in guide['builds'])
 stuck = ''.join(f'<p><b>{e(phrase(a))}</b> {e(b)}</p>' for a, b in guide['stuck'])
-nxt = ''.join(f'<a class="card next" href="{html.escape(u)}" target="_blank" rel="noopener"><span class="tag tag--off">{e(who)}</span><h3>{e(t)}</h3><p>{e(len_)}</p></a>' for t, who, len_, u in guide['next'])
+nxt = ''.join(f'<a class="next" href="{html.escape(u)}" target="_blank" rel="noopener"><span class="lbl">{e(who)}</span><h3>{e(t)}</h3><p>{e(len_)}</p></a>' for t, who, len_, u in guide['next'])
+US = ('<a class="next next--us" href="https://www.youtube.com/@OutOfOurDepthPod?sub_confirmation=1" target="_blank" rel="noopener">'
+      '<span class="lbl">Us, obviously</span><h3>Out of Our Depth</h3><p>New episodes every week. Would it kill ya to subscribe?</p></a>')
+week = ''.join(f'<li><span class="lbl">{e(d)}</span><b>{e(n)}</b><span>{e(t)}</span></li>' for d, n, t in guide['first_week'])
 boxes = ''.join(f'<li>{e(topics[w]["title"])}</li>' for lv in levels for w in lv['words'])
-NOTE = "We only email when we've got something worth writing. Written by us, not AI."
-edition = guide['edition']
-month = edition.replace(' edition', '')
+NOTE = "We only email when we've got something worth writing (by us humans! Well, realistically Josh. Mary's proudly dyslexic, so go ahead and thank her for the humor + designs)"
 
 # ---------- PDF ----------
 sticker = (WEB / 'images' / 'hosts-sticker.webp').as_uri()
 toc = ''.join(f'<li><span class="toc-n">{lv["n"]}</span><span class="toc-name">{e(lv["name"])}</span><span class="toc-p">{e(phrase(lv["promise"]))}</span></li>' for lv in levels)
 
 PDF_CSS = '''
-@page { size: letter; margin: .55in 0 .62in; }
+@page { size: letter; margin: .6in 0 .62in; }
 @page :first { margin: 0; }
-:root { --cream:#FBF1E5; --foam:#FDF8F2; --navy:#0B2A45; --muted:#4F6072; --blue:#38B6FF; --ink:#0A6BB8; --sky:#BDE5FF; --dash:#CDBBA4; }
+:root { --cream:#FBF1E5; --foam:#FDF8F2; --navy:#0B2A45; --muted:#4F6072; --blue:#38B6FF; --ink:#0A6BB8; --sky:#BDE5FF; --wm:#E2EEF6; }
 html { background: var(--cream); }
-body { margin:0; padding:0 .7in; color:var(--navy); font-family:Teachers, sans-serif; font-size:10.5pt; line-height:1.4; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
-.kick { font-family:'JetBrains Mono', monospace; font-size:7.5pt; letter-spacing:.14em; text-transform:uppercase; color:var(--ink); margin:0 0 5pt; display:flex; align-items:center; gap:5pt; }
+body { margin:0; padding:0 .75in; color:var(--navy); font-family:Teachers, sans-serif; font-size:9.8pt; line-height:1.4; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+.kick { font-family:'JetBrains Mono', monospace; font-size:7.5pt; letter-spacing:.14em; text-transform:uppercase; color:var(--ink); margin:0 0 8pt; display:flex; align-items:center; gap:6pt; }
 .spark { width:9pt; height:9pt; color:var(--blue); flex:none; }
 h1,h2,h3 { font-weight:800; text-transform:uppercase; margin:0; line-height:.95; }
+.blue { color:var(--blue); }
 a { color:var(--ink); text-decoration:none; }
-.card { background:var(--foam); border-radius:12pt; padding:8pt 10pt; break-inside:avoid; }
-.tags { display:flex; flex-wrap:wrap; gap:4pt; margin-bottom:5pt; }
-.tag { display:inline-block; font-family:'JetBrains Mono', monospace; font-size:6.5pt; letter-spacing:.08em; text-transform:uppercase; padding:3pt 6pt; border-radius:5pt; background:var(--sky); color:var(--navy); }
-.tag--off { background:var(--cream); color:var(--muted); }
-.tag--solid { background:var(--navy); color:var(--cream); }
-.aka { display:block; font-family:'JetBrains Mono', monospace; font-size:7pt; letter-spacing:.05em; color:var(--muted); margin-top:2pt; }
+.lbl { display:block; font-family:'JetBrains Mono', monospace; font-size:6.8pt; letter-spacing:.08em; text-transform:uppercase; color:var(--ink); margin-top:5pt; }
+.lbl--off { color:#8C99A6; }
+.page { page-break-before:always; position:relative; }
+.wm { position:absolute; top:-.35in; right:-.45in; font-weight:800; font-size:150pt; line-height:1; letter-spacing:-.03em; color:var(--wm); z-index:-1; }
+.lv-head, .sec-head { margin-bottom:16pt; max-width:5.4in; }
+.lv-head h2, .sec-head h2 { font-size:32pt; }
+.promise, .sec-head p:not(.kick) { margin:8pt 0 0; font-size:11.5pt; line-height:1.4; }
+/* cover: navy, like her full-color cover */
+.cover { margin:0 -.75in; height:11in; box-sizing:border-box; padding:.8in .85in .75in; background:var(--navy); color:var(--cream); display:flex; flex-direction:column; page-break-after:always; position:relative; overflow:hidden; }
+.cover .brand { font-weight:800; text-transform:uppercase; line-height:.9; font-size:11pt; }
+.cover .brand b { display:block; font-size:22pt; }
+.cover .kick { color:var(--sky); margin-top:1.5in; }
+.cover h1 { font-size:58pt; margin-top:8pt; }
+.cover h1 span { display:block; color:var(--blue); font-size:132pt; line-height:.84; }
+.cover .sub { font-size:14pt; margin:22pt 0 0; max-width:4.6in; color:var(--sky); }
+.cover img { position:absolute; right:.6in; bottom:1.1in; width:3.9in; transform:rotate(-3deg); }
+.cover .by { margin-top:auto; font-family:'JetBrains Mono', monospace; font-size:7.5pt; letter-spacing:.14em; text-transform:uppercase; color:var(--sky); }
+/* start here + contents */
+.start h2 { font-size:38pt; }
+.start-time { font-family:'JetBrains Mono', monospace; font-size:7.5pt; letter-spacing:.12em; text-transform:uppercase; color:var(--ink); margin:8pt 0 14pt; }
+.steps { margin:0; padding-left:16pt; font-size:12pt; max-width:5.6in; }
+.steps li { margin-bottom:7pt; }
+.tenhours { margin:16pt 0 0; background:var(--navy); color:var(--cream); border-radius:12pt; padding:13pt 15pt; font-size:10.5pt; max-width:5.6in; }
+.tenhours b { color:var(--blue); margin-right:3pt; }
+.toc { list-style:none; margin:30pt 0 0; padding:0; }
+.toc li { display:grid; grid-template-columns:.7in 1.9in 1fr; align-items:baseline; gap:10pt; padding:6pt 0; }
+.toc-n { font-weight:800; font-size:18pt; color:var(--blue); }
+.toc-name { font-weight:800; text-transform:uppercase; font-size:11.5pt; }
+.toc-p { font-size:9.5pt; color:var(--muted); }
+/* words: plain text in two columns, lots of space, no boxes */
+.cards { display:grid; grid-template-columns:1fr 1fr; gap:11pt 24pt; }
+.word { break-inside:avoid; }
 .word h3, .build h3, .next h3 { font-size:12.5pt; }
-.word p, .build p { margin:3pt 0 0; font-size:9.8pt; line-height:1.35; }
-.think { color:var(--muted); font-size:9pt !important; }
-.think b { color:var(--navy); }
-/* cover */
-.cover { margin:0 -.7in; height:11in; box-sizing:border-box; padding:.75in .8in .7in; display:flex; flex-direction:column; align-items:center; text-align:center; page-break-after:always; }
-.cover .brand { font-weight:800; text-transform:uppercase; line-height:.9; font-size:12pt; align-self:flex-start; text-align:left; }
-.cover .brand b { display:block; font-size:24pt; }
-.cover .badge { margin-top:.6in; }
-.badge { display:inline-flex; align-items:center; gap:5pt; background:var(--navy); color:var(--cream); font-family:'JetBrains Mono', monospace; font-size:7.5pt; letter-spacing:.12em; text-transform:uppercase; padding:5pt 9pt; border-radius:6pt; }
-.cover h1 { font-size:64pt; margin-top:14pt; }
-.cover h1 span { color:var(--blue); display:inline-flex; align-items:center; gap:10pt; font-size:120pt; line-height:.86; }
-.cover h1 .spark { width:56pt; height:56pt; }
-.cover .sub { font-size:16pt; margin:16pt 0 0; max-width:5.3in; }
-.cover img { width:4.2in; margin-top:.45in; transform:rotate(-2deg); }
-.cover .by { margin-top:auto; font-family:'JetBrains Mono', monospace; font-size:8pt; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); }
-/* intro */
-.intro { page-break-after:always; }
-.start { padding:16pt 18pt; margin-bottom:22pt; }
-.start h2 { font-size:26pt; margin-top:10pt; }
-.start-time { font-family:'JetBrains Mono', monospace; font-size:8pt; letter-spacing:.12em; text-transform:uppercase; color:var(--ink); margin:5pt 0 8pt; }
-.steps { margin:0; padding-left:16pt; font-size:11pt; }
-.steps li { margin-bottom:5pt; }
-.tenhours { margin:12pt 0 0; background:var(--cream); border-radius:10pt; padding:9pt 11pt; font-size:10pt; color:var(--muted); }
-.tenhours b { color:var(--navy); margin-right:3pt; }
-.toc { list-style:none; margin:0; padding:0; display:grid; gap:5pt; }
-.toc li { display:grid; grid-template-columns:.75in 1.9in 1fr; align-items:center; gap:10pt; padding:7pt 12pt; background:var(--foam); border-radius:10pt; }
-.toc-n { font-weight:800; font-size:20pt; color:var(--blue); }
-.toc-name { font-weight:800; text-transform:uppercase; font-size:12pt; }
-.toc-p { font-size:10pt; color:var(--muted); }
-.toc li.extra .toc-n .spark { width:16pt; height:16pt; }
-/* levels */
-.level { page-break-before:always; }
-.lv-head { display:grid; grid-template-columns:auto 1fr; gap:14pt; align-items:end; margin-bottom:10pt; }
-.lv-n { font-weight:800; font-size:52pt; line-height:.78; color:var(--blue); }
-.lv-head h2 { font-size:24pt; }
-.promise { margin:4pt 0 0; font-size:11pt; color:var(--muted); }
-.cards { display:grid; grid-template-columns:1fr 1fr; gap:6pt; }
-.pair { display:grid; grid-template-columns:1fr 1fr; gap:6pt; margin-top:8pt; break-inside:avoid; }
-.try { background:var(--navy); color:var(--cream); border-radius:12pt; padding:9pt 11pt; }
+.aka { display:block; font-family:'JetBrains Mono', monospace; font-size:6.8pt; letter-spacing:.05em; color:var(--muted); margin-top:2pt; }
+.word p { margin:4pt 0 0; }
+.think { color:var(--muted); font-size:9.3pt; }
+.think b { color:var(--navy); font-weight:700; }
+/* the one highlighted box per page */
+.pair { display:grid; grid-template-columns:1.15fr 1fr; gap:20pt; margin-top:16pt; break-inside:avoid; align-items:start; }
+.try { background:var(--navy); color:var(--cream); border-radius:12pt; padding:13pt 15pt; }
 .try .kick { color:var(--sky); }
-.check { background:var(--sky); border-radius:12pt; padding:9pt 11pt; }
-.check .kick { color:var(--navy); }
-.pair ol { margin:0; padding-left:14pt; font-size:9.2pt; line-height:1.35; }
-.pair li { margin-bottom:3pt; }
-.hint { font-size:9pt; color:var(--muted); margin:0 0 5pt; }
-.map { margin-top:18pt; break-inside:avoid; }
+.check { padding:2pt 0; }
+.pair ol { margin:0; padding-left:14pt; font-size:9.6pt; }
+.pair li { margin-bottom:3.5pt; }
+.hint { font-size:9pt; color:var(--muted); margin:0 0 6pt; }
+.map { margin-top:20pt; break-inside:avoid; }
 .map h3 { font-size:22pt; }
-.map-sub { margin:4pt 0 9pt; color:var(--muted); }
-.map-row { display:grid; grid-template-columns:repeat(4,1fr); gap:8pt; }
-.map-row div { background:var(--foam); border-radius:12pt; padding:10pt; }
-.map-row b { display:block; font-weight:800; text-transform:uppercase; font-size:14pt; margin-bottom:3pt; color:var(--blue); }
-.map-row p { margin:0 0 5pt; font-size:9pt; }
+.map-sub { margin:6pt 0 14pt; color:var(--muted); max-width:5.4in; }
+.map-row { display:grid; grid-template-columns:repeat(4,1fr); gap:14pt; }
+.map-row b { display:block; font-weight:800; text-transform:uppercase; font-size:15pt; margin-bottom:4pt; color:var(--blue); }
+.map-row p { margin:0 0 6pt; font-size:9pt; }
 .map-row i { font-style:normal; font-family:'JetBrains Mono', monospace; font-size:6.5pt; letter-spacing:.05em; text-transform:uppercase; color:var(--ink); }
 /* builds */
-.builds-sec { page-break-before:always; }
-.sec-head h2 { font-size:34pt; display:flex; align-items:center; gap:8pt; }
-.sec-head h2 .spark { width:24pt; height:24pt; }
-.sec-head p { margin:6pt 0 12pt; font-size:11.5pt; color:var(--muted); max-width:6in; }
-.prompt { margin-top:8pt; background:var(--cream); border:1.2px dashed var(--dash); border-radius:10pt; padding:8pt 10pt; }
-.prompt .kick { margin-bottom:3pt; }
-.prompt p { margin:0; font-size:9.5pt; }
-/* stuck, next, finish */
-.finish { page-break-before:always; }
-.stuck h2, .nexts h2, .done h2 { font-size:24pt; margin-bottom:8pt; }
-.stuck p { margin:0 0 6pt; }
+.builds { display:grid; grid-template-columns:1fr 1fr; gap:14pt 24pt; }
+.build { break-inside:avoid; }
+.build .lbl { margin:0 0 5pt; }
+.build p { margin:4pt 0 0; }
+.prompt { margin-top:8pt; background:var(--foam); border-radius:12pt; padding:10pt 12pt; }
+.prompt .kick { margin-bottom:4pt; }
+.prompt p { margin:0; font-size:9.3pt; }
+/* first week */
+.week { list-style:none; margin:0; padding:0; display:grid; gap:12pt; max-width:6in; }
+.week li { display:grid; grid-template-columns:.6in 1.6in 1fr; align-items:baseline; gap:10pt; }
+.week .lbl { margin:0; font-size:8pt; }
+.week b { font-weight:800; text-transform:uppercase; font-size:12pt; }
+.week span:last-child { font-size:10pt; color:var(--muted); }
+/* finish */
+.stuck p { margin:0 0 9pt; max-width:5.8in; font-size:10.5pt; }
 .stuck b { font-weight:800; margin-right:3pt; }
-.nexts { margin-top:18pt; }
-.next-row { display:grid; grid-template-columns:repeat(3,1fr); gap:8pt; }
-.next h3 { font-size:13pt; margin-top:2pt; }
-.next p { margin:4pt 0 0; font-size:9.5pt; color:var(--muted); }
-.done { margin-top:18pt; }
-.done h2 span { color:var(--blue); }
-.boxes { columns:3; column-gap:14pt; list-style:none; margin:6pt 0 12pt; padding:0; }
+.nexts { margin-top:28pt; }
+.nexts h2, .done h2 { font-size:22pt; margin-bottom:12pt; }
+.next-row { display:grid; grid-template-columns:repeat(4,1fr); gap:10pt; align-items:stretch; }
+.next { display:flex; flex-direction:column; background:var(--foam); border-radius:12pt; padding:10pt 11pt; color:var(--navy); }
+.next--us { background:var(--navy); color:var(--cream); }
+.next--us .lbl { color:var(--sky); }
+.next--us p { color:var(--sky) !important; }
+.next .lbl { margin:0 0 3pt; }
+.next p { margin:4pt 0 0; font-size:9pt; color:var(--muted); }
+.done { margin-top:28pt; }
+.boxes { columns:3; column-gap:16pt; list-style:none; margin:6pt 0 14pt; padding:0; }
 .boxes li { break-inside:avoid; padding:2.5pt 0 2.5pt 15pt; position:relative; font-size:9.5pt; }
 .boxes li::before { content:''; position:absolute; left:0; top:4.5pt; width:8pt; height:8pt; border:1.2pt solid var(--navy); border-radius:2pt; }
-.sign { font-family:'JetBrains Mono', monospace; font-size:7.5pt; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); margin-top:8pt; }
+.contact { margin-top:16pt; font-size:10pt; color:var(--muted); }
+.outro { background:var(--navy); color:var(--cream); border-radius:12pt; padding:13pt 15pt; font-size:10.5pt; }
+.outro a { color:var(--sky); }
 '''
 
 pdf = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><title>AI from 0 to 1 | Out of Our Depth</title>
@@ -227,36 +245,46 @@ pdf = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><title>AI f
 <style>{PDF_CSS}</style></head><body>
 <section class="cover">
   <div class="brand">Out of our<b>Depth</b></div>
-  <span class="badge">{SPARK} Free study guide  /  {e(edition)}</span>
-  <h1>AI from<br><span>0 to 1 {SPARK}</span></h1>
-  <p class="sub">The {N} words and ideas you need to actually get AI, plus eight fun things to build first</p>
+  <p class="kick">A free study guide</p>
+  <h1>AI from<span>0 to 1</span></h1>
+  <p class="sub">The {N} words you need to actually get AI, the habits that keep you out of trouble, and eight fun things to build first</p>
   <img src="{sticker}" alt="">
   <p class="by">Mary and Josh  /  outofourdepth.com/guide</p>
 </section>
 <section class="intro">
+  <span class="wm" aria-hidden="true">0</span>
   {START}
-  <p class="kick">What's inside</p>
-  <ol class="toc">{toc}<li class="extra"><span class="toc-n">{SPARK}</span><span class="toc-name">Start building</span><span class="toc-p">Eight fun first projects with prompts to copy</span></li><li class="extra"><span class="toc-n">{SPARK}</span><span class="toc-name">If you get stuck</span><span class="toc-p">Quick fixes, where to go next and your checklist</span></li></ol>
+  <ol class="toc">{toc}<li><span class="toc-n">+</span><span class="toc-name">Start building</span><span class="toc-p">Eight fun first projects with prompts to copy</span></li><li><span class="toc-n">+</span><span class="toc-name">Your first week</span><span class="toc-p">One small thing a day</span></li></ol>
 </section>
-{''.join(level_block(lv, i) for i, lv in enumerate(levels))}
-<section class="builds-sec">
-  <div class="sec-head"><p class="kick">Steal our homework</p><h2>Start building {SPARK}</h2><p>The fastest way to learn AI is to make something with it. Pick one, paste the prompt into any AI app, and fill in the [brackets].</p></div>
-  <div class="cards">{builds_pdf}</div>
+{''.join(level_block(lv, i, 'page') for i, lv in enumerate(levels))}
+<section class="page">
+  <span class="wm" aria-hidden="true">+</span>
+  <div class="sec-head"><p class="kick">{SPARK} Steal our homework</p><h2>Start <span class="blue">building</span></h2><p>The fastest way to learn AI is to make something with it. Pick one, paste the prompt into any AI app, and fill in the [brackets].</p></div>
+  <div class="builds">{builds_pdf}</div>
 </section>
-<section class="finish">
-  <div class="stuck"><p class="kick">{SPARK} Happens to everyone</p><h2>If you get stuck</h2>{stuck}</div>
-  <div class="nexts"><p class="kick">Want more?</p><h2>Where to go next</h2><div class="next-row">{nxt}</div></div>
-  <div class="done"><p class="kick">Level 1.0, done</p><h2>You're at <span>1</span></h2><p>Check off every word you could explain to a friend.</p><ul class="boxes">{boxes}</ul>
-  <p>Watch the show at <a href="https://outofourdepth.com/youtube">outofourdepth.com/youtube</a>. Get the notes at <a href="https://outofourdepth.com">outofourdepth.com</a>. {e(NOTE)} Which word still confuses you? Tell us at <a href="mailto:hi@outofourdepth.com">hi@outofourdepth.com</a></p>
-  <p class="sign">AI changes fast. Model names here are current as of {e(month)}. Built with AI, argued over by humans</p></div>
+<section class="flow">
+  <div class="sec-head" style="margin-top:28pt"><p class="kick">One small thing a day</p><h2>Your first <span class="blue">week</span></h2><p>Ten hours sounds like a lot. Split it up and it's one fun thing a day.</p></div>
+  <ol class="week">{week}</ol>
+  <div class="nexts"><p class="kick">Want more?</p><h2>Where to go <span class="blue">next</span></h2><div class="next-row">{US}{nxt}</div></div>
+</section>
+<section class="page">
+  <span class="wm" aria-hidden="true">?</span>
+  <div class="stuck"><p class="kick">Happens to everyone</p><h2 style="font-size:22pt;margin-bottom:12pt">If you get <span class="blue">stuck</span></h2>{stuck}</div>
+</section>
+<section class="flow" style="margin-top:28pt">
+  <div class="sec-head"><p class="kick">Level 1.0, done</p><h2>You're at <span class="blue">1</span></h2><p>Check off every word you could explain to a friend. Anything left, go back and try it once more.</p></div>
+  <ul class="boxes">{boxes}</ul>
+  <p class="contact">Which word still confuses you? Tell us at <a href="mailto:hi@outofourdepth.com">hi@outofourdepth.com</a>. Get the notes at <a href="https://outofourdepth.com">outofourdepth.com</a>. {e(NOTE)}</p>
+
 </section>
 </body></html>'''
+pdf = soften(pdf)
 (SRC / 'study-guide.html').write_text(pdf)
 
 # ---------- Web page ----------
 jump = ('<a href="#start-here">Start here</a>' +
         ''.join(f'<a href="#{slug(lv["n"])}"><b>{lv["n"]}</b> {e(lv["name"])}</a>' for lv in levels) +
-        '<a href="#start-building">Start building</a><a href="#stuck">If you get stuck</a>')
+        '<a href="#start-building">Start building</a><a href="#first-week">Your first week</a><a href="#stuck">If you get stuck</a>')
 PDF_URL = '/downloads/ai-0-to-1-study-guide.pdf'
 page = f'''<!doctype html>
 <html lang="en">
@@ -312,13 +340,18 @@ page = f'''<!doctype html>
       <div class="sec-head"><p class="kick">{SPARK} Steal our homework</p><h2>Start building</h2><p>The fastest way to learn AI is to make something with it. Pick one, paste the prompt into any AI app, and fill in the [brackets].</p></div>
       <div class="cards">{builds}</div>
     </div></section>
+    <section class="level g-week" id="first-week"><div class="h-wrap">
+      <span class="wm" aria-hidden="true">7</span>
+      <div class="sec-head"><p class="kick">One small thing a day</p><h2>Your first <span class="blue">week</span></h2><p>Ten hours sounds like a lot. Split it up and it's one fun thing a day</p></div>
+      <ol class="week">{week}</ol>
+    </div></section>
     <section class="level g-stuck" id="stuck"><div class="h-wrap g-narrow">
       <p class="kick">{SPARK} Happens to everyone</p><h2>If you get stuck</h2>
       {stuck}
     </div></section>
     <section class="level g-next"><div class="h-wrap">
       <p class="kick">Want more?</p><h2>Where to go next</h2>
-      <div class="next-row">{nxt}<a class="card next" href="https://www.youtube.com/@OutOfOurDepthPod" target="_blank" rel="noopener"><span class="tag tag--off">Us</span><h3>Out of Our Depth</h3><p>New episodes every week</p></a></div>
+      <div class="next-row">{US}{nxt}</div>
     </div></section>
     <section class="g-finish" id="notes">
       <div class="h-wrap g-finish__inner">
@@ -335,7 +368,7 @@ page = f'''<!doctype html>
           <p class="h-note">{e(NOTE)}</p>
           <p class="notes__status" data-notes-status role="status" aria-live="polite"></p>
         </form>
-        <p class="g-small">Spot something out of date? Tell us at <a href="mailto:hi@outofourdepth.com">hi@outofourdepth.com</a>. AI changes fast. Model names here are current as of {e(month)}.</p>
+        <p class="g-small">Spot something out of date? Tell us at <a href="mailto:hi@outofourdepth.com">hi@outofourdepth.com</a>.</p>
       </div>
     </section>
   </main>
@@ -363,6 +396,7 @@ page = f'''<!doctype html>
 </body>
 </html>
 '''
+page = soften(page)
 (WEB / 'guide.html').write_text(page)
 
 # ---------- Render the PDF and the cover image ----------
@@ -376,17 +410,27 @@ foot = (PAINT + '<div style="position:absolute;left:0;right:0;bottom:0;height:.6
         'font-family:Helvetica,Arial,sans-serif;font-size:7.5px;letter-spacing:1.2px;color:#4F6072;'
         'display:flex;justify-content:space-between;align-items:center;padding:0 .7in;box-sizing:border-box">'
         '<span>OUT OF OUR DEPTH  /  AI FROM 0 TO 1</span><span class="pageNumber"></span></div>')
+import pypdf, io
 with sync_playwright() as p:
     kw = {'executable_path': os.environ['CHROME']} if os.environ.get('CHROME') else {}
     b = p.chromium.launch(**kw)
     pg = b.new_page()
     pg.goto((SRC / 'study-guide.html').as_uri(), wait_until='networkidle')
     pg.evaluate('document.fonts.ready')
-    pg.pdf(path=str(out), print_background=True, prefer_css_page_size=True, display_header_footer=True,
-           header_template=head, footer_template=foot)
+    # The cream header and footer would paint over the navy cover, so the cover prints on its own.
+    cover = pg.pdf(print_background=True, prefer_css_page_size=True, page_ranges='1')
+    rest = pg.pdf(print_background=True, prefer_css_page_size=True, display_header_footer=True,
+                  header_template=head, footer_template=foot, page_ranges='2-')
     pg.set_viewport_size({'width': 816, 'height': 1056})
     pg.screenshot(path=str(SRC / 'cover.png'), clip={'x': 0, 'y': 0, 'width': 816, 'height': 1056})
     b.close()
+w = pypdf.PdfWriter()
+for part in (cover, rest):
+    for page in pypdf.PdfReader(io.BytesIO(part)).pages:
+        w.add_page(page)
+w.add_metadata({'/Title': 'AI from 0 to 1: a free study guide', '/Author': 'Out of Our Depth (Mary and Josh)'})
+with open(out, 'wb') as f:
+    w.write(f)
 
 from PIL import Image
 Image.open(SRC / 'cover.png').convert('RGB').resize((612, 792), Image.LANCZOS).save(WEB / 'images' / 'guide-cover.webp', quality=88, method=6)

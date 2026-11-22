@@ -1,5 +1,4 @@
 {
-  "edition": "November 2026 edition",
   "episodes": {
     "010": "V_DVa4fi3q0",
     "011": "cH2al7Y1QKA",
@@ -10,7 +9,7 @@
     "title": "New here? Do this first",
     "time": "20 minutes",
     "steps": [
-      "Pick one app: ChatGPT, Claude or Gemini. The free version is fine to start, and you can switch later.",
+      "Pick one app: ChatGPT, Claude or Gemini. The free version is fine to start, and you can always switch.",
       "Check your privacy setting. It takes two minutes. See \"Your data\" in level 0.4.",
       "Do the level 0.0 try-its, then pick one build from Start building. Make something today."
     ]
@@ -47,7 +46,7 @@
     {
       "n": "0.0",
       "name": "Say hi",
-      "promise": "What AI is, what to call things, and the one habit that fixes most bad answers.",
+      "promise": "You don't need to know how it works to start. You need a few words and one good habit.",
       "words": [
         "generative-ai",
         "prompt",
@@ -66,12 +65,13 @@
         "In one sentence, what's the difference between a model and an app?",
         "Why does a better prompt usually beat a better model?",
         "Name one time you'd double check an AI answer before using it."
-      ]
+      ],
+      "accent": "hi"
     },
     {
       "n": "0.2",
       "name": "Make it yours",
-      "promise": "Stop re-explaining yourself. Set it up once so every chat starts smarter.",
+      "promise": "Stop re-explaining yourself every chat. Set it up once and it starts smarter every time.",
       "words": [
         "memory",
         "custom-instructions",
@@ -89,12 +89,13 @@
         "What's the difference between memory and custom instructions?",
         "When is a small, fast model the right pick?",
         "What kind of question is worth a deep research report?"
-      ]
+      ],
+      "accent": "yours"
     },
     {
       "n": "0.4",
       "name": "Spot the traps",
-      "promise": "The ways AI quietly lets you down, and the easy habits that protect you.",
+      "promise": "AI fails quietly and confidently. These are the ways it happens, and the easy habits that protect you.",
       "words": [
         "your-data",
         "knowledge-cutoff",
@@ -113,12 +114,13 @@
         "What's one thing you'd never paste into a chatbot?",
         "What are two signs a piece of writing is AI slop?",
         "Why is prompt injection a bigger deal once AI can take actions for you?"
-      ]
+      ],
+      "accent": "traps"
     },
     {
       "n": "0.6",
       "name": "Under the hood",
-      "promise": "Enough of how it works to follow the news and ask good questions.",
+      "promise": "Just enough of how it works to follow the news, ask good questions and not get fooled by hype.",
       "words": [
         "training",
         "token",
@@ -139,12 +141,13 @@
         "Why do long chats sometimes get worse?",
         "RAG or fine-tuning: which one would you use to answer questions about your company handbook, and why?",
         "Why do AI companies care so much about GPUs and data centers?"
-      ]
+      ],
+      "accent": "hood"
     },
     {
       "n": "0.8",
       "name": "AI that does things",
-      "promise": "The jump from answering questions to getting work done for you.",
+      "promise": "The jump from answering questions to actually getting stuff done for you, with you still in charge.",
       "words": [
         "agent",
         "skills",
@@ -162,12 +165,13 @@
         "What makes something an agent and not just a chatbot?",
         "What's one task you'd hand to an agent, and one you wouldn't yet?",
         "What would you want to approve before AI clicks buy or send for you?"
-      ]
+      ],
+      "accent": "does"
     },
     {
       "n": "1.0",
       "name": "The big questions",
-      "promise": "The debates everyone is having. You don't need answers, just your own take.",
+      "promise": "The debates everyone is having. Nobody has the answers yet, so your take counts.",
       "words": [
         "scaling-laws",
         "alignment",
@@ -183,7 +187,8 @@
         "If AGI arrived tomorrow, how would you know?",
         "Who should decide what AI is allowed to do?",
         "What's one thing you'd never hand to AI, no matter how good it gets?"
-      ]
+      ],
+      "accent": "big"
     }
   ],
   "builds": [
@@ -282,20 +287,68 @@
     [
       "AI Fluency",
       "Anthropic",
-      "3 to 4 hours, free",
+      "Free online course",
       "https://www.anthropic.com/ai-fluency"
     ],
     [
       "AI Foundations",
       "OpenAI Academy",
-      "About 70 minutes",
+      "Free online course",
       "https://openai.com/academy"
     ],
     [
-      "AI Essentials",
-      "Google",
-      "Under 5 hours",
-      "https://grow.google/ai-essentials/"
+      "Elements of AI",
+      "University of Helsinki",
+      "Free online course",
+      "https://www.elementsofai.com/"
+    ]
+  ],
+  "overrides": {
+    "model-vs-app": {
+      "definition": "OpenAI is the company. GPT is its family of models. ChatGPT is the app you open. Same idea for Anthropic, Claude models and the Claude app."
+    },
+    "model-sizes": {
+      "definition": "Most AI companies sell a few sizes of the same model. Bigger is smarter, smaller is faster and cheaper, and the names change every few months."
+    },
+    "gpu": {
+      "definition": "The chips that do AI's heavy math. Nvidia makes most of them, and every AI company wants more."
+    }
+  },
+  "first_week": [
+    [
+      "Mon",
+      "Say hi",
+      "Do the three level 0.0 try-its. Birthday message twice, fact check, fridge photo"
+    ],
+    [
+      "Tue",
+      "Make it yours",
+      "Write your three lines of custom instructions and start one project"
+    ],
+    [
+      "Wed",
+      "Check your settings",
+      "Two minutes in privacy settings. Then ask for a smart skeptic's take on an idea you love"
+    ],
+    [
+      "Thu",
+      "Quiz me",
+      "Pick something you're learning and run the Quiz me, don't tell me prompt"
+    ],
+    [
+      "Fri",
+      "Build a tiny app",
+      "Make the dinner bill splitter, then use it at dinner"
+    ],
+    [
+      "Sat",
+      "Settle a debate",
+      "Run the debate prompt on something you and a friend actually disagree about"
+    ],
+    [
+      "Sun",
+      "Clear your week",
+      "Sort next week into three piles: AI does it, AI helps, you do it"
     ]
   ]
 }
