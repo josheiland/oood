@@ -27,6 +27,12 @@ window.OOOD = {
   episodes: [
     // episodes:start
     {
+      id: 'B7CdxJTgh_0', number: '014', title: 'How We Use ChatGPT, Claude & Instinct as Personal Assistants',
+      published: '2026-11-22T04:54:07+00:00',
+      url: 'https://www.youtube.com/watch?v=B7CdxJTgh_0',
+      thumbnail: 'https://i.ytimg.com/vi/B7CdxJTgh_0/maxresdefault.jpg'
+    },
+    {
       id: 'IWYHJ2VxDNA', number: '013', title: 'The Jensen Huang Scandal, Explained Simply',
       published: '2026-11-15T18:53:19+00:00',
       url: 'https://www.youtube.com/watch?v=IWYHJ2VxDNA',
