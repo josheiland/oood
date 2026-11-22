@@ -123,7 +123,7 @@
   {
    "n": "0.0",
    "name": "Say hi",
-   "promise": "You don't need to know how it works to start. You need a few words and one good habit.",
+   "promise": "You don't need to know how it works to start. These ten words are enough to get going.",
    "words": [
     "generative-ai",
     "prompt",
@@ -188,7 +188,7 @@
   {
    "n": "0.4",
    "name": "Spot the traps",
-   "promise": "AI fails quietly and confidently. These are the ways it happens, and the easy habits that protect you.",
+   "promise": "AI rarely fails loudly. Here's what to watch for, and the easy habits that protect you.",
    "words": [
     "your-data",
     "knowledge-cutoff",
@@ -532,7 +532,7 @@
   "This is the guide we wish someone had handed us. Words in plain English, habits that keep you out of trouble, and fun things to build. You can read it in an afternoon (if you're not dyslexic, sry Mary)"
  ],
  "ourselves": [
-  "The ideas and the opinions. AI can argue both sides, but our take is ours",
+  "The ideas and the opinions. AI can argue both sides, but we pick one",
   "The jokes, and the real replies to real people",
   "The final say on anything with our names on it",
   "Anything that's supposed to sound like it came from our hearts"
@@ -638,7 +638,7 @@
    "time": "10 min",
    "level": "Thinking partner",
    "prompt": "My partner and I disagree about [topic]. Give the strongest case for each side, then tell us what evidence would change each of our minds. Don't pick a winner.",
-   "what": "Hand AI both sides of an argument and ask for the best case for each. Think referee, not judge",
+   "what": "Hand AI both sides of an argument and get the best case for each, without it picking a winner",
    "get": "The strongest version of each side, and what would change each mind"
   }
  ]

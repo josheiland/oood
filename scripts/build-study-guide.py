@@ -331,7 +331,7 @@ pdf = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><title>AI f
 </section>
 <section class="page">
   <span class="wm" aria-hidden="true">5</span>
-  <div class="sec-head"><p class="kick">{SPARK} Dip a toe in</p><h2>5 fun ways to get <span class="blue">started</span></h2><p>The fastest way to learn AI is to make something with it. Pick one, paste the prompt into any AI app, and fill in the [brackets].</p></div>
+  <div class="sec-head"><p class="kick">{SPARK} Dip a toe in</p><h2>5 fun ways to get <span class="blue">started</span></h2><p>The fastest way to learn AI is to make something with it. Pick one, fill in the [brackets] and paste the prompt into any AI app.</p></div>
   <div class="builds">{ways_pdf}</div>
   {TEN}
 </section>
@@ -410,7 +410,7 @@ page = f'''<!doctype html>
     </section>
     <section class="g-why h-wrap"><div class="g-narrow"><p class="kick">Why we made this</p>{WHY}</div></section>
     <section class="g-ways" id="start-building"><div class="h-wrap">
-      <div class="sec-head"><p class="kick">{SPARK} Dip a toe in</p><h2>5 fun ways to get <span class="blue">started</span></h2><p>The fastest way to learn AI is to make something with it. Pick one, paste the prompt into any AI app, and fill in the [brackets].</p></div>
+      <div class="sec-head"><p class="kick">{SPARK} Dip a toe in</p><h2>5 fun ways to get <span class="blue">started</span></h2><p>The fastest way to learn AI is to make something with it. Pick one, fill in the [brackets] and paste the prompt into any AI app.</p></div>
       <div class="ways">{ways}</div>
       {TEN}
     </div></section>
