@@ -3,7 +3,10 @@
     "010": "V_DVa4fi3q0",
     "011": "cH2al7Y1QKA",
     "012": "NKtHzD6y60s",
-    "013": "IWYHJ2VxDNA"
+    "013": "IWYHJ2VxDNA",
+    "007": "82qlgC3QcEw",
+    "008": "lGp5szF6HI4",
+    "009": "yhVYY1N7hDg"
   },
   "start_here": {
     "title": "New here? Do this first",
@@ -20,14 +23,22 @@
       "id": "jagged-frontier",
       "title": "Jagged frontier",
       "definition": "AI is amazing at some things and weirdly bad at others, and the split isn't what you'd guess. The only way to find the edges is to try it on your own stuff.",
-      "think": "A genius who still can't fold a fitted sheet."
+      "think": "A genius who still can't fold a fitted sheet.",
+      "episode": {
+        "number": "008",
+        "time": "02:39"
+      }
     },
     "your-data": {
       "id": "your-data",
       "title": "Your data",
       "aka": "Privacy settings",
       "definition": "On free and personal plans, your chats can be used to train future models unless you switch that off in settings. Either way, don't paste in passwords, account numbers or anything you'd hate to see again.",
-      "think": "Talking in a coffee shop. Mostly fine, but you lower your voice for some things."
+      "think": "Talking in a coffee shop. Mostly fine, but you lower your voice for some things.",
+      "episode": {
+        "number": "002",
+        "time": "37:58"
+      }
     },
     "bias": {
       "id": "bias",
@@ -311,7 +322,53 @@
       "definition": "Most AI companies sell a few sizes of the same model. Bigger is smarter, smaller is faster and cheaper, and the names change every few months."
     },
     "gpu": {
-      "definition": "The chips that do AI's heavy math. Nvidia makes most of them, and every AI company wants more."
+      "definition": "The chips that do AI's heavy math. Nvidia makes most of them, and every AI company wants more.",
+      "episode": {
+        "number": "013",
+        "time": "07:36"
+      }
+    },
+    "agi": {
+      "episode": {
+        "number": "008",
+        "time": "01:24"
+      }
+    },
+    "superintelligence": {
+      "episode": {
+        "number": "008",
+        "time": "04:56"
+      }
+    },
+    "benchmark": {
+      "episode": {
+        "number": "008",
+        "time": "14:53"
+      }
+    },
+    "data-center": {
+      "episode": {
+        "number": "012",
+        "time": "01:05"
+      }
+    },
+    "memory": {
+      "episode": {
+        "number": "001",
+        "time": "18:39"
+      }
+    },
+    "context-window": {
+      "episode": {
+        "number": "001",
+        "time": "03:12"
+      }
+    },
+    "fine-tuning": {
+      "episode": {
+        "number": "002",
+        "time": "11:24"
+      }
     }
   },
   "first_week": [
@@ -361,5 +418,6 @@
     "The jokes, and the real replies to real people",
     "The final say on anything with our names on it",
     "Anything that's supposed to sound like it came from our hearts"
-  ]
+  ],
+  "episode_sources": "Timestamps found 2026-11-21 by searching the final caption files in Drive (Video Files/Final). Ep 012's came from the v8 review cut. Episodes 007 and 010 had no caption files to search."
 }
