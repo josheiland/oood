@@ -54,22 +54,16 @@
 .home .notes__status--ok { color: var(--navy); font-weight: 700; }
 .home .notes__status--err { color: #B3261E; }
 
-/* Watch or listen: three quiet outline buttons */
-.h-listen { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 26px; }
-.lbtn {
-  display: inline-flex; align-items: center; gap: 8px; height: 44px; padding: 0 16px; border: 1.5px solid var(--navy);
-  border-radius: 999px; color: var(--navy); text-decoration: none; font-weight: 700; font-size: 15px; transition: background .15s, color .15s;
-}
-.lbtn:hover { background: var(--navy); color: var(--cream); }
-.lbtn__icon { width: 20px; height: 20px; }
-.lbtn:hover .lbtn__icon [fill="#FBF1E5"] { fill: var(--navy); }
-.lbtn:hover .lbtn__icon [stroke="#FBF1E5"] { stroke: var(--navy); }
-.lbtn.btn--soon { opacity: .5; pointer-events: none; }
+/* Watch or listen: one quiet line of links under the email note (Mary 2026-11-21) */
+.h-listen { margin: 6px 0 0; font-size: 15px; color: var(--muted); }
+.h-listen a { color: var(--navy); font-weight: 700; text-decoration: underline; text-decoration-color: var(--blue); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+.h-listen a:hover { color: var(--ink); }
+.h-listen a.btn--soon { pointer-events: none; opacity: .6; }
 
 /* Sections */
 .h-sec { padding: 96px 0; }
 .h-get { padding-top: 24px; }
-.h-rule { border-top: 1px solid var(--line); }
+.h-rule { border-top: 0; } /* no divider lines (Mary 2026-11-21) */
 .h-three { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
 .h-get h2 { margin: 12px 0 8px; font-weight: 800; font-size: 24px; line-height: 1.05; text-transform: uppercase; }
 .h-get p:not(.h-mono) { margin: 0; font-size: 17px; line-height: 1.5; color: var(--muted); }
@@ -78,6 +72,15 @@
 .h-head h2, .h-guide h2 { margin: 0; font-weight: 800; font-size: 56px; line-height: .9; letter-spacing: -.025em; text-transform: uppercase; }
 .h-head__all:hover { text-decoration: underline; }
 
+/* Try it yourself cards (from the earlier C1 mock) */
+.h-card { display: flex; flex-direction: column; gap: 12px; min-height: 240px; padding: 28px; border-radius: 22px; background: var(--foam); color: var(--navy); text-decoration: none; transition: transform .2s ease, background .2s; }
+.h-card:hover { transform: translateY(-3px); background: #FFFFFF; }
+.h-card__k { color: var(--muted); }
+.h-card__t { font-weight: 800; font-size: 26px; line-height: 1; text-transform: uppercase; }
+.h-card__p { font-size: 16px; line-height: 1.5; color: var(--muted); }
+.h-card__go { margin-top: auto; }
+.h-try { text-align: left !important; }
+
 /* Study guide band */
 .h-guide { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 64px; align-items: center; }
 .h-guide__cover { display: block; transform: rotate(-2deg); transition: transform .3s ease; }
@@ -85,8 +88,8 @@
 .h-guide__cover img { width: 100%; height: auto; border-radius: 6px; box-shadow: 0 2px 0 var(--line), 0 24px 48px -24px rgba(11, 42, 69, .35); }
 .h-guide__copy .h-mono { margin-bottom: 14px; }
 .h-guide__copy > p:not(.h-mono) { margin: 18px 0 20px; font-size: 18px; line-height: 1.5; color: var(--muted); max-width: 520px; }
-.h-guide__levels { list-style: none; margin: 0 0 30px; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 24px; max-width: 520px; }
-.h-guide__levels li { padding: 9px 0; border-bottom: 1px solid var(--line); font-weight: 700; text-transform: uppercase; font-size: 15px; }
+.h-guide__levels { list-style: none; margin: 0 0 30px; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; max-width: 520px; }
+.h-guide__levels li { padding: 10px 14px; border-radius: 10px; background: var(--foam); font-weight: 700; text-transform: uppercase; font-size: 15px; }
 .h-guide__levels b { display: inline-block; width: 40px; color: var(--blue); font-weight: 800; }
 
 /* Episodes: six newest, three across, all the same size */
@@ -100,7 +103,7 @@
 /* Footer */
 .h-foot { background: var(--navy); color: var(--cream); padding: 96px 0 40px; text-align: center; }
 .h-foot__big { margin: 0; font-weight: 800; text-transform: uppercase; font-size: 160px; line-height: .82; letter-spacing: -.035em; }
-.h-foot__row { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; margin-top: 48px; padding-top: 24px; border-top: 1px solid rgba(189, 229, 255, .25); }
+.h-foot__row { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; margin-top: 56px; }
 .h-foot__links { display: flex; flex-wrap: wrap; gap: 24px; }
 .h-foot__links a { color: var(--sky); font-family: var(--mono); font-size: 13px; letter-spacing: .1em; text-transform: uppercase; text-decoration: none; }
 .h-foot__links a:hover { color: var(--cream); }

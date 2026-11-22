@@ -1,11 +1,62 @@
 {
   "edition": "November 2026 edition",
+  "episodes": {
+    "010": "V_DVa4fi3q0",
+    "011": "cH2al7Y1QKA",
+    "012": "NKtHzD6y60s",
+    "013": "IWYHJ2VxDNA"
+  },
+  "start_here": {
+    "title": "New here? Do this first",
+    "time": "20 minutes",
+    "steps": [
+      "Pick one app: ChatGPT, Claude or Gemini. The free version is fine to start, and you can switch later.",
+      "Check your privacy setting. It takes two minutes. See \"Your data\" in level 0.4.",
+      "Do the level 0.0 try-its, then pick one build from Start building. Make something today."
+    ]
+  },
+  "ten_hours": "Wharton professor Ethan Mollick's rule of thumb: AI starts to click after about ten hours of real use. Use it on stuff you already know, so you can tell when it's wrong.",
+  "extra_words": {
+    "jagged-frontier": {
+      "id": "jagged-frontier",
+      "title": "Jagged frontier",
+      "definition": "AI is amazing at some things and weirdly bad at others, and the split isn't what you'd guess. The only way to find the edges is to try it on your own stuff.",
+      "think": "A genius who still can't fold a fitted sheet."
+    },
+    "your-data": {
+      "id": "your-data",
+      "title": "Your data",
+      "aka": "Privacy settings",
+      "definition": "On free and personal plans, your chats can be used to train future models unless you switch that off in settings. Either way, don't paste in passwords, account numbers or anything you'd hate to see again.",
+      "think": "Talking in a coffee shop. Mostly fine, but you lower your voice for some things."
+    },
+    "bias": {
+      "id": "bias",
+      "title": "Bias",
+      "definition": "AI learned from human writing, so it picked up our blind spots too, like picturing every CEO as a man. Notice it, and ask for other angles.",
+      "think": "A mirror that can also magnify."
+    },
+    "human-in-the-loop": {
+      "id": "human-in-the-loop",
+      "title": "Human in the loop",
+      "definition": "You stay the one who checks and signs off, especially before AI sends, buys or posts anything for you. Your name is on it, not the AI's.",
+      "think": "Autopilot still needs a pilot."
+    }
+  },
   "levels": [
     {
       "n": "0.0",
       "name": "Say hi",
       "promise": "What AI is, what to call things, and the one habit that fixes most bad answers.",
-      "words": ["generative-ai", "prompt", "llm", "model-vs-app", "hallucination", "multimodal"],
+      "words": [
+        "generative-ai",
+        "prompt",
+        "llm",
+        "model-vs-app",
+        "hallucination",
+        "multimodal",
+        "jagged-frontier"
+      ],
       "try": [
         "Ask for a birthday message twice. First just \"write a birthday message.\" Then write it like a text to a smart friend: who it's for, how you know them, one inside joke, how long. Compare the two.",
         "Ask it for a fact with a source. Click the source. Does it exist and say what the AI claimed?",
@@ -21,7 +72,14 @@
       "n": "0.2",
       "name": "Make it yours",
       "promise": "Stop re-explaining yourself. Set it up once so every chat starts smarter.",
-      "words": ["memory", "custom-instructions", "projects", "model-sizes", "reasoning", "deep-research"],
+      "words": [
+        "memory",
+        "custom-instructions",
+        "projects",
+        "model-sizes",
+        "reasoning",
+        "deep-research"
+      ],
       "try": [
         "Write three lines of custom instructions: who you are, how you like answers, and one thing to never do.",
         "Start a project for one ongoing thing in your life, like a trip, a job search or a class. Add one file.",
@@ -37,14 +95,22 @@
       "n": "0.4",
       "name": "Spot the traps",
       "promise": "The ways AI quietly lets you down, and the easy habits that protect you.",
-      "words": ["knowledge-cutoff", "ai-slop", "sycophancy", "deepfake", "prompt-injection"],
+      "words": [
+        "your-data",
+        "knowledge-cutoff",
+        "ai-slop",
+        "sycophancy",
+        "bias",
+        "deepfake",
+        "prompt-injection"
+      ],
       "try": [
+        "Open Settings and find the privacy or data controls. Decide on purpose whether your chats can be used for training.",
         "Share an idea you like and ask: \"What would a smart skeptic say? Be blunt.\" Compare that to its first reaction.",
-        "Ask about something from this week with web search off, then on. Notice the difference.",
         "Pick a family safe word you'd ask for if \"you\" ever called asking for money."
       ],
       "check": [
-        "How can you tell a model is past its knowledge cutoff?",
+        "What's one thing you'd never paste into a chatbot?",
         "What are two signs a piece of writing is AI slop?",
         "Why is prompt injection a bigger deal once AI can take actions for you?"
       ]
@@ -53,7 +119,17 @@
       "n": "0.6",
       "name": "Under the hood",
       "promise": "Enough of how it works to follow the news and ask good questions.",
-      "words": ["training", "token", "context-window", "open-closed", "benchmark", "gpu", "data-center", "rag", "fine-tuning"],
+      "words": [
+        "training",
+        "token",
+        "context-window",
+        "open-closed",
+        "benchmark",
+        "gpu",
+        "data-center",
+        "rag",
+        "fine-tuning"
+      ],
       "try": [
         "Search \"tokenizer\" and paste in a sentence. Watch how it gets chopped into tokens.",
         "Upload a long PDF and ask three questions, each with the page number of the answer. Check one.",
@@ -69,9 +145,16 @@
       "n": "0.8",
       "name": "AI that does things",
       "promise": "The jump from answering questions to getting work done for you.",
-      "words": ["agent", "skills", "mcp", "computer-use", "vibe-coding"],
+      "words": [
+        "agent",
+        "skills",
+        "mcp",
+        "computer-use",
+        "vibe-coding",
+        "human-in-the-loop"
+      ],
       "try": [
-        "Vibe code something tiny: \"Make me a tip calculator for splitting dinner with friends.\" Use it once for real.",
+        "Vibe code something tiny, like the dinner bill splitter in Start building. Use it once for real.",
         "Connect one app you already use, like your calendar or Drive, and ask it to find something for you.",
         "Give an agent a job with a clear finish line, like \"find three Saturday hikes under an hour away and put them in a table.\""
       ],
@@ -85,7 +168,12 @@
       "n": "1.0",
       "name": "The big questions",
       "promise": "The debates everyone is having. You don't need answers, just your own take.",
-      "words": ["scaling-laws", "alignment", "agi", "superintelligence"],
+      "words": [
+        "scaling-laws",
+        "alignment",
+        "agi",
+        "superintelligence"
+      ],
       "try": [
         "Pick one big question below. Write your own opinion in three sentences before you ask AI anything.",
         "Then ask AI for the strongest argument against you. Did it change your mind or sharpen it?",
@@ -97,5 +185,117 @@
         "What's one thing you'd never hand to AI, no matter how good it gets?"
       ]
     }
+  ],
+  "builds": [
+    {
+      "id": "dinner",
+      "title": "What's for dinner?",
+      "time": "5 min",
+      "level": "Any app with photos",
+      "why": "The fastest way to see what multimodal means",
+      "prompt": "Here's a photo of my fridge. Give me three dinners I can make tonight with what's in here, plus anything I'd need to grab. Keep each one under 30 minutes."
+    },
+    {
+      "id": "voice",
+      "title": "Teach it your voice",
+      "time": "15 min",
+      "level": "Custom instructions",
+      "watch": "005",
+      "why": "Every draft after this sounds a little more like you.",
+      "prompt": "Interview me one question at a time about how I write: who I usually write to, words I use a lot, and things I'd never say. After eight questions, write a short voice guide I can paste into my custom instructions."
+    },
+    {
+      "id": "quiz",
+      "title": "Quiz me, don't tell me",
+      "time": "10 min",
+      "level": "Learning",
+      "watch": "011",
+      "why": "Use AI to learn faster without letting it do the thinking.",
+      "prompt": "I'm learning [topic]. Quiz me one question at a time. Don't give me the answer until I've tried. If I'm wrong, give me a hint first, then the answer."
+    },
+    {
+      "id": "coach",
+      "title": "Your own coach",
+      "time": "15 min",
+      "level": "Projects",
+      "watch": "004",
+      "why": "A project that remembers your goal and checks in on it",
+      "prompt": "You're my coach for [goal]. Start by asking me five questions about where I am now and what gets in my way. Then give me a plan for this week. Every time I come back, ask how it went before you give advice. Be honest, not a cheerleader."
+    },
+    {
+      "id": "app",
+      "title": "Build a tiny app",
+      "time": "10 min",
+      "level": "Vibe coding",
+      "why": "You just made software. No code required.",
+      "prompt": "Make me a simple, colorful web app that splits a dinner bill. I type the total, the tip and everyone's names, and it shows what each person owes. Make it easy to use on my phone."
+    },
+    {
+      "id": "party",
+      "title": "Plan the party",
+      "time": "15 min",
+      "level": "Reasoning",
+      "watch": "006",
+      "why": "We planned parts of our wedding this way. It handles the boring logistics so you can do the fun part.",
+      "prompt": "I'm planning [event] for [number] people on [date] with a budget of [amount]. Ask me what matters most first. Then give me a timeline, a checklist and three ideas that would make it feel like us."
+    },
+    {
+      "id": "debate",
+      "title": "Settle a debate",
+      "time": "10 min",
+      "level": "Thinking partner",
+      "why": "Our favorite use. It won't pick a side, and that's the point.",
+      "prompt": "My partner and I disagree about [topic]. Give the strongest case for each side, then tell us what evidence would change each of our minds. Don't pick a winner."
+    },
+    {
+      "id": "week",
+      "title": "Clear your week",
+      "time": "10 min",
+      "level": "Delegation",
+      "why": "Figure out what AI should do for you, and what you should still do yourself.",
+      "prompt": "Here's everything on my plate this week: [paste your list]. Sort it into three piles: things AI could do for me, things AI could help me do, and things I should do myself. Explain each pick in one line."
+    }
+  ],
+  "stuck": [
+    [
+      "It sounds generic.",
+      "Show it, don't describe it. Paste an example you love and say \"more like this.\""
+    ],
+    [
+      "It got something wrong.",
+      "Tell it exactly what's off, like you'd tell a new coworker. Then ask it to double check its own answer."
+    ],
+    [
+      "It agrees with everything.",
+      "Ask \"What would a smart skeptic say?\" or \"What am I missing?\""
+    ],
+    [
+      "It forgot what you said.",
+      "Long chats slip. Start a fresh chat with a quick summary, or keep the work in a project."
+    ],
+    [
+      "You don't know what to ask.",
+      "Let it interview you: \"Here's my week. What could you help with?\""
+    ]
+  ],
+  "next": [
+    [
+      "AI Fluency",
+      "Anthropic",
+      "3 to 4 hours, free",
+      "https://www.anthropic.com/ai-fluency"
+    ],
+    [
+      "AI Foundations",
+      "OpenAI Academy",
+      "About 70 minutes",
+      "https://openai.com/academy"
+    ],
+    [
+      "AI Essentials",
+      "Google",
+      "Under 5 hours",
+      "https://grow.google/ai-essentials/"
+    ]
   ]
 }
