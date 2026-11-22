@@ -115,6 +115,11 @@ def headline(name, accent):
         return html.escape(name[:i]) + f'<span class="blue">{html.escape(name[i:i + len(accent)])}</span>' + html.escape(name[i + len(accent):])
     return e(name)
 
+# The web shows Learn, look, think, act inside level 0.6. In print it gets its own page right after 0.6,
+# so it really is "the whole thing on one page" and level 0.6 keeps its words and quiz together.
+MAP_PAGE = f'''
+<section class="page map-page"><span class="wm" aria-hidden="true">4</span>{MAP}</section>'''
+
 def level_pdf(lv, i):
     words = ''.join(word_card(topics[w]) for w in lv['words'])
     return f'''<section class="level" id="{slug(lv["n"])}"><div class="page">
@@ -122,8 +127,7 @@ def level_pdf(lv, i):
   <header class="lv-head"><p class="kick">Level {lv["n"]}  /  {e(lv["depth"])}  /  {len(lv["words"])} words</p><h2>{headline(lv["name"], lv.get("accent"))}</h2><p class="promise">{e(lv["promise"])}</p></header>
   <div class="cards{' cards--3' if len(lv["words"]) > 10 else ''}">{words}</div>
   {air_pdf(lv)}
-  {MAP if lv["n"] == "1.0" else ""}
-</div></section>'''
+</div></section>{MAP_PAGE if lv["n"] == "0.6" else ""}'''
 
 def level_web(lv, i):
     words = ''.join(word_card(topics[w]) for w in lv['words'])
@@ -145,12 +149,7 @@ def way_card(b, web):
             f'<div class="prompt"><p class="kick">Copy this into any AI app</p><p id="p-{b["id"]}">{e(b["prompt"])}</p>{copy}</div></article>')
 
 sh = guide['start_here']
-start_steps = ''.join(f'<li>{e(s)}</li>' for s in sh['steps'])
 TEN = f'<p class="tenhours"><b>The ten-hour rule</b> {e(guide["ten_hours"])}</p>'
-START = f'''<div class="start"><p class="kick">{SPARK} Start here</p>
-  <h2>{e(sh["title"])}</h2><p class="start-time">{e(sh["time"])}</p>
-  <ol class="steps">{start_steps}</ol>
-  {TEN}</div>'''
 
 ways = ''.join(way_card(b, True) for b in guide['ways'])
 ways_pdf = ''.join(way_card(b, False) for b in guide['ways'])
@@ -242,6 +241,13 @@ a { color:var(--ink); text-decoration:none; }
 .map-row { display:grid; grid-template-columns:repeat(4,1fr); gap:14pt; }
 .map-row b { display:block; font-weight:800; text-transform:uppercase; font-size:15pt; margin-bottom:4pt; color:var(--blue); }
 .map-row p { margin:0 0 6pt; font-size:9pt; }
+.map-page .map { margin-top:0; }
+.map-page .map h3 { font-size:32pt; }
+.map-page .map-sub { font-size:11.5pt; line-height:1.4; margin:8pt 0 26pt; }
+.map-page .map-row { grid-template-columns:1fr 1fr; gap:30pt 36pt; max-width:6.4in; }
+.map-page .map-row b { font-size:34pt; margin-bottom:8pt; }
+.map-page .map-row p { font-size:12.5pt; line-height:1.4; margin-bottom:10pt; }
+.map-page .map-row i { font-size:8.5pt; }
 .map-row i { font-style:normal; font-family:'JetBrains Mono', monospace; font-size:6.5pt; letter-spacing:.05em; text-transform:uppercase; color:var(--ink); }
 /* builds */
 .builds { display:grid; grid-template-columns:1fr 1fr; gap:14pt 24pt; }
@@ -289,6 +295,7 @@ a { color:var(--ink); text-decoration:none; }
 .ours li { margin-bottom:3pt; break-inside:avoid; }
 .help { margin-top:8pt !important; font-weight:700; }
 .contact { margin-top:16pt; font-size:10pt; color:var(--muted); }
+.contact + .contact { margin-top:5pt; }
 .sign { margin-top:14pt; font-family:'JetBrains Mono', monospace; font-size:8pt; letter-spacing:.06em; color:var(--ink); }
 .outro { background:var(--navy); color:var(--cream); border-radius:12pt; padding:13pt 15pt; font-size:10.5pt; }
 .outro a { color:var(--sky); }
@@ -320,20 +327,20 @@ pdf = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><title>AI f
 <section class="intro">
   <span class="wm" aria-hidden="true">0</span>
   <div class="why"><p class="kick">Why we made this</p>{WHY}</div>
-  {START}
-  <ol class="toc">{toc}<li><span class="toc-n">+</span><span class="toc-name">10 debates</span><span class="toc-p">Pick a side, then go start something at dinner</span></li><li><span class="toc-n">+</span><span class="toc-name">5 fun ways to start</span><span class="toc-p">Prompts to copy, no experience needed</span></li></ol>
+  <ol class="toc"><li><span class="toc-n">+</span><span class="toc-name">5 fun ways to get started</span><span class="toc-p">Prompts to copy, no experience needed</span></li>{toc}<li><span class="toc-n">+</span><span class="toc-name">10 debates</span><span class="toc-p">Pick a side, then go start something at dinner</span></li></ol>
+</section>
+<section class="page">
+  <span class="wm" aria-hidden="true">5</span>
+  <div class="sec-head"><p class="kick">{SPARK} Dip a toe in</p><h2>5 fun ways to get <span class="blue">started</span></h2><p>The fastest way to learn AI is to make something with it. Pick one, paste the prompt into any AI app, and fill in the [brackets].</p></div>
+  <div class="builds">{ways_pdf}</div>
+  {TEN}
 </section>
 {''.join(level_pdf(lv, i) for i, lv in enumerate(levels))}
 <section class="page">
   <span class="wm" aria-hidden="true">10</span>
-  <div class="sec-head"><p class="kick">{SPARK} The bottom  /  no right answers</p><h2>10 <span class="blue">debates</span></h2><p>We don't agree on half of these. Pick a side, then go start something at dinner.</p></div>
+  <div class="sec-head"><p class="kick">{SPARK} The bottom  /  no right answers down here</p><h2>10 <span class="blue">debates</span></h2><p>We don't agree on half of these. Pick a side, then go start something at dinner.</p></div>
   <div class="debates">{debates_pdf}</div>
   <div class="ours"><p class="kick">The parts that need us</p><h3>What we still do <span class="blue">ourselves</span></h3><ul>{OURS}</ul></div>
-</section>
-<section class="page">
-  <span class="wm" aria-hidden="true">5</span>
-  <div class="sec-head"><p class="kick">{SPARK} Steal our homework</p><h2>5 fun ways to get <span class="blue">started</span></h2><p>The fastest way to learn AI is to make something with it. Pick one, paste the prompt into any AI app, and fill in the [brackets].</p></div>
-  <div class="builds">{ways_pdf}</div>
 </section>
 <section class="page">
   <span class="wm" aria-hidden="true">?</span>
@@ -341,9 +348,10 @@ pdf = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><title>AI f
   <div class="nexts" style="margin-top:10pt"><p class="kick">Want more?</p><h2>Where to go <span class="blue">next</span></h2><div class="next-row">{US}{nxt}</div></div>
 </section>
 <section class="flow" style="margin-top:14pt">
-  <div class="sec-head" style="margin-bottom:8pt"><p class="kick">Level 1.0, done</p><h2>You're at <span class="blue">1</span></h2><p>Check off every word you could explain to a friend. Anything left, go back and try it once more.</p></div>
+  <div class="sec-head" style="margin-bottom:8pt"><p class="kick">You hit the bottom</p><h2>You're at <span class="blue">1</span></h2><p>Check off every word you could explain to a friend. Anything left, go back and try it once more.</p></div>
   <ul class="boxes">{boxes}</ul>
-  <p class="contact">Get the notes at <a href="https://outofourdepth.com">outofourdepth.com</a></p>
+  <p class="contact">Want what comes after 1? Get the notes at <a href="https://outofourdepth.com">outofourdepth.com</a>: what we tried, what worked and what flopped</p>
+  <p class="contact">Spot something out of date? Tell us at <a href="mailto:hi@outofourdepth.com">hi@outofourdepth.com</a></p>
 </section>
 </body></html>'''
 pdf = soften(pdf)
