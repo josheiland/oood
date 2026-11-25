@@ -196,15 +196,18 @@ a { color:var(--ink); text-decoration:none; }
 .lv-head, .sec-head { margin-bottom:16pt; max-width:5.4in; }
 .lv-head h2, .sec-head h2 { font-size:32pt; }
 .promise, .sec-head p:not(.kick) { margin:8pt 0 0; font-size:11.5pt; line-height:1.4; }
-/* cover: calm center. Cream page, the marker asterisk, the title and one line, wordmark at the bottom. Mary picked it 2026-11-22, replacing the pool cover */
+/* Cream cover with the marker asterisk, title, host stickers and wordmark. */
 .cover { margin:0 -.75in; height:11in; page-break-after:always; position:relative; overflow:hidden; background:var(--cream); }
 .cv { position:absolute; left:0; top:0; width:816px; height:1056px; }
 .cv-in { position:absolute; inset:0; padding:65px 73px 163px; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; }
-.cv-in h1, .cv-in p { margin:0; font-weight:800; text-transform:uppercase; letter-spacing:-.02em; white-space:nowrap; }
-.cv-star { width:90px; margin-bottom:57px; display:block; }
+.cv-in h1 { margin:0; font-weight:800; text-transform:uppercase; letter-spacing:-.02em; white-space:nowrap; }
+.cv-star { width:90px; margin-bottom:44px; display:block; }
 .cv-a { font-size:62px; line-height:.9; margin-bottom:13px !important; }
-.cv-b { font-size:180px; line-height:.86; color:var(--blue); margin-bottom:73px !important; }
-.cv-s { font-size:41px; line-height:1.06; }
+.cv-b { font-size:180px; line-height:.86; color:var(--blue); margin-bottom:35px !important; }
+.cv-hosts { display:flex; align-items:flex-end; justify-content:center; gap:18px; }
+.cv-hosts img { display:block; width:auto; height:auto; }
+.cv-hosts .cv-mary { width:154px; }
+.cv-hosts .cv-josh { width:200px; }
 .cv-wm { position:absolute; left:0; right:0; bottom:65px; text-align:center; font-weight:800; text-transform:uppercase; line-height:.9; }
 .cv-wm small { display:block; font-size:13px; } .cv-wm b { display:block; font-size:37px; letter-spacing:-.02em; }
 /* start here + contents */
@@ -320,7 +323,10 @@ pdf = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><title>AI f
   <div class="cv-in">
     <svg class="cv-star" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M25 5 Q22 22 24.5 43 M6 15 Q22 27 42 33 M8 37 Q26 21 40 10" fill="none" stroke="#38B6FF" stroke-width="6.5" stroke-linecap="round"/></svg>
     <h1 class="cv-a">AI from</h1><h1 class="cv-b">0 to 1</h1>
-    <p class="cv-s">Anyone can learn this.<br>Start here</p>
+    <div class="cv-hosts">
+      <img class="cv-mary" src="../../website/images/mary-sticker.webp" width="395" height="629" alt="Mary Blankemeier">
+      <img class="cv-josh" src="../../website/images/josh-sticker.webp" width="497" height="578" alt="Josh Eiland">
+    </div>
   </div>
   <div class="cv-wm"><small>Out of our</small><b>Depth</b></div>
 </div></section>
@@ -393,7 +399,7 @@ page = f'''<!doctype html>
   <header class="h-nav">
     <div class="h-wrap h-nav__inner">
       <a class="h-wm" href="/" aria-label="Out of Our Depth home"><span class="h-wm__k">Out of our</span><span>Depth</span></a>
-      <nav class="h-links" aria-label="Main"><a href="/#episodes">Episodes</a><a href="/builds">Builds</a><a href="/guide" aria-current="page">Study guide</a><a href="/#about">About</a></nav>
+      <nav class="h-links" aria-label="Main"><a href="/#episodes">Episodes</a><a href="/guide" aria-current="page">Study guide</a><a href="/builds">Builds</a><a href="/#about">About</a></nav>
       <a class="h-btn h-btn--sm" href="https://www.youtube.com/@OutOfOurDepthPod" data-link="youtube" target="_blank" rel="noopener">Watch the show</a>
     </div>
   </header>
@@ -449,7 +455,7 @@ page = f'''<!doctype html>
     <div class="h-wrap">
       <p class="h-foot__big" aria-hidden="true">AI for normal <span class="h-blue">people</span></p>
       <div class="h-foot__row">
-        <nav class="h-foot__links" aria-label="Footer"><a href="/#episodes">Episodes</a><a href="/builds">Builds</a><a href="/guide">Study guide</a><a href="/#about">About</a><a href="mailto:hi@outofourdepth.com">hi@outofourdepth.com</a></nav>
+        <nav class="h-foot__links" aria-label="Footer"><a href="/#episodes">Episodes</a><a href="/guide">Study guide</a><a href="/builds">Builds</a><a href="/#about">About</a><a href="mailto:hi@outofourdepth.com">hi@outofourdepth.com</a></nav>
         <nav class="h-foot__social topbar__social" aria-label="Find us" data-socials></nav>
       </div>
       <p class="h-foot__sign">{e(SIGN)}</p>
@@ -568,7 +574,7 @@ with sync_playwright() as p:
     pg = b.new_page()
     pg.goto((SRC / 'study-guide.html').as_uri(), wait_until='networkidle')
     pg.evaluate('document.fonts.ready')
-    # The cream header and footer would paint over the navy cover, so the cover prints on its own.
+    # The cover has its own layout without the running header and footer.
     cover = pg.pdf(print_background=True, prefer_css_page_size=True, page_ranges='1')
     rest = pg.pdf(print_background=True, prefer_css_page_size=True, display_header_footer=True,
                   header_template=head, footer_template=foot, page_ranges='2-')

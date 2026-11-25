@@ -87,6 +87,11 @@
 
 /* Sections */
 .h-sec { padding: 96px 0; }
+.home .h-sec[id] { scroll-margin-top: 24px; }
+.h-jump { display: inline-flex; align-items: center; min-height: 44px; color: inherit; text-decoration: underline; text-underline-offset: 5px; }
+.h-jump:hover { color: var(--navy); }
+.h-jump:focus-visible { outline: 3px solid var(--blue); outline-offset: 5px; border-radius: 2px; }
+.h-build__intro { max-width: 620px; margin: 18px 0 0; font-size: 18px; line-height: 1.5; color: var(--muted); }
 .h-get { padding-top: 24px; }
 .h-rule { border-top: 0; } /* no divider lines (Mary 2026-11-21) */
 .h-three { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
@@ -143,6 +148,12 @@
 @media (max-width: 1100px) {
   .h-hero { --big: 120px; }
   .h-foot__big { font-size: 120px; }
+}
+
+@media (860px < width <= 1000px) {
+  .h-get .h-three { gap: 20px; }
+  .h-get h2 { font-size: 21px; }
+  .h-get p:not(.h-mono) { font-size: 16px; }
 }
 
 /* Tablets */
@@ -204,12 +215,16 @@
 .h-about__lead--2 { margin-bottom: 40px !important; }
 .h-about__head { margin-bottom: 18px; }
 .h-about__lead { margin: 0 0 14px; text-wrap: pretty; font-size: 21px; line-height: 1.5; font-weight: 500; }
+.h-about__break { margin: 0 0 18px; font-size: 20px; line-height: 1.25; text-wrap: balance; }
 .h-about__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
 .h-who { display: grid; grid-template-columns: 150px 1fr; gap: 24px; align-items: center; padding: 28px; border-radius: 24px; background: var(--foam); }
 .h-who img { width: 100%; height: auto; transform: rotate(-2deg); }
 .h-who:nth-child(2) img { transform: rotate(2deg); }
-.h-who h3 { margin: 6px 0 12px; font-weight: 800; font-size: 30px; line-height: .95; text-transform: uppercase; }
+.h-who > div { align-self: start; }
+.h-who h4 { margin: 6px 0 12px; font-weight: 800; font-size: 30px; line-height: .95; text-transform: uppercase; }
+.h-who h4 span { display: block; }
 .h-who ul { margin: 0; padding-left: 18px; font-size: 17px; line-height: 1.45; }
 .h-who li { margin-bottom: 6px; }
 @media (max-width: 900px) { .h-about__grid { grid-template-columns: 1fr; } }
-@media (max-width: 520px) { .h-who { grid-template-columns: 96px 1fr; gap: 16px; padding: 20px; } .h-who h3 { font-size: 24px; } .h-about__lead { font-size: 18px; } }
+@media (max-width: 520px) { .h-who { grid-template-columns: 96px 1fr; gap: 16px; padding: 20px; } .h-who h4 { font-size: 24px; } .h-about__lead { font-size: 18px; } }
+@media (max-width: 380px) { .h-who { grid-template-columns: 72px 1fr; gap: 12px; padding: 16px; } }

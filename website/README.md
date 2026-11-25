@@ -189,3 +189,8 @@ Josh requested a starter learning library for E007’s planned appended screen s
 - Source and delivery records: `02_RESEARCH/codex-learning-tab-sources-2026-10-11/`. Current research names Google’s notebook “NotebookLM / Gemini Notebook” because the official help page redirects to the latter name. Starter order and exercises are OOOD editorial suggestions.
 
 The screen-share recording is still to be supplied; building or deploying the tab does not mean the segment has been recorded or appended to E007.
+
+
+## Homepage and guide update, 2026-11-25
+
+The Watch / Learn / Build teasers link to their sections in the same order. Study Guide precedes Builds in the site navigation. About explains AI@GSB, covers the hosts' UVA and Bain background, and gives each host three things they do when they need a break from AI. All host popups use lowercase. The guide generator places both host stickers below the title on the PDF cover and homepage thumbnail.

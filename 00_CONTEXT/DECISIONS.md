@@ -817,3 +817,27 @@ The v11 recurring cards correct an implicit RGB-to-BT.601 conversion before BT.7
 - This supersedes the pool cover ("Come on in") finalized 2026-11-21. The 50 words, 10 debates and 5 ways to start are unchanged inside the guide; only the cover changed.
 - Changed: the cover block in `scripts/build-study-guide.py` and `03_ASSETS/study-guide/study-guide.html`, page 1 of `website/downloads/ai-0-to-1-study-guide.pdf` (pages 2 to 11 untouched), and `website/images/guide-cover.webp` (the homepage thumbnail).
 - Page 1 was swapped into the existing PDF rather than rebuilding the whole file, so nothing else moved. The next full run of the build script produces the same cover.
+
+
+## 2026-11-25 — Homepage Watch / Learn / Build order and bio revision
+
+Josh requested Watch / Learn / Build teasers linked to matching homepage sections, content in that order, and a Build focus on following prompts and builds while learning skills. About now says nobody should feel “silly for asking”, leads with Stanford and explains/links AI@GSB. Bios lead with Stanford then Run Your City; per his follow-up, systems engineering and Bain stay in the shared introduction only. The old final dyslexia/opposites bullets are removed.
+
+Implementation is checked in the isolated `homepage-watch-learn-build-2026-11-25` worktree at `/Users/je/oood-homepage-2026-11-25`, with a Vercel review preview. Production is unchanged. Popup replacements, the hand-written email promise and fun bio endings are recommendations in the preview, with alternatives and verification in `04_PUBLISHING/codex-homepage-2026-11-25/README.md`; they remain open host copy choices.
+
+
+### 2026-11-25 — Homepage revision 2 and About direction
+
+Josh selected Mary's two replacement popups verbatim: “let's make it cute” and “it's giving AI mormon wives”. Both names now span two lines with aligned tops, and the Meet labels are removed. The shared text explains the dean's Applied AI Initiative, adds UVA and Bain & Company, and connects making AI fun with asking questions about meaning and use. Checked review preview v2 is linked from the homepage review record; production is unchanged.
+
+His next direction is to move the Stanford/AI@GSB and RYC credentials into the shared introduction and make the individual bullets more fun. He requested ideas/options; the final structure and personal details are open.
+
+
+### 2026-11-25 — Homepage revision 3
+
+Josh approved moving the credentials to the shared About text and added “including us” to the purpose line. He asked for parallel lengths where relevant, Study Guide before Builds in the navigation and all host popups in lowercase. These changes are in the checked v3 preview. The current handoff also holds ten questions to give Mary's agent and draft Josh answers for the next bio comparison. The final two or three bio items are pending that comparison.
+
+
+### 2026-11-25 — Homepage and guide release selection
+
+Josh directed publication of the revised homepage and navigation. The intro ends “in plain English”. About removes the AI@GSB workshops and Run Your City passages and adds “What we're doing when we need a break from AI” with three personal bullets per host. The guide cover uses the two existing host stickers in place of the “Anyone can learn this. Start here” line, superseding that part of the November 22 cover decision. Both the PDF and thumbnail are built from the same source. Compared with the prior PDF, all 11 interior pages render identically and all 50 fillable checkboxes are present.

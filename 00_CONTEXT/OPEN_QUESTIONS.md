@@ -46,3 +46,8 @@ Pruned 2026-10-03. Josh resolved these items: the Episode 002 replacement choice
 - Which canonical logo/cover exports will be distributed from the adopted September 2026 kit? The written specification is square/two-line; older circular art remains in the source kit.
 - Which optional motion treatments, if any, do the hosts want beyond the kit's chapter/lower-third rules? (Pop-ups are out.)
 - Pending YouTube Advanced features (requested 2026-09-29): clickable description links, chapters re-read, pinned comment and channel links. The full checklist is preserved in the 2026-09-30 archive at `01_EPISODES/E000-why-were-here/jtan-youtube/advanced-features-todo.md`. Its caption-upload step is superseded by the auto-captions decision.
+
+
+## Homepage copy choices — 2026-11-25
+
+Resolved by Josh's production instruction. See the November 25 release decision for the chosen copy, navigation and guide cover.

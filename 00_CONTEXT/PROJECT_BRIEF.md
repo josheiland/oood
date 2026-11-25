@@ -76,3 +76,8 @@ Handles: YouTube/Instagram/TikTok @OutOfOurDepthPod (TikTok live again as of 202
 Josh planned a coordinated public announcement for October 3–4. The [October 1 launch primer](../04_PUBLISHING/codex-public-launch-primer-2026-10-01.md) has recommended channels and sequencing; those are recommendations, not adopted decisions.
 
 Source documents: the [launch recording primer](https://docs.google.com/document/d/1gWK3_jPo7-Y5J_zjiGggAhPWY-EtNpHh5X3jszLH6bY/edit) and the [Marketing & Episodes Brainstorm](https://docs.google.com/document/d/1AvDfSBg6xxMyGNH7D9JhbGEzm3NP46459uxMoQDLSXc/edit). The brainstorm calls the launch episodes 1/2/3.
+
+
+## Homepage and guide update — 2026-11-25
+
+The homepage follows Watch / Learn / Build, with links to each section. About keeps Stanford, AI@GSB, UVA and Bain in the shared introduction and introduces both hosts' offscreen interests. The AI from 0 to 1 cover features both host stickers in the PDF and on the homepage.
