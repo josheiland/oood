@@ -87,15 +87,25 @@ def word_card(t):
             f'<h3>{e(t["title"])}</h3>{aka}<p>{e(t["definition"])}</p>'
             f'<p class="think"><b>Think of it like</b> {e(phrase(t["think"]))}</p>{tag(t)}{source}</article>')
 
-def air_web(lv):
-    """Name that moment: three tap-to-flip cards and one dare. Replaces the old try-its (Mary 2026-11-21)."""
+def air_quiz(lv):
+    quiz_id = f'{slug(lv["n"])}-quiz'
     cards = ''.join(
         f'<button class="mo" type="button" aria-label="Tap to see the word"><span class="mo__in">'
-        f'<span class="mo__f"><span class="mo__q">{e(q)}</span><span class="mo__hint">Tap to check</span></span>'
+        f'<span class="mo__f"><span class="mo__n g-print-only">{i}.</span>'
+        f'<span class="mo__q">{e(q)}</span><span class="mo__hint">Tap to check</span></span>'
         f'<span class="mo__b"><span class="mo__hint">That\'s</span><span class="mo__a">{e(topics[w]["title"])}</span></span></span></button>'
-        for q, w in lv['moments'])
-    return (f'<div class="air"><p class="kick">Come up for air  /  name that moment</p><div class="mos">{cards}</div>'
+        for i, (q, w) in enumerate(lv['moments'], 1))
+    return (f'<div class="air" id="{quiz_id}"><p class="kick">Come up for air  /  name that moment</p>'
+            f'<div class="mos">{cards}</div>'
+            f'<a class="air__answers g-print-only" href="#{quiz_id}-answers">Check answers</a>'
             f'<p class="dare"><b>Dare</b> {e(lv["dare"])}</p></div>')
+
+def answer_group(lv):
+    quiz_id = f'{slug(lv["n"])}-quiz'
+    answers = ''.join(f'<li>{e(topics[word]["title"])}</li>' for _, word in lv['moments'])
+    return (f'<div class="answer-key__group" id="{quiz_id}-answers">'
+            f'<p class="kick">Level {e(lv["n"])}</p><h3>{e(lv["name"])}</h3>'
+            f'<ol>{answers}</ol><a href="#{quiz_id}">Back to quiz</a></div>')
 
 MAP = f'''<div class="map"><p class="kick">{SPARK} The whole thing on one page</p>
   <h3>Learn, look, think, act</h3>
@@ -119,7 +129,7 @@ def level_section(lv, i):
   <header class="lv-head{' lv-head--word' if not lv["depth"][0].isdigit() else ''}"><span class="ft" aria-hidden="true">{e(lv["depth"])}</span><div><p class="kick">Level {lv["n"]}  /  {len(lv["words"])} words</p><h2 id="{slug(lv["n"])}-t">{headline(lv["name"], lv.get("accent"))}</h2><p class="promise">{e(lv["promise"])}</p></div></header>
   <div class="cards">{words}</div>
 {f'  {MAP}' if lv["n"] == "0.6" else ""}
-  {air_web(lv)}
+  {air_quiz(lv)}
 </div></section>'''
 
 def debate_card(debate, i):
@@ -243,6 +253,12 @@ page = f'''<!doctype html>
       <p class="h-foot__sign">{e(SIGN)}</p>
     </div>
   </footer>
+  <section class="g-answer-key g-print-only" aria-labelledby="answer-key-title">
+    <div class="h-wrap">
+      <header class="sec-head"><p class="kick">Come up for air</p><h2 id="answer-key-title">Answer <span class="blue">key</span></h2></header>
+      <div class="answer-key__groups">{''.join(answer_group(lv) for lv in levels)}</div>
+    </div>
+  </section>
   <script src="/config.js"></script>
   <script src="/main.js"></script>
   <script src="/debates.js"></script>

@@ -41,6 +41,7 @@
   @bottom-left { color: #BDE5FF; }
   @bottom-right { color: #BDE5FF; }
 }
+@page answer-key { background: #FBF1E5; }
 
 html, body.home.guide { margin: 0; overflow: visible; background: transparent; }
 body.guide { print-color-adjust: exact; -webkit-print-color-adjust: exact; font-size: 10.5pt; }
@@ -109,18 +110,20 @@ body.guide { print-color-adjust: exact; -webkit-print-color-adjust: exact; font-
 
 .guide .air { margin-top: 7pt; break-inside: avoid; }
 .guide .mo { height: auto; cursor: auto; perspective: none; }
-.guide .mo__in, .guide .mo.on .mo__in { display: flex; flex-direction: column; transform: none; }
-.guide .mo__f, .guide .mo__b {
+.guide .mo__in, .guide .mo.on .mo__in { transform: none; }
+.guide .mo__f {
   position: static;
+  min-height: 58pt;
   padding: 6pt 8pt;
   border-radius: 8pt;
   backface-visibility: visible;
 }
-.guide .mo__f { flex: 1; border-radius: 8pt 8pt 0 0; }
-.guide .mo__b { display: block; transform: rotate(180deg); text-align: center; border-radius: 8pt 8pt 0 0; }
-.guide .mo__f .mo__hint { display: none; }
+.guide .mo__b, .guide .mo__f .mo__hint { display: none; }
+.guide .mo__n.g-print-only { display: block; color: var(--sky); font: 8pt var(--mono); margin-bottom: 3pt; }
 .guide .mo__q { font-size: 10pt; line-height: 1.13; }
-.guide .mo__b .mo__hint, .guide .mo__a { display: inline; font-size: 8pt; }
+.guide .air__answers, .guide .answer-key__group a { font-weight: 700; color: var(--navy); text-underline-offset: 2pt; }
+.guide .air__answers { display: inline-block; margin-top: 5pt; }
+.guide .dk .air__answers { color: var(--sky); }
 .guide .dare { margin-top: 6pt; font-size: 10pt; }
 
 .guide .debates { gap: 8pt; }
@@ -165,3 +168,11 @@ body.guide { print-color-adjust: exact; -webkit-print-color-adjust: exact; font-
 .guide .h-foot__row { justify-content: center; }
 .guide .h-foot__links { gap: 12pt; }
 .guide .h-foot__links a, .guide .h-foot__sign { font-size: 8pt; }
+
+.guide .g-answer-key { page: answer-key; padding-top: 8pt; }
+.guide .g-answer-key .sec-head { margin-bottom: 16pt; }
+.guide .g-answer-key h2 { font-size: 36pt; }
+.answer-key__groups { display: grid; grid-template-columns: 1fr 1fr; gap: 10pt; }
+.answer-key__group { background: var(--foam); border-radius: 10pt; padding: 12pt; break-inside: avoid; }
+.guide .answer-key__group h3 { font-size: 15pt; line-height: 1.05; }
+.answer-key__group ol { padding-left: 17pt; margin: 6pt 0; }

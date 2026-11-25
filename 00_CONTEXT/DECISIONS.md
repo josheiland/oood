@@ -864,3 +864,5 @@ Josh removed the starter activity list from Builds and kept the Mollick ten-hour
 ### 2026-11-25 — Build destinations and matching guide PDF
 
 Josh chose Mary's GitHub Pages site for the voice guide preview and a public Google Sheets template for the wedding tracker preview. The Sheet is a view-only copy of the published sample workbook. Josh also asked for the PDF to mirror the site. The PDF now prints the web guide with the same section order, host artwork, term cards and depth colors. It includes both follow-ups for each debate and links online for voting and newsletter sign-up. The starter activities and PDF-only glossary checklist were removed to match the web content.
+
+Josh approved a linked answer key if in-place PDF reveals lacked consistent support in browsers and macOS Preview. Each printed quiz now links to its three answers at the back, with a return link to the same quiz.
