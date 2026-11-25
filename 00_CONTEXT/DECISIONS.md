@@ -841,3 +841,7 @@ Josh approved moving the credentials to the shared About text and added “inclu
 ### 2026-11-25 — Homepage and guide release selection
 
 Josh directed publication of the revised homepage and navigation. The intro ends “in plain English”. About removes the AI@GSB workshops and Run Your City passages and adds “What we're doing when we need a break from AI” with three personal bullets per host. The guide cover uses the two existing host stickers in place of the “Anyone can learn this. Start here” line, superseding that part of the November 22 cover decision. Both the PDF and thumbnail are built from the same source. Compared with the prior PDF, all 11 interior pages render identically and all 50 fillable checkboxes are present.
+
+### 2026-11-25 — Starter activities and homepage copy follow-up
+
+Josh supplied new Watch and Build teaser descriptions and asked for the guide's depth pun, shorter bio cards, and a one-line workout bullet where it fits. The web guide now links to five starter activities and the Mollick note on Builds. Both that section and the original offline version in the PDF come from `guide-levels.json`. Existing guide bookmarks lead to a link to the new section, and the homepage tiny-app card goes straight to the bill splitter prompt.

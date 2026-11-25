@@ -194,3 +194,5 @@ The screen-share recording is still to be supplied; building or deploying the ta
 ## Homepage and guide update, 2026-11-25
 
 The Watch / Learn / Build teasers link to their sections in the same order. Study Guide precedes Builds in the site navigation. About explains AI@GSB, covers the hosts' UVA and Bain background, and gives each host three things they do when they need a break from AI. All host popups use lowercase. The guide generator places both host stickers below the title on the PDF cover and homepage thumbnail.
+
+The five starter activities and the ten-hour note now appear at `/builds#start-building` online. The guide links there, and the PDF keeps the activities for offline use. Edit `03_ASSETS/study-guide/guide-levels.json` and run `scripts/build-study-guide.py` to regenerate the starter section and guide. The featured builds below the starter section are hand-written.

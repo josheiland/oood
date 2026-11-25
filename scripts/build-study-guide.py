@@ -7,7 +7,8 @@ cards, dares, debates, five ways to get started, If you get stuck tips and Where
 
     python3 scripts/build-study-guide.py
 
-Writes website/guide.html, website/downloads/ai-0-to-1-study-guide.pdf, website/images/guide-cover.webp
+Writes website/guide.html, the starter activities in website/builds.html,
+website/downloads/ai-0-to-1-study-guide.pdf, website/images/guide-cover.webp
 and the print HTML at 03_ASSETS/study-guide/study-guide.html. Needs Python 3, Pillow and Playwright with
 Chromium or Chrome (set CHROME=/path/to/chrome to pick one). Fonts load from Google Fonts at build time.
 
@@ -141,17 +142,19 @@ def level_web(lv, i):
 def way_card(b, web):
     """What it is, what you get, what we made with it, then the prompt. All visible, nothing behind a click."""
     watch = f'  /  <a href="{html.escape(ep_url(b["watch"]))}" target="_blank" rel="noopener">&#9654;&#xFE0E; ep {b["watch"]}</a>' if b.get('watch') else ''
-    copy = f'<button class="copy" type="button" data-copy="p-{b["id"]}">Copy prompt</button>' if web else ''
+    card_id = f' id="starter-{b["id"]}"' if web else ''
+    prompt_id = f'p-starter-{b["id"]}' if web else f'p-{b["id"]}'
+    copy = f'<button class="copy" type="button" data-copy="{prompt_id}">Copy prompt</button>' if web else ''
     ours = f'<p class="way__row"><b>What we made</b> {e(b["ours"])}</p>' if b.get('ours') else ''
-    return (f'<article class="build"><div class="way__info"><p class="lbl">{e(b["time"])}  /  {e(b["level"])}{watch}</p>'
+    return (f'<article class="build"{card_id}><div class="way__info"><p class="lbl">{e(b["time"])}  /  {e(b["level"])}{watch}</p>'
             f'<h3>{e(b["title"])}</h3><p class="way__what">{e(b["what"])}</p>'
             f'<p class="way__row"><b>You get</b> {e(b["get"])}</p>{ours}</div>'
-            f'<div class="prompt"><p class="kick">Copy this into any AI app</p><p id="p-{b["id"]}">{e(b["prompt"])}</p>{copy}</div></article>')
+            f'<div class="prompt"><p class="kick">Copy this into any AI app</p><p id="{prompt_id}">{e(b["prompt"])}</p>{copy}</div></article>')
 
 sh = guide['start_here']
 TEN = f'<p class="tenhours"><b>The ten-hour rule</b> {e(guide["ten_hours"])}</p>'
 
-ways = ''.join(way_card(b, True) for b in guide['ways'])
+ways = '\n      '.join(way_card(b, True) for b in guide['ways'])
 ways_pdf = ''.join(way_card(b, False) for b in guide['ways'])
 debates_web = ''.join(
     f'<article class="debate"><span class="debate__n">{i + 1:02d}</span><h3>{e(q)}</h3>'
@@ -169,7 +172,7 @@ HELP = 'Stuck on one? Email <a href="mailto:hi@outofourdepth.com">hi@outofourdep
 boxes = ''.join(f'<li>{e(topics[w]["title"])}</li>' for lv in levels for w in lv['words'])
 NOTE = "We only email when it's worth it. Josh fixes the typos, Mary makes them (proudly dyslexic #flex)"
 SIGN = "Can't lie, Claude built this"
-PITCH = f'{N} words, 10 debates and 5 fun ways to get started'
+PITCH = f'{N} words and 10 debates'
 
 # ---------- PDF ----------
 sticker = (WEB / 'images' / 'hosts-sticker.webp').as_uri()
@@ -414,12 +417,7 @@ page = f'''<!doctype html>
         <img class="g-hero__hosts" src="/images/hosts-sticker-640.webp" width="640" height="421" alt="Mary and Josh">
       </div>
     </section>
-    <section class="g-why h-wrap"><div class="g-narrow"><p class="kick">Why we made this</p>{WHY}</div></section>
-    <section class="g-ways" id="start-building"><div class="h-wrap">
-      <div class="sec-head"><p class="kick">{SPARK} Dip a toe in</p><h2>5 fun ways to get <span class="blue">started</span></h2><p>The fastest way to learn AI is to make something with it. Pick one, paste the prompt into any AI app, and fill in the [brackets].</p></div>
-      <div class="ways">{ways}</div>
-      {TEN}
-    </div></section>
+    <section class="g-why h-wrap"><div class="g-narrow"><p class="kick">Why we made this</p>{WHY}<p id="start-building">Ready to try it? <a href="/builds#start-building">See the 5 fun ways to get started</a></p></div></section>
     {''.join(level_web(lv, i) for i, lv in enumerate(levels))}
     <section class="lv lv--6 dk" data-depth id="debates"><div class="h-wrap">
       <header class="lv-head lv-head--word"><span class="ft" aria-hidden="true">The bottom</span><div><p class="kick">No right answers down here</p><h2>10 <span class="blue">debates</span></h2><p class="promise">We don't agree on half of these. Tap your side, then go start something at dinner</p></div></header>
@@ -464,13 +462,6 @@ page = f'''<!doctype html>
   <script src="/config.js"></script>
   <script src="/main.js"></script>
   <script>
-    document.querySelectorAll('[data-copy]').forEach(function (b) {{
-      b.addEventListener('click', function () {{
-        var t = document.getElementById(b.getAttribute('data-copy')).textContent;
-        var done = function () {{ b.textContent = 'Copied! Go make something'; setTimeout(function () {{ b.textContent = 'Copy prompt'; }}, 2200); }};
-        if (navigator.clipboard) navigator.clipboard.writeText(t).then(done, function () {{}}); else done();
-      }});
-    }});
     document.querySelectorAll('.mo').forEach(function (b) {{ b.addEventListener('click', function () {{ b.classList.toggle('on'); }}); }});
     document.querySelectorAll('.side').forEach(function (b) {{
       b.addEventListener('click', function () {{
@@ -501,6 +492,25 @@ page = f'''<!doctype html>
 '''
 page = soften(page)
 (WEB / 'guide.html').write_text(page)
+
+# ---------- Starter activities on the Builds page ----------
+starts = f'''    <section class="g-ways" id="start-building" aria-labelledby="starter-title"><div class="h-wrap">
+      <div class="sec-head"><p class="kick">{SPARK} Dip a toe in</p><h2 id="starter-title">5 fun ways to get <span class="blue">started</span></h2><p>The fastest way to learn AI is to make something with it. Pick one, paste the prompt into any AI app, and fill in the [brackets].</p></div>
+      <div class="ways">
+      {ways}
+      </div>
+      {TEN}
+    </div></section>'''
+builds = WEB / 'builds.html'
+start_marker = '    <!-- starter-activities:start (generated by scripts/build-study-guide.py) -->'
+end_marker = '    <!-- starter-activities:end -->'
+builds_content, replacements = re.subn(
+    re.escape(start_marker) + r'.*?' + re.escape(end_marker),
+    lambda _: f'{start_marker}\n{soften(starts)}\n{end_marker}',
+    builds.read_text(), flags=re.S)
+if replacements != 1:
+    sys.exit('website/builds.html needs exactly one starter activities marker pair')
+builds.write_text(builds_content)
 
 # ---------- Render the PDF and the cover image ----------
 from playwright.sync_api import sync_playwright
