@@ -117,6 +117,26 @@
    "title": "Compute",
    "definition": "The raw computing power AI runs on. When companies say they need more of it, they mean more chips, more data centers and more electricity.",
    "think": "Horsepower, for AI."
+  },
+  "ai-time-horizons": {
+   "id": "ai-time-horizons",
+   "title": "AI time horizons",
+   "definition": "How big a job can you hand to an AI agent and expect it to finish? METR measures this using how long the task takes a human expert. A 50% horizon tells you what the agent can do about half the time on the test, not how long it can run unattended.",
+   "think": "A runner who can sometimes finish a marathon. Would you count on them to deliver something at mile 26?",
+   "source": [
+    "See how METR measures it",
+    "https://metr.org/time-horizons/"
+   ]
+  },
+  "ai-improving-ai": {
+   "id": "ai-improving-ai",
+   "title": "AI improving AI",
+   "definition": "An AI agent can change how a model is trained, run an experiment and keep changes that improve the score. Andrej Karpathy's autoresearch does this in small training runs. The question is whether those wins hold up on a fresh test or a bigger model.",
+   "think": "Trying a hundred cookie recipes for the same judge. Bring in someone new before calling the winner everyone's favorite.",
+   "source": [
+    "See Karpathy's experiment",
+    "https://github.com/karpathy/autoresearch"
+   ]
   }
  },
  "levels": [
@@ -294,7 +314,9 @@
     "scaling-laws",
     "alignment",
     "agi",
-    "superintelligence"
+    "superintelligence",
+    "ai-time-horizons",
+    "ai-improving-ai"
    ],
    "accent": "big",
    "moments": [
@@ -409,10 +431,10 @@
  ],
  "next": [
   [
-   "AI Fluency",
-   "Anthropic",
-   "Free online course",
-   "https://www.anthropic.com/ai-fluency"
+   "How AI works",
+   "Claude Academy",
+   "Free course collection",
+   "https://academy.claude.com/collections/how-ai-works"
   ],
   [
    "AI Foundations",
@@ -539,56 +561,146 @@
  ],
  "episode_sources": "Timestamps found 2026-11-21 by searching the final caption files in Drive (Video Files/Final). Ep 012's came from the v8 review cut. Episodes 007 and 010 had no caption files to search. Rechecked 2026-11-21: of the 12 words with no link, only scaling laws turned up (ep 013). Words with no confirmed moment show no label at all.",
  "debates": [
-  [
-   "Would you be mad if AI wrote your apology?",
-   "Yes. The effort is the apology",
-   "No. The right words are the right words"
-  ],
-  [
-   "Should kids use AI for homework?",
-   "Yes. It's a tutor that never gets tired",
-   "No. The struggle is the learning"
-  ],
-  [
-   "Is AI making us better or just faster?",
-   "Better. It handles the busywork so we can think",
-   "Faster. We're skipping the part where we learn"
-  ],
-  [
-   "If an AI makes you feel understood, does it matter that nobody understood you?",
-   "It matters. Feeling heard needs a someone",
-   "It doesn't. Comfort is comfort"
-  ],
-  [
-   "Do you have to tell people when AI helped?",
-   "Always. Hiding it is a little bit lying",
-   "Nope. Nobody discloses spellcheck"
-  ],
-  [
-   "Is it still yours if the idea was yours and the words weren't?",
-   "Yes. The idea is the hard part",
-   "No. The words are the work"
-  ],
-  [
-   "Will AI take your job or just the boring parts?",
-   "The boring parts. The job gets better",
-   "The job. The boring parts were the job"
-  ],
-  [
-   "Who should make the rules for AI?",
-   "The people building it. They understand it",
-   "Everyone else. They have to live with it"
-  ],
-  [
-   "Would you hand an AI your credit card?",
-   "Sure, with a spending limit",
-   "Not until it can explain itself"
-  ],
-  [
-   "Smarter-than-human AI: exciting or terrifying?",
-   "Exciting. Think cures and free time",
-   "Terrifying. Nobody knows how to steer it"
-  ]
+  {
+   "id": "apology",
+   "question": "Would you be mad if AI wrote your apology?",
+   "options": [
+    {
+     "label": "Yes. The effort is the apology",
+     "followup": "What if AI helped someone organize their thoughts, then they rewrote it in their own words? Where does the effort have to happen?"
+    },
+    {
+     "label": "No. The right words are the right words",
+     "followup": "Would it still feel like an apology if they could not explain, in their own words, what they did wrong?"
+    }
+   ]
+  },
+  {
+   "id": "homework",
+   "question": "Should kids use AI for homework?",
+   "options": [
+    {
+     "label": "Yes. It's a tutor that never gets tired",
+     "followup": "Would you let it give hints but hide the answer? Try drawing the line between a tutor and a shortcut."
+    },
+    {
+     "label": "No. The struggle is the learning",
+     "followup": "What if the student already tried on their own and the AI only pointed out where they got stuck?"
+    }
+   ]
+  },
+  {
+   "id": "better-or-faster",
+   "question": "Is AI making us better or just faster?",
+   "options": [
+    {
+     "label": "Better. It handles the busywork so we can think",
+     "followup": "Pick a task AI made faster. What did you actually do with the time you got back?"
+    },
+    {
+     "label": "Faster. We're skipping the part where we learn",
+     "followup": "What if you asked AI to critique your first attempt? What would you need to do yourself to keep learning?"
+    }
+   ]
+  },
+  {
+   "id": "feeling-understood",
+   "question": "If an AI makes you feel understood, does it matter that nobody understood you?",
+   "options": [
+    {
+     "label": "It matters. Feeling heard needs a someone",
+     "followup": "Would you feel differently if the AI helped you rehearse what to tell a real person?"
+    },
+    {
+     "label": "It doesn't. Comfort is comfort",
+     "followup": "If the comfort comes from constant agreement, how would you know when it would help to hear a different view?"
+    }
+   ]
+  },
+  {
+   "id": "disclosure",
+   "question": "Do you have to tell people when AI helped?",
+   "options": [
+    {
+     "label": "Always. Hiding it is a little bit lying",
+     "followup": "Where would you draw the line between fixing a typo, rewriting a paragraph and coming up with the argument?"
+    },
+    {
+     "label": "Nope. Nobody discloses spellcheck",
+     "followup": "Would your answer change if the AI supplied the reasoning in a recommendation someone is relying on?"
+    }
+   ]
+  },
+  {
+   "id": "authorship",
+   "question": "Is it still yours if the idea was yours and the words weren't?",
+   "options": [
+    {
+     "label": "Yes. The idea is the hard part",
+     "followup": "Try giving the same idea to two writers. If they tell different stories, what part of each story is yours?"
+    },
+    {
+     "label": "No. The words are the work",
+     "followup": "If you reject three drafts, rewrite the ending and take responsibility for every claim, what would make it yours?"
+    }
+   ]
+  },
+  {
+   "id": "jobs",
+   "question": "Will AI take your job or just the boring parts?",
+   "options": [
+    {
+     "label": "The boring parts. The job gets better",
+     "followup": "If AI takes the routine assignments, where do new hires get the practice they need for the harder ones?"
+    },
+    {
+     "label": "The job. The boring parts were the job",
+     "followup": "Pick a job you know. What part would still need a person even if the rest took ten minutes?"
+    }
+   ]
+  },
+  {
+   "id": "rules",
+   "question": "Who should make the rules for AI?",
+   "options": [
+    {
+     "label": "The people building it. They understand it",
+     "followup": "Builders know what their tools can do. Who should decide which risks other people have to accept?"
+    },
+    {
+     "label": "Everyone else. They have to live with it",
+     "followup": "What would a useful public rule say about what an AI must do or disclose before someone relies on it?"
+    }
+   ]
+  },
+  {
+   "id": "credit-card",
+   "question": "Would you hand an AI your credit card?",
+   "options": [
+    {
+     "label": "Sure, with a spending limit",
+     "followup": "Would you rather cap every purchase, ask for approval once the bill hits a limit, or restrict which stores it can buy from?"
+    },
+    {
+     "label": "Not until it can explain itself",
+     "followup": "What would you want to see before trusting it: why it picked the item, the full cost, or a chance to approve the order?"
+    }
+   ]
+  },
+  {
+   "id": "superintelligence",
+   "question": "Smarter-than-human AI: exciting or terrifying?",
+   "options": [
+    {
+     "label": "Exciting. Think cures and free time",
+     "followup": "Who decides which problems the AI works on first, and who gets to benefit when it solves one?"
+    },
+    {
+     "label": "Terrifying. Nobody knows how to steer it",
+     "followup": "What result would make you more comfortable: a test it passes, a way to stop it, or an independent team that can check both?"
+    }
+   ]
+  }
  ],
  "ways": [
   {

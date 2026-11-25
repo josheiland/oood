@@ -80,9 +80,13 @@ slug = lambda n: 'level-' + n.replace('.', '-')
 # ---------- shared pieces ----------
 def word_card(t):
     aka = f'<span class="aka">{e(t["aka"])}</span>' if t.get('aka') else ''
+    source = ''
+    if t.get('source'):
+        label, url = t['source']
+        source = f'<a class="lbl" href="{html.escape(url, quote=True)}" target="_blank" rel="noopener">{e(label)}</a>'
     return (f'<article class="word" id="{t["id"]}">'
             f'<h3>{e(t["title"])}</h3>{aka}<p>{e(t["definition"])}</p>'
-            f'<p class="think"><b>Think of it like</b> {e(phrase(t["think"]))}</p>{tag(t)}</article>')
+            f'<p class="think"><b>Think of it like</b> {e(phrase(t["think"]))}</p>{tag(t)}{source}</article>')
 
 def air_web(lv):
     """Name that moment: three tap-to-flip cards and one dare. Replaces the old try-its (Mary 2026-11-21)."""
@@ -140,28 +144,40 @@ def level_web(lv, i):
 </div></section>'''
 
 def way_card(b, web):
-    """What it is, what you get, what we made with it, then the prompt. All visible, nothing behind a click."""
     watch = f'  /  <a href="{html.escape(ep_url(b["watch"]))}" target="_blank" rel="noopener">&#9654;&#xFE0E; ep {b["watch"]}</a>' if b.get('watch') else ''
-    card_id = f' id="starter-{b["id"]}"' if web else ''
-    prompt_id = f'p-starter-{b["id"]}' if web else f'p-{b["id"]}'
-    copy = f'<button class="copy" type="button" data-copy="{prompt_id}">Copy prompt</button>' if web else ''
     ours = f'<p class="way__row"><b>What we made</b> {e(b["ours"])}</p>' if b.get('ours') else ''
-    return (f'<article class="build"{card_id}><div class="way__info"><p class="lbl">{e(b["time"])}  /  {e(b["level"])}{watch}</p>'
+    if web:
+        prompt_id = f'p-starter-{b["id"]}'
+        return f'''<article class="starter" id="starter-{b["id"]}">
+        <div class="starter__top"><div><p class="lbl">{e(b["time"])}</p><h3>{e(b["title"])}</h3></div><button class="copy" type="button" data-copy="{prompt_id}">Copy prompt</button></div>
+        <p class="starter__get">{e(b["get"])}</p>
+        <details><summary>Read the prompt</summary><div class="prompt"><p class="kick">{e(b["level"])}{watch}</p><p id="{prompt_id}">{e(b["prompt"])}</p>{ours}</div></details>
+      </article>'''
+    return (f'<article class="build"><div class="way__info"><p class="lbl">{e(b["time"])}  /  {e(b["level"])}{watch}</p>'
             f'<h3>{e(b["title"])}</h3><p class="way__what">{e(b["what"])}</p>'
             f'<p class="way__row"><b>You get</b> {e(b["get"])}</p>{ours}</div>'
-            f'<div class="prompt"><p class="kick">Copy this into any AI app</p><p id="{prompt_id}">{e(b["prompt"])}</p>{copy}</div></article>')
+            f'<div class="prompt"><p class="kick">Copy this into any AI app</p><p id="p-{b["id"]}">{e(b["prompt"])}</p></div></article>')
 
 sh = guide['start_here']
 TEN = f'<p class="tenhours"><b>The ten-hour rule</b> {e(guide["ten_hours"])}</p>'
 
 ways = '\n      '.join(way_card(b, True) for b in guide['ways'])
 ways_pdf = ''.join(way_card(b, False) for b in guide['ways'])
-debates_web = ''.join(
-    f'<article class="debate"><span class="debate__n">{i + 1:02d}</span><h3>{e(q)}</h3>'
-    f'<div class="sides"><button type="button" class="side">{e(a)}</button><button type="button" class="side">{e(b)}</button></div></article>'
-    for i, (q, a, b) in enumerate(guide['debates']))
-debates_pdf = ''.join(f'<article class="debate"><h3>{i + 1}. {e(q)}</h3><p><b>A</b> {e(a)}</p><p><b>B</b> {e(b)}</p></article>'
-                      for i, (q, a, b) in enumerate(guide['debates']))
+def debate_web(debate, i):
+    key = e(debate['id'])
+    choices = ''.join(
+        f'<button type="button" class="side" aria-pressed="false" aria-controls="followup-{key}" '
+        f'data-option="{side}" data-followup="{e(option["followup"])}">{e(option["label"])}</button>'
+        for side, option in enumerate(debate['options']))
+    return (f'<article class="debate" data-debate="{key}"><span class="debate__n">{i + 1:02d}</span>'
+            f'<h3 id="debate-{key}">{e(debate["question"])}</h3><div class="sides" role="group" aria-labelledby="debate-{key}">{choices}</div>'
+            f'<div class="debate__followup" id="followup-{key}" aria-live="polite"></div></article>')
+
+debates_web = '\n      '.join(debate_web(d, i) for i, d in enumerate(guide['debates']))
+debates_pdf = ''.join(
+    f'<article class="debate"><h3>{i + 1}. {e(d["question"])}</h3>' +
+    ''.join(f'<p><b>{side}</b> {e(option["label"])}</p>' for side, option in zip('AB', d['options'], strict=True)) +
+    '</article>' for i, d in enumerate(guide['debates']))
 stuck = ''.join(f'<p><b>{e(phrase(a))}</b> {e(b)}</p>' for a, b in guide['stuck'])
 nxt = ''.join(f'<a class="next" href="{html.escape(u)}" target="_blank" rel="noopener"><span class="lbl">{e(who)}</span><h3>{e(t)}</h3><p>{e(len_)}</p></a>' for t, who, len_, u in guide['next'])
 US = ('<a class="next next--us" href="https://www.youtube.com/@OutOfOurDepthPod?sub_confirmation=1" target="_blank" rel="noopener">'
@@ -353,7 +369,7 @@ pdf = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><title>AI f
 </section>
 <section class="page">
   <span class="wm" aria-hidden="true">?</span>
-  <div class="stuck"><p class="kick">Happens to everyone</p><h2 style="font-size:22pt;margin-bottom:12pt">If you get <span class="blue">stuck</span></h2>{stuck}<p class="help">{HELP}</p></div>
+  <div class="stuck"><p class="kick">Happens to the best of us</p><h2 style="font-size:22pt;margin-bottom:12pt">If you get <span class="blue">stuck</span></h2>{stuck}<p class="help">{HELP}</p></div>
   <div class="nexts" style="margin-top:10pt"><p class="kick">Want more?</p><h2>Where to go <span class="blue">next</span></h2><div class="next-row">{US}{nxt}</div></div>
 </section>
 <section class="flow" style="margin-top:14pt">
@@ -417,16 +433,16 @@ page = f'''<!doctype html>
         <img class="g-hero__hosts" src="/images/hosts-sticker-640.webp" width="640" height="421" alt="Mary and Josh">
       </div>
     </section>
-    <section class="g-why h-wrap"><div class="g-narrow"><p class="kick">Why we made this</p>{WHY}<p id="start-building">Ready to try it? <a href="/builds#start-building">See the 5 fun ways to get started</a></p></div></section>
+    <section class="g-why h-wrap"><div class="g-narrow"><p class="kick">Why we made this</p>{WHY}</div></section>
     {''.join(level_web(lv, i) for i, lv in enumerate(levels))}
     <section class="lv lv--6 dk" data-depth id="debates"><div class="h-wrap">
-      <header class="lv-head lv-head--word"><span class="ft" aria-hidden="true">The bottom</span><div><p class="kick">No right answers down here</p><h2>10 <span class="blue">debates</span></h2><p class="promise">We don't agree on half of these. Tap your side, then go start something at dinner</p></div></header>
+      <header class="lv-head lv-head--word"><span class="ft" aria-hidden="true">The bottom</span><div><p class="kick">No right answers down here</p><h2>10 <span class="blue">debates</span></h2><p class="promise">We don't agree on half of these. Pick a side for a follow-up question</p><p class="g-small">We're tallying anonymous picks so we can share the split once enough people weigh in</p></div></header>
       <div class="debates">{debates_web}</div>
       <div class="g-ours"><p class="kick">The parts that need us</p><h3>What we still do <span class="blue">ourselves</span></h3><ul>{OURS}</ul></div>
     </div></section>
     <section class="g-end dk"><div class="h-wrap">
       <div class="g-end__cols">
-        <div class="g-stuck" id="stuck"><p class="kick">Happens to everyone</p><h3>If you get <span class="blue">stuck</span></h3>{stuck}<p class="g-help">{HELP}</p></div>
+        <div class="g-stuck" id="stuck"><p class="kick">Happens to the best of us</p><h3>If you get <span class="blue">stuck</span></h3>{stuck}<p class="g-help">{HELP}</p></div>
         <div class="g-next"><p class="kick">Want more?</p><h3>Where to go <span class="blue">next</span></h3><div class="next-row">{US}{nxt}</div></div>
       </div>
     </div></section>
@@ -461,13 +477,9 @@ page = f'''<!doctype html>
   </footer>
   <script src="/config.js"></script>
   <script src="/main.js"></script>
+  <script src="/debates.js"></script>
   <script>
     document.querySelectorAll('.mo').forEach(function (b) {{ b.addEventListener('click', function () {{ b.classList.toggle('on'); }}); }});
-    document.querySelectorAll('.side').forEach(function (b) {{
-      b.addEventListener('click', function () {{
-        b.parentNode.querySelectorAll('.side').forEach(function (x) {{ x.classList.toggle('on', x === b); x.classList.toggle('off', x !== b); }});
-      }});
-    }});
     (function () {{
       var g = document.querySelector('.gauge'), links = g.querySelectorAll('a'), secs = [].slice.call(document.querySelectorAll('[data-depth]'));
       function u() {{
@@ -494,9 +506,9 @@ page = soften(page)
 (WEB / 'guide.html').write_text(page)
 
 # ---------- Starter activities on the Builds page ----------
-starts = f'''    <section class="g-ways" id="start-building" aria-labelledby="starter-title"><div class="h-wrap">
+starts = f'''    <section class="g-ways g-starters" id="start-building" aria-labelledby="starter-title"><div class="h-wrap">
       <div class="sec-head"><p class="kick">{SPARK} Dip a toe in</p><h2 id="starter-title">5 fun ways to get <span class="blue">started</span></h2><p>The fastest way to learn AI is to make something with it. Pick one, paste the prompt into any AI app, and fill in the [brackets].</p></div>
-      <div class="ways">
+      <div class="starters">
       {ways}
       </div>
       {TEN}

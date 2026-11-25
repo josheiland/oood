@@ -38,8 +38,29 @@
 .think { font-size: 15px !important; opacity: .82; }
 .think b { font-weight: 700; }
 
-/* 5 ways: one row each. Left says what it is and what we made, right is the prompt */
+/* Starter prompts and featured builds */
 .g-ways { padding: 56px 0 90px; }
+.g-starters { padding-bottom: 44px; }
+.starters { display: grid; gap: 8px; }
+.starter { padding: 13px 18px; border-radius: 16px; background: var(--foam); scroll-margin-top: 20px; }
+.starter__top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.starter .lbl { margin: 0 0 5px; }
+.starter h3 { font-size: 22px; line-height: 1.05; }
+.starter .copy { flex: none; margin: 0; align-self: center; }
+.starter__get { margin: 5px 0 4px; font-size: 15px; line-height: 1.4; }
+.starter summary { width: fit-content; color: var(--ink); font-size: 14px; cursor: pointer; }
+.starter details .prompt { margin-top: 8px; }
+.guide .starter .prompt p:last-child { margin-bottom: 0; }
+.g-featured { padding-top: 0; }
+.g-featured .sec-head { border-top: 2px solid var(--line); padding-top: 34px; }
+.g-featured .build > .prompt { align-self: start; }
+.build__preview { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 12px; margin-top: 14px; background: var(--cream); }
+.build__preview--screen { object-fit: contain; }
+@media (max-width: 380px) {
+  .starter { padding-inline: 12px; }
+  .starter h3 { font-size: 19px; }
+  .starter .copy { padding-inline: 9px; }
+}
 .ways { display: grid; gap: 14px; }
 .build { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: stretch; background: var(--foam); border-radius: 24px; padding: 28px; }
 .build .lbl { margin: 0 0 8px; }
@@ -128,8 +149,9 @@
 .sides { margin-top: auto; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 .side { padding: 12px 14px; border: 0; border-radius: 14px; background: rgba(255,255,255,.1); color: var(--cream); font: 500 15px/1.3 var(--display); text-align: left; cursor: pointer; transition: background .15s, opacity .15s, transform .15s; }
 .side:hover { background: rgba(255,255,255,.18); }
-.side.on { background: var(--blue); color: var(--navy); font-weight: 700; transform: scale(1.02); }
-.side.off { opacity: .45; }
+.side[aria-pressed="true"] { background: var(--blue); color: var(--navy); font-weight: 700; }
+.debate__followup:not(:empty) { border-inline-start: 2px solid var(--blue); margin-top: 14px; padding-inline-start: 12px; color: var(--cream); line-height: 1.45; }
+.debate__followup small { display: block; margin-top: 5px; color: var(--sky); }
 .g-ours { margin-top: 56px; }
 .g-ours h3 { font-size: 36px; line-height: 1; }
 .g-ours ul { margin: 16px 0 0; padding-left: 20px; columns: 2; column-gap: 40px; font-size: 18px; line-height: 1.5; }
@@ -207,3 +229,7 @@
   .g-finish h2 { font-size: 64px; }
 }
 @media (prefers-reduced-motion: reduce) { .g-hero__hosts { animation: none; } .mo__in { transition: none; } }
+@media (max-width: 380px) {
+  .lv-head--word .ft { font-size: clamp(36px, 12vw, 46px); }
+  .mo__a { font-size: 24px; }
+}

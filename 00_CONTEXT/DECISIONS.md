@@ -845,3 +845,8 @@ Josh directed publication of the revised homepage and navigation. The intro ends
 ### 2026-11-25 — Starter activities and homepage copy follow-up
 
 Josh supplied new Watch and Build teaser descriptions and asked for the guide's depth pun, shorter bio cards, and a one-line workout bullet where it fits. The web guide now links to five starter activities and the Mollick note on Builds. Both that section and the original offline version in the PDF come from `guide-levels.json`. Existing guide bookmarks lead to a link to the new section, and the homepage tiny-app card goes straight to the bill splitter prompt.
+
+
+### 2026-11-25 — Deep-end questions, debate follow-ups and Builds previews
+
+Josh asked to remove the starter link from the study guide, add researched deep-end topics and give each debate choice a follow-up. The guide and PDF add AI time horizons and AI improving AI, with direct links to METR and Karpathy. Claude Academy's How AI works collection replaces the legacy AI Fluency link. The website collects one anonymous choice per browser per debate for future aggregate results. Builds now uses compact starter rows with expandable prompts, a divider and eight featured previews.
