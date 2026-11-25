@@ -860,3 +860,7 @@ Josh asked for single-row starters, photos beside the larger build descriptions,
 ### 2026-11-25 — Builds focuses on the five projects
 
 Josh removed the starter activity list from Builds and kept the Mollick ten-hour note. The wedding tracker has one setup prompt and a workbook download. The homepage card now links to the tracker, replacing the dinner bill splitter. The guide PDF retains its starter activities.
+
+### 2026-11-25 — Build destinations and matching guide PDF
+
+Josh chose Mary's GitHub Pages site for the voice guide preview and a public Google Sheets template for the wedding tracker preview. The Sheet is a view-only copy of the published sample workbook. Josh also asked for the PDF to mirror the site. The PDF now prints the web guide with the same section order, host artwork, term cards and depth colors. It includes both follow-ups for each debate and links online for voting and newsletter sign-up. The starter activities and PDF-only glossary checklist were removed to match the web content.

@@ -9,6 +9,7 @@
 .guide a.lbl:hover { text-decoration: underline; }
 .g-narrow { max-width: 860px; margin: 0 auto; }
 .guide p, .guide li { text-wrap: pretty; }
+.guide .g-print-only { display: none; }
 .g-small { margin: 14px 0 0; font-size: 14px; opacity: .8; }
 .g-small a { color: inherit; }
 

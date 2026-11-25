@@ -1,0 +1,167 @@
+/* Print the web guide on letter paper, preserving the colors at each depth. */
+@page {
+  size: letter;
+  margin: .48in 0 .48in;
+  @bottom-left {
+    content: "OUT OF OUR DEPTH  /  AI FROM 0 TO 1";
+    margin-left: .55in;
+    font: 7pt "JetBrains Mono", monospace;
+    color: #0B2A45;
+  }
+  @bottom-right {
+    content: counter(page);
+    margin-right: .55in;
+    font: 8pt "JetBrains Mono", monospace;
+    color: #0B2A45;
+  }
+}
+@page cover {
+  margin: 0;
+  background: #FBF1E5;
+  @bottom-left { content: none; }
+  @bottom-right { content: none; }
+}
+@page surface { background: #FBF1E5; }
+@page shallow { background: #E9F3F8; }
+@page midwater { background: #CDE8F8; }
+@page under { background: #93D1F7; }
+@page lower { background: #38B6FF; }
+@page deep {
+  background: #0B2A45;
+  @bottom-left { color: #BDE5FF; }
+  @bottom-right { color: #BDE5FF; }
+}
+@page bottom {
+  background: #0B2A45;
+  @bottom-left { color: #BDE5FF; }
+  @bottom-right { color: #BDE5FF; }
+}
+@page finish {
+  background: #0B2A45;
+  @bottom-left { color: #BDE5FF; }
+  @bottom-right { color: #BDE5FF; }
+}
+
+html, body.home.guide { margin: 0; overflow: visible; background: transparent; }
+body.guide { print-color-adjust: exact; -webkit-print-color-adjust: exact; font-size: 10.5pt; }
+.guide .h-nav, .guide .skip-link, .guide .gauge, .guide .bub,
+.guide .g-screen-only, .guide .notes__hp, .guide .notes__status,
+.guide .h-foot__social, .guide .debate__followup { display: none; }
+.guide .g-print-only { display: revert; }
+.guide .h-btn.g-print-only, .guide .h-wm.g-print-only { display: inline-flex; }
+
+.guide .h-wrap { max-width: none; padding-inline: .47in; }
+.guide .g-opening {
+  page: cover;
+  height: 11in;
+  background: var(--cream);
+}
+.guide .g-hero {
+  height: 8.65in;
+  padding: 0;
+  display: grid;
+  align-items: center;
+}
+.g-hero__kick { font-size: 52pt; }
+.g-hero__big { font-size: 116pt; }
+.g-hero__sub { font-size: 16pt; max-width: 5in; }
+.g-hero__hosts { animation: none; width: 4.5in; }
+.g-hero .h-wm { order: -1; margin-bottom: .42in; font-size: 25pt; }
+.guide .h-btn { height: auto; padding: 8pt 14pt; font-size: 10pt; }
+
+.lv--0 { page: surface; }
+.lv--1 { page: shallow; }
+.lv--2 { page: midwater; }
+.lv--3 { page: under; }
+.lv--4 { page: lower; }
+.lv--5 { page: deep; }
+.lv--6 { page: bottom; }
+.g-end, .g-finish, .guide .h-foot { page: finish; }
+.guide .g-why { max-width: 7.8in; padding-block: 0 12pt; }
+.guide .g-why p:not(.kick) { font-size: 11pt; line-height: 1.4; margin-bottom: 5pt; }
+.guide .lv { padding: 8pt 0 14pt; }
+.guide .lv-head { gap: 14pt; margin-bottom: 9pt; break-after: avoid; }
+.guide .ft { font-size: 47pt; }
+.guide .lv-head--word .ft { font-size: 36pt; }
+.guide .lv-head--word { gap: 7pt; }
+.guide .lv-head h2 { font-size: 32pt; }
+.guide .promise { font-size: 11pt; margin-top: 5pt; }
+.guide .kick { font-size: 8pt; margin-bottom: 5pt; }
+.guide .lbl { font-size: 7pt; margin-top: 4pt; }
+.guide .g-small { font-size: 9pt; margin-top: 6pt; }
+
+.guide .cards, .guide .mos { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6pt; }
+.guide .word, .guide .map, .guide .mo, .guide .debate, .guide .next { break-inside: avoid; }
+.guide .word { border-radius: 10pt; padding: 7pt 8pt; }
+.guide .word h3 { font-size: 11.5pt; }
+.guide .word p { margin-top: 3pt; font-size: 9.5pt; line-height: 1.22; }
+.guide .aka { font-size: 7pt; }
+.guide .think { font-size: 9pt !important; }
+.guide .lv--3 .word:nth-child(10) { break-before: page; }
+
+.guide .map { margin-top: 10pt; border-radius: 10pt; padding: 10pt; }
+.guide .map h3, .guide .g-ours h3, .guide .g-end h3 { font-size: 19pt; }
+.guide .map-sub { margin: 4pt 0 8pt; font-size: 10pt; }
+.guide .map-row { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 9pt; }
+.guide .map-row b { font-size: 13pt; }
+.guide .map-row p { margin: 3pt 0; font-size: 9.5pt; line-height: 1.3; }
+.guide .map-row i { font-size: 7pt; }
+
+.guide .air { margin-top: 7pt; break-inside: avoid; }
+.guide .mo { height: auto; cursor: auto; perspective: none; }
+.guide .mo__in, .guide .mo.on .mo__in { display: flex; flex-direction: column; transform: none; }
+.guide .mo__f, .guide .mo__b {
+  position: static;
+  padding: 6pt 8pt;
+  border-radius: 8pt;
+  backface-visibility: visible;
+}
+.guide .mo__f { flex: 1; border-radius: 8pt 8pt 0 0; }
+.guide .mo__b { display: block; transform: rotate(180deg); text-align: center; border-radius: 8pt 8pt 0 0; }
+.guide .mo__f .mo__hint { display: none; }
+.guide .mo__q { font-size: 10pt; line-height: 1.13; }
+.guide .mo__b .mo__hint, .guide .mo__a { display: inline; font-size: 8pt; }
+.guide .dare { margin-top: 6pt; font-size: 10pt; }
+
+.guide .debates { gap: 8pt; }
+.guide .debate { border-radius: 10pt; padding: 10pt; }
+.guide .debate__n { font-size: 8pt; }
+.guide .debate h3 { margin: 5pt 0 7pt; font-size: 14pt; }
+.guide .sides { gap: 5pt; }
+.guide .side, .guide .side[aria-pressed="true"] {
+  border-radius: 8pt;
+  padding: 6pt;
+  cursor: auto;
+  background: rgba(255,255,255,.1);
+  color: var(--cream);
+  font-size: 9.5pt;
+  font-weight: 700;
+}
+.guide .side::after {
+  content: attr(data-followup);
+  display: block;
+  margin-top: 4pt;
+  color: var(--sky);
+  font-size: 9pt;
+  font-weight: 400;
+}
+.guide .g-ours { margin-top: 14pt; break-inside: avoid; }
+.guide .g-ours ul { margin-top: 7pt; font-size: 10pt; column-gap: 20pt; }
+.guide .g-ours li { margin-bottom: 3pt; }
+
+.guide .g-end { padding: 8pt 0 18pt; }
+.guide .g-end__cols { grid-template-columns: 1fr 1fr; gap: 16pt; }
+.guide .g-end h3 { margin-bottom: 7pt; }
+.guide .g-stuck p:not(.kick), .guide .next p { font-size: 10pt; line-height: 1.35; }
+.guide .next-row { grid-template-columns: 1fr; gap: 6pt; }
+.guide .next { padding: 7pt 10pt; border-radius: 8pt; }
+.guide .next h3 { min-height: 0; font-size: 12pt; }
+.guide .g-finish { padding: 14pt 0 18pt; break-inside: avoid; }
+.guide .g-finish h2 { font-size: 46pt; }
+.guide .g-finish__sub { margin: 6pt auto 12pt; font-size: 11pt; }
+.guide .g-finish .h-note { margin-top: 8pt; font-size: 9pt; }
+.guide .h-foot { padding: 12pt 0 0; break-inside: avoid; }
+.guide .h-foot__big { font-size: 21pt; }
+.guide .h-foot__row { justify-content: center; }
+.guide .h-foot__links { gap: 12pt; }
+.guide .h-foot__links a, .guide .h-foot__sign { font-size: 8pt; }
