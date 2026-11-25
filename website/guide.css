@@ -40,29 +40,28 @@
 
 /* Starter prompts and featured builds */
 .g-ways { padding: 56px 0 90px; }
-.g-starters { padding-bottom: 44px; }
-.starters { display: grid; gap: 8px; }
-.starter { padding: 13px 18px; border-radius: 16px; background: var(--foam); scroll-margin-top: 20px; }
-.starter__top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
-.starter .lbl { margin: 0 0 5px; }
-.starter h3 { font-size: 22px; line-height: 1.05; }
-.starter .copy { flex: none; margin: 0; align-self: center; }
-.starter__get { margin: 5px 0 4px; font-size: 15px; line-height: 1.4; }
-.starter summary { width: fit-content; color: var(--ink); font-size: 14px; cursor: pointer; }
-.starter details .prompt { margin-top: 8px; }
+.g-starters { padding-bottom: 36px; }
+.starters { display: grid; gap: 5px; }
+.starter { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px; padding: 5px 12px; border-radius: 12px; background: var(--foam); scroll-margin-top: 20px; }
+.starter summary { padding: 9px 0; color: var(--navy); font-size: 17px; font-weight: 700; line-height: 1.2; cursor: pointer; }
+.starter .copy { margin: 0; align-self: start; min-width: 108px; height: 38px; padding-inline: 9px; }
+.starter details .prompt { margin: 3px 0 7px; }
 .guide .starter .prompt p:last-child { margin-bottom: 0; }
 .g-featured { padding-top: 0; }
 .g-featured .sec-head { border-top: 2px solid var(--line); padding-top: 34px; }
-.g-featured .build > .prompt { align-self: start; }
-.build__preview { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 12px; margin-top: 14px; background: var(--cream); }
-.build__preview--screen { object-fit: contain; }
+.build__preview { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: contain; border-radius: 12px; background: var(--cream); }
+.build__prompt { margin-top: 10px; }
+.build__prompt summary { color: var(--ink); font-weight: 700; cursor: pointer; width: fit-content; }
+.build__prompt > .prompt { margin-top: 8px; }
+.build__prompts { padding-inline-start: 14px; }
+.build__links a { color: var(--ink); font-weight: 700; }
 @media (max-width: 380px) {
-  .starter { padding-inline: 12px; }
-  .starter h3 { font-size: 19px; }
-  .starter .copy { padding-inline: 9px; }
+  .starter { gap: 8px; }
+  .starter summary { font-size: 16px; }
+  .starter .copy { min-width: 92px; padding-inline: 5px; font-size: 11px; }
 }
 .ways { display: grid; gap: 14px; }
-.build { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: stretch; background: var(--foam); border-radius: 24px; padding: 28px; }
+.build { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); gap: 24px; align-items: start; background: var(--foam); border-radius: 24px; padding: 20px; }
 .build .lbl { margin: 0 0 8px; }
 .build .lbl a { color: inherit; }
 .build h3 { font-size: 30px; line-height: .95; }
@@ -74,17 +73,10 @@
 .guide .prompt p:not(.kick) { margin: 0 0 16px; font-size: 16px; line-height: 1.5; }
 .copy { margin-top: auto; align-self: flex-start; height: 38px; padding: 0 14px; border: 0; border-radius: 8px; background: var(--navy); color: var(--cream); cursor: pointer; font-family: var(--mono); font-size: 12px; letter-spacing: .06em; text-transform: uppercase; }
 .copy:hover { background: var(--blue); color: var(--navy); }
-.build .minis { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-.minis .prompt .kick { display: block; }
 .prompt .kick a { color: inherit; white-space: nowrap; }
-.guide .prompt p.mini-note { margin-top: -6px; font-size: 14px; color: var(--ink); opacity: .8; }
-.guide .build p.dl-note { margin: 4px 0 0; font-size: 16px; line-height: 1.45; }
-.guide .build p.dl { margin: 16px 0 0; }
 .tenhours { margin: 14px 0 0; border-radius: 24px; padding: 24px 28px; background: var(--navy); color: var(--cream); font-size: 18px; line-height: 1.5; }
 .tenhours b { margin-right: 8px; font-weight: 800; text-transform: uppercase; color: var(--blue); }
 
-.how { margin: 6px 0 0; padding-left: 20px; font-size: 16px; line-height: 1.45; }
-.how li { margin-bottom: 6px; }
 .g-hero--builds { padding-bottom: 8px; }
 .g-hero__big--sm { font-size: 150px; }
 .g-more { margin: 28px 0 0; font-size: 18px; font-weight: 500; }
@@ -213,7 +205,7 @@
   .g-hero__ctas { flex-direction: column; align-self: stretch; }
   .g-hero__hosts { width: 86%; margin-top: 28px; }
   .g-why p:not(.kick) { font-size: 17px; }
-  .guide .cards, .mos, .debates, .map-row, .build, .build .minis { grid-template-columns: 1fr; }
+  .guide .cards, .mos, .debates, .map-row, .build { grid-template-columns: 1fr; }
   .build { padding: 20px; gap: 18px; } .build h3 { font-size: 24px; }
   .lv { padding: 56px 0 64px; }
   .lv-head { grid-template-columns: 1fr; gap: 8px; }

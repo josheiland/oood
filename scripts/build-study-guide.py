@@ -149,9 +149,11 @@ def way_card(b, web):
     if web:
         prompt_id = f'p-starter-{b["id"]}'
         return f'''<article class="starter" id="starter-{b["id"]}">
-        <div class="starter__top"><div><p class="lbl">{e(b["time"])}</p><h3>{e(b["title"])}</h3></div><button class="copy" type="button" data-copy="{prompt_id}">Copy prompt</button></div>
-        <p class="starter__get">{e(b["get"])}</p>
-        <details><summary>Read the prompt</summary><div class="prompt"><p class="kick">{e(b["level"])}{watch}</p><p id="{prompt_id}">{e(b["prompt"])}</p>{ours}</div></details>
+        <details>
+          <summary id="title-{prompt_id}">{e(b["title"])}</summary>
+          <div class="prompt"><p class="kick">{e(b["time"])} / {e(b["level"])}{watch}</p><p>{e(b["get"])}</p><p id="{prompt_id}">{e(b["prompt"])}</p>{ours}</div>
+        </details>
+        <button class="copy" type="button" data-copy="{prompt_id}" aria-describedby="title-{prompt_id}">Copy prompt</button>
       </article>'''
     return (f'<article class="build"><div class="way__info"><p class="lbl">{e(b["time"])}  /  {e(b["level"])}{watch}</p>'
             f'<h3>{e(b["title"])}</h3><p class="way__what">{e(b["what"])}</p>'
@@ -507,7 +509,7 @@ page = soften(page)
 
 # ---------- Starter activities on the Builds page ----------
 starts = f'''    <section class="g-ways g-starters" id="start-building" aria-labelledby="starter-title"><div class="h-wrap">
-      <div class="sec-head"><p class="kick">{SPARK} Dip a toe in</p><h2 id="starter-title">5 fun ways to get <span class="blue">started</span></h2><p>The fastest way to learn AI is to make something with it. Pick one, paste the prompt into any AI app, and fill in the [brackets].</p></div>
+      <div class="sec-head"><h2 id="starter-title">5 fun ways to get <span class="blue">started</span></h2><p>Pick one, paste the prompt into an AI app and fill in the [brackets]</p></div>
       <div class="starters">
       {ways}
       </div>
