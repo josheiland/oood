@@ -47,7 +47,7 @@ html, body.home.guide { margin: 0; overflow: visible; background: transparent; }
 body.guide { print-color-adjust: exact; -webkit-print-color-adjust: exact; font-size: 10.5pt; }
 .guide .h-nav, .guide .skip-link, .guide .gauge, .guide .bub,
 .guide .g-screen-only, .guide .notes__hp, .guide .notes__status,
-.guide .h-foot__social, .guide .debate__followup { display: none; }
+.guide .h-foot, .guide .debate__followup { display: none; }
 .guide .g-print-only { display: revert; }
 .guide .h-btn.g-print-only, .guide .h-wm.g-print-only { display: inline-flex; }
 
@@ -77,7 +77,7 @@ body.guide { print-color-adjust: exact; -webkit-print-color-adjust: exact; font-
 .lv--4 { page: lower; }
 .lv--5 { page: deep; }
 .lv--6 { page: bottom; }
-.g-end, .g-finish, .guide .h-foot { page: finish; }
+.g-end, .g-finish { page: finish; }
 .guide .g-why { max-width: 7.8in; padding-block: 0 12pt; }
 .guide .g-why p:not(.kick) { font-size: 11pt; line-height: 1.4; margin-bottom: 5pt; }
 .guide .lv { padding: 8pt 0 14pt; }
@@ -163,11 +163,6 @@ body.guide { print-color-adjust: exact; -webkit-print-color-adjust: exact; font-
 .guide .g-finish h2 { font-size: 46pt; }
 .guide .g-finish__sub { margin: 6pt auto 12pt; font-size: 11pt; }
 .guide .g-finish .h-note { margin-top: 8pt; font-size: 9pt; }
-.guide .h-foot { padding: 12pt 0 0; break-inside: avoid; }
-.guide .h-foot__big { font-size: 21pt; }
-.guide .h-foot__row { justify-content: center; }
-.guide .h-foot__links { gap: 12pt; }
-.guide .h-foot__links a, .guide .h-foot__sign { font-size: 8pt; }
 
 .guide .g-answer-key { page: answer-key; padding-top: 8pt; }
 .guide .g-answer-key .sec-head { margin-bottom: 16pt; }
