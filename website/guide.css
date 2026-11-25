@@ -32,39 +32,24 @@
 .sec-head p:not(.kick), .promise { margin: 12px 0 0; font-size: 19px; line-height: 1.45; text-wrap: pretty; }
 .guide .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
 .word, .build { background: rgba(253,248,242,.8); border-radius: 20px; padding: 22px 24px; }
-.word h3, .build h3 { font-size: 22px; line-height: 1; }
+.word h3 { font-size: 22px; line-height: 1; }
 .word p, .build p { margin: 8px 0 0; font-size: 16px; line-height: 1.45; }
 .aka { display: block; margin-top: 4px; font-family: var(--mono); font-size: 11px; opacity: .7; }
 .think { font-size: 15px !important; opacity: .82; }
 .think b { font-weight: 700; }
 
-/* Starter prompts and featured builds */
-.g-ways { padding: 56px 0 90px; }
-.g-starters { padding-bottom: 36px; }
-.starters { display: grid; gap: 5px; }
-.starter { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px; padding: 5px 12px; border-radius: 12px; background: var(--foam); scroll-margin-top: 20px; }
-.starter summary { padding: 9px 0; color: var(--navy); font-size: 17px; font-weight: 700; line-height: 1.2; cursor: pointer; }
-.starter .copy { margin: 0; align-self: start; min-width: 108px; height: 38px; padding-inline: 9px; }
-.starter details .prompt { margin: 3px 0 7px; }
-.guide .starter .prompt p:last-child { margin-bottom: 0; }
-.g-featured { padding-top: 0; }
-.g-featured .sec-head { border-top: 2px solid var(--line); padding-top: 34px; }
+/* Builds */
+.g-ways { padding: 20px 0 90px; }
 .build__preview { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: contain; border-radius: 12px; background: var(--cream); }
 .build__prompt { margin-top: 10px; }
 .build__prompt summary { color: var(--ink); font-weight: 700; cursor: pointer; width: fit-content; }
 .build__prompt > .prompt { margin-top: 8px; }
-.build__prompts { padding-inline-start: 14px; }
 .build__links a { color: var(--ink); font-weight: 700; }
-@media (max-width: 380px) {
-  .starter { gap: 8px; }
-  .starter summary { font-size: 16px; }
-  .starter .copy { min-width: 92px; padding-inline: 5px; font-size: 11px; }
-}
 .ways { display: grid; gap: 14px; }
 .build { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); gap: 24px; align-items: start; background: var(--foam); border-radius: 24px; padding: 20px; }
 .build .lbl { margin: 0 0 8px; }
 .build .lbl a { color: inherit; }
-.build h3 { font-size: 30px; line-height: .95; }
+.build h2 { font-size: 30px; line-height: .95; }
 .guide .way__what { margin: 10px 0 0; font-size: 18px; line-height: 1.45; }
 .guide .way__row { margin: 12px 0 0; font-size: 16px; line-height: 1.45; }
 .way__row b { display: block; font-family: var(--mono); font-weight: 500; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink); }
@@ -206,7 +191,7 @@
   .g-hero__hosts { width: 86%; margin-top: 28px; }
   .g-why p:not(.kick) { font-size: 17px; }
   .guide .cards, .mos, .debates, .map-row, .build { grid-template-columns: 1fr; }
-  .build { padding: 20px; gap: 18px; } .build h3 { font-size: 24px; }
+  .build { padding: 20px; gap: 18px; } .build h2 { font-size: 24px; }
   .lv { padding: 56px 0 64px; }
   .lv-head { grid-template-columns: 1fr; gap: 8px; }
   .ft, .lv-head--word .ft { font-size: 52px; }

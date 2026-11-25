@@ -855,3 +855,8 @@ Josh asked to remove the starter link from the study guide, add researched deep-
 ### 2026-11-25 — Builds page condensed
 
 Josh asked for single-row starters, photos beside the larger build descriptions, collapsed prompts, and a shorter wedding entry. The wedding tracker is shown using the public workbook's All tasks tab. Mary's voice guide uses a crop of her personal site from the published personalization tutorial, and the race coach uses the El Cruce training page. The study buddy, house rules and study guide are removed from the featured list.
+
+
+### 2026-11-25 — Builds focuses on the five projects
+
+Josh removed the starter activity list from Builds and kept the Mollick ten-hour note. The wedding tracker has one setup prompt and a workbook download. The homepage card now links to the tracker, replacing the dinner bill splitter. The guide PDF retains its starter activities.

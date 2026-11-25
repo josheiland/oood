@@ -82,4 +82,4 @@ Source documents: the [launch recording primer](https://docs.google.com/document
 
 The homepage follows Watch / Learn / Build, with links to each section. About keeps Stanford, AI@GSB, UVA and Bain in the shared introduction and introduces both hosts' offscreen interests. The AI from 0 to 1 cover features both host stickers in the PDF and on the homepage.
 
-The web guide has 52 words and 10 debates. Each debate choice reveals a follow-up and is tallied for future results. The five starter activities and Mollick note are on `/builds#start-building`, above five featured builds with previews and collapsed prompts. The downloadable PDF retains the starter activities.
+The web guide has 52 words and 10 debates. Each debate choice reveals a follow-up and is tallied for future results. Builds has five projects with previews and collapsed prompts, plus the Mollick note. The downloadable study guide retains the five starter activities.
