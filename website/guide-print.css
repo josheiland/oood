@@ -58,15 +58,15 @@ body.guide { print-color-adjust: exact; -webkit-print-color-adjust: exact; font-
   background: var(--cream);
 }
 .guide .g-hero {
-  height: 8.65in;
+  height: 11in;
   padding: 0;
   display: grid;
   align-items: center;
 }
 .g-hero__kick { font-size: 52pt; }
 .g-hero__big { font-size: 116pt; }
-.g-hero__sub { font-size: 16pt; max-width: 5in; }
-.g-hero__hosts { animation: none; width: 4.5in; }
+.g-hero__sub { font-size: 16pt; max-width: 6.4in; margin: 22pt auto 26pt; text-wrap: balance; }
+.g-hero__hosts { animation: none; width: 5.2in; margin-top: .55in; }
 .g-hero .h-wm { order: -1; margin-bottom: .42in; font-size: 25pt; }
 .guide .h-btn { height: auto; padding: 8pt 14pt; font-size: 10pt; }
 
