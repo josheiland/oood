@@ -870,3 +870,7 @@ Josh approved a linked answer key if in-place PDF reveals lacked consistent supp
 ### 2026-11-25 — Study guide: "Why we made this" removed, hero buttons matched
 
 Mary asked to clear the "Why we made this" section from the study guide and to make the cover buttons the same size. The section is gone from the web guide and the PDF (and its copy from `guide-levels.json`). The hero buttons now share one width: Dive in and Download the PDF on the web, Dive in and Read online on the PDF cover, and full width on phones.
+
+### 2026-11-25 — About section centered; guide cover fills the page
+
+Mary picked option C for About: centered heading and intro in a narrower column, "What we're doing when we need a break from AI" as a small blue label, and the two hosts as open centered columns (bigger stickers, name on one line, no bullets or cards). On phones the hosts stack. She also approved the PDF cover spacing: the cover now fills the whole page, the tagline sits on one line and the stickers are larger.
