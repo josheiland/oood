@@ -78,8 +78,6 @@ body.guide { print-color-adjust: exact; -webkit-print-color-adjust: exact; font-
 .lv--5 { page: deep; }
 .lv--6 { page: bottom; }
 .g-end, .g-finish { page: finish; }
-.guide .g-why { max-width: 7.8in; padding-block: 0 12pt; }
-.guide .g-why p:not(.kick) { font-size: 11pt; line-height: 1.4; margin-bottom: 5pt; }
 .guide .lv { padding: 8pt 0 14pt; }
 .guide .lv-head { gap: 14pt; margin-bottom: 9pt; break-after: avoid; }
 .guide .ft { font-size: 47pt; }

@@ -21,11 +21,10 @@
 .g-hero__kick { display: block; font-size: 56px; line-height: 1; letter-spacing: -.015em; }
 .g-hero__big { display: block; font-size: 168px; line-height: .86; letter-spacing: -.035em; color: var(--blue); }
 .g-hero__sub { margin: 24px auto 30px; max-width: 560px; font-size: 21px; line-height: 1.45; font-weight: 500; }
-.g-hero__ctas { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; }
+/* equal-width buttons: each column is as wide as the widest button */
+.g-hero__ctas { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 14px; }
 .g-hero__hosts { width: 380px; height: auto; margin-top: 40px; transform: rotate(-2deg); animation: g-float 6s ease-in-out infinite alternate; }
 @keyframes g-float { from { transform: translateY(0) rotate(-2deg); } to { transform: translateY(-12px) rotate(-.5deg); } }
-.g-why { padding-top: 48px; padding-bottom: 24px; }
-.g-why p:not(.kick) { margin: 0 0 14px; font-size: 19px; line-height: 1.6; }
 
 /* shared heads + cards */
 .sec-head { margin-bottom: 30px; }
@@ -190,9 +189,8 @@
   .g-hero__kick { font-size: 34px; }
   .g-hero__big { font-size: 92px; }
   .g-hero__sub { font-size: 18px; }
-  .g-hero__ctas { flex-direction: column; align-self: stretch; }
+  .g-hero__ctas { grid-auto-flow: row; align-self: stretch; }
   .g-hero__hosts { width: 86%; margin-top: 28px; }
-  .g-why p:not(.kick) { font-size: 17px; }
   .guide .cards, .mos, .debates, .map-row, .build { grid-template-columns: 1fr; }
   .build { padding: 20px; gap: 18px; } .build h2 { font-size: 24px; }
   .lv { padding: 56px 0 64px; }

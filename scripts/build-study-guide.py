@@ -147,7 +147,6 @@ stuck = ''.join(f'<p><b>{e(phrase(a))}</b> {e(b)}</p>' for a, b in guide['stuck'
 nxt = ''.join(f'<a class="next" href="{html.escape(u)}" target="_blank" rel="noopener"><span class="lbl">{e(who)}</span><h3>{e(t)}</h3><p>{e(len_)}</p></a>' for t, who, len_, u in guide['next'])
 US = ('<a class="next next--us" href="https://www.youtube.com/@OutOfOurDepthPod?sub_confirmation=1" target="_blank" rel="noopener">'
       '<span class="lbl">Us, obviously</span><h3>Out of Our Depth</h3><p>New episodes every week. Would it kill ya to subscribe?</p></a>')
-WHY = ''.join(f'<p>{e(x)}</p>' for x in guide['why'])
 OURS = ''.join(f'<li>{e(x)}</li>' for x in guide['ourselves'])
 HELP = 'Stuck on one? Email <a href="mailto:hi@outofourdepth.com">hi@outofourdepth.com</a>, tell us which one, and we\'ll help'
 NOTE = "Written by us, when we have something worth sharing"
@@ -209,7 +208,6 @@ page = f'''<!doctype html>
           <a class="h-wm g-print-only" href="/" aria-label="Out of Our Depth home"><span class="h-wm__k">Out of our</span><span>Depth</span></a>
         </div>
       </section>
-      <section class="g-why h-wrap"><div class="g-narrow"><p class="kick">Why we made this</p>{WHY}</div></section>
     </div>
     {''.join(level_section(lv, i) for i, lv in enumerate(levels))}
     <section class="lv lv--6 dk" data-depth id="debates"><div class="h-wrap">
